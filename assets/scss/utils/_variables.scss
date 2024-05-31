@@ -1,0 +1,59 @@
+$color-text-primary: #111827;
+$color-text-secondary: #6B7280;
+$color-text-invert: #FFFFFF;
+
+$color-text-primary-dark: #FFFFFF;
+$color-text-secondary-dark: #D1D5DB;
+$color-text-invert-dark: #111827;
+
+$color-surface-primary:#FFFFFF;
+$color-surface-secondary:#F9FAFB;
+$color-surface-highlight:#F3F4F6;
+$color-surface-invert:#111827;
+
+$color-surface-primary-dark:#410F39;
+$color-surface-secondary-dark:#320B38;
+$color-surface-highlight-dark:#521849;
+$color-surface-invert-dark:#FFFFFF;
+
+$color-other-silver:#8E94A1;
+$color-other-golden:#C4A020;
+$color-other-bronze:#A66417;
+$color-other-green:#18A215;
+$color-other-blue:#297CF9;
+$color-other-red:#BE1212;
+
+$color-button:#BE123C;
+$color-button-dark:#F43F5E;
+
+$color-border-invert:#FFFFFF;
+$color-border-primary:#D1D5DB;
+$color-border-secondary:#E5E7EB;
+$color-border-icons:#9CA3AF;
+$color-border-accent:#BE123C;
+
+$color-border-invert-dark:#320B38;
+$color-border-primary-dark:#7E3A73;
+$color-border-secondary-dark:#612A58;
+$color-border-icons-dark:#E5E7EB;
+$color-border-accent-dark:#BE123C;
+
+$gradient-linear-silver: linear-gradient(156.1deg, #C7CAD0 -1.47%, #F4F4F4 45.72%, #BBC0C9 100%);
+$gradient-linear-gold: linear-gradient(90.74deg, #D0AF5B 0%, #FFE5B3 63.9%, #B69235 100%);
+$gradient-linear-accent: linear-gradient(90.74deg, #881337 0%, #be123c 49%, #881337 100%);
+$gradient-linear-bronze: linear-gradient(155.68deg, #B17938 1.15%, #FEE6CA 47.11%, #AD6C21 100%);
+$gradient-linear-variants: linear-gradient(270deg, #320b38 0%, #320b38 50%, #ffffff 50%, #ffffff 100%);
+$gradient-radial: radial-gradient(50% 50% at 50% 50%, #BE123C 0%, #320B38 100%);
+
+
+$desktop-md: 1440px;
+$desktop-sm: 1280px;
+$tablet: 744px;
+$mobile-md: 430px;
+
+$sm-shadow: 0px 1px 6px rgba(7, 7, 8, 0.15);
+$hover-light-mode: 0px 4px 15px rgba(190, 18, 60, 0.3);
+$hover-dark-mode: 0px 4px 15px rgba(244, 63, 94, 0.3);
+
+$transition-hover: 0.3s;
+

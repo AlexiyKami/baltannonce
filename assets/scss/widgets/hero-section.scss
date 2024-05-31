@@ -1,0 +1,94 @@
+@use '../utils' as *;
+
+.hero {
+  @include padding-vertical(60px);
+
+  &__container {
+    @include flex(row);
+    gap: 32px;
+  }
+
+  &__body {
+    flex: 1 1 50%;
+    @include flex(column, center, flex-start);
+    gap: 20px;
+  }
+
+  &__title {
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+  }
+
+  &__buttons {
+    @include flex(row, center, center);
+    gap: 12px;
+    & .button_primary {
+      padding: 0 38px;
+    }
+
+    & .button_outlined {
+      padding: 0 20px;
+    }
+  }
+
+  &__img-wrapper {
+    border-radius: 12px;
+    overflow: hidden;
+    flex: 0 0 50%;
+    height: 522px;
+  }
+  &__img-wrapper > img {
+    object-fit: cover;
+  }
+}
+
+@media screen and (max-width: $desktop-sm) {
+  .hero {
+    &__container {
+      flex-direction: column;
+    }
+
+    &__img-wrapper {
+      flex: 0 0 auto;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .hero {
+    &__container {
+      flex-direction: column;
+    }
+
+    &__img-wrapper {
+      height: 469px;
+    }
+
+    &__title {
+      font-size: 36px;
+      line-height: 49px;
+    }
+
+    &__subtitle {
+      margin-bottom: 8px;
+    }
+
+    &__body {
+      gap: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .hero {
+    &__buttons {
+      @include flex(column, center, flex-start);
+    }
+
+    &__img-wrapper {
+      height: 240px;
+    }
+  }
+}

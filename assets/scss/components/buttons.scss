@@ -1,0 +1,32 @@
+@use '../utils' as *;
+
+.button {
+  @include flex(row, center, center);
+  text-align: center;
+  padding: 0px 38px;
+  min-height: 52px;
+  border-radius: 8px;
+  transition: all $transition-hover;
+}
+
+.button_primary {
+  // background-color: $accents;
+  // color: $white;
+  &:hover {
+    box-shadow: 0px 4px 20px rgba(255, 88, 62, 0.24);
+  }
+}
+
+.button_outlined {
+  // border: 1px solid $dark-1;
+  // color: $dark-1;
+  &:hover {
+  }
+}
+
+.text-button {
+  text-decoration: underline;
+  &:hover {
+    // color: $accents;
+  }
+}
