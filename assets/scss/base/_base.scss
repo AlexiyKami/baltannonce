@@ -40,3 +40,9 @@ body {
     @include padding-horizontal(20px);
   }
 }
+
+@media screen and (max-width: $mobile-md) {
+  ._container {
+    @include padding-horizontal(16px);
+  }
+}
