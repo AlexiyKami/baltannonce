@@ -6,40 +6,28 @@ import '../assets/scss/components/buttons.scss';
 <template>
   <footer class="footer">
     <div class="footer__container _container">
-      <div class="footer__grid">
-        <div class="footer__box">
-          <a href="" class="footer__logo">
-            <img src="../assets/icons/logo.svg" alt="Logo" >
-          </a>
-          <p>Ідеальне житло чекає на вас!</p>
-        </div>
-        <div class="footer__box">
-          <ul class="footer__links">
-            <li><a class="footer__link" href="">Доступні нерухомості</a></li>
-            <li><a href="">Про нас</a></li>
+      <div class="footer__content">
+        <a href="" class="footer__logo">
+          <img src="../assets/icons/logo.svg" alt="Logo" >
+        </a>
+        <nav class="footer__navmenu navmenu-footer">
+          <ul class="navmenu-footer__list">
+            <NuxtLink to="/" class="navmenu-footer__item">Sample text 1</NuxtLink>
+            <NuxtLink to="/" class="navmenu-footer__item">Sample text 2</NuxtLink>
+            <NuxtLink to="/" class="navmenu-footer__item">Sample text 3</NuxtLink>
+            <NuxtLink to="/" class="navmenu-footer__item">Sample text 4</NuxtLink>
+            <NuxtLink to="/" class="navmenu-footer__item">Sample text 5</NuxtLink>
+            <NuxtLink to="/" class="navmenu-footer__item">Sample text 6</NuxtLink>
+            <NuxtLink to="/" class="navmenu-footer__item">Sample text 7</NuxtLink>
+            <NuxtLink to="/" class="navmenu-footer__item">Sample text 8</NuxtLink>
           </ul>
-          <button type="button" class="footer__button button button_primary">
-            Зв’язатись зі мною
-          </button>
-        </div>
-        <div class="footer__box">
-          <h5 class="footer__heading">Контакти</h5>
-          <div class="footer__contacts">
-            <a class="footer__contact" href="tel:+380 956 405 34">+380 956 405 34</a>
-            <a class="footer__contact" href="mailto:sfdfldds123@gmail.com">sfdfldds123@gmail.com</a>
-          </div>
-          <div class="footer__socials">
-            <a href=""
-              ><img class="footer__social" src="../assets/icons/telegram.svg" alt="Telegram"
-            ></a>
-            <a href=""
-              ><img class="footer__social" src="../assets/icons/viber.svg" alt="Viber"
-            ></a>
-            <a href=""
-              ><img class="footer__social" src="../assets/icons/whatsapp.svg" alt="Whatsapp"
-            ></a>
-          </div>
-        </div>
+        </nav>
+      </div>
+      <div class="footer__line" />
+      <div class="footer__copyright">
+        <p class="footer__copyright-text body-text_2">
+          Copyright © 2024-2024 Baltannonce.net. All Rights Reserved.
+        </p>
       </div>
     </div>
   </footer>
