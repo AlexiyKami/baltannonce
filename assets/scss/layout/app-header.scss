@@ -101,8 +101,10 @@
 @media screen and (max-width: $desktop-sm) {
   .navmenu-header__list {
     flex-direction: column;
-    gap: 40px;
-    @include font(20px, 600, 140%);
+    gap: 32px;
+    @include font(24px, 600, 136%);
+    font-family: 'Manrope', sans-serif;
+    color: $color-text-primary;
   }
 
   .burger-header {
@@ -119,7 +121,7 @@
     left: 0;
     width: 100vw;
     padding: 20px;
-    gap: 24px;
+    gap: 0px;
 
   }
   .header__body.active {
@@ -128,20 +130,52 @@
   }
 
   .header__navmenu {
-    margin-bottom: 32px;
+    margin-bottom: 0px;
   }
 
   .header__navmenu::after {
     content: '';
     width: 100%;
-    // background-color: $light-2;
+    background-color: $color-border-primary;
     height: 1px;
     display: flex;
-    margin-top: 32px;
-    margin-bottom: -32px;
+    margin-top: 40px;
+    margin-bottom: 24px;
   }
 
-  .header__button {
-    order: 1;
+  .header__buttons {
+    @include flex(row, center, center);
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .header__login-btns {
+    width: 100%;
+    justify-content: space-between;
+    & a {
+      width: 100%;
+    }
+  }
+
+  .header__theme-switch {
+    order: -1;
+  }
+
+  .header__dropdown-lang {
+    order: -2;
+  }
+}
+
+@media screen and (max-width: $mobile-md) {
+  .navmenu-header__list {
+    @include font(20px, 700, 136%);
+  }
+
+  .header__login-btns {
+    flex-direction: column;
+  }
+  .header__body {
+    padding: 16px;
   }
 }
