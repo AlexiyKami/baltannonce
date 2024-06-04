@@ -2,31 +2,49 @@
 
 .button {
   @include flex(row, center, center);
+  @include font(16px, 600, 137%);
   text-align: center;
-  padding: 0px 38px;
-  min-height: 52px;
+  padding: 4px 20px;
+  min-height: 46px;
   border-radius: 8px;
   transition: all $transition-hover;
 }
 
 .button_primary {
-  // background-color: $accents;
-  // color: $white;
+  background-color: $color-button;
+  color: $color-text-invert;
   &:hover {
-    box-shadow: 0px 4px 20px rgba(255, 88, 62, 0.24);
+    box-shadow: $hover-light-mode;
   }
 }
 
+.button_secondary {
+  background-color: $color-surface-highlight;
+  color: $color-button;
+  outline: 1px solid $color-surface-highlight;
+  &:hover {
+    outline: 1px solid $color-border-accent;
+  }
+}
+
+.button_small {
+  min-height: 35px;
+  @include font(14px, 600, 136%);
+  &:hover {
+  }
+}
 .button_outlined {
-  // border: 1px solid $dark-1;
-  // color: $dark-1;
+  outline: 1px solid $color-border-accent;
+  color: $color-button;
   &:hover {
   }
 }
 
-.text-button {
-  text-decoration: underline;
+.button-with-icon {
+  @include flex(row, center, center);
+  gap: 8px;
+  color: $color-text-primary;
   &:hover {
-    // color: $accents;
+    background-color: $color-surface-primary;
   }
 }

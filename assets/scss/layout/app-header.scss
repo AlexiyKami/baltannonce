@@ -5,28 +5,41 @@
   position: relative;
   &__container {
     @include flex(row, space-between, center);
-    @include padding-vertical(4px);
-    min-height: 68px;
+    @include padding-vertical(12px);
+    min-height: 54px;
   }
 
   &__content {
     width: 100%;
     @include flex(row, space-between, center);
+    gap: 48px;
   }
 
   &__logo {
-    flex: 0 0 47px;
+    flex: 0 0 160px;
     z-index: 101;
   }
 
   &__body {
     @include flex(row, space-between, center);
-    gap: 70px;
+    gap: 32px;
   }
 
-  &__button {
-    text-wrap: nowrap;
+  &__buttons {
+    @include flex(row, flex-start, center);
+    gap: 12px;
   }
+
+  &__login-btns {
+    @include flex(row, flex-start, flex-start);
+    gap: 8px;
+
+    &__button {
+      text-wrap: nowrap;
+    }
+  }
+
+  
 
   &__navmenu {
     position: relative;
@@ -37,7 +50,8 @@
 .navmenu-header {
   &__list {
     @include flex(row, space-between, center);
-    gap: 70px;
+    gap: 32px;
+    font-size: 16px;
   }
 }
 
@@ -99,17 +113,18 @@
     @include flex(column, center, center);
     background-color: $color-surface-primary;
     position: absolute;
-    transition: top 1s ease-out;
+    transition: top 1s ease-in;
     z-index: 100;
-    top: -100vh;
+    top: -250vh;
     left: 0;
     width: 100vw;
     padding: 20px;
     gap: 24px;
+
   }
   .header__body.active {
     top: 56px;
-    transition: top 1s ease-out;
+    transition: top 1s cubic-bezier(0.070, 1.020, 0.340, 0.635);
   }
 
   .header__navmenu {

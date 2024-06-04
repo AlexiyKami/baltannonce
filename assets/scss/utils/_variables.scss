@@ -1,20 +1,30 @@
-$color-text-primary: #111827;
-$color-text-secondary: #6B7280;
-$color-text-invert: #FFFFFF;
+:root {
+  --color-text-primary: #111827;
+  --color-text-secondary: #6B7280;
+  --color-text-invert: #FFFFFF;
 
-$color-text-primary-dark: #FFFFFF;
-$color-text-secondary-dark: #D1D5DB;
-$color-text-invert-dark: #111827;
+  --color-surface-primary:#FFFFFF;
+  --color-surface-secondary:#F9FAFB;
+  --color-surface-highlight:#F3F4F6;
+  --color-surface-invert:#111827;
 
-$color-surface-primary:#FFFFFF;
-$color-surface-secondary:#F9FAFB;
-$color-surface-highlight:#F3F4F6;
-$color-surface-invert:#111827;
+  --color-button:#BE123C;
 
-$color-surface-primary-dark:#410F39;
-$color-surface-secondary-dark:#320B38;
-$color-surface-highlight-dark:#521849;
-$color-surface-invert-dark:#FFFFFF;
+  --color-border-invert:#FFFFFF;
+  --color-border-primary:#D1D5DB;
+  --color-border-secondary:#E5E7EB;
+  --color-border-icons:#9CA3AF;
+  --color-border-accent:#BE123C;
+}
+
+$color-text-primary: var(--color-text-primary);
+$color-text-secondary: var(--color-text-secondary);
+$color-text-invert: var(--color-text-invert);
+
+$color-surface-primary:var(--color-surface-primary);
+$color-surface-secondary:var(--color-surface-secondary);
+$color-surface-highlight:var(--color-surface-highlight);
+$color-surface-invert:var(--color-surface-invert);
 
 $color-other-silver:#8E94A1;
 $color-other-golden:#C4A020;
@@ -23,20 +33,13 @@ $color-other-green:#18A215;
 $color-other-blue:#297CF9;
 $color-other-red:#BE1212;
 
-$color-button:#BE123C;
-$color-button-dark:#F43F5E;
+$color-button:var(--color-button);
 
-$color-border-invert:#FFFFFF;
-$color-border-primary:#D1D5DB;
-$color-border-secondary:#E5E7EB;
-$color-border-icons:#9CA3AF;
-$color-border-accent:#BE123C;
-
-$color-border-invert-dark:#320B38;
-$color-border-primary-dark:#7E3A73;
-$color-border-secondary-dark:#612A58;
-$color-border-icons-dark:#E5E7EB;
-$color-border-accent-dark:#BE123C;
+$color-border-invert:var(--color-border-invert);
+$color-border-primary:var(--color-border-primary);
+$color-border-secondary:var(--color-border-secondary);
+$color-border-icons:var(--color-border-icons);
+$color-border-accent:var(--color-border-accent);
 
 $gradient-linear-silver: linear-gradient(156.1deg, #C7CAD0 -1.47%, #F4F4F4 45.72%, #BBC0C9 100%);
 $gradient-linear-gold: linear-gradient(90.74deg, #D0AF5B 0%, #FFE5B3 63.9%, #B69235 100%);
