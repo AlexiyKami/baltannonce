@@ -1,40 +1,9 @@
 <script setup>
 import '../assets/scss/layout/app-header.scss';
 import '../assets/scss/components/buttons.scss';
-import '../assets/scss/components/dropdown.scss';
 
-const selected = ref('Укр');
 const isMenuOpened = ref(false);
 
-const items = [
-  [
-    {
-      label: 'Укр',
-      labelClass: 'dropdown-lang-header__item',
-      click: () => {
-        isMenuOpened.value = false;
-      }
-    }
-  ],
-  [
-    {
-      label: 'Рус',
-      labelClass: 'dropdown-lang-header__item',
-      click: () => {
-        isMenuOpened.value = false;
-      }
-    }
-  ],
-  [
-    {
-      label: 'Eng',
-      labelClass: 'dropdown-lang-header__item',
-      click: () => {
-        isMenuOpened.value = false;
-      }
-    }
-  ]
-];
 </script>
 
 <template>
@@ -64,31 +33,27 @@ const items = [
           <nav class="header__navmenu navmenu-header">
             <ul class="navmenu-header__list">
               <NuxtLink to="/" class="navmenu-header__item" @click="isMenuOpened = false"
-                >Головна</NuxtLink
+                >Sample text 1</NuxtLink
               >
-              <NuxtLink to="/about" class="navmenu-header__item" @click="isMenuOpened = false"
-                >Про Нас</NuxtLink
+              <NuxtLink to="/" class="navmenu-header__item" @click="isMenuOpened = false"
+                >Sample text 2</NuxtLink
               >
-              <NuxtLink to="/contacts" class="navmenu-header__item" @click="isMenuOpened = false"
-                >Контакти</NuxtLink
+              <NuxtLink to="/" class="navmenu-header__item" @click="isMenuOpened = false"
+                >Sample text 3</NuxtLink
+              >
+              <NuxtLink to="/" class="navmenu-header__item" @click="isMenuOpened = false"
+                >Sample text 4</NuxtLink
               >
             </ul>
           </nav>
-          <NuxtLink
-            to="/contacts"
-            class="button button_primary header__button"
-            @click="isMenuOpened = false"
-            >Зв'язатись зі мною</NuxtLink
-          >
-          <UDropdown :items="items" :popper="{ placement: 'bottom-start' }">
-            <UButton
-              class="dropdown-lang-header__text"
-              color="white"
-              variant="ghost"
-              :label="selected"
-              trailing-icon="i-heroicons-chevron-down-20-solid"
-            />
-          </UDropdown>
+          <div class="header__buttons">
+            <LangDropdown/>
+            <div class="header__login-btns">
+              <a href="" class="button button_secondary button_filled">Войти</a>
+              <a href="" class="button button_primary button_filled">Зарегистрироваться</a>
+            </div>
+            <ThemeSwitch class="header__theme-switch"/>
+          </div>
         </div>
       </div>
     </div>
