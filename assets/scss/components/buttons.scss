@@ -8,6 +8,7 @@
   min-height: 46px;
   border-radius: 8px;
   transition: all $transition-hover;
+  cursor: pointer;
 }
 
 .button_primary {
@@ -36,15 +37,35 @@
 .button_outlined {
   outline: 1px solid $color-border-accent;
   color: $color-button;
+  transition: outline 0s;
   &:hover {
+    outline-width: 2px;
   }
 }
 
-.button-with-icon {
+.button_with-icon {
   @include flex(row, center, center);
   gap: 8px;
   color: $color-text-primary;
+  padding: 0px 16px;
   &:hover {
     background-color: $color-surface-primary;
+  }
+}
+
+.button_with-indicator {
+  position: relative;
+  &::after {
+    content: '1';
+    position: absolute;
+    top: 5px;
+    right: 6px;
+    @include size(15px);
+    @include font(11px, 600, 136%);
+    color: $color-button;
+    outline:1px solid $color-button;
+    background-color: $color-surface-primary;
+    border-radius: 50%;
+    z-index: 2;
   }
 }
