@@ -1,6 +1,30 @@
 @use '../utils' as *;
 .hero {
+  @include padding-vertical(28px);
+  outline: 1px solid $color-border-secondary;
   background-color: $color-surface-highlight;
+  &__container {
+    @include flex(column);
+    
+  }
+  &__title {
+    margin-bottom: 28px;
+  }
+  &__filter-btns {
+    @include flex(row, flex-start, center);
+    margin-bottom: 8px;
+    gap: 16px;
+    .button__icon {
+      color: $color-button;
+    }
+  }
+  &__filter-btn {
+    
+  }
+
+  &__extended-filter-btn {
+
+  }
 }
 
 
@@ -9,9 +33,18 @@
 }
 
 @media screen and (max-width: $tablet) {
-
+  .hero {
+    &__filter-btns {
+      flex-wrap: wrap;
+    }
+    &__filter-btn {
+      .button__text {
+        display: none;
+      }
+    }
+  }
 }
 
-@media screen and (max-width: $tablet) {
+@media screen and (max-width: $mobile-md) {
 
 }
