@@ -2,7 +2,10 @@
 .hero {
   @include padding-vertical(28px);
   outline: 1px solid $color-border-secondary;
-  background-color: $color-surface-highlight;
+  background: $gradient-radial;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
   &__container {
     @include flex(column);
     
@@ -19,7 +22,9 @@
     }
   }
   &__filter-btn {
-    
+    &.active {
+      background-color: $color-surface-primary;
+    }
   }
 
   &__extended-filter-btn {
