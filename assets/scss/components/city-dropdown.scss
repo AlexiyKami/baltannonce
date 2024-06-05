@@ -21,7 +21,6 @@
     }
   }
   &__text {
-    @include font(18px, 600, 144%);
     color: $color-text-primary;
     width: 260px;
   }
@@ -47,6 +46,7 @@
   &__container {
     position: relative;
     @include flex(row, flex-start, center);
+    @include font(18px, 600, 144%);
     width: 100%;
     height: 80px;
     border-radius: 8px;
