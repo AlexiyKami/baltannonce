@@ -55,7 +55,13 @@ input[type="number"] {
     -webkit-appearance: none;
     margin: 0;
   }
+  &::placeholder {
+    color: $color-text-secondary;
+  }
   &.small {
     width: 60px;
+  }
+  &.medium {
+    width: 98px;
   }
 }
