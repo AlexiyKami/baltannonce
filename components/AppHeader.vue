@@ -33,16 +33,16 @@ const isMenuOpened = ref(false);
           <nav class="header__navmenu navmenu-header">
             <ul class="navmenu-header__list">
               <NuxtLink to="/" class="navmenu-header__item" @click="isMenuOpened = false"
-                >Sample text 1</NuxtLink
+                >Мужчины</NuxtLink
               >
               <NuxtLink to="/" class="navmenu-header__item" @click="isMenuOpened = false"
-                >Sample text 2</NuxtLink
+                >Спрос и предложение</NuxtLink
               >
               <NuxtLink to="/" class="navmenu-header__item" @click="isMenuOpened = false"
-                >Sample text 3</NuxtLink
+                >Содержанки</NuxtLink
               >
               <NuxtLink to="/" class="navmenu-header__item" @click="isMenuOpened = false"
-                >Sample text 4</NuxtLink
+                >В первый раз?</NuxtLink
               >
             </ul>
           </nav>

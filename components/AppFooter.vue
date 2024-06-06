@@ -12,14 +12,14 @@ import '../assets/scss/components/buttons.scss';
         </a>
         <nav class="footer__navmenu navmenu-footer">
           <ul class="navmenu-footer__list">
-            <NuxtLink to="/" class="navmenu-footer__item">Sample text 1</NuxtLink>
-            <NuxtLink to="/" class="navmenu-footer__item">Sample text 2</NuxtLink>
-            <NuxtLink to="/" class="navmenu-footer__item">Sample text 3</NuxtLink>
-            <NuxtLink to="/" class="navmenu-footer__item">Sample text 4</NuxtLink>
-            <NuxtLink to="/" class="navmenu-footer__item">Sample text 5</NuxtLink>
-            <NuxtLink to="/" class="navmenu-footer__item">Sample text 6</NuxtLink>
-            <NuxtLink to="/" class="navmenu-footer__item">Sample text 7</NuxtLink>
-            <NuxtLink to="/" class="navmenu-footer__item">Sample text 8</NuxtLink>
+            <NuxtLink to="/" class="navmenu-footer__item">Девушки</NuxtLink>
+            <NuxtLink to="/" class="navmenu-footer__item">Мужчины</NuxtLink>
+            <NuxtLink to="/" class="navmenu-footer__item">Спрос и предложение</NuxtLink>
+            <NuxtLink to="/" class="navmenu-footer__item">Содержанки</NuxtLink>
+            <NuxtLink to="/" class="navmenu-footer__item">В первый раз?</NuxtLink>
+            <NuxtLink to="/" class="navmenu-footer__item">Поддержка и Оплата</NuxtLink>
+            <NuxtLink to="/" class="navmenu-footer__item">Terms and Conditions</NuxtLink>
+            <NuxtLink to="/" class="navmenu-footer__item">Privacy Policy</NuxtLink>
           </ul>
         </nav>
       </div>
