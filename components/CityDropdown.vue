@@ -17,19 +17,19 @@ defineProps(["isCityMenuOpened"]);
           <span class="dropdown-city__city-count">(0)</span>
           </li>
           <li class="dropdown-city__item">
-          <span class="dropdown-city__city-name">Вильнюс</span>
+          <span class="dropdown-city__city-name">Каунас</span>
           <span class="dropdown-city__city-count">(0)</span>
           </li>
           <li class="dropdown-city__item">
-          <span class="dropdown-city__city-name">Вильнюс</span>
+          <span class="dropdown-city__city-name">Клайпеда</span>
           <span class="dropdown-city__city-count">(0)</span>
           </li>
           <li class="dropdown-city__item">
-          <span class="dropdown-city__city-name">Вильнюс</span>
+          <span class="dropdown-city__city-name">Шяуляй</span>
           <span class="dropdown-city__city-count">(0)</span>
           </li>
           <li class="dropdown-city__item">
-          <span class="dropdown-city__city-name">Вильнюс</span>
+          <span class="dropdown-city__city-name">Паневежис</span>
           <span class="dropdown-city__city-count">(0)</span>
           </li>
         </ul>
@@ -38,19 +38,19 @@ defineProps(["isCityMenuOpened"]);
         <span class="dropdown-city__text">Латвия</span>
         <ul class="dropdown-city__list">
           <li class="dropdown-city__item">
-          <span class="dropdown-city__city-name">Вильнюс</span>
+          <span class="dropdown-city__city-name">Рига</span>
           <span class="dropdown-city__city-count">(0)</span>
           </li>
           <li class="dropdown-city__item">
-          <span class="dropdown-city__city-name">Вильнюс</span>
+          <span class="dropdown-city__city-name">Юрмала</span>
           <span class="dropdown-city__city-count">(0)</span>
           </li>
           <li class="dropdown-city__item">
-          <span class="dropdown-city__city-name">Вильнюс</span>
+          <span class="dropdown-city__city-name">Даугавпилс</span>
           <span class="dropdown-city__city-count">(0)</span>
           </li>
           <li class="dropdown-city__item">
-          <span class="dropdown-city__city-name">Вильнюс</span>
+          <span class="dropdown-city__city-name">Лиепая</span>
           <span class="dropdown-city__city-count">(0)</span>
           </li>
         </ul>
@@ -59,15 +59,15 @@ defineProps(["isCityMenuOpened"]);
         <span class="dropdown-city__text">Эстония</span>
         <ul class="dropdown-city__list">
           <li class="dropdown-city__item">
-          <span class="dropdown-city__city-name">Вильнюс</span>
+          <span class="dropdown-city__city-name">Таллин</span>
           <span class="dropdown-city__city-count">(0)</span>
           </li>
           <li class="dropdown-city__item">
-          <span class="dropdown-city__city-name">Вильнюс</span>
+          <span class="dropdown-city__city-name">Тарту</span>
           <span class="dropdown-city__city-count">(0)</span>
           </li>
           <li class="dropdown-city__item">
-          <span class="dropdown-city__city-name">Вильнюс</span>
+          <span class="dropdown-city__city-name">Нарва</span>
           <span class="dropdown-city__city-count">(0)</span>
           </li>
         </ul>

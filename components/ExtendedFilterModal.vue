@@ -103,215 +103,216 @@ defineEmits(["setIsFilterModalMenuOpened"]);
           <div class="item-extended-filter__stripe"/>
           <div class="item-extended-filter__forms-container">
             <div class="item-extended-filter__forms">
-            <h5 class="item-extended-filter__subtitle heading_h5">TEST</h5>
+            <h5 class="item-extended-filter__subtitle heading_h5">Секс</h5>
             <div class="item-extended-filter__preferences">
               <input id="item1" type="checkbox" name="available">
-              <label for="item1">test</label>
+              <label for="item1">Секс классический </label>
             </div>
             <div class="item-extended-filter__preferences">
               <input id="item2" type="checkbox" name="available">
-              <label for="item2">test</label>
+              <label for="item2">Секс анальный</label>
             </div>
             <div class="item-extended-filter__preferences">
               <input id="item3" type="checkbox" name="available">
-              <label for="item3">test</label>
+              <label for="item3">Секс групповой</label>
             </div>
             <div class="item-extended-filter__preferences">
               <input id="item4" type="checkbox" name="available">
-              <label for="item4">test</label>
+              <label for="item4">Услуги семейной паре</label>
             </div>
             <div class="item-extended-filter__preferences">
               <input id="item5" type="checkbox" name="available">
-              <label for="item5">test</label>
+              <label for="item5">Минет в презервативе</label>
             </div>
             <div class="item-extended-filter__preferences">
               <input id="item6" type="checkbox" name="available">
-              <label for="item6">test</label>
+              <label for="item6">Минет без резинки</label>
             </div>
             <div class="item-extended-filter__preferences">
               <input id="item7" type="checkbox" name="available">
-              <label for="item7">test</label>
+              <label for="item7">Горловой Минет</label>
             </div>
             <div class="item-extended-filter__preferences">
               <input id="item8" type="checkbox" name="available">
-              <label for="item8">test</label>
+              <label for="item8">Куннилингус</label>
             </div>
             <div class="item-extended-filter__preferences">
               <input id="item9" type="checkbox" name="available">
-              <label for="item9">test</label>
+              <label for="item9">Поцелуи</label>
             </div>
             <div class="item-extended-filter__preferences">
               <input id="item10" type="checkbox" name="available">
-              <label for="item10">test</label>
+              <label for="item10">Окончание на грудь</label>
             </div>
             <div class="item-extended-filter__preferences">
               <input id="item11" type="checkbox" name="available">
-              <label for="item11">test</label>
+              <label for="item11">Окончание на лицо</label>
             </div>
             <div class="item-extended-filter__preferences">
               <input id="item12" type="checkbox" name="available">
-              <label for="item12">test</label>
+              <label for="item12">Окончание в рот</label>
             </div>
             <div class="item-extended-filter__preferences">
               <input id="item13" type="checkbox" name="available">
-              <label for="item13">test</label>
+              <label for="item13">Сквирт</label>
             </div>
             <div class="item-extended-filter__preferences">
               <input id="item14" type="checkbox" name="available">
-              <label for="item14">test</label>
+              <label for="item14">Игрушки</label>
             </div>
-            <h5 class="item-extended-filter__subtitle heading_h5">TEST</h5>
+            <h5 class="item-extended-filter__subtitle heading_h5">Стриптиз</h5>
               <div class="item-extended-filter__preferences">
                 <input id="item15" type="checkbox" name="available">
-                <label for="item15">test</label>
+                <label for="item15">Стриптиз профи
+</label>
               </div>
               <div class="item-extended-filter__preferences">
                 <input id="item16" type="checkbox" name="available">
-                <label for="item16">test</label>
+                <label for="item16">Стриптиз не профи</label>
               </div>
             </div>
             <div class="item-extended-filter__forms">
-              <h5 class="item-extended-filter__subtitle heading_h5">TEST</h5>
+              <h5 class="item-extended-filter__subtitle heading_h5">Массаж</h5>
               <div class="item-extended-filter__preferences">
                 <input id="item17" type="checkbox" name="available">
-                <label for="item17">test</label>
+                <label for="item17">Классический</label>
               </div>
               <div class="item-extended-filter__preferences">
                 <input id="item18" type="checkbox" name="available">
-                <label for="item18">test</label>
+                <label for="item18">Профессиональный</label>
               </div>
               <div class="item-extended-filter__preferences">
                 <input id="item19" type="checkbox" name="available">
-                <label for="item19">test</label>
+                <label for="item19">Урологический</label>
               </div>
               <div class="item-extended-filter__preferences">
                 <input id="item20" type="checkbox" name="available">
-                <label for="item20">test</label>
+                <label for="item20">Эротический</label>
               </div>
               <div class="item-extended-filter__preferences">
                 <input id="item21" type="checkbox" name="available">
-                <label for="item21">test</label>
+                <label for="item21">Лингам</label>
               </div>
               <div class="item-extended-filter__preferences">
                 <input id="item22" type="checkbox" name="available">
-                <label for="item22">test</label>
+                <label for="item22">Карсай</label>
               </div>
               <div class="item-extended-filter__preferences">
                 <input id="item23" type="checkbox" name="available">
-                <label for="item23">test</label>
+                <label for="item23">Массажный стол</label>
               </div>
-              <h5 class="item-extended-filter__subtitle heading_h5">TEST</h5>
+              <h5 class="item-extended-filter__subtitle heading_h5">Экстрим</h5>
               <div class="item-extended-filter__preferences">
                 <input id="item24" type="checkbox" name="available">
-                <label for="item24">test</label>
+                <label for="item24">Страпон</label>
               </div>
               <div class="item-extended-filter__preferences">
                 <input id="item25" type="checkbox" name="available">
-                <label for="item25">test</label>
+                <label for="item25">Анилингус вам</label>
               </div>
               <div class="item-extended-filter__preferences">
                 <input id="item26" type="checkbox" name="available">
-                <label for="item26">test</label>
+                <label for="item26">Анилингус мне</label>
               </div>
               <div class="item-extended-filter__preferences">
                 <input id="item27" type="checkbox" name="available">
-                <label for="item27">test</label>
+                <label for="item27">Золот. дождь выдача</label>
               </div>
               <div class="item-extended-filter__preferences">
                 <input id="item28" type="checkbox" name="available">
-                <label for="item28">test</label>
+                <label for="item28">Золотой дождь прием</label>
               </div>
               <div class="item-extended-filter__preferences">
                 <input id="item29" type="checkbox" name="available">
-                <label for="item29">test</label>
+                <label for="item29">Копро выдача</label>
               </div>
               <div class="item-extended-filter__preferences">
                 <input id="item30" type="checkbox" name="available">
-                <label for="item30">test</label>
+                <label for="item30">Фистинг анальный вам</label>
               </div>
               <div class="item-extended-filter__preferences">
                 <input id="item31" type="checkbox" name="available">
-                <label for="item31">test</label>
+                <label for="item31">Фистинг анальный мне</label>
               </div>
               <div class="item-extended-filter__preferences">
                 <input id="item32" type="checkbox" name="available">
-                <label for="item32">test</label>
+                <label for="item32">Фистинг классический</label>
               </div>
               <div class="item-extended-filter__preferences">
                 <input id="item33" type="checkbox" name="available">
-                <label for="item33">test</label>
+                <label for="item33">Фингеринг</label>
               </div>
             </div>
             <div class="item-extended-filter__forms">
-              <h5 class="item-extended-filter__subtitle heading_h5">TEST</h5>
+              <h5 class="item-extended-filter__subtitle heading_h5">Садо-мазо</h5>
               <div class="item-extended-filter__preferences">
                 <input id="item34" type="checkbox" name="available">
-                <label for="item34">test</label>
+                <label for="item34">Бандаж</label>
               </div>
               <div class="item-extended-filter__preferences">
                 <input id="item35" type="checkbox" name="available">
-                <label for="item35">test</label>
+                <label for="item35">Госпожа</label>
               </div>
               <div class="item-extended-filter__preferences">
                 <input id="item36" type="checkbox" name="available">
-                <label for="item36">test</label>
+                <label for="item36">Игры</label>
               </div>
               <div class="item-extended-filter__preferences">
                 <input id="item37" type="checkbox" name="available">
-                <label for="item37">test</label>
+                <label for="item37">Легкая доминация</label>
               </div>
               <div class="item-extended-filter__preferences">
                 <input id="item38" type="checkbox" name="available">
-                <label for="item38">test</label>
+                <label for="item38">Порка</label>
               </div>
               <div class="item-extended-filter__preferences">
                 <input id="item39" type="checkbox" name="available">
-                <label for="item39">test</label>
+                <label for="item39">Клизма</label>
               </div>
               <div class="item-extended-filter__preferences">
                 <input id="item40" type="checkbox" name="available">
-                <label for="item40">test</label>
+                <label for="item40">Рабыня</label>
               </div>
               <div class="item-extended-filter__preferences">
                 <input id="item41" type="checkbox" name="available">
-                <label for="item41">test</label>
+                <label for="item41">Легкая рабыня</label>
               </div>
               <div class="item-extended-filter__preferences">
                 <input id="item42" type="checkbox" name="available">
-                <label for="item42">test</label>
+                <label for="item42">Фетиш</label>
               </div>
               <div class="item-extended-filter__preferences">
                 <input id="item43" type="checkbox" name="available">
-                <label for="item43">test</label>
+                <label for="item43">Трамплинг</label>
               </div>
               <div class="item-extended-filter__preferences">
                 <input id="item44" type="checkbox" name="available">
-                <label for="item44">test</label>
+                <label for="item44">Боллбастинг</label>
               </div>
               <div class="item-extended-filter__preferences">
                 <input id="item45" type="checkbox" name="available">
-                <label for="item45">test</label>
+                <label for="item45">Феминизация</label>
               </div>
-              <h5 class="item-extended-filter__subtitle heading_h5">TEST</h5>
+              <h5 class="item-extended-filter__subtitle heading_h5">Разное</h5>
               <div class="item-extended-filter__preferences">
                 <input id="item46" type="checkbox" name="available">
-                <label for="item46">test</label>
+                <label for="item46">Ролевые игры</label>
               </div>
               <div class="item-extended-filter__preferences">
                 <input id="item47" type="checkbox" name="available">
-                <label for="item47">test</label>
+                <label for="item47">Фото/видео съемка</label>
               </div>
               <div class="item-extended-filter__preferences">
                 <input id="item48" type="checkbox" name="available">
-                <label for="item48">test</label>
+                <label for="item48">Эскорт</label>
               </div>
               <div class="item-extended-filter__preferences">
                 <input id="item49" type="checkbox" name="available">
-                <label for="item49">test</label>
+                <label for="item49">Виртуальный секс</label>
               </div>
               <div class="item-extended-filter__preferences">
                 <input id="item50" type="checkbox" name="available">
-                <label for="item50">test</label>
+                <label for="item50">Cекс по телефону</label>
               </div>
             </div>
           </div>

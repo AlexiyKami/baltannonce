@@ -15,7 +15,7 @@ const setIsFilterModalMenuOpened = (value) => {
   <main>
     <section class="hero">
       <div class="hero__container _container">
-        <h1 class="hero__title heading_h1">TEST</h1>
+        <h1 class="hero__title heading_h1">Высококлассный Эскорт в странах Прибалтики</h1>
         <div class="hero__filter-btns">
           <div
             class="dropdown-city__btn"
@@ -102,12 +102,12 @@ const setIsFilterModalMenuOpened = (value) => {
                   </div>
                 </div>
                 <div class="card-home__img-container">
-                  <img src="../assets/img/girl01.jpg" alt="photo" />
+                  <img src="../assets/img/girl06.jpg" alt="photo" />
                 </div>
                 <div class="card-home__info">
                   <div class="card-home__row">
                     <h5 class="card-home__name heading_h5">
-                      Имя
+                      Имя Девушки
                       <span class="card-home__yeard-old">24</span>
                     </h5>
                     <h5 class="card-home__price heading_h5">200€</h5>
@@ -199,12 +199,12 @@ const setIsFilterModalMenuOpened = (value) => {
                   </div>
                 </div>
                 <div class="card-home__img-container">
-                  <img src="../assets/img/girl01.jpg" alt="photo" />
+                  <img src="../assets/img/girl02.jpg" alt="photo" />
                 </div>
                 <div class="card-home__info">
                   <div class="card-home__row">
                     <h5 class="card-home__name heading_h5">
-                      Имя
+                      Имя Девушки
                       <span class="card-home__yeard-old">24</span>
                     </h5>
                     <h5 class="card-home__price heading_h5">200€</h5>
@@ -296,12 +296,12 @@ const setIsFilterModalMenuOpened = (value) => {
                   </div>
                 </div>
                 <div class="card-home__img-container">
-                  <img src="../assets/img/girl01.jpg" alt="photo" />
+                  <img src="../assets/img/girl03.jpg" alt="photo" />
                 </div>
                 <div class="card-home__info">
                   <div class="card-home__row">
                     <h5 class="card-home__name heading_h5">
-                      Имя
+                      Имя Девушки
                       <span class="card-home__yeard-old">24</span>
                     </h5>
                     <h5 class="card-home__price heading_h5">200€</h5>
@@ -392,12 +392,12 @@ const setIsFilterModalMenuOpened = (value) => {
                   </div>
                 </div>
                 <div class="card-home__img-container">
-                  <img src="../assets/img/girl01.jpg" alt="photo" />
+                  <img src="../assets/img/girl04.jpg" alt="photo" />
                 </div>
                 <div class="card-home__info">
                   <div class="card-home__row">
                     <h5 class="card-home__name heading_h5">
-                      Имя
+                      Имя Девушки
                       <span class="card-home__yeard-old">24</span>
                     </h5>
                     <h5 class="card-home__price heading_h5">200€</h5>
@@ -488,12 +488,12 @@ const setIsFilterModalMenuOpened = (value) => {
                   </div>
                 </div>
                 <div class="card-home__img-container">
-                  <img src="../assets/img/girl01.jpg" alt="photo" />
+                  <img src="../assets/img/girl05.jpg" alt="photo" />
                 </div>
                 <div class="card-home__info">
                   <div class="card-home__row">
                     <h5 class="card-home__name heading_h5">
-                      Имя
+                      Имя Девушки
                       <span class="card-home__yeard-old">24</span>
                     </h5>
                     <h5 class="card-home__price heading_h5">200€</h5>
@@ -583,12 +583,12 @@ const setIsFilterModalMenuOpened = (value) => {
                   </div>
                 </div>
                 <div class="card-home__img-container">
-                  <img src="../assets/img/girl01.jpg" alt="photo" />
+                  <img src="../assets/img/girl06.jpg" alt="photo" />
                 </div>
                 <div class="card-home__info">
                   <div class="card-home__row">
                     <h5 class="card-home__name heading_h5">
-                      Имя
+                      Имя Девушки
                       <span class="card-home__yeard-old">24</span>
                     </h5>
                     <h5 class="card-home__price heading_h5">200€</h5>
@@ -693,7 +693,7 @@ const setIsFilterModalMenuOpened = (value) => {
                 <div class="card-home__info">
                   <div class="card-home__row">
                     <h5 class="card-home__name heading_h5">
-                      Имя
+                      Имя Девушки
                       <span class="card-home__yeard-old">24</span>
                     </h5>
                     <h5 class="card-home__price heading_h5">200€</h5>
@@ -784,12 +784,12 @@ const setIsFilterModalMenuOpened = (value) => {
                   </div>
                 </div>
                 <div class="card-home__img-container">
-                  <img src="../assets/img/girl01.jpg" alt="photo" />
+                  <img src="../assets/img/girl02.jpg" alt="photo" />
                 </div>
                 <div class="card-home__info">
                   <div class="card-home__row">
                     <h5 class="card-home__name heading_h5">
-                      Имя
+                      Имя Девушки
                       <span class="card-home__yeard-old">24</span>
                     </h5>
                     <h5 class="card-home__price heading_h5">200€</h5>
@@ -881,12 +881,12 @@ const setIsFilterModalMenuOpened = (value) => {
                   </div>
                 </div>
                 <div class="card-home__img-container">
-                  <img src="../assets/img/girl01.jpg" alt="photo" />
+                  <img src="../assets/img/girl03.jpg" alt="photo" />
                 </div>
                 <div class="card-home__info">
                   <div class="card-home__row">
                     <h5 class="card-home__name heading_h5">
-                      Имя
+                      Имя Девушки
                       <span class="card-home__yeard-old">24</span>
                     </h5>
                     <h5 class="card-home__price heading_h5">200€</h5>
@@ -977,12 +977,12 @@ const setIsFilterModalMenuOpened = (value) => {
                   </div>
                 </div>
                 <div class="card-home__img-container">
-                  <img src="../assets/img/girl01.jpg" alt="photo" />
+                  <img src="../assets/img/girl04.jpg" alt="photo" />
                 </div>
                 <div class="card-home__info">
                   <div class="card-home__row">
                     <h5 class="card-home__name heading_h5">
-                      Имя
+                      Имя Девушки
                       <span class="card-home__yeard-old">24</span>
                     </h5>
                     <h5 class="card-home__price heading_h5">200€</h5>
@@ -1073,12 +1073,12 @@ const setIsFilterModalMenuOpened = (value) => {
                   </div>
                 </div>
                 <div class="card-home__img-container">
-                  <img src="../assets/img/girl01.jpg" alt="photo" />
+                  <img src="../assets/img/girl05.jpg" alt="photo" />
                 </div>
                 <div class="card-home__info">
                   <div class="card-home__row">
                     <h5 class="card-home__name heading_h5">
-                      Имя
+                      Имя Девушки
                       <span class="card-home__yeard-old">24</span>
                     </h5>
                     <h5 class="card-home__price heading_h5">200€</h5>
@@ -1180,12 +1180,12 @@ const setIsFilterModalMenuOpened = (value) => {
                   </div>
                 </div>
                 <div class="card-home__img-container">
-                  <img src="../assets/img/girl01.jpg" alt="photo" />
+                  <img src="../assets/img/girl06.jpg" alt="photo" />
                 </div>
                 <div class="card-home__info">
                   <div class="card-home__row">
                     <h5 class="card-home__name heading_h5">
-                      Имя
+                      Имя Девушки
                       <span class="card-home__yeard-old">24</span>
                     </h5>
                     <h5 class="card-home__price heading_h5">200€</h5>
@@ -1282,7 +1282,7 @@ const setIsFilterModalMenuOpened = (value) => {
                 <div class="card-home__info">
                   <div class="card-home__row">
                     <h5 class="card-home__name heading_h5">
-                      Имя
+                      Имя Девушки
                       <span class="card-home__yeard-old">24</span>
                     </h5>
                     <h5 class="card-home__price heading_h5">200€</h5>
@@ -1374,12 +1374,12 @@ const setIsFilterModalMenuOpened = (value) => {
                   </div>
                 </div>
                 <div class="card-home__img-container">
-                  <img src="../assets/img/girl01.jpg" alt="photo" />
+                  <img src="../assets/img/girl02.jpg" alt="photo" />
                 </div>
                 <div class="card-home__info">
                   <div class="card-home__row">
                     <h5 class="card-home__name heading_h5">
-                      Имя
+                      Имя Девушки
                       <span class="card-home__yeard-old">24</span>
                     </h5>
                     <h5 class="card-home__price heading_h5">200€</h5>
@@ -1471,12 +1471,12 @@ const setIsFilterModalMenuOpened = (value) => {
                   </div>
                 </div>
                 <div class="card-home__img-container">
-                  <img src="../assets/img/girl01.jpg" alt="photo" />
+                  <img src="../assets/img/girl03.jpg" alt="photo" />
                 </div>
                 <div class="card-home__info">
                   <div class="card-home__row">
                     <h5 class="card-home__name heading_h5">
-                      Имя
+                      Имя Девушки
                       <span class="card-home__yeard-old">24</span>
                     </h5>
                     <h5 class="card-home__price heading_h5">200€</h5>
@@ -1568,12 +1568,12 @@ const setIsFilterModalMenuOpened = (value) => {
                   </div>
                 </div>
                 <div class="card-home__img-container">
-                  <img src="../assets/img/girl01.jpg" alt="photo" />
+                  <img src="../assets/img/girl04.jpg" alt="photo" />
                 </div>
                 <div class="card-home__info">
                   <div class="card-home__row">
                     <h5 class="card-home__name heading_h5">
-                      Имя
+                      Имя Девушки
                       <span class="card-home__yeard-old">24</span>
                     </h5>
                     <h5 class="card-home__price heading_h5">200€</h5>
@@ -1665,12 +1665,12 @@ const setIsFilterModalMenuOpened = (value) => {
                   </div>
                 </div>
                 <div class="card-home__img-container">
-                  <img src="../assets/img/girl01.jpg" alt="photo" />
+                  <img src="../assets/img/girl05.jpg" alt="photo" />
                 </div>
                 <div class="card-home__info">
                   <div class="card-home__row">
                     <h5 class="card-home__name heading_h5">
-                      Имя
+                      Имя Девушки
                       <span class="card-home__yeard-old">24</span>
                     </h5>
                     <h5 class="card-home__price heading_h5">200€</h5>
