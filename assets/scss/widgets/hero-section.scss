@@ -1,94 +1,55 @@
 @use '../utils' as *;
-
 .hero {
-  @include padding-vertical(60px);
-
+  @include padding-vertical(28px);
+  outline: 1px solid $color-border-secondary;
+  background: $gradient-radial;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
   &__container {
-    @include flex(row);
-    gap: 32px;
+    @include flex(column);
+    
   }
-
-  &__body {
-    flex: 1 1 50%;
-    @include flex(column, center, flex-start);
-    gap: 20px;
-  }
-
   &__title {
+    margin-bottom: 28px;
   }
-
-  &__subtitle {
-    margin-bottom: 20px;
-  }
-
-  &__buttons {
-    @include flex(row, center, center);
-    gap: 12px;
-    & .button_primary {
-      padding: 0 38px;
+  &__filter-btns {
+    @include flex(row, flex-start, center);
+    margin-bottom: 8px;
+    gap: 16px;
+    .button__icon {
+      color: $color-button;
     }
-
-    & .button_outlined {
-      padding: 0 20px;
+  }
+  &__filter-btn {
+    &.active {
+      background-color: $color-surface-primary;
     }
   }
 
-  &__img-wrapper {
-    border-radius: 12px;
-    overflow: hidden;
-    flex: 0 0 50%;
-    height: 522px;
-  }
-  &__img-wrapper > img {
-    object-fit: cover;
+  &__extended-filter-btn {
+
   }
 }
+
 
 @media screen and (max-width: $desktop-sm) {
-  .hero {
-    &__container {
-      flex-direction: column;
-    }
 
-    &__img-wrapper {
-      flex: 0 0 auto;
-    }
-  }
 }
 
 @media screen and (max-width: $tablet) {
   .hero {
-    &__container {
-      flex-direction: column;
+    &__filter-btns {
+      flex-wrap: wrap;
     }
-
-    &__img-wrapper {
-      height: 469px;
-    }
-
-    &__title {
-      font-size: 36px;
-      line-height: 49px;
-    }
-
-    &__subtitle {
-      margin-bottom: 8px;
-    }
-
-    &__body {
-      gap: 12px;
+    &__filter-btn {
+      .button__text {
+        display: none;
+      }
     }
   }
 }
 
-@media screen and (max-width: $tablet) {
-  .hero {
-    &__buttons {
-      @include flex(column, center, flex-start);
-    }
+@media screen and (max-width: $mobile-md) {
 
-    &__img-wrapper {
-      height: 240px;
-    }
-  }
 }

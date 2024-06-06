@@ -1,0 +1,115 @@
+@use '../utils' as *;
+
+.dropdown-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: $color-surface-primary;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 20px;
+  opacity: 0;
+  height: 0;
+  padding: 0 20px;
+  pointer-events: none;
+  transition: opacity .4s, height .3s .3s, margin .0s .3s;
+  &.active {
+    height: 386px;
+    padding: 20px;
+    opacity: 1;
+    pointer-events: all;
+  }
+  &__body {
+    @include flex(row);
+    gap: 24px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 144px;
+  }
+  &__item-price {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__item-number-inputs {
+    display: flex;
+    gap: 8px;
+    align-items: center
+  }
+  &__form {
+    @include flex(column);
+    gap: 8px;
+  }
+  &__title {
+    margin-top: 12px;
+  }
+  &__btns {
+    @include flex(column);
+    gap: 12px;
+  }
+
+  &__other-filters {
+    display: flex;
+    gap:24px;
+    .dropdown-filter__form {
+      gap: 4px;
+      min-width: 144px;
+      & > .dropdown-filter__title {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  &__row-container {
+    display: flex;
+    gap: 24px;
+      .dropdown-filter__item {
+        width: auto;
+      }
+  }
+
+  &__body-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  
+}
+
+@media screen and (max-width:$desktop-md) {
+  .dropdown-filter {
+    &.active {
+      height: 734px;
+    }
+    &__body, &__body-bottom, &__other-filters {
+      flex-wrap: wrap;
+    }
+    &__btns {
+      flex-direction: row;
+    }
+  }
+}
+
+@media screen and (max-width:$tablet) {
+  .dropdown-filter {
+    overflow: scroll;
+    &__body-bottom {
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width:$mobile-md) {
+  .dropdown-filter {
+    &__body-bottom {
+      justify-content: flex-start;
+    }
+    &__btns {
+      flex-direction: column;
+    }
+  }
+}

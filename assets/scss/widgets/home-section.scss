@@ -1,0 +1,227 @@
+@use '../utils' as *;
+
+.home {
+  padding: 20px 0px;
+  margin-top: 32px;
+  &__container {
+    display: flex;
+    gap: 64px;
+  }
+
+  &__heading {
+    @include flex(row, center,center);
+    white-space:nowrap;
+    gap: 8px;
+    margin-bottom: 20px;
+    &::before, &::after {
+      content: '';
+      height: 1px;
+      width: 100%;
+      background-color: $color-border-primary;
+      margin-left: 16px;
+      margin-right: 16px;
+    }
+  }
+
+  &__title {
+  }
+
+  &__title-counter {
+  }
+
+  &__all-cards {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 81%;
+    gap: 56px;
+    background-color: $color-surface-primary;
+    border: 1px solid $color-border-secondary;
+    border-radius: 12px;
+  }
+
+  &__verified-cards, &__coming-soon-cards {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__verified-cards, &__coming-soon-cards, &__random-cards {
+    padding: 20px 0px;
+  }
+
+  &__cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  &__advertisement {
+    flex: 0 0 19%;
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    &-block {
+      @include flex(column, center, center);
+      font-size: 40px;
+      min-width: 280px;
+      min-height: 526px;
+      border-radius: 12px;
+      background-color: $color-surface-highlight;
+    }
+  }
+
+  &__card {
+  }
+}
+.card-home {
+  @include flex(column);
+  @include size(320px, 480px);
+  position: relative;
+  background: $gradient-linear-silver;
+  border: 4px solid silver;
+  border-radius: 12px;
+  &__img-container {
+    overflow: hidden;
+    object-fit: cover;
+    min-height: 380px;
+  }
+
+  &__badges {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__of-the-day {
+    @include flex(row, center, center);
+    width: 100%;
+    height: 42px;
+    background: $gradient-linear-accent;
+    color: white;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+
+  &__tags-container {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    margin-left: 8px;
+  }
+  &__tag_video, &__tag_new {
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+  }
+  &__tag_video {
+    background: $gradient-linear-accent;
+  }
+  &__tag_new {
+    background-color: $color-other-blue;
+  }
+
+  &__info {
+    @include flex(column);
+    gap: 4px;
+    height: 92px;
+    padding: 12px 16px;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background-color: $color-surface-primary;
+  }
+
+  &__row {
+    @include flex(row, space-between, flex-start);
+  }
+
+  &__name {
+  }
+
+  &__yeard-old {
+  }
+
+  &__price {
+  }
+
+  &__location {
+    display: flex;
+    gap: 4px;
+    & > svg {
+      flex: 0 0 16px;
+    }
+  }
+
+  &__location-icon {
+    color: $color-border-icons;
+  }
+
+  &__location-text {
+  }
+
+  &__date {
+    color: $color-text-secondary;
+  }
+
+  &__verified {
+    display: flex;
+    gap: 4px;
+    & > svg {
+      flex: 0 0 16px;
+      color: $color-border-icons;
+    }
+  }
+
+  &__verified-text {
+    color: $color-text-secondary;
+  }
+
+  &__rating {
+    & > svg {
+      color: $color-border-icons;
+    }
+  }
+
+  &__rating-text {
+    color: $color-text-secondary;
+  }
+}
+
+@media screen and (max-width: $desktop-md) {
+  .home {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      gap: 64px;
+    }
+    &__advertisement {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      &-block {
+        flex: 0 1 45%;
+        min-height: auto;
+        height: 197px;
+      }
+    }
+  }
+  
+}
+
+@media screen and (max-width: $mobile-md) {
+  .home {
+    &__cards-container {
+      width: 100%
+    }
+  }
+  .card-home {
+    @include flex(column);
+    @include size(320px, 480px);
+    &__img-container {
+      
+    }
+  }
+}

@@ -109,6 +109,7 @@
 
   .burger-header {
     display: flex;
+    z-index: 1001;
   }
 
   .header__body {
@@ -116,7 +117,7 @@
     background-color: $color-surface-primary;
     position: absolute;
     transition: top 1s ease-in;
-    z-index: 100;
+    z-index: 1000;
     top: -250vh;
     left: 0;
     width: 100vw;

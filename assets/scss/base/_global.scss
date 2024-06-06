@@ -26,7 +26,7 @@
 
 .heading_h5 {
   @include font(16px, 600, 144%);
-  font-family: 'Inter';
+  font-family: 'Manrope', sans-serif;
 }
 
 .heading_h6 {
@@ -59,4 +59,14 @@
 
 .button-small__text {
   @include font(14px, 600, 136%);
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity $transition-hover ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
 }

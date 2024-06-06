@@ -15,6 +15,10 @@
   --color-border-secondary:#E5E7EB;
   --color-border-icons:#9CA3AF;
   --color-border-accent:#BE123C;
+
+  --color-gradient-flags: rgba(255, 255, 255, 0.6);
+  --color-gradient-flags-hover: rgba(255, 255, 255, 0.5);
+  --gradient-radial: radial-gradient(50% 50% at 50% 50%, #F3F4F6 0%, #f3f4f6 100%);
 }
 
 $color-text-primary: var(--color-text-primary);
@@ -33,6 +37,9 @@ $color-other-green:#18A215;
 $color-other-blue:#297CF9;
 $color-other-red:#BE1212;
 
+$color-brand-rose-500:#F43F5E;
+$color-brand-rose-600:#BE123C;
+
 $color-button:var(--color-button);
 
 $color-border-invert:var(--color-border-invert);
@@ -46,8 +53,9 @@ $gradient-linear-gold: linear-gradient(90.74deg, #D0AF5B 0%, #FFE5B3 63.9%, #B69
 $gradient-linear-accent: linear-gradient(90.74deg, #881337 0%, #be123c 49%, #881337 100%);
 $gradient-linear-bronze: linear-gradient(155.68deg, #B17938 1.15%, #FEE6CA 47.11%, #AD6C21 100%);
 $gradient-linear-variants: linear-gradient(270deg, #320b38 0%, #320b38 50%, #ffffff 50%, #ffffff 100%);
-$gradient-radial: radial-gradient(50% 50% at 50% 50%, #BE123C 0%, #320B38 100%);
-
+$gradient-radial: var(--gradient-radial);
+$color-gradient-flags: var(--color-gradient-flags);
+$color-gradient-flags-hover: var(--color-gradient-flags-hover);
 
 $desktop-md: 1440px;
 $desktop-sm: 1024px;
