@@ -1,7 +1,7 @@
 @use '../utils' as *;
 
 .footer {
-  background-color: $color-surface-invert;
+  background-color: $color-surface-highlight;
   &__container {
     @include flex(column);
     @include padding-vertical(40px);
@@ -21,7 +21,7 @@
   }
 
   &__navmenu {
-    color: $color-text-invert;
+    color: $color-text-primary;
     width: 100%;
   }
 
