@@ -1,0 +1,57 @@
+@use '../utils' as *;
+
+.dropdown {
+  width: 124px;
+  position: relative;
+  &.wide {
+    width: 100%;
+    max-width: 340px;
+  }
+  &.narrow {
+    width: 98px;
+  }
+  &__btn {
+    @include flex(row, space-between, center);
+    padding: 10px 12px;
+    outline: 1px solid $color-border-primary;
+    border-radius: 4px;
+    color: $color-text-secondary;
+    cursor: pointer;
+  }
+
+  &__chevron {
+    color: $color-border-icons;
+    transition: transform $transition-hover ease-in;
+    &.active {
+      transform: rotateZ(-180deg);
+    }
+  }
+
+  &__body {
+    position: absolute;
+    top: calc(100% + 8px);
+    width: 100%;
+    @include flex(column, center, flex-start);
+    opacity: 0;
+    transition: opacity .5s;
+    pointer-events: none;
+    background-color: $color-surface-primary;
+    outline: 1px solid $color-border-primary;
+    border-radius: 4px;
+
+    &.active {
+      z-index: 3;
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+  &__item {
+    cursor: pointer;
+    width: 100%;
+    background-color: $color-surface-secondary;
+    padding: 10px 12px;
+    &:hover {
+      background-color: $color-surface-primary;
+    }
+  }
+}
