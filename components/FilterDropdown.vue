@@ -245,13 +245,13 @@ defineProps(["isFilterMenuOpened"]);
           <h5 class="dropdown-filter__title heading_h5">Способ связи:</h5>
           <div class="dropdown-filter__row-container">
             <div class="dropdown-filter__item">
-            <input type="checkbox" name="contacts" id="telegram">
-            <label for="telegram">Telegram</label>
-          </div>
-          <div class="dropdown-filter__item">
-            <input type="checkbox" name="contacts" id="whatsapp">
-            <label for="whatsapp">Whatsapp</label>
-          </div>
+              <input type="checkbox" name="contacts" id="telegram">
+              <label for="telegram">Telegram</label>
+            </div>
+            <div class="dropdown-filter__item">
+              <input type="checkbox" name="contacts" id="whatsapp">
+              <label for="whatsapp">Whatsapp</label>
+            </div>
           </div>
         </form>
         <form class="dropdown-filter__form dropdown-filter__verified">
