@@ -6,21 +6,21 @@ defineEmits(["setIsFilterModalMenuOpened"]);
 </script>
 
 <template>
-  <div class="modal-menu" v-if="isFilterModalMenuOpened">
-    <div class="modal-overlay" @click="$emit('setIsFilterModalMenuOpened', false)"></div>
+  <div v-if="isFilterModalMenuOpened" class="modal-menu">
+    <div class="modal-overlay" @click="$emit('setIsFilterModalMenuOpened', false)"/>
     <div class="extended-filter">
     <h2 class="extended-filter__title heading_h2">Поиск анкет по параметрам</h2>
     <div class="extended-filter__containers">
       <div class="extended-filter__container">
         <div class="extended-filter__item item-extended-filter">
           <h4 class="item-extended-filter__title">Основные параметры</h4>
-          <div class="item-extended-filter__stripe"></div>
+          <div class="item-extended-filter__stripe"/>
           <form class="item-extended-filter__form wrap">
             <label class="heading_h6" for="">Возраст:</label>
             <div class="item-extended-filter__row">
-              <input type="number" name="years-old" id="years-old" class="medium" min="0" placeholder="----">
+              <input id="years-old" type="number" name="years-old" class="medium" min="0" placeholder="----">
               <span>-</span>
-              <input type="number" name="years-old" id="years-old" class="medium" min="0" placeholder="----">
+              <input id="years-old" type="number" name="years-old" class="medium" min="0" placeholder="----">
               <span class="item-extended-filter__unit">лет</span>
             </div>
             
@@ -28,71 +28,71 @@ defineEmits(["setIsFilterModalMenuOpened"]);
           <form class="item-extended-filter__form wrap">
             <label class="heading_h6" for="">Рост:</label>
             <div class="item-extended-filter__row">
-              <input type="number" name="height" id="height" class="medium" min="0" placeholder="----">
+              <input id="height" type="number" name="height" class="medium" min="0" placeholder="----">
               <span>-</span>
-              <input type="number" name="height" id="height" class="medium" min="0" placeholder="----">
+              <input id="height" type="number" name="height" class="medium" min="0" placeholder="----">
               <span class="item-extended-filter__unit">см</span>
             </div>
           </form>
           <form class="item-extended-filter__form wrap">
             <label class="heading_h6" for="">Вес:</label>
             <div class="item-extended-filter__row">
-              <input type="number" name="weight" id="weight" class="medium" min="0" placeholder="----">
+              <input id="weight" type="number" name="weight" class="medium" min="0" placeholder="----">
               <span>-</span>
-              <input type="number" name="weight" id="weight" class="medium" min="0" placeholder="----">
+              <input id="weight" type="number" name="weight" class="medium" min="0" placeholder="----">
               <span class="item-extended-filter__unit">кг</span>
             </div>
           </form>
         </div>
         <div class="extended-filter__item item-extended-filter">
           <h4 class="item-extended-filter__title">Расценки</h4>
-          <div class="item-extended-filter__stripe"></div>
+          <div class="item-extended-filter__stripe"/>
           <form class="item-extended-filter__form wrap">
             <label class="heading_h6" for="">1 час:</label>
             <div class="item-extended-filter__row">
-              <input type="number" name="1hour" id="1hour" class="medium" min="0" placeholder="----">
+              <input id="1hour" type="number" name="1hour" class="medium" min="0" placeholder="----">
               <span>-</span>
-              <input type="number" name="1hour" id="1hour" class="medium" min="0" placeholder="----">
+              <input id="1hour" type="number" name="1hour" class="medium" min="0" placeholder="----">
             </div>
           </form>
           <form class="item-extended-filter__form wrap">
             <label class="heading_h6" for="">2 часа:</label>
             <div class="item-extended-filter__row">
-              <input type="number" name="2hour" id="2hour" class="medium" min="0" placeholder="----">
+              <input id="2hour" type="number" name="2hour" class="medium" min="0" placeholder="----">
               <span>-</span>
-              <input type="number" name="2hour" id="2hour" class="medium" min="0" placeholder="----">
+              <input id="2hour" type="number" name="2hour" class="medium" min="0" placeholder="----">
             </div>
           </form>
           <form class="item-extended-filter__form wrap">
             <label class="heading_h6" for="">Ночь:</label>
             <div class="item-extended-filter__row">
-              <input type="number" name="night" id="night" class="medium" min="0" placeholder="----">
+              <input id="night" type="number" name="night" class="medium" min="0" placeholder="----">
               <span>-</span>
-              <input type="number" name="night" id="night" class="medium" min="0" placeholder="----">
+              <input id="night" type="number" name="night" class="medium" min="0" placeholder="----">
             </div>
           </form>
         </div>
         <div class="extended-filter__item item-extended-filter">
           <h4 class="item-extended-filter__title">Место встречи</h4>
-          <div class="item-extended-filter__stripe"></div>
+          <div class="item-extended-filter__stripe"/>
           <div class="item-extended-filter__form">
-            <input type="checkbox" name="available" id="incall-aa">
+            <input id="incall-aa" type="checkbox" name="available">
             <label for="incall-aa">Апартаменты Incall</label>
           </div>
           <div class="item-extended-filter__form">
-            <input type="checkbox" name="available" id="incall-hh">
+            <input id="incall-hh" type="checkbox" name="available">
             <label for="incall-hh">Отель Incall</label>
           </div>
           <div class="item-extended-filter__form">
-            <input type="checkbox" name="available" id="outcall-aa">
+            <input id="outcall-aa" type="checkbox" name="available">
             <label for="outcall-aa">Апартаменты Outcall</label>
           </div>
           <div class="item-extended-filter__form">
-            <input type="checkbox" name="available" id="outcall-hh">
+            <input id="outcall-hh" type="checkbox" name="available">
             <label for="outcall-hh">Отель Outcall</label>
           </div>
           <div class="item-extended-filter__form">
-            <input type="checkbox" name="available" id="invite">
+            <input id="invite" type="checkbox" name="available">
             <label for="invite">Путешествия по приглашению</label>
           </div>
         </div>
@@ -100,217 +100,217 @@ defineEmits(["setIsFilterModalMenuOpened"]);
       <div class="extended-filter__container extended-filter__container-preferences">
         <div class="extended-filter__item item-extended-filter">
           <h4 class="item-extended-filter__title">Предпочтения</h4>
-          <div class="item-extended-filter__stripe"></div>
+          <div class="item-extended-filter__stripe"/>
           <div class="item-extended-filter__forms-container">
             <div class="item-extended-filter__forms">
             <h5 class="item-extended-filter__subtitle heading_h5">TEST</h5>
             <div class="item-extended-filter__preferences">
-              <input type="checkbox" name="available" id="item1">
+              <input id="item1" type="checkbox" name="available">
               <label for="item1">test</label>
             </div>
             <div class="item-extended-filter__preferences">
-              <input type="checkbox" name="available" id="item2">
+              <input id="item2" type="checkbox" name="available">
               <label for="item2">test</label>
             </div>
             <div class="item-extended-filter__preferences">
-              <input type="checkbox" name="available" id="item3">
+              <input id="item3" type="checkbox" name="available">
               <label for="item3">test</label>
             </div>
             <div class="item-extended-filter__preferences">
-              <input type="checkbox" name="available" id="item4">
+              <input id="item4" type="checkbox" name="available">
               <label for="item4">test</label>
             </div>
             <div class="item-extended-filter__preferences">
-              <input type="checkbox" name="available" id="item5">
+              <input id="item5" type="checkbox" name="available">
               <label for="item5">test</label>
             </div>
             <div class="item-extended-filter__preferences">
-              <input type="checkbox" name="available" id="item6">
+              <input id="item6" type="checkbox" name="available">
               <label for="item6">test</label>
             </div>
             <div class="item-extended-filter__preferences">
-              <input type="checkbox" name="available" id="item7">
+              <input id="item7" type="checkbox" name="available">
               <label for="item7">test</label>
             </div>
             <div class="item-extended-filter__preferences">
-              <input type="checkbox" name="available" id="item8">
+              <input id="item8" type="checkbox" name="available">
               <label for="item8">test</label>
             </div>
             <div class="item-extended-filter__preferences">
-              <input type="checkbox" name="available" id="item9">
+              <input id="item9" type="checkbox" name="available">
               <label for="item9">test</label>
             </div>
             <div class="item-extended-filter__preferences">
-              <input type="checkbox" name="available" id="item10">
+              <input id="item10" type="checkbox" name="available">
               <label for="item10">test</label>
             </div>
             <div class="item-extended-filter__preferences">
-              <input type="checkbox" name="available" id="item11">
+              <input id="item11" type="checkbox" name="available">
               <label for="item11">test</label>
             </div>
             <div class="item-extended-filter__preferences">
-              <input type="checkbox" name="available" id="item12">
+              <input id="item12" type="checkbox" name="available">
               <label for="item12">test</label>
             </div>
             <div class="item-extended-filter__preferences">
-              <input type="checkbox" name="available" id="item13">
+              <input id="item13" type="checkbox" name="available">
               <label for="item13">test</label>
             </div>
             <div class="item-extended-filter__preferences">
-              <input type="checkbox" name="available" id="item14">
+              <input id="item14" type="checkbox" name="available">
               <label for="item14">test</label>
             </div>
             <h5 class="item-extended-filter__subtitle heading_h5">TEST</h5>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item15">
+                <input id="item15" type="checkbox" name="available">
                 <label for="item15">test</label>
               </div>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item16">
+                <input id="item16" type="checkbox" name="available">
                 <label for="item16">test</label>
               </div>
             </div>
             <div class="item-extended-filter__forms">
               <h5 class="item-extended-filter__subtitle heading_h5">TEST</h5>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item17">
+                <input id="item17" type="checkbox" name="available">
                 <label for="item17">test</label>
               </div>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item18">
+                <input id="item18" type="checkbox" name="available">
                 <label for="item18">test</label>
               </div>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item19">
+                <input id="item19" type="checkbox" name="available">
                 <label for="item19">test</label>
               </div>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item20">
+                <input id="item20" type="checkbox" name="available">
                 <label for="item20">test</label>
               </div>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item21">
+                <input id="item21" type="checkbox" name="available">
                 <label for="item21">test</label>
               </div>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item22">
+                <input id="item22" type="checkbox" name="available">
                 <label for="item22">test</label>
               </div>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item23">
+                <input id="item23" type="checkbox" name="available">
                 <label for="item23">test</label>
               </div>
               <h5 class="item-extended-filter__subtitle heading_h5">TEST</h5>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item24">
+                <input id="item24" type="checkbox" name="available">
                 <label for="item24">test</label>
               </div>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item25">
+                <input id="item25" type="checkbox" name="available">
                 <label for="item25">test</label>
               </div>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item26">
+                <input id="item26" type="checkbox" name="available">
                 <label for="item26">test</label>
               </div>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item27">
+                <input id="item27" type="checkbox" name="available">
                 <label for="item27">test</label>
               </div>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item28">
+                <input id="item28" type="checkbox" name="available">
                 <label for="item28">test</label>
               </div>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item29">
+                <input id="item29" type="checkbox" name="available">
                 <label for="item29">test</label>
               </div>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item30">
+                <input id="item30" type="checkbox" name="available">
                 <label for="item30">test</label>
               </div>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item31">
+                <input id="item31" type="checkbox" name="available">
                 <label for="item31">test</label>
               </div>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item32">
+                <input id="item32" type="checkbox" name="available">
                 <label for="item32">test</label>
               </div>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item33">
+                <input id="item33" type="checkbox" name="available">
                 <label for="item33">test</label>
               </div>
             </div>
             <div class="item-extended-filter__forms">
               <h5 class="item-extended-filter__subtitle heading_h5">TEST</h5>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item34">
+                <input id="item34" type="checkbox" name="available">
                 <label for="item34">test</label>
               </div>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item35">
+                <input id="item35" type="checkbox" name="available">
                 <label for="item35">test</label>
               </div>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item36">
+                <input id="item36" type="checkbox" name="available">
                 <label for="item36">test</label>
               </div>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item37">
+                <input id="item37" type="checkbox" name="available">
                 <label for="item37">test</label>
               </div>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item38">
+                <input id="item38" type="checkbox" name="available">
                 <label for="item38">test</label>
               </div>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item39">
+                <input id="item39" type="checkbox" name="available">
                 <label for="item39">test</label>
               </div>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item40">
+                <input id="item40" type="checkbox" name="available">
                 <label for="item40">test</label>
               </div>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item41">
+                <input id="item41" type="checkbox" name="available">
                 <label for="item41">test</label>
               </div>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item42">
+                <input id="item42" type="checkbox" name="available">
                 <label for="item42">test</label>
               </div>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item43">
+                <input id="item43" type="checkbox" name="available">
                 <label for="item43">test</label>
               </div>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item44">
+                <input id="item44" type="checkbox" name="available">
                 <label for="item44">test</label>
               </div>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item45">
+                <input id="item45" type="checkbox" name="available">
                 <label for="item45">test</label>
               </div>
               <h5 class="item-extended-filter__subtitle heading_h5">TEST</h5>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item46">
+                <input id="item46" type="checkbox" name="available">
                 <label for="item46">test</label>
               </div>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item47">
+                <input id="item47" type="checkbox" name="available">
                 <label for="item47">test</label>
               </div>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item48">
+                <input id="item48" type="checkbox" name="available">
                 <label for="item48">test</label>
               </div>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item49">
+                <input id="item49" type="checkbox" name="available">
                 <label for="item49">test</label>
               </div>
               <div class="item-extended-filter__preferences">
-                <input type="checkbox" name="available" id="item50">
+                <input id="item50" type="checkbox" name="available">
                 <label for="item50">test</label>
               </div>
             </div>
@@ -320,7 +320,7 @@ defineEmits(["setIsFilterModalMenuOpened"]);
       <div class="extended-filter__container extended-filter__container-reviews">
         <div class="extended-filter__item item-extended-filter">
           <h4 class="item-extended-filter__title">Отзывы и оценки</h4>
-          <div class="item-extended-filter__stripe"></div>
+          <div class="item-extended-filter__stripe"/>
           <div class="item-extended-filter__forms-container">
             <div class="item-extended-filter__forms">
               <div class="item-extended-filter__reviews">
@@ -348,7 +348,7 @@ defineEmits(["setIsFilterModalMenuOpened"]);
       <div class="extended-filter__container extended-filter__container-additional">
         <div class="extended-filter__item item-extended-filter">
           <h4 class="item-extended-filter__title">Дополнительные параметры</h4>
-          <div class="item-extended-filter__stripe"></div>
+          <div class="item-extended-filter__stripe"/>
           <div class="item-extended-filter__forms-container">
             <div class="item-extended-filter__forms">
               <div class="item-extended-filter__additional">
@@ -371,18 +371,18 @@ defineEmits(["setIsFilterModalMenuOpened"]);
               </div>
               <div class="item-extended-filter__additional">
                 <label class="heading_h6" for="">Принимает в возрасте от:</label>
-                <input type="number" name="" id="" class="medium" min="0" placeholder="----">
+                <input id="" type="number" name="" class="medium" min="0" placeholder="----">
                 <span>-</span>
-                <input type="number" name="" id="" class="medium" min="0" placeholder="----">
+                <input id="" type="number" name="" class="medium" min="0" placeholder="----">
               </div>
               <div class="item-extended-filter__additional">
                 <label class="heading_h6" for="">Способ связи:</label>
                 <div class="item-extended-filter__row">
-                  <input type="checkbox" name="contacts" id="telegramm">
+                  <input id="telegramm" type="checkbox" name="contacts">
                   <label for="telegramm">Telegram</label>
                 </div>
                 <div class="item-extended-filter__row">
-                  <input type="checkbox" name="contacts" id="whatsappp">
+                  <input id="whatsappp" type="checkbox" name="contacts">
                   <label for="whatsappp">Whatsapp</label>
                 </div>
               </div>
@@ -394,19 +394,19 @@ defineEmits(["setIsFilterModalMenuOpened"]);
                 <Dropdown>-</Dropdown>
               </div>
               <div class="item-extended-filter__row">
-                  <input type="checkbox" name="" id="questionary-video">
+                  <input id="questionary-video" type="checkbox" name="">
                   <label for="questionary-video">Анкеты с видео</label>
                 </div>
                 <div class="item-extended-filter__row">
-                  <input type="checkbox" name="" id="smoking1">
+                  <input id="smoking1" type="checkbox" name="">
                   <label for="smoking1">Курит</label>
                 </div>
                 <div class="item-extended-filter__row">
-                  <input type="checkbox" name="" id="drinking">
+                  <input id="drinking" type="checkbox" name="">
                   <label for="drinking">Пьет алкоголь</label>
                 </div>
                 <div class="item-extended-filter__row">
-                  <input type="checkbox" name="" id="friends">
+                  <input id="friends" type="checkbox" name="">
                   <label for="friends">Подружки</label>
                 </div>
             </div>
@@ -416,29 +416,29 @@ defineEmits(["setIsFilterModalMenuOpened"]);
       <div class="extended-filter__container extended-filter__container-appearance">
         <div class="extended-filter__item item-extended-filter">
           <h4 class="item-extended-filter__title">Внешность</h4>
-          <div class="item-extended-filter__stripe"></div>
+          <div class="item-extended-filter__stripe"/>
           <div class="item-extended-filter__forms-container">
             <div class="item-extended-filter__forms item-extended-filter__forms-appearance">
               <div class="item-extended-filter__appearance wrap">
                 <label class="heading_h6" for="">Цвет волос:</label>
                 <div class="item-extended-filter__row">
-                  <input type="checkbox" name="haircolor" id="blonde2">
+                  <input id="blonde2" type="checkbox" name="haircolor">
                   <label for="blonde2">Блондинка</label>
                 </div>
                 <div class="item-extended-filter__row">
-                  <input type="checkbox" name="haircolor" id="brown2">
+                  <input id="brown2" type="checkbox" name="haircolor">
                   <label for="brown2">Шатенка</label>
                 </div>
                 <div class="item-extended-filter__row">
-                  <input type="checkbox" name="haircolor" id="brunette2">
+                  <input id="brunette2" type="checkbox" name="haircolor">
                   <label for="brunette2">Брюнетка</label>
                 </div>
                 <div class="item-extended-filter__row">
-                  <input type="checkbox" name="haircolor" id="light-brown2">
+                  <input id="light-brown2" type="checkbox" name="haircolor">
                   <label for="light-brown2">Русая</label>
                 </div>
                 <div class="item-extended-filter__row">
-                  <input type="checkbox" name="haircolor" id="red2">
+                  <input id="red2" type="checkbox" name="haircolor">
                   <label for="red2">Рыжая</label>
                 </div>
               </div>
@@ -448,27 +448,27 @@ defineEmits(["setIsFilterModalMenuOpened"]);
                   <div class="item-extended-filter__column">
                   <span>Грудь:</span>
                   <div class="item-extended-filter__row">
-                    <input type="number" name="" id="" class="small" min="0" placeholder="----">
+                    <input id="" type="number" name="" class="small" min="0" placeholder="----">
                     <span>-</span>
-                    <input type="number" name="" id="" class="small" min="0" placeholder="----">
+                    <input id="" type="number" name="" class="small" min="0" placeholder="----">
                     <span class="item-extended-filter__unit">см</span>
                   </div>
                 </div>
                 <div class="item-extended-filter__column">
                   <span>Талия:</span>
                   <div class="item-extended-filter__row">
-                    <input type="number" name="" id="" class="small" min="0" placeholder="----">
+                    <input id="" type="number" name="" class="small" min="0" placeholder="----">
                     <span>-</span>
-                    <input type="number" name="" id="" class="small" min="0" placeholder="----">
+                    <input id="" type="number" name="" class="small" min="0" placeholder="----">
                     <span class="item-extended-filter__unit">см</span>
                   </div>
                 </div>
                 <div class="item-extended-filter__column">
                   <span>Ягодицы:</span>
                   <div class="item-extended-filter__row">
-                    <input type="number" name="" id="" class="small" min="0" placeholder="----">
+                    <input id="" type="number" name="" class="small" min="0" placeholder="----">
                     <span>-</span>
-                    <input type="number" name="" id="" class="small" min="0" placeholder="----">
+                    <input id="" type="number" name="" class="small" min="0" placeholder="----">
                     <span class="item-extended-filter__unit">см</span>
                   </div>
                 </div>
@@ -481,18 +481,18 @@ defineEmits(["setIsFilterModalMenuOpened"]);
                   <div class="item-extended-filter__column">
                     <span>Размер:</span>
                     <div class="item-extended-filter__row">
-                      <input type="number" name="" id="" class="small" min="0" placeholder="----">
+                      <input id="" type="number" name="" class="small" min="0" placeholder="----">
                       <span>-</span>
-                      <input type="number" name="" id="" class="small" min="0" placeholder="----">
+                      <input id="" type="number" name="" class="small" min="0" placeholder="----">
                       <span class="item-extended-filter__unit">A-G или 1-6</span>
                     </div>
                   </div>
                   <div class="item-extended-filter__column">
                     <span>Тип:</span>
                     <div class="item-extended-filter__row">
-                      <input type="checkbox" name="breast-type" id="breast-type-n">
+                      <input id="breast-type-n" type="checkbox" name="breast-type">
                       <label for="breast-type-n">Натуральная</label>
-                      <input type="checkbox" name="breast-type" id="breast-type-a">
+                      <input id="breast-type-a" type="checkbox" name="breast-type">
                       <label for="breast-type-a">Искусственная</label>
                     </div>
                   </div>
@@ -502,15 +502,15 @@ defineEmits(["setIsFilterModalMenuOpened"]);
               <div class="item-extended-filter__appearance wrap">
                 <label class="heading_h6" for="">Интимная стрижка:</label>
                 <div class="item-extended-filter__row">
-                  <input type="checkbox" name="" id="intimate-haircut-f">
+                  <input id="intimate-haircut-f" type="checkbox" name="">
                   <label for="intimate-haircut-f">Полная депиляция</label>
                 </div>
                 <div class="item-extended-filter__row">
-                  <input type="checkbox" name="" id="intimate-haircut-c">
+                  <input id="intimate-haircut-c" type="checkbox" name="">
                   <label for="intimate-haircut-c">Аккуратная стрижка</label>
                 </div>
                 <div class="item-extended-filter__row">
-                  <input type="checkbox" name="" id="intimate-haircut-n">
+                  <input id="intimate-haircut-n" type="checkbox" name="">
                   <label for="intimate-haircut-n">Натуральная</label>
                 </div>
               </div>
@@ -518,43 +518,43 @@ defineEmits(["setIsFilterModalMenuOpened"]);
                 <label class="heading_h6 heading__align-self_start" for="">Тату:</label>
                 <div class="item-extended-filter__column">
                   <div class="item-extended-filter__row">
-                    <input type="checkbox" name="" id="tattoo-y">
+                    <input id="tattoo-y" type="checkbox" name="">
                     <label for="tattoo-y">Да</label>
-                    <input type="checkbox" name="" id="tattoo-n">
+                    <input id="tattoo-n" type="checkbox" name="">
                     <label for="tattoo-n">Нет</label>
                   </div>
                   <div class="item-extended-filter__row  item-extended-filter__tattoo">
                     <span>Места на теле:</span>
                     <div class="item-extended-filter__row">
-                      <input type="checkbox" name="" id="tattoo-face">
+                      <input id="tattoo-face" type="checkbox" name="">
                       <label for="tattoo-face">Лицо</label>
                     </div>
                     <div class="item-extended-filter__row">
-                      <input type="checkbox" name="" id="tattoo-hand">
+                      <input id="tattoo-hand" type="checkbox" name="">
                       <label for="tattoo-hand">Руки</label>
                     </div>
                     <div class="item-extended-filter__row">
-                      <input type="checkbox" name="" id="tattoo-leg">
+                      <input id="tattoo-leg" type="checkbox" name="">
                       <label for="tattoo-leg">Ноги</label>
                     </div>
                     <div class="item-extended-filter__row">
-                      <input type="checkbox" name="" id="tattoo-groin">
+                      <input id="tattoo-groin" type="checkbox" name="">
                       <label for="tattoo-groin">Пах</label>
                     </div>
                     <div class="item-extended-filter__row">
-                      <input type="checkbox" name="" id="tattoo-spine">
+                      <input id="tattoo-spine" type="checkbox" name="">
                       <label for="tattoo-spine">Спина</label>
                     </div>
                     <div class="item-extended-filter__row">
-                      <input type="checkbox" name="" id="tattoo-hip">
+                      <input id="tattoo-hip" type="checkbox" name="">
                       <label for="tattoo-hip">Бедра</label>
                     </div>
                     <div class="item-extended-filter__row">
-                      <input type="checkbox" name="" id="tattoo-stomach">
+                      <input id="tattoo-stomach" type="checkbox" name="">
                       <label for="tattoo-stomach">Живот</label>
                     </div>
                     <div class="item-extended-filter__row">
-                      <input type="checkbox" name="" id="tattoo-breast">
+                      <input id="tattoo-breast" type="checkbox" name="">
                       <label for="tattoo-breast">Грудь</label>
                     </div>
                     
@@ -566,43 +566,43 @@ defineEmits(["setIsFilterModalMenuOpened"]);
                 <label class="heading_h6 heading__align-self_start" for="">Пирсинг:</label>
                 <div class="item-extended-filter__column">
                   <div class="item-extended-filter__row">
-                    <input type="checkbox" name="" id="piercing-y">
+                    <input id="piercing-y" type="checkbox" name="">
                     <label for="piercing-y">Да</label>
-                    <input type="checkbox" name="" id="piercing-n">
+                    <input id="piercing-n" type="checkbox" name="">
                     <label for="piercing-n">Нет</label>
                   </div>
                   <div class="item-extended-filter__row item-extended-filter__piercing">
                     <span>Места на теле:</span>
                     <div class="item-extended-filter__row">
-                      <input type="checkbox" name="" id="piercing-face">
+                      <input id="piercing-face" type="checkbox" name="">
                       <label for="piercing-face">Лицо</label>
                     </div>
                     <div class="item-extended-filter__row">
-                      <input type="checkbox" name="" id="piercing-hand">
+                      <input id="piercing-hand" type="checkbox" name="">
                       <label for="piercing-hand">Руки</label>
                     </div>
                     <div class="item-extended-filter__row">
-                      <input type="checkbox" name="" id="piercing-leg">
+                      <input id="piercing-leg" type="checkbox" name="">
                       <label for="piercing-leg">Ноги</label>
                     </div>
                     <div class="item-extended-filter__row">
-                      <input type="checkbox" name="" id="piercing-groin">
+                      <input id="piercing-groin" type="checkbox" name="">
                       <label for="piercing-groin">Пах</label>
                     </div>
                     <div class="item-extended-filter__row">
-                      <input type="checkbox" name="" id="piercing-spine">
+                      <input id="piercing-spine" type="checkbox" name="">
                       <label for="piercing-spine">Спина</label>
                     </div>
                     <div class="item-extended-filter__row">
-                      <input type="checkbox" name="" id="piercing-hip">
+                      <input id="piercing-hip" type="checkbox" name="">
                       <label for="piercing-hip">Бедра</label>
                     </div>
                     <div class="item-extended-filter__row">
-                      <input type="checkbox" name="" id="piercing-stomach">
+                      <input id="piercing-stomach" type="checkbox" name="">
                       <label for="piercing-stomach">Живот</label>
                     </div>
                     <div class="item-extended-filter__row">
-                      <input type="checkbox" name="" id="piercing-breast">
+                      <input id="piercing-breast" type="checkbox" name="">
                       <label for="piercing-breast">Грудь</label>
                     </div>
                   </div>
@@ -612,23 +612,23 @@ defineEmits(["setIsFilterModalMenuOpened"]);
               <div class="item-extended-filter__appearance wrap">
                 <label class="heading_h6" for="">Раса:</label>
                 <div class="item-extended-filter__row">
-                  <input type="checkbox" name="" id="race-white">
+                  <input id="race-white" type="checkbox" name="">
                   <label for="race-white">Белая</label>
                 </div>
                 <div class="item-extended-filter__row">
-                  <input type="checkbox" name="" id="race-latin">
+                  <input id="race-latin" type="checkbox" name="">
                   <label for="race-latin">Латинская</label>
                 </div>
                 <div class="item-extended-filter__row">
-                  <input type="checkbox" name="" id="race-negro">
+                  <input id="race-negro" type="checkbox" name="">
                   <label for="race-negro">Черная</label>
                 </div>
                 <div class="item-extended-filter__row">
-                  <input type="checkbox" name="" id="race-asian">
+                  <input id="race-asian" type="checkbox" name="">
                   <label for="race-asian">Азиатка</label>
                 </div>
                 <div class="item-extended-filter__row">
-                  <input type="checkbox" name="" id="race-exotic">
+                  <input id="race-exotic" type="checkbox" name="">
                   <label for="race-exotic">Экзотическая</label>
                 </div>
               </div>
@@ -640,55 +640,55 @@ defineEmits(["setIsFilterModalMenuOpened"]);
                 <label class="heading_h6 heading__align-self_start" for="">Языки:</label>
                 <div class="item-extended-filter__row item-extended-filter__languages">
                     <div class="item-extended-filter__row">
-                      <input type="checkbox" name="" id="language-ru">
+                      <input id="language-ru" type="checkbox" name="">
                       <label for="language-ru">Русский</label>
                     </div>
                     <div class="item-extended-filter__row">
-                      <input type="checkbox" name="" id="language-en">
+                      <input id="language-en" type="checkbox" name="">
                       <label for="language-en">Английский</label>
                     </div>
                     <div class="item-extended-filter__row">
-                      <input type="checkbox" name="" id="language-lt">
+                      <input id="language-lt" type="checkbox" name="">
                       <label for="language-lt">Литовский</label>
                     </div>
                     <div class="item-extended-filter__row">
-                      <input type="checkbox" name="" id="language-lv">
+                      <input id="language-lv" type="checkbox" name="">
                       <label for="language-lv">Латвийский</label>
                     </div>
                     <div class="item-extended-filter__row">
-                      <input type="checkbox" name="" id="language-ee">
+                      <input id="language-ee" type="checkbox" name="">
                       <label for="language-ee">Эстонский</label>
                     </div>
                     <div class="item-extended-filter__row">
-                      <input type="checkbox" name="" id="language-es">
+                      <input id="language-es" type="checkbox" name="">
                       <label for="language-es">Испанский</label>
                     </div>
                   <div class="item-extended-filter__row">
-                    <input type="checkbox" name="" id="language-pt">
+                    <input id="language-pt" type="checkbox" name="">
                     <label for="language-pt">Португальский</label>
                   </div>
                   <div class="item-extended-filter__row">
-                    <input type="checkbox" name="" id="language-de">
+                    <input id="language-de" type="checkbox" name="">
                     <label for="language-de">Немецкий</label>
                   </div>
                   <div class="item-extended-filter__row">
-                    <input type="checkbox" name="" id="language-pl">
+                    <input id="language-pl" type="checkbox" name="">
                     <label for="language-pl">Польский</label>
                   </div>
                   <div class="item-extended-filter__row">
-                    <input type="checkbox" name="" id="language-fi">
+                    <input id="language-fi" type="checkbox" name="">
                     <label for="language-fi">Финский</label>
                   </div>
                   <div class="item-extended-filter__row">
-                    <input type="checkbox" name="" id="language-sw">
+                    <input id="language-sw" type="checkbox" name="">
                     <label for="language-sw">Шведский</label>
                   </div>
                   <div class="item-extended-filter__row">
-                    <input type="checkbox" name="" id="language-it">
+                    <input id="language-it" type="checkbox" name="">
                     <label for="language-it">Итальянский</label>
                   </div>
                   <div class="item-extended-filter__row">
-                    <input type="checkbox" name="" id="language-fr">
+                    <input id="language-fr" type="checkbox" name="">
                     <label for="language-fr">Французский</label>
                   </div>
                 </div>
@@ -696,7 +696,7 @@ defineEmits(["setIsFilterModalMenuOpened"]);
             </div>
           </div>
           <div class="item-extended-filter__has-passport">
-            <input type="checkbox" name="" id="has-passport">
+            <input id="has-passport" type="checkbox" name="">
             <label for="has-passport">Есть паспорт для путешествий</label>
           </div>
         </div>
@@ -704,22 +704,22 @@ defineEmits(["setIsFilterModalMenuOpened"]);
       <div class="extended-filter__container extended-filter__container-fetish">
         <div class="extended-filter__item item-extended-filter">
           <h4 class="item-extended-filter__title">Фетишизм</h4>
-          <div class="item-extended-filter__stripe"></div>
+          <div class="item-extended-filter__stripe"/>
           <div class="item-extended-filter__forms-container">
             <div class="item-extended-filter__forms item-extended-filter__forms-fetish">
               <div class="item-extended-filter__fetish">
                 <div class="item-extended-filter__row">
                   <label class="heading_h6" for="">Размер одежды:</label>
-                  <input type="number" name="" id="" class="medium" min="0" placeholder="----">
+                  <input id="" type="number" name="" class="medium" min="0" placeholder="----">
                   <span>-</span>
-                  <input type="number" name="" id="" class="medium" min="0" placeholder="----">
+                  <input id="" type="number" name="" class="medium" min="0" placeholder="----">
                   <span class="item-extended-filter__unit">см</span>
                 </div>
                 <div class="item-extended-filter__row">
                   <label class="heading_h6" for="">Размер обуви:</label>
-                  <input type="number" name="" id="" class="medium" min="0" placeholder="----">
+                  <input id="" type="number" name="" class="medium" min="0" placeholder="----">
                   <span>-</span>
-                  <input type="number" name="" id="" class="medium" min="0" placeholder="----">
+                  <input id="" type="number" name="" class="medium" min="0" placeholder="----">
                   <span class="item-extended-filter__unit">см</span>
                 </div>
               </div>
@@ -730,63 +730,63 @@ defineEmits(["setIsFilterModalMenuOpened"]);
       <div class="extended-filter__container extended-filter__container-location">
         <div class="extended-filter__item item-extended-filter">
           <h4 class="item-extended-filter__title">Расположение</h4>
-          <div class="item-extended-filter__stripe"></div>
+          <div class="item-extended-filter__stripe"/>
           <div class="item-extended-filter__forms-container">
             <div class="item-extended-filter__forms item-extended-filter__forms-location">
               <div class="item-extended-filter__location">
                 <label class="heading_h6" for="">Литва:</label>
                 <div class="item-extended-filter__row">
-                  <input type="checkbox" name="" id="vilnus">
+                  <input id="vilnus" type="checkbox" name="">
                   <label for="vilnus">Вильнюс</label>
                 </div>
                 <div class="item-extended-filter__row">
-                  <input type="checkbox" name="" id="kaunas">
+                  <input id="kaunas" type="checkbox" name="">
                   <label for="kaunas">Каунас</label>
                 </div>
                 <div class="item-extended-filter__row">
-                  <input type="checkbox" name="" id="klaipeda">
+                  <input id="klaipeda" type="checkbox" name="">
                   <label for="klaipeda">Клайпеда</label>
                 </div>
                 <div class="item-extended-filter__row">
-                  <input type="checkbox" name="" id="shaulai">
+                  <input id="shaulai" type="checkbox" name="">
                   <label for="shaulai">Шяуляй</label>
                 </div>
                 <div class="item-extended-filter__row">
-                  <input type="checkbox" name="" id="panevezis">
+                  <input id="panevezis" type="checkbox" name="">
                   <label for="panevezis">Паневежис</label>
                 </div>
               </div>
               <div class="item-extended-filter__location">
                 <label class="heading_h6" for="">Латвия:</label>
                 <div class="item-extended-filter__row">
-                  <input type="checkbox" name="" id="riga">
+                  <input id="riga" type="checkbox" name="">
                   <label for="riga">Рига</label>
                 </div>
                 <div class="item-extended-filter__row">
-                  <input type="checkbox" name="" id="urmala">
+                  <input id="urmala" type="checkbox" name="">
                   <label for="urmala">Юрмала</label>
                 </div>
                 <div class="item-extended-filter__row">
-                  <input type="checkbox" name="" id="daugavpils">
+                  <input id="daugavpils" type="checkbox" name="">
                   <label for="daugavpils">Даугавпилс</label>
                 </div>
                 <div class="item-extended-filter__row">
-                  <input type="checkbox" name="" id="liepaia">
+                  <input id="liepaia" type="checkbox" name="">
                   <label for="liepaia">Лиепая</label>
                 </div>
               </div>
               <div class="item-extended-filter__location">
                 <label class="heading_h6" for="">Эстония:</label>
                 <div class="item-extended-filter__row">
-                  <input type="checkbox" name="" id="tallin">
+                  <input id="tallin" type="checkbox" name="">
                   <label for="tallin">Таллин</label>
                 </div>
                 <div class="item-extended-filter__row">
-                  <input type="checkbox" name="" id="tartu">
+                  <input id="tartu" type="checkbox" name="">
                   <label for="tartu">Тарту</label>
                 </div>
                 <div class="item-extended-filter__row">
-                  <input type="checkbox" name="" id="narva">
+                  <input id="narva" type="checkbox" name="">
                   <label for="narva">Нарва</label>
                 </div>
               </div>
@@ -797,9 +797,9 @@ defineEmits(["setIsFilterModalMenuOpened"]);
       <div class="extended-filter__container extended-filter__container-appearance">
         <div class="extended-filter__item item-extended-filter">
           <h4 class="item-extended-filter__title">Спрос и Предложение</h4>
-          <div class="item-extended-filter__stripe"></div>
+          <div class="item-extended-filter__stripe"/>
           <div class="item-extended-filter__create-questionary">
-              <input type="checkbox" name="" id="create-questionary">
+              <input id="create-questionary" type="checkbox" name="">
               <label for="create-questionary">Создать как анкету в Спросе</label>
             </div>
         </div>

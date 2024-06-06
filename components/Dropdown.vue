@@ -7,7 +7,7 @@ const isDropdownMenuOpened = ref(false);
 <template>
   <div class="dropdown">
     <div class="dropdown__btn" @click="isDropdownMenuOpened = !isDropdownMenuOpened">
-      <span class="dropdown__text button__text"><slot></slot></span>
+      <span class="dropdown__text button__text"><slot/></span>
       <svg
         width="24"
         height="24"
