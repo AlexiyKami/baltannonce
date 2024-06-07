@@ -8,22 +8,29 @@ input[type="checkbox"] {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  transition: border-color $transition-hover;
   min-width: 1.25rem;
   min-height: 1.25rem;
-  border: 0.0625rem solid $color-border-primary;
+  @include flex(row, center, center);
   padding: 0.5625rem;
+  border: 0.0625rem solid $color-border-primary;
   border-radius: 0.25rem;
-  transition: border-color $transition-hover;
-
-  &:hover {
-    border: 0.0625rem solid $color-border-accent;
-  }
 
   &:checked {
-    -webkit-appearance: auto;
-    -moz-appearance: auto;
-    appearance: auto;
-    accent-color: $color-button;
+    background-size: cover;
+    padding: 2px;
+  }
+
+  &:not(:disabled):checked {
+    background-color: $color-button;
+    background-image: url(../../assets/icons/checkbox.svg);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:not(:checked):hover {
+    border: 0.0625rem solid $color-border-accent;
   }
 }
 
@@ -33,6 +40,7 @@ input[type="radio"] {
   appearance: none;
   border: 0.0625rem solid $color-border-primary;
   padding: 0.5625rem;
+  position: relative;
   border-radius: 50%;
   transition: border-color $transition-hover;
 
@@ -51,12 +59,13 @@ input[type="radio"] {
 }
 
 input[type="number"] {
-  outline: 0.0625rem solid $color-border-primary;
+  box-shadow: 0 0 0 0.0625rem $color-border-primary;
   background-color: transparent;
   border-radius: 0.25rem;
   min-height: 2.25rem;
   color: $color-text-primary;
   padding: 0.5rem 0.75rem;
+  transition: box-shadow $transition-hover;
 
   &::-webkit-outer-spin-button,
   &::-webkit-inner-spin-button {
@@ -75,14 +84,17 @@ input[type="number"] {
   &.medium {
     width: 6.125rem;
   }
+
   &:hover {
-    outline-color: $color-border-accent;
+    box-shadow: 0 0 0 0.0625rem $color-border-accent;
   }
+
   &:focus {
-    outline: 0.125rem solid $color-border-accent;
+    box-shadow: 0 0 0 0.125rem $color-border-accent;
   }
+
   &:disabled {
-    outline-color: $color-border-primary;
+    box-shadow: 0 0 0 0.0625rem $color-border-primary;
     background-color: $color-surface-highlight;
   }
 }
