@@ -16,22 +16,28 @@
   &__btn {
     @include flex(row, space-between, center);
     padding: 0.625rem 0.75rem;
-    outline: 0.0625rem solid $color-border-primary;
     border-radius: 0.25rem;
+    box-shadow: 0 0 0 0.0625rem $color-border-primary;
     color: $color-text-secondary;
+    transition: box-shadow $transition-hover;
     cursor: pointer;
+
     &:hover {
-      outline-color: $color-border-accent;
+      box-shadow: 0 0 0 0.0625rem $color-border-accent;
     }
+
     &.active {
-      outline: 0.125rem solid $color-border-accent;
+      box-shadow: 0 0 0 0.125rem $color-border-accent;
     }
-    &[disabled], &:disabled {
+
+    &[disabled],
+    &:disabled {
       cursor: auto;
       pointer-events: none;
-      outline-color: $color-border-primary;
+      box-shadow: 0 0 0 0.0625rem $color-border-primary;
       background-color: $color-surface-highlight;
     }
+
     &:disabled &__chevron {
       color: $color-border-primary;
     }
