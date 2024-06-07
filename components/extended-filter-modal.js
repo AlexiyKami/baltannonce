@@ -319,7 +319,7 @@ extendedFilterModal.innerHTML = `
         <div class="item-extended-filter__forms">
           <div class="item-extended-filter__reviews">
             <label class="heading_h6" for="">Отзывов, не менее:</label>
-            <div class="dropdown"></div>
+            <div class="dropdown">-</div>
           </div>
           <div class="item-extended-filter__reviews">
             <label class="heading_h6" for="">С оценками пользователей:</label>
@@ -329,11 +329,11 @@ extendedFilterModal.innerHTML = `
         <div class="item-extended-filter__forms">
           <div class="item-extended-filter__reviews">
             <label class="heading_h6" for="">Оценок, не менее:</label>
-            <Dropdown>-</Dropdown>
+            <div class="dropdown">-</div>
           </div>
           <div class="item-extended-filter__reviews">
             <label class="heading_h6" for="">С новыми отзывами за последние:</label>
-            <Dropdown>-</Dropdown>
+            <div class="dropdown">-</div>
           </div>
         </div>
       </div>
@@ -347,21 +347,21 @@ extendedFilterModal.innerHTML = `
         <div class="item-extended-filter__forms">
           <div class="item-extended-filter__additional">
             <label class="heading_h6" for="">Новые за:</label>
-            <Dropdown>-</Dropdown>
+            <div class="dropdown">-</div>
           </div>
           <div class="item-extended-filter__additional">
             <label class="heading_h6" for="">Сортировать по верификации</label>
-            <Dropdown class="wide">Не выбрано</Dropdown>
+            <div class="dropdown wide">Не выбрано</div>
           </div>
           <div class="item-extended-filter__additional">
             <label class="heading_h6" for="">Сортировать по разделу</label>
-            <Dropdown class="wide">Не выбрано</Dropdown>
+            <div class="dropdown wide">Не выбрано</div>
           </div>
           <div class="item-extended-filter__additional">
             <label class="heading_h6" for="">Часы работы:</label>
-            <Dropdown class="narrow">-</Dropdown>
+            <div class="dropdown narrow">-</div>
             <span>-</span>
-            <Dropdown class="narrow">-</Dropdown>
+            <div class="dropdown narrow">-</div>
           </div>
           <div class="item-extended-filter__additional">
             <label class="heading_h6" for="">Принимает в возрасте от:</label>
@@ -385,7 +385,7 @@ extendedFilterModal.innerHTML = `
         <div class="item-extended-filter__forms">
           <div class="item-extended-filter__additional">
             <label class="heading_h6" for="">Анкет с уникальным номером телефона:</label>
-            <Dropdown>-</Dropdown>
+            <div class="dropdown">-</div>
           </div>
           <div class="item-extended-filter__row">
               <input id="questionary-video" type="checkbox" name="">
