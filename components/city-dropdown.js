@@ -6,23 +6,23 @@ dropdownCity.innerHTML = `
   <span class="dropdown-city__text">Литва</span>
   <ul class="dropdown-city__list">
     <li class="dropdown-city__item">
-    <span class="dropdown-city__city-name">Вильнюс</span>
+    <p class="dropdown-city__city-name">Вильнюс</p>
     <span class="dropdown-city__city-count">(0)</span>
     </li>
     <li class="dropdown-city__item">
-    <span class="dropdown-city__city-name">Каунас</span>
+    <p class="dropdown-city__city-name">Каунас</p>
     <span class="dropdown-city__city-count">(0)</span>
     </li>
     <li class="dropdown-city__item">
-    <span class="dropdown-city__city-name">Клайпеда</span>
+    <p class="dropdown-city__city-name">Клайпеда</p>
     <span class="dropdown-city__city-count">(0)</span>
     </li>
     <li class="dropdown-city__item">
-    <span class="dropdown-city__city-name">Шяуляй</span>
+    <p class="dropdown-city__city-name">Шяуляй</p>
     <span class="dropdown-city__city-count">(0)</span>
     </li>
     <li class="dropdown-city__item">
-    <span class="dropdown-city__city-name">Паневежис</span>
+    <p class="dropdown-city__city-name">Паневежис</p>
     <span class="dropdown-city__city-count">(0)</span>
     </li>
   </ul>
@@ -31,19 +31,19 @@ dropdownCity.innerHTML = `
   <span class="dropdown-city__text">Латвия</span>
   <ul class="dropdown-city__list">
     <li class="dropdown-city__item">
-    <span class="dropdown-city__city-name">Рига</span>
+    <p class="dropdown-city__city-name">Рига</p>
     <span class="dropdown-city__city-count">(0)</span>
     </li>
     <li class="dropdown-city__item">
-    <span class="dropdown-city__city-name">Юрмала</span>
+    <p class="dropdown-city__city-name">Юрмала</p>
     <span class="dropdown-city__city-count">(0)</span>
     </li>
     <li class="dropdown-city__item">
-    <span class="dropdown-city__city-name">Даугавпилс</span>
+    <p class="dropdown-city__city-name">Даугавпилс</p>
     <span class="dropdown-city__city-count">(0)</span>
     </li>
     <li class="dropdown-city__item">
-    <span class="dropdown-city__city-name">Лиепая</span>
+    <p class="dropdown-city__city-name">Лиепая</p>
     <span class="dropdown-city__city-count">(0)</span>
     </li>
   </ul>
@@ -52,18 +52,23 @@ dropdownCity.innerHTML = `
   <span class="dropdown-city__text">Эстония</span>
   <ul class="dropdown-city__list">
     <li class="dropdown-city__item">
-    <span class="dropdown-city__city-name">Таллин</span>
+    <p class="dropdown-city__city-name">Таллин</p>
     <span class="dropdown-city__city-count">(0)</span>
     </li>
     <li class="dropdown-city__item">
-    <span class="dropdown-city__city-name">Тарту</span>
+    <p class="dropdown-city__city-name">Тарту</p>
     <span class="dropdown-city__city-count">(0)</span>
     </li>
     <li class="dropdown-city__item">
-    <span class="dropdown-city__city-name">Нарва</span>
+    <p class="dropdown-city__city-name">Нарва</p>
     <span class="dropdown-city__city-count">(0)</span>
     </li>
   </ul>
 </div>
 </div>
 `
+document.querySelectorAll('.dropdown-city__item').forEach((item) => {
+  item.addEventListener('click', () => {
+    item.classList.toggle('active');
+  })
+});
