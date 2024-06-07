@@ -1,7 +1,7 @@
 @use '../utils' as *;
 
 .footer {
-  background-color: $color-surface-highlight;
+  background-color: $color-footer-background;
 
   &__container {
     @include flex(column);
@@ -23,7 +23,7 @@
   }
 
   &__navmenu {
-    color: $color-text-primary;
+    color: white;
     width: 100%;
   }
 

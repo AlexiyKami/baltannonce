@@ -78,6 +78,7 @@ textarea {
   --color-surface-secondary: #F9FAFB;
   --color-surface-highlight: #F3F4F6;
   --color-surface-invert: #111827;
+  --color-footer-background: #111827;
   --color-button: #BE123C;
   --color-border-invert: #FFFFFF;
   --color-border-primary: #D1D5DB;
@@ -253,6 +254,7 @@ body.darkmode {
   --color-surface-secondary: #320B38;
   --color-surface-highlight: #521849;
   --color-surface-invert: #FFFFFF;
+  --color-footer-background:#521849;
   --color-button: #F43F5E;
   --color-border-invert: #320B38;
   --color-border-primary: #7E3A73;
@@ -666,13 +668,13 @@ body.darkmode {
 .item-extended-filter__form label {
   min-width: 4.375rem;
 }
-.item-extended-filter__form.wrap {
-  flex-wrap: wrap;
-}
 .item-extended-filter__preferences, .item-extended-filter__reviews, .item-extended-filter__additional, .item-extended-filter__appearance, .item-extended-filter__fetish, .item-extended-filter__location {
   display: flex;
   gap: 0.5rem;
   align-items: center;
+}
+.item-extended-filter__fetish {
+  align-items: stretch;
 }
 .item-extended-filter__reviews .heading_h6, .item-extended-filter__additional .heading_h6, .item-extended-filter__appearance .heading_h6, .item-extended-filter__fetish .heading_h6, .item-extended-filter__location .heading_h6 {
   min-width: 9rem;
@@ -782,9 +784,6 @@ body.darkmode {
   .item-extended-filter__fetish {
     flex-direction: column;
   }
-  .item-extended-filter__location {
-    flex-wrap: wrap;
-  }
 }
 @media screen and (max-width: 26.875rem) {
   .item-extended-filter__piercing, .item-extended-filter__tattoo, .item-extended-filter__additional, .item-extended-filter__appearance, .item-extended-filter__fetish, .item-extended-filter__location, .item-extended-filter__languages {
@@ -793,6 +792,9 @@ body.darkmode {
   }
   .item-extended-filter__piercing .heading_h6, .item-extended-filter__tattoo .heading_h6, .item-extended-filter__additional .heading_h6, .item-extended-filter__appearance .heading_h6, .item-extended-filter__fetish .heading_h6, .item-extended-filter__location .heading_h6, .item-extended-filter__languages .heading_h6 {
     text-align: left;
+  }
+  .item-extended-filter__form.wrap {
+    flex-wrap: wrap;
   }
 }
 .dropdown-filter {
@@ -1318,7 +1320,7 @@ input[type=number]:disabled {
   }
 }
 .footer {
-  background-color: var(--color-surface-highlight);
+  background-color: var(--color-footer-background);
 }
 .footer__container {
   display: flex;
@@ -1344,7 +1346,7 @@ input[type=number]:disabled {
      object-fit: contain;
 }
 .footer__navmenu {
-  color: var(--color-text-primary);
+  color: white;
   width: 100%;
 }
 .footer__line {
