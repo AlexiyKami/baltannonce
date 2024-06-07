@@ -308,7 +308,7 @@ body.darkmode {
 .button_outlined {
   outline: 0.0625rem solid var(--color-border-accent);
   color: var(--color-button);
-  transition: outline 0s;
+  transition: outline 0.3s;
 }
 .button_outlined:hover {
   outline-width: 0.125rem;
@@ -1576,6 +1576,7 @@ input[type=number]:disabled {
   border: 0.25rem solid silver;
   border-radius: 0.75rem;
   overflow: hidden;
+  transition: transform 0.3s;
 }
 .card-home__img-container {
   overflow: hidden;
@@ -1583,8 +1584,16 @@ input[type=number]:disabled {
      object-fit: cover;
   min-height: 23.75rem;
 }
+.card-home__img-container > img {
+  transform: scale(1);
+  transition: transform 0.3s;
+}
+.card-home__img-container > img:hover {
+  transform: scale(1.1);
+}
 .card-home__badges {
   position: absolute;
+  z-index: 4;
   width: 100%;
   display: flex;
   flex-direction: column;
