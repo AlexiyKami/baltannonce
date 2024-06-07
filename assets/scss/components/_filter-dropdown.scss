@@ -18,7 +18,7 @@
   &.active {
     transition: opacity .4s .3s, max-height .6s, height .6s, margin .1s .2s;
     height: 100%;
-    max-height: 2400px;
+    max-height: 150rem;
     opacity: 1;
     pointer-events: all;
   }
