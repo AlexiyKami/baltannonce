@@ -8,6 +8,9 @@
   z-index: 10001;
   @include size(100%);
   @include flex(column, center, center);
+  &.closed {
+    display: none;
+  }
 }
 
 .modal-overlay {

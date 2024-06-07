@@ -1,10 +1,10 @@
+import './components/extended-filter-modal.js'
+import './components/city-dropdown.js'
+import './components/filter-dropdown.js'
+import './components/dropdown.js'
 import './components/header.js'
 import './components/footer.js'
-import './components/city-dropdown.js'
-import './components/extended-filter-modal.js'
-import './components/dropdown.js'
 import './components/lang-dropdown.js'
-import './components/filter-dropdown.js'
 import './components/theme-switch.js'
 
 const isCityMenuOpened = true;
@@ -27,8 +27,11 @@ const toggleDarkMode = () => {
 };
 
 const headerBurger = document.querySelector('.burger-header');
+
 const headerBody = document.querySelector('.header__body');
 const navmenuHeaderItem = document.querySelector('.navmenu-header__item');
+
+console.log(headerBurger, headerBody);
 
 headerBurger.addEventListener('click', () => {
   headerBurger.classList.toggle('active');

@@ -555,6 +555,9 @@ body.darkmode {
   justify-content: center;
   align-items: center;
 }
+.modal-menu.closed {
+  display: none;
+}
 
 .modal-overlay {
   position: absolute;
@@ -878,6 +881,7 @@ body.darkmode {
 label {
   -webkit-user-select: none;
      -moz-user-select: none;
+      -ms-user-select: none;
           user-select: none;
 }
 
@@ -934,6 +938,9 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
   margin: 0;
 }
 input[type=number]::-moz-placeholder {
+  color: var(--color-text-secondary);
+}
+input[type=number]:-ms-input-placeholder {
   color: var(--color-text-secondary);
 }
 input[type=number]::placeholder {

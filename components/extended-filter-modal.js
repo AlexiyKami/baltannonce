@@ -319,7 +319,7 @@ extendedFilterModal.innerHTML = `
         <div class="item-extended-filter__forms">
           <div class="item-extended-filter__reviews">
             <label class="heading_h6" for="">Отзывов, не менее:</label>
-            <Dropdown>-</Dropdown>
+            <div class="dropdown"></div>
           </div>
           <div class="item-extended-filter__reviews">
             <label class="heading_h6" for="">С оценками пользователей:</label>
