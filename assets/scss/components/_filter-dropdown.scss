@@ -13,10 +13,10 @@
   max-height: 0rem;
   margin-top: 0.5rem;
   pointer-events: none;
-  transition: opacity .4s, max-height .3s .3s, height .3s .3s, margin .0s .3s;
+  transition: opacity .3s, max-height .3s, height .3s;
 
   &.active {
-    transition: opacity .4s .3s, max-height .6s, height .6s, margin .1s .2s;
+    transition: opacity .3s .2s, max-height .7s, height .7s;
     height: 100%;
     max-height: 150rem;
     opacity: 1;
