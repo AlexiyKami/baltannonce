@@ -115,7 +115,7 @@
   visibility: hidden;
   opacity: 0;
   transition: opacity $transition-hover;
-  
+
   &__heading {
     display: flex;
     min-height: 48px;
@@ -123,18 +123,18 @@
     align-items: center;
     border-bottom: 1px solid $color-border-primary;
   }
+
   &.active {
     visibility: visible;
     transition: opacity $transition-hover;
     opacity: 1;
   }
-  &__title {
 
-  }
   &__cross {
     color: $color-border-icons;
-    cursor: pointer; 
+    cursor: pointer;
   }
+
   &__list {
     margin-top: 12px;
     display: flex;
@@ -143,11 +143,13 @@
     gap: 10px;
     height: 86px;
   }
+
   &__item {
     display: flex;
     align-items: center;
     gap: 8px;
   }
+
   &__btns {
     display: flex;
     gap: 8px;
@@ -157,6 +159,7 @@
 
 @media screen and (max-width:$desktop-md) {
   .dropdown-filter {
+
     &__body,
     &__body-bottom,
     &__other-filters {

@@ -407,6 +407,7 @@ body.darkmode {
   max-height: 0rem;
   padding: 0 1.25rem;
   margin-top: 0.5rem;
+  overflow: hidden;
   transition: opacity 0.3s, max-height 0.3s, height 0.3s;
   pointer-events: none;
   gap: 0.5rem;

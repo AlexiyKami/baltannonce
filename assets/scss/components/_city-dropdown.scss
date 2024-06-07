@@ -46,6 +46,7 @@
     max-height: 0rem;
     padding: 0 1.25rem;
     margin-top: 0.5rem;
+    overflow: hidden;
     transition: opacity .3s, max-height .3s, height .3s;
     pointer-events: none;
     gap: 0.5rem;
