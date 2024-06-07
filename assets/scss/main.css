@@ -927,6 +927,9 @@ body.darkmode {
   border-radius: 8px;
   border: 1px solid var(--color-border-primary);
   padding: 12px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 .popup-dropdown-filter__heading {
   display: flex;
@@ -934,6 +937,11 @@ body.darkmode {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid var(--color-border-primary);
+}
+.popup-dropdown-filter.active {
+  visibility: visible;
+  transition: opacity 0.3s;
+  opacity: 1;
 }
 .popup-dropdown-filter__cross {
   color: var(--color-border-icons);
