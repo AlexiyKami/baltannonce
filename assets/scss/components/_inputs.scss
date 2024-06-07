@@ -13,6 +13,7 @@ input[type="checkbox"] {
   border: 0.0625rem solid $color-border-primary;
   padding: 0.5625rem;
   border-radius: 0.25rem;
+  transition: border-color $transition-hover;
 
   &:hover {
     border: 0.0625rem solid $color-border-accent;
@@ -33,6 +34,7 @@ input[type="radio"] {
   border: 0.0625rem solid $color-border-primary;
   padding: 0.5625rem;
   border-radius: 50%;
+  transition: border-color $transition-hover;
 
   &:hover {
     border: 0.0625rem solid $color-border-accent;

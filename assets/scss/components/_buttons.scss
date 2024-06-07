@@ -23,11 +23,10 @@
 .button_secondary {
   background-color: $color-surface-highlight;
   color: $color-button;
-  outline: 0.0625rem solid $color-surface-highlight;
+  transition: box-shadow $transition-hover;
 
   &:hover {
-    background-color: $color-surface-secondary;
-    outline: 0.0625rem solid $color-border-accent;
+    box-shadow: 0 0 0 0.0625rem $color-border-accent;
   }
 }
 
@@ -37,44 +36,12 @@
 }
 
 .button_outlined {
-  outline: 0.0625rem solid $color-border-accent;
   color: $color-button;
-  transition: outline $transition-hover;
+  box-shadow: 0 0 0 0.0625rem $color-border-accent;
+  transition: box-shadow $transition-hover;
 
   &:hover {
-    outline-width: 0.125rem;
-  }
-}
-
-.button_icon-button-primary {
-  color: $color-surface-invert;
-  &:hover {
-    color: $color-button;
-  }
-  &[disabled], &:disabled {
-    color: $color-border-icons;
-  }
-}
-
-.button_icon-button-secondary {
-  color: $color-border-icons;
-  &:hover {
-    color: $color-surface-invert;
-  }
-  &[disabled], &:disabled {
-    color: $color-border-icons;
-  }
-}
-
-.button_icon-button-colored {
-  color: $color-button;
-  &:hover {
-    color: $color-button;
-    background-color: $color-surface-primary;
-  }
-  &.active {
-    color: $color-button;
-    background-color: $color-surface-primary;
+    box-shadow: 0 0 0 0.125rem $color-border-accent;
   }
 }
 
