@@ -5,60 +5,60 @@
 }
 
 .heading_h1 {
-  @include font(40px, 700, 137%);
+  @include font(2.5rem, 700, 137%);
   font-family: 'Manrope', sans-serif;
 }
 
 .heading_h2 {
-  @include font(24px, 600, 136%);
+  @include font(1.5rem, 600, 136%);
   font-family: 'Manrope', sans-serif;
 }
 
 .heading_h3 {
-  @include font(20px, 700, 136%);
+  @include font(1.25rem, 700, 136%);
   font-family: 'Manrope', sans-serif;
 }
 
 .heading_h4 {
-  @include font(18px, 600, 144%);
+  @include font(1.125rem, 600, 144%);
   font-family: 'Manrope', sans-serif;
 }
 
 .heading_h5 {
-  @include font(16px, 600, 144%);
+  @include font(1rem, 600, 144%);
   font-family: 'Manrope', sans-serif;
 }
 
 .heading_h6 {
-  @include font(14px, 700, 143%);
+  @include font(0.875rem, 700, 143%);
   font-family: 'Manrope', sans-serif;
 }
 
 .body-text_1 {
-  @include font(16px, 400, 144%);
+  @include font(1rem, 400, 144%);
   font-family: 'Inter';
 }
 
 .body-text_2 {
-  @include font(14px, 400, 143%);
+  @include font(0.875rem, 400, 143%);
   font-family: 'Manrope', sans-serif;
 }
 
 .body-text_3 {
-  @include font(12px, 400, 133%);
+  @include font(0.75rem, 400, 133%);
   font-family: 'Manrope', sans-serif;
 }
 
 .other-text {
-  @include font(11px, 600, 136%);
+  @include font(0.6875rem, 600, 136%);
 }
 
 .button__text {
-  @include font(16px, 600, 137%);
+  @include font(1rem, 600, 137%);
 }
 
 .button-small__text {
-  @include font(14px, 600, 136%);
+  @include font(0.875rem, 600, 136%);
 }
 
 .v-enter-active,

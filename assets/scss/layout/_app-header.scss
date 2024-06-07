@@ -5,41 +5,39 @@
   position: relative;
   &__container {
     @include flex(row, space-between, center);
-    @include padding-vertical(12px);
-    min-height: 54px;
+    @include padding-vertical(0.75rem);
+    min-height: 4rem;
   }
 
   &__content {
     width: 100%;
     @include flex(row, space-between, center);
-    gap: 48px;
+    gap: 3rem;
   }
 
   &__logo {
-    flex: 0 0 160px;
+    flex: 0 0 10rem;
     z-index: 101;
   }
 
   &__body {
     @include flex(row, space-between, center);
-    gap: 32px;
+    gap: 2rem;
   }
 
   &__buttons {
     @include flex(row, flex-start, center);
-    gap: 12px;
+    gap: 0.75rem;
   }
 
   &__login-btns {
     @include flex(row, flex-start, flex-start);
-    gap: 8px;
+    gap: 0.5rem;
 
     &__button {
       text-wrap: nowrap;
     }
   }
-
-  
 
   &__navmenu {
     position: relative;
@@ -50,8 +48,8 @@
 .navmenu-header {
   &__list {
     @include flex(row, space-between, center);
-    gap: 32px;
-    font-size: 16px;
+    gap: 2rem;
+    font-size: 1rem;
   }
 }
 
@@ -65,13 +63,14 @@
 .burger-header {
   @include flex(column, center, center);
   display: none;
-  gap: 4px;
-  width: 24px;
-  height: 24px;
-  padding: 6px 3px;
+  gap: 0.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0.375rem 0.1875rem;
   cursor: pointer;
   z-index: 101;
 }
+
 .burger-header__stripe_1,
 .burger-header__stripe_2,
 .burger-header__stripe_3 {
@@ -79,7 +78,7 @@
 }
 
 .burger-header.active .burger-header__stripe_1 {
-  transform: translateY(5px) rotate(45deg);
+  transform: translateY(0.3125rem) rotate(45deg);
 }
 
 .burger-header.active .burger-header__stripe_2 {
@@ -93,16 +92,16 @@
 
 .burger-header__stripe {
   background-color: $color-surface-invert;
-  width: 18px;
-  height: 1px;
-  border-radius: 10px;
+  width: 1.125rem;
+  height: 0.0625rem;
+  border-radius: 0.625rem;
 }
 
-@media screen and (max-width: $desktop-sm) {
+@media screen and (max-width: $desktop-md) {
   .navmenu-header__list {
     flex-direction: column;
-    gap: 32px;
-    @include font(24px, 600, 136%);
+    gap: 2rem;
+    @include font(1.5rem, 600, 136%);
     font-family: 'Manrope', sans-serif;
     color: $color-text-primary;
   }
@@ -121,34 +120,34 @@
     top: -250vh;
     left: 0;
     width: 100vw;
-    padding: 20px;
-    gap: 0px;
-
+    padding: 1.25rem;
+    gap: 0rem;
   }
+
   .header__body.active {
-    top: 56px;
+    top: 3.5rem;
     transition: top 1s cubic-bezier(0.070, 1.020, 0.340, 0.635);
   }
 
   .header__navmenu {
-    margin-bottom: 0px;
+    margin-bottom: 0rem;
   }
 
   .header__navmenu::after {
     content: '';
     width: 100%;
     background-color: $color-border-primary;
-    height: 1px;
+    height: 0.0625rem;
     display: flex;
-    margin-top: 40px;
-    margin-bottom: 24px;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
   }
 
   .header__buttons {
     @include flex(row, center, center);
     flex-wrap: wrap;
     width: 100%;
-    gap: 8px;
+    gap: 0.5rem;
   }
 
   .header__login-btns {
@@ -170,13 +169,13 @@
 
 @media screen and (max-width: $mobile-md) {
   .navmenu-header__list {
-    @include font(20px, 700, 136%);
+    @include font(1.25rem, 700, 136%);
   }
 
   .header__login-btns {
     flex-direction: column;
   }
   .header__body {
-    padding: 16px;
+    padding: 1rem;
   }
 }

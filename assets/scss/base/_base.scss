@@ -16,33 +16,27 @@ body {
 }
 
 ._container {
-  max-width: 1440px;
+  max-width: 90rem;
   margin: 0 auto;
-  @include padding-horizontal(40px);
+  @include padding-horizontal(2.5rem);
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
-  // background-color: $dark-2;
+  width: 0.625rem;
 }
 
 ::-webkit-scrollbar-thumb {
-  // background-color: $dark-2;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  // background-color: $dark-1;
+  border-radius: 0.625rem;
 }
 
 @media screen and (max-width: $tablet) {
   ._container {
-    @include padding-horizontal(20px);
+    @include padding-horizontal(1.25rem);
   }
 }
 
 @media screen and (max-width: $mobile-md) {
   ._container {
-    @include padding-horizontal(16px);
+    @include padding-horizontal(1rem);
   }
 }

@@ -1,2 +1,17 @@
 @use './base';
-@use './theme'
+@use './theme';
+
+@use './components/buttons.scss';
+@use './components/city-dropdown.scss';
+@use './components/dropdown.scss';
+@use './components/extended-filter-modal.scss';
+@use './components/filter-dropdown.scss';
+@use './components/inputs.scss';
+@use './components/lang-dropdown.scss';
+@use './components/theme-switch.scss';
+
+@use './layout/app-header.scss';
+@use './layout/app-footer.scss';
+
+@use './widgets/hero-section.scss';
+@use './widgets/home-section.scss';

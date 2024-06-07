@@ -1,22 +1,21 @@
 @use '../utils' as *;
 .hero {
-  @include padding-vertical(28px);
-  outline: 1px solid $color-border-secondary;
+  @include padding-vertical(1.75rem);
+  outline: 0.0625rem solid $color-border-secondary;
   background: $gradient-radial;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   &__container {
     @include flex(column);
-    
   }
   &__title {
-    margin-bottom: 28px;
+    margin-bottom: 1.75rem;
   }
   &__filter-btns {
     @include flex(row, flex-start, center);
-    margin-bottom: 8px;
-    gap: 16px;
+    margin-bottom: 0.5rem;
+    gap: 1rem;
     .button__icon {
       color: $color-button;
     }
@@ -25,10 +24,6 @@
     &.active {
       background-color: $color-surface-primary;
     }
-  }
-
-  &__extended-filter-btn {
-
   }
 }
 
@@ -47,9 +42,8 @@
         display: none;
       }
     }
+    &__title {
+      @include font(1.75rem, 700, 2.3906rem);
+    }
   }
-}
-
-@media screen and (max-width: $mobile-md) {
-
 }

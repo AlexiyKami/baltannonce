@@ -1,0 +1,100 @@
+@use '../utils' as *;
+
+.footer {
+  background-color: $color-surface-highlight;
+  &__container {
+    @include flex(column);
+    @include padding-vertical(2.5rem);
+    gap: 1.25rem;
+  }
+
+  &__content {
+    @include flex(row);
+    gap: 1.5rem;
+  }
+
+  &__logo {
+    flex: 0 0 8rem;
+    & img {
+      object-fit: contain;
+    }
+  }
+
+  &__navmenu {
+    color: $color-text-primary;
+    width: 100%;
+  }
+
+  &__line {
+    width: 100%;
+    height: 0.0625rem;
+    background-color: $color-border-icons;
+  }
+
+  &__copyright-text {
+    color: $color-text-secondary;
+  }
+}
+.navmenu-footer {
+  &__list {
+    @include flex(row, space-between)
+  }
+  &__item {
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: $desktop-md) {
+  .navmenu-footer {
+    &__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 10.0625rem;
+      grid-template-rows: auto;
+      column-gap: 1.25rem;
+      row-gap: 0.75rem;
+    }
+  }
+
+  .footer {
+    &__content {
+      @include flex(column, flex-start, flex-start);
+      gap: 1.25rem;
+    }
+    &__logo {
+      flex: 0 0 auto;
+      width: 8rem;
+      height: auto;
+    }
+  }
+}
+
+@media screen and (max-width:$desktop-md) {
+  .footer {
+    &__content {
+      @include flex(column, flex-start, flex-start);
+      gap: 1.25rem;
+    }
+
+    &__logo {
+      flex: 0 0 auto;
+      width: 8rem;
+      height: auto;
+    }
+  }
+}
+
+@media screen and (max-width:$tablet) {
+  .navmenu-footer {
+    &__list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media screen and (max-width:$mobile-md) {
+  .navmenu-footer {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+  }
+}

@@ -2,19 +2,19 @@
 
 .theme-switch {
   @include flex(row);
-  @include size(68px, 36px);
-  border-radius: 24px;
+  @include size(4.25rem, 2.25rem);
+  border-radius: 1.5rem;
   background-color: $color-surface-secondary;
   cursor: pointer;
   position: relative;
   &::after {
     content: '';
-    @include size(32px);
+    @include size(2rem);
     border-radius: 50%;
     background-color: $color-button;
     position: absolute;
-    top: 2px;
-    left: 1px;
+    top: 0.125rem;
+    left: 0.0625rem;
     transition: left $transition-hover;
   }
 
@@ -26,7 +26,7 @@
   }
 
   &.darkmode::after {
-    left: 35px;
+    left: 2.1875rem;
   }
   
   & > svg {

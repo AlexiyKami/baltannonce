@@ -1,90 +1,91 @@
 @use '../utils' as *;
 
 .home {
-  padding: 20px 0px;
-  margin-top: 32px;
+  padding: 1.25rem 0rem;
+  margin-top: 2rem;
+
   &__container {
     display: flex;
-    gap: 64px;
+    gap: 4rem;
   }
 
   &__heading {
-    @include flex(row, center,center);
-    white-space:nowrap;
-    gap: 8px;
-    margin-bottom: 20px;
-    &::before, &::after {
+    @include flex(row, center, center);
+    white-space: nowrap;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+
+    &::before,
+    &::after {
       content: '';
-      height: 1px;
+      height: 0.0625rem;
       width: 100%;
       background-color: $color-border-primary;
-      margin-left: 16px;
-      margin-right: 16px;
+      margin-left: 1rem;
+      margin-right: 1rem;
     }
-  }
-
-  &__title {
-  }
-
-  &__title-counter {
   }
 
   &__all-cards {
     display: flex;
     flex-direction: column;
     flex: 1 1 81%;
-    gap: 56px;
+    gap: 0.75rem;
     background-color: $color-surface-primary;
-    border: 1px solid $color-border-secondary;
-    border-radius: 12px;
+    border: 0.0625rem solid $color-border-secondary;
+    border-radius: 0.75rem;
   }
 
-  &__verified-cards, &__coming-soon-cards {
+  &__verified-cards,
+  &__coming-soon-cards {
     display: flex;
     flex-direction: column;
     width: 100%;
   }
 
-  &__verified-cards, &__coming-soon-cards, &__random-cards {
-    padding: 20px 0px;
+  &__verified-cards,
+  &__coming-soon-cards,
+  &__random-cards {
+    padding: 1.25rem 0rem;
   }
 
   &__cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0.75rem;
   }
 
   &__advertisement {
     flex: 0 0 19%;
     display: flex;
     flex-direction: column;
-    gap: 23px;
+    gap: 1.4375rem;
+
     &-block {
       @include flex(column, center, center);
-      font-size: 40px;
-      min-width: 280px;
-      min-height: 526px;
-      border-radius: 12px;
+      font-size: 2.5rem;
+      min-width: 17.5rem;
+      min-height: 32.875rem;
+      border-radius: 0.75rem;
       background-color: $color-surface-highlight;
     }
   }
-
-  &__card {
-  }
 }
+
 .card-home {
   @include flex(column);
-  @include size(320px, 480px);
+  min-height: 30rem;
   position: relative;
   background: $gradient-linear-silver;
-  border: 4px solid silver;
-  border-radius: 12px;
+  border: 0.25rem solid silver;
+  border-radius: 0.75rem;
+  overflow: hidden;
+
   &__img-container {
     overflow: hidden;
     object-fit: cover;
-    min-height: 380px;
+    min-height: 23.75rem;
   }
 
   &__badges {
@@ -97,38 +98,42 @@
   &__of-the-day {
     @include flex(row, center, center);
     width: 100%;
-    height: 42px;
+    height: 2.625rem;
     background: $gradient-linear-accent;
     color: white;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
   }
 
   &__tags-container {
     display: flex;
-    gap: 8px;
-    margin-top: 10px;
-    margin-left: 8px;
+    gap: 0.5rem;
+    margin-top: 0.625rem;
+    margin-left: 0.5rem;
   }
-  &__tag_video, &__tag_new {
+
+  &__tag_video,
+  &__tag_new {
     color: white;
-    padding: 4px 8px;
-    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
   }
+
   &__tag_video {
     background: $gradient-linear-accent;
   }
+
   &__tag_new {
     background-color: $color-other-blue;
   }
 
   &__info {
     @include flex(column);
-    gap: 4px;
-    height: 92px;
-    padding: 12px 16px;
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
+    gap: 0.25rem;
+    height: 5.75rem;
+    padding: 0.75rem 1rem;
+    border-bottom-left-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
     background-color: $color-surface-primary;
   }
 
@@ -136,28 +141,17 @@
     @include flex(row, space-between, flex-start);
   }
 
-  &__name {
-  }
-
-  &__yeard-old {
-  }
-
-  &__price {
-  }
-
   &__location {
     display: flex;
-    gap: 4px;
-    & > svg {
-      flex: 0 0 16px;
+    gap: 0.25rem;
+
+    &>svg {
+      flex: 0 0 1rem;
     }
   }
 
   &__location-icon {
     color: $color-border-icons;
-  }
-
-  &__location-text {
   }
 
   &__date {
@@ -166,9 +160,10 @@
 
   &__verified {
     display: flex;
-    gap: 4px;
-    & > svg {
-      flex: 0 0 16px;
+    gap: 0.25rem;
+
+    &>svg {
+      flex: 0 0 1rem;
       color: $color-border-icons;
     }
   }
@@ -178,7 +173,7 @@
   }
 
   &__rating {
-    & > svg {
+    &>svg {
       color: $color-border-icons;
     }
   }
@@ -193,22 +188,38 @@
     &__container {
       display: flex;
       flex-direction: column;
-      gap: 64px;
+      gap: 4rem;
     }
+
     &__advertisement {
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: 16px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      gap: 1rem;
+
       &-block {
         flex: 0 1 45%;
         min-height: auto;
-        height: 197px;
+        height: 12.3125rem;
       }
     }
   }
-  
+}
+
+@media screen and (max-width: $desktop-sm) {
+  .home {
+    &__cards-container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .home {
+    &__cards-container {
+      grid-template-columns: 1fr;
+    }
+  }
 }
 
 @media screen and (max-width: $mobile-md) {
@@ -217,11 +228,16 @@
       width: 100%
     }
   }
+
   .card-home {
     @include flex(column);
-    @include size(320px, 480px);
-    &__img-container {
-      
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .home {
+    &__advertisement {
+      grid-template-columns: 1fr;
     }
   }
 }
