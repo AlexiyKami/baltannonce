@@ -98,8 +98,8 @@ filterDropdown.innerHTML = `
         </div>
       </div>
       <div class="popup-dropdown-filter__btns">
-        <div class="popup-dropdown-filter__btn button button_secondary button_small">Отменить</div>
-        <div class="popup-dropdown-filter__btn button button_primary button_small">Отфильтровать</div>
+        <div class="popup-dropdown-filter__btn popup-dropdown-filter__btn-cancel button button_secondary button_small">Отменить</div>
+        <div class="popup-dropdown-filter__btn popup-dropdown-filter__btn-filter button button_primary button_small">Отфильтровать</div>
       </div>
     </div>
   </div>
@@ -145,14 +145,6 @@ filterDropdown.innerHTML = `
     <input id="D" type="checkbox" name="breast-size">
     <label for="D">D</label>
   </div>
-  <div class="dropdown-filter__item">
-    <input id="DD" type="checkbox" name="breast-size">
-    <label for="DD">DD</label>
-  </div>
-  <div class="dropdown-filter__item">
-    <input id="G" type="checkbox" name="breast-size">
-    <label for="G">G</label>
-  </div>
   <div class="dropdown-filter__btn-more button__text">
     <span class="dropdown-filter__btn-text button__text">Больше</span>
     <div class="dropdown-filter__popup popup-dropdown-filter">
@@ -189,8 +181,8 @@ filterDropdown.innerHTML = `
         </div>
       </div>
       <div class="popup-dropdown-filter__btns">
-        <div class="popup-dropdown-filter__btn button button_secondary button_small">Отменить</div>
-        <div class="popup-dropdown-filter__btn button button_primary button_small">Отфильтровать</div>
+        <div class="popup-dropdown-filter__btn popup-dropdown-filter__btn-cancel button button_secondary button_small">Отменить</div>
+        <div class="popup-dropdown-filter__btn popup-dropdown-filter__btn-filter button button_primary button_small">Отфильтровать</div>
       </div>
     </div>
   </div>
@@ -349,3 +341,18 @@ filterDropdown.innerHTML = `
 </div>
 </div>
 `
+const popupDropdownFilter = document.querySelectorAll('.popup-dropdown-filter');
+const popupBtnMore = document.querySelectorAll('.dropdown-filter__btn-text');
+const popupBtnClose = document.querySelectorAll('.popup-dropdown-filter__cross');
+
+popupBtnMore.forEach((item, index) => {
+  item.addEventListener('click', (e) => {
+    popupDropdownFilter[index].classList.toggle('active');
+  })
+})
+
+popupBtnClose.forEach((item, index) => {
+  item.addEventListener('click', (e) => {
+    popupDropdownFilter[index].classList.remove('active');
+  })
+})
