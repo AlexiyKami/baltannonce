@@ -282,10 +282,10 @@ body.darkmode {
 .button_secondary {
   background-color: var(--color-surface-highlight);
   color: var(--color-button);
-  outline: 0.0625rem solid var(--color-surface-highlight);
+  transition: box-shadow 0.3s;
 }
 .button_secondary:hover {
-  outline: 0.0625rem solid var(--color-border-accent);
+  box-shadow: 0 0 0 0.0625rem var(--color-border-accent);
 }
 
 .button_small {
@@ -296,12 +296,12 @@ body.darkmode {
 }
 
 .button_outlined {
-  outline: 0.0625rem solid var(--color-border-accent);
   color: var(--color-button);
-  transition: outline 0s;
+  box-shadow: 0 0 0 0.0625rem var(--color-border-accent);
+  transition: box-shadow 0.3s;
 }
 .button_outlined:hover {
-  outline-width: 0.125rem;
+  box-shadow: 0 0 0 0.125rem var(--color-border-accent);
 }
 
 .button_with-icon {
@@ -352,8 +352,12 @@ body.darkmode {
   width: 11.75rem;
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
+  transition: all 0.3s;
 }
 .dropdown-city__btn.active {
+  background-color: var(--color-surface-primary);
+}
+.dropdown-city__btn:hover {
   background-color: var(--color-surface-primary);
 }
 .dropdown-city__chevron {
