@@ -799,6 +799,6 @@ extendedFilterModal.innerHTML = `
     </div>
   </div>
 </div>
-<div class="extended-filter__button button button_primary" @click="$emit('setIsFilterModalMenuOpened', false)">Найти</div>
+<div class="extended-filter__button button button_primary">Найти</div>
 
 </div>`

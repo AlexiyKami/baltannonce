@@ -81,15 +81,23 @@
   border: 0.25rem solid silver;
   border-radius: 0.75rem;
   overflow: hidden;
-
+  transition: transform $transition-hover;
+  &:hover &__img-container > img {
+    transform: scale(1.1);
+  }
   &__img-container {
     overflow: hidden;
     object-fit: cover;
     min-height: 23.75rem;
+    & > img {
+      transform: scale(1);
+      transition: transform $transition-hover;
+    }
   }
 
   &__badges {
     position: absolute;
+    z-index: 4;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -125,6 +133,11 @@
 
   &__tag_new {
     background-color: $color-other-blue;
+    transition: opacity $transition-hover;
+  }
+
+  &:hover &__tag_new {
+    opacity: 0;
   }
 
   &__info {

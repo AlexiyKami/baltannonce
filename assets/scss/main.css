@@ -1533,6 +1533,10 @@ input[type=number]:disabled {
   border: 0.25rem solid silver;
   border-radius: 0.75rem;
   overflow: hidden;
+  transition: transform 0.3s;
+}
+.card-home:hover .card-home__img-container > img {
+  transform: scale(1.1);
 }
 .card-home__img-container {
   overflow: hidden;
@@ -1540,8 +1544,13 @@ input[type=number]:disabled {
      object-fit: cover;
   min-height: 23.75rem;
 }
+.card-home__img-container > img {
+  transform: scale(1);
+  transition: transform 0.3s;
+}
 .card-home__badges {
   position: absolute;
+  z-index: 4;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1574,6 +1583,10 @@ input[type=number]:disabled {
 }
 .card-home__tag_new {
   background-color: #297CF9;
+  transition: opacity 0.3s;
+}
+.card-home:hover .card-home__tag_new {
+  opacity: 0;
 }
 .card-home__info {
   display: flex;
