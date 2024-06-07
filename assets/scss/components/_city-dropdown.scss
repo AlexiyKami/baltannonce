@@ -42,31 +42,29 @@
     background-color: $color-surface-primary;
     border-radius: 0.75rem;
     opacity: 0;
-    min-height: 0rem;
-    height: 0;
+    height: 0rem;
+    max-height: 0rem;
     padding: 0 1.25rem;
     margin-top: 0.5rem;
-    transition: opacity .4s, min-height .3s .3s, margin .0s .3s;
+    transition: opacity .4s, max-height .3s .3s, height .3s .3s, margin .0s .3s;
     pointer-events: none;
     gap: 0.5rem;
 
     &.active {
-      transition: opacity .4s .3s, min-height .3s, margin .1s .2s;
-      min-height: 18.5rem;
+      transition: opacity .4s .3s, max-height .9s, height .9s, margin .1s .2s;
+      height: 100%;
+      max-height: 2400px;
       opacity: 1;
       pointer-events: all;
     }
   }
 
   &__container {
-    position: relative;
     @include flex(row, flex-start, center);
     @include font(1.125rem, 600, 144%);
     width: 100%;
-    height: 5rem;
     border-radius: 0.5rem;
     padding: 1.25rem 2.5rem;
-    overflow: hidden;
 
     &.lt {
       background: linear-gradient(0deg, $color-gradient-flags, $color-gradient-flags), url('../../assets/img/lithuania.jpg') no-repeat;
@@ -125,7 +123,6 @@
     &__container {
       @include flex(column, flex-start, flex-start);
       gap: 0.75rem;
-      height: 6.0625rem;
       padding: 0.75rem;
     }
 
@@ -136,17 +133,6 @@
 
     &__text {
       @include font(1rem, 600, 144%);
-    }
-
-    &__container {
-      min-height: 8.6875rem;
-      height: auto;
-    }
-
-    &__body {
-      &.active {
-        min-height: 30rem;
-      }
     }
   }
 }
