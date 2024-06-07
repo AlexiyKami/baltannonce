@@ -1717,6 +1717,7 @@ input[type=number]:disabled {
   border-radius: 0.75rem;
   overflow: hidden;
   transition: transform 0.3s;
+  height: 100%;
 }
 .card-home:hover .card-home__img-container > img {
   transform: scale(1.1);
