@@ -39,7 +39,7 @@
 .button_outlined {
   outline: 0.0625rem solid $color-border-accent;
   color: $color-button;
-  transition: outline 0s;
+  transition: outline $transition-hover;
 
   &:hover {
     outline-width: 0.125rem;
