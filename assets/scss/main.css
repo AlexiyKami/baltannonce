@@ -1022,6 +1022,8 @@ input[type=number]:disabled {
   margin-top: 0.5rem;
   border-bottom-left-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
+  overflow: hidden;
+  width: 4.6875rem;
 }
 .dropdown-lang__body.active {
   opacity: 1;
@@ -1186,6 +1188,32 @@ input[type=number]:disabled {
   gap: 2rem;
   font-size: 1rem;
 }
+.navmenu-header__item {
+  display: block;
+  max-width: -moz-min-content;
+  max-width: min-content;
+  position: relative;
+  white-space: nowrap;
+  overflow-x: hidden;
+  padding-bottom: 0.5rem;
+  margin-bottom: -0.5rem;
+}
+.navmenu-header__item::after {
+  content: "";
+  position: absolute;
+  bottom: 0rem;
+  left: 0;
+  width: 100%;
+  height: 0.0625rem;
+  background-color: var(--color-border-accent);
+  transition: all 0.3s ease;
+  opacity: 1;
+  transform: translate3d(-100%, 0, 0);
+}
+.navmenu-header__item:hover::after, .navmenu-header__item:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
 
 .dropdown-lang-header__btn {
   display: flex;
@@ -1265,7 +1293,7 @@ input[type=number]:disabled {
     gap: 0rem;
   }
   .header__body.active {
-    top: 3.5rem;
+    top: 4rem;
     transition: top 1s ease;
   }
   .header__navmenu {
@@ -1362,7 +1390,30 @@ input[type=number]:disabled {
   align-items: stretch;
 }
 .navmenu-footer__item {
+  display: block;
+  max-width: -moz-min-content;
+  max-width: min-content;
+  position: relative;
   white-space: nowrap;
+  overflow-x: hidden;
+  padding-bottom: 0.5rem;
+  margin-bottom: -0.5rem;
+}
+.navmenu-footer__item::after {
+  content: "";
+  position: absolute;
+  bottom: 0rem;
+  left: 0;
+  width: 100%;
+  height: 0.0625rem;
+  background-color: var(--color-border-accent);
+  transition: all 0.3s ease;
+  opacity: 1;
+  transform: translate3d(-100%, 0, 0);
+}
+.navmenu-footer__item:hover::after, .navmenu-footer__item:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
 }
 
 @media screen and (max-width: 90rem) {
@@ -1551,6 +1602,7 @@ input[type=number]:disabled {
 }
 .card-home__badges {
   position: absolute;
+  top: 0;
   z-index: 4;
   width: 100%;
   display: flex;
@@ -1565,8 +1617,6 @@ input[type=number]:disabled {
   height: 2.625rem;
   background: linear-gradient(90.74deg, #881337 0%, #be123c 49%, #881337 100%);
   color: white;
-  border-top-left-radius: 0.75rem;
-  border-top-right-radius: 0.75rem;
 }
 .card-home__tags-container {
   display: flex;

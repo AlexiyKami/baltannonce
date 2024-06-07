@@ -40,6 +40,8 @@
     margin-top: 0.5rem;
     border-bottom-left-radius: 0.25rem;
     border-bottom-right-radius: 0.25rem;
+    overflow: hidden;
+    width: 4.6875rem;
 
     &.active {
       opacity: 1;
