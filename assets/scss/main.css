@@ -906,6 +906,7 @@ input[type=checkbox] {
   border: 0.0625rem solid var(--color-border-primary);
   padding: 0.5625rem;
   border-radius: 0.25rem;
+  transition: border-color 0.3s;
 }
 input[type=checkbox]:hover {
   border: 0.0625rem solid var(--color-border-accent);
@@ -924,6 +925,7 @@ input[type=radio] {
   border: 0.0625rem solid var(--color-border-primary);
   padding: 0.5625rem;
   border-radius: 50%;
+  transition: border-color 0.3s;
 }
 input[type=radio]:hover {
   border: 0.0625rem solid var(--color-border-accent);
