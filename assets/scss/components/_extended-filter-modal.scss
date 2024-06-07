@@ -41,6 +41,10 @@
     text-align: center;
   }
 
+  &__cross {
+    display: none;
+  }
+
   &__containers {
     @include flex(column);
     gap: 2.5rem;
@@ -204,6 +208,17 @@
 @media screen and (max-width: $desktop-sm) {
   .extended-filter {
     padding: 1.25rem 1.25rem 2rem;
+    &__title {
+      text-align: left;
+    }
+    &__cross {
+      display: block;
+      position: absolute;
+      z-index: 1000;
+      margin: 18px;
+      top: 0;
+      right: 0;
+    }
 
     &__container {
       flex-wrap: wrap;
@@ -238,6 +253,9 @@
 
 @media screen and (max-width: $tablet) {
   .extended-filter {
+    &__title {
+      @include font(1.25rem, 700, 136%);
+    }
     &__container-reviews {
       & .item-extended-filter__forms {
         gap: 1.5rem;

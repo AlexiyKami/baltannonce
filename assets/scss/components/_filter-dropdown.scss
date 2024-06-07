@@ -29,6 +29,15 @@
     padding-top: 1.25rem;
   }
 
+  &__btn-more {
+    position: relative;
+  }
+
+  &__btn-text {
+    color: $color-button;
+    cursor: pointer;
+  }
+
   &__item {
     display: flex;
     align-items: center;
@@ -91,6 +100,58 @@
     justify-content: space-between;
     gap: 1.5rem;
     padding-bottom: 1.25rem;
+  }
+}
+
+.popup-dropdown-filter {
+  position: absolute;
+  top: -50px;
+  left: 40px;
+  background-color: $color-surface-highlight;
+  height: 224px;
+  border-radius: 8px;
+  border: 1px solid $color-border-primary;
+  padding: 12px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity $transition-hover;
+  
+  &__heading {
+    display: flex;
+    min-height: 48px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $color-border-primary;
+  }
+  &.active {
+    visibility: visible;
+    transition: opacity $transition-hover;
+    opacity: 1;
+  }
+  &__title {
+
+  }
+  &__cross {
+    color: $color-border-icons;
+    cursor: pointer; 
+  }
+  &__list {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    height: 86px;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  &__btns {
+    display: flex;
+    gap: 8px;
+    margin-top: 20px;
   }
 }
 

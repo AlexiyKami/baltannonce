@@ -45,6 +45,28 @@
   }
 }
 
+.button_icon-primary {
+  cursor: pointer;
+  color: $color-surface-invert;
+  &:hover {
+    color: $color-button;
+  }
+  &[disabled], &:disabled {
+    color: $color-border-icons;
+  }
+}
+
+.button_icon-secondary {
+  cursor: pointer;
+  color: $color-border-icons;
+  &:hover {
+    color: $color-surface-invert;
+  }
+  &[disabled], &:disabled {
+    color: $color-border-icons;
+  }
+}
+
 .button_with-icon {
   @include flex(row, center, center);
   gap: 0.5rem;
