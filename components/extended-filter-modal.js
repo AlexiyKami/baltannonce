@@ -413,27 +413,29 @@ extendedFilterModal.innerHTML = `
       <div class="item-extended-filter__stripe"></div>
       <div class="item-extended-filter__forms-container">
         <div class="item-extended-filter__forms item-extended-filter__forms-appearance">
-          <div class="item-extended-filter__appearance wrap">
-            <label class="heading_h6" for="">Цвет волос:</label>
-            <div class="item-extended-filter__row">
-              <input id="blonde2" type="checkbox" name="haircolor">
-              <label for="blonde2">Блондинка</label>
-            </div>
-            <div class="item-extended-filter__row">
-              <input id="brown2" type="checkbox" name="haircolor">
-              <label for="brown2">Шатенка</label>
-            </div>
-            <div class="item-extended-filter__row">
-              <input id="brunette2" type="checkbox" name="haircolor">
-              <label for="brunette2">Брюнетка</label>
-            </div>
-            <div class="item-extended-filter__row">
-              <input id="light-brown2" type="checkbox" name="haircolor">
-              <label for="light-brown2">Русая</label>
-            </div>
-            <div class="item-extended-filter__row">
-              <input id="red2" type="checkbox" name="haircolor">
-              <label for="red2">Рыжая</label>
+          <div class="item-extended-filter__appearance">
+            <label class="heading_h6 heading__align-self_start" for="">Цвет волос:</label>
+            <div class="item-extended-filter__row wrap">
+              <div class="item-extended-filter__row">
+                <input id="blonde2" type="checkbox" name="haircolor">
+                <label for="blonde2">Блондинка</label>
+              </div>
+              <div class="item-extended-filter__row">
+                <input id="brown2" type="checkbox" name="haircolor">
+                <label for="brown2">Шатенка</label>
+              </div>
+              <div class="item-extended-filter__row">
+                <input id="brunette2" type="checkbox" name="haircolor">
+                <label for="brunette2">Брюнетка</label>
+              </div>
+              <div class="item-extended-filter__row">
+                <input id="light-brown2" type="checkbox" name="haircolor">
+                <label for="light-brown2">Русая</label>
+              </div>
+              <div class="item-extended-filter__row">
+                <input id="red2" type="checkbox" name="haircolor">
+                <label for="red2">Рыжая</label>
+              </div>
             </div>
           </div>
           <div class="item-extended-filter__appearance">
@@ -493,20 +495,23 @@ extendedFilterModal.innerHTML = `
             </div>
             
           </div>
-          <div class="item-extended-filter__appearance wrap">
-            <label class="heading_h6" for="">Интимная стрижка:</label>
-            <div class="item-extended-filter__row">
-              <input id="intimate-haircut-f" type="checkbox" name="">
-              <label for="intimate-haircut-f">Полная депиляция</label>
+          <div class="item-extended-filter__appearance">
+            <label class="heading_h6 heading__align-self_start" for="">Интимная стрижка:</label>
+            <div class="item-extended-filter__row wrap">
+              <div class="item-extended-filter__row">
+                <input id="intimate-haircut-f" type="checkbox" name="">
+                <label for="intimate-haircut-f">Полная депиляция</label>
+              </div>
+              <div class="item-extended-filter__row">
+                <input id="intimate-haircut-c" type="checkbox" name="">
+                <label for="intimate-haircut-c">Аккуратная стрижка</label>
+              </div>
+              <div class="item-extended-filter__row">
+                <input id="intimate-haircut-n" type="checkbox" name="">
+                <label for="intimate-haircut-n">Натуральная</label>
+              </div>
             </div>
-            <div class="item-extended-filter__row">
-              <input id="intimate-haircut-c" type="checkbox" name="">
-              <label for="intimate-haircut-c">Аккуратная стрижка</label>
-            </div>
-            <div class="item-extended-filter__row">
-              <input id="intimate-haircut-n" type="checkbox" name="">
-              <label for="intimate-haircut-n">Натуральная</label>
-            </div>
+            
           </div>
           <div class="item-extended-filter__appearance">
             <label class="heading_h6 heading__align-self_start" for="">Тату:</label>
@@ -603,27 +608,29 @@ extendedFilterModal.innerHTML = `
             </div>
             
           </div>
-          <div class="item-extended-filter__appearance wrap">
-            <label class="heading_h6" for="">Раса:</label>
-            <div class="item-extended-filter__row">
-              <input id="race-white" type="checkbox" name="">
-              <label for="race-white">Белая</label>
-            </div>
-            <div class="item-extended-filter__row">
-              <input id="race-latin" type="checkbox" name="">
-              <label for="race-latin">Латинская</label>
-            </div>
-            <div class="item-extended-filter__row">
-              <input id="race-negro" type="checkbox" name="">
-              <label for="race-negro">Черная</label>
-            </div>
-            <div class="item-extended-filter__row">
-              <input id="race-asian" type="checkbox" name="">
-              <label for="race-asian">Азиатка</label>
-            </div>
-            <div class="item-extended-filter__row">
-              <input id="race-exotic" type="checkbox" name="">
-              <label for="race-exotic">Экзотическая</label>
+          <div class="item-extended-filter__appearance">
+            <label class="heading_h6 heading__align-self_start" for="">Раса:</label>
+            <div class="item-extended-filter__row wrap">
+              <div class="item-extended-filter__row">
+                <input id="race-white" type="checkbox" name="">
+                <label for="race-white">Белая</label>
+              </div>
+              <div class="item-extended-filter__row">
+                <input id="race-latin" type="checkbox" name="">
+                <label for="race-latin">Латинская</label>
+              </div>
+              <div class="item-extended-filter__row">
+                <input id="race-negro" type="checkbox" name="">
+                <label for="race-negro">Черная</label>
+              </div>
+              <div class="item-extended-filter__row">
+                <input id="race-asian" type="checkbox" name="">
+                <label for="race-asian">Азиатка</label>
+              </div>
+              <div class="item-extended-filter__row">
+                <input id="race-exotic" type="checkbox" name="">
+                <label for="race-exotic">Экзотическая</label>
+              </div>
             </div>
           </div>
           <div class="item-extended-filter__appearance">
@@ -704,17 +711,21 @@ extendedFilterModal.innerHTML = `
           <div class="item-extended-filter__fetish">
             <div class="item-extended-filter__row">
               <label class="heading_h6" for="">Размер одежды:</label>
-              <input id="" type="number" name="" class="medium" min="0" placeholder="----">
-              <span>-</span>
-              <input id="" type="number" name="" class="medium" min="0" placeholder="----">
-              <span class="item-extended-filter__unit">см</span>
+              <div class="item-extended-filter__row">
+                <input id="" type="number" name="" class="medium" min="0" placeholder="----">
+                <span>-</span>
+                <input id="" type="number" name="" class="medium" min="0" placeholder="----">
+                <span class="item-extended-filter__unit">см</span>
+              </div>
             </div>
             <div class="item-extended-filter__row">
               <label class="heading_h6" for="">Размер обуви:</label>
-              <input id="" type="number" name="" class="medium" min="0" placeholder="----">
-              <span>-</span>
-              <input id="" type="number" name="" class="medium" min="0" placeholder="----">
-              <span class="item-extended-filter__unit">см</span>
+              <div class="item-extended-filter__row">
+                <input id="" type="number" name="" class="medium" min="0" placeholder="----">
+                <span>-</span>
+                <input id="" type="number" name="" class="medium" min="0" placeholder="----">
+                <span class="item-extended-filter__unit">см</span>
+              </div>
             </div>
           </div>
         </div>
@@ -728,60 +739,67 @@ extendedFilterModal.innerHTML = `
       <div class="item-extended-filter__forms-container">
         <div class="item-extended-filter__forms item-extended-filter__forms-location">
           <div class="item-extended-filter__location">
-            <label class="heading_h6" for="">Литва:</label>
-            <div class="item-extended-filter__row">
-              <input id="vilnus" type="checkbox" name="">
-              <label for="vilnus">Вильнюс</label>
-            </div>
-            <div class="item-extended-filter__row">
-              <input id="kaunas" type="checkbox" name="">
-              <label for="kaunas">Каунас</label>
-            </div>
-            <div class="item-extended-filter__row">
-              <input id="klaipeda" type="checkbox" name="">
-              <label for="klaipeda">Клайпеда</label>
-            </div>
-            <div class="item-extended-filter__row">
-              <input id="shaulai" type="checkbox" name="">
-              <label for="shaulai">Шяуляй</label>
-            </div>
-            <div class="item-extended-filter__row">
-              <input id="panevezis" type="checkbox" name="">
-              <label for="panevezis">Паневежис</label>
-            </div>
-          </div>
-          <div class="item-extended-filter__location">
-            <label class="heading_h6" for="">Латвия:</label>
-            <div class="item-extended-filter__row">
-              <input id="riga" type="checkbox" name="">
-              <label for="riga">Рига</label>
-            </div>
-            <div class="item-extended-filter__row">
-              <input id="urmala" type="checkbox" name="">
-              <label for="urmala">Юрмала</label>
-            </div>
-            <div class="item-extended-filter__row">
-              <input id="daugavpils" type="checkbox" name="">
-              <label for="daugavpils">Даугавпилс</label>
-            </div>
-            <div class="item-extended-filter__row">
-              <input id="liepaia" type="checkbox" name="">
-              <label for="liepaia">Лиепая</label>
+            <label class="heading_h6 heading__align-self_start" for="">Литва:</label>
+            <div class="item-extended-filter__row wrap">
+              <div class="item-extended-filter__row">
+                <input id="vilnus" type="checkbox" name="">
+                <label for="vilnus">Вильнюс</label>
+              </div>
+              <div class="item-extended-filter__row">
+                <input id="kaunas" type="checkbox" name="">
+                <label for="kaunas">Каунас</label>
+              </div>
+              <div class="item-extended-filter__row">
+                <input id="klaipeda" type="checkbox" name="">
+                <label for="klaipeda">Клайпеда</label>
+              </div>
+              <div class="item-extended-filter__row">
+                <input id="shaulai" type="checkbox" name="">
+                <label for="shaulai">Шяуляй</label>
+              </div>
+              <div class="item-extended-filter__row">
+                <input id="panevezis" type="checkbox" name="">
+                <label for="panevezis">Паневежис</label>
+              </div>
             </div>
           </div>
           <div class="item-extended-filter__location">
-            <label class="heading_h6" for="">Эстония:</label>
-            <div class="item-extended-filter__row">
-              <input id="tallin" type="checkbox" name="">
-              <label for="tallin">Таллин</label>
+            <label class="heading_h6 heading__align-self_start" for="">Латвия:</label>
+            <div class="item-extended-filter__row wrap">
+              <div class="item-extended-filter__row">
+                <input id="riga" type="checkbox" name="">
+                <label for="riga">Рига</label>
+              </div>
+              <div class="item-extended-filter__row">
+                <input id="urmala" type="checkbox" name="">
+                <label for="urmala">Юрмала</label>
+              </div>
+              <div class="item-extended-filter__row">
+                <input id="daugavpils" type="checkbox" name="">
+                <label for="daugavpils">Даугавпилс</label>
+              </div>
+              <div class="item-extended-filter__row">
+                <input id="liepaia" type="checkbox" name="">
+                <label for="liepaia">Лиепая</label>
+              </div>
             </div>
-            <div class="item-extended-filter__row">
-              <input id="tartu" type="checkbox" name="">
-              <label for="tartu">Тарту</label>
-            </div>
-            <div class="item-extended-filter__row">
-              <input id="narva" type="checkbox" name="">
-              <label for="narva">Нарва</label>
+            
+          </div>
+          <div class="item-extended-filter__location">
+            <label class="heading_h6 heading__align-self_start" for="">Эстония:</label>
+            <div class="item-extended-filter__row wrap">
+              <div class="item-extended-filter__row">
+                <input id="tallin" type="checkbox" name="">
+                <label for="tallin">Таллин</label>
+              </div>
+              <div class="item-extended-filter__row">
+                <input id="tartu" type="checkbox" name="">
+                <label for="tartu">Тарту</label>
+              </div>
+              <div class="item-extended-filter__row">
+                <input id="narva" type="checkbox" name="">
+                <label for="narva">Нарва</label>
+              </div>
             </div>
           </div>
         </div>

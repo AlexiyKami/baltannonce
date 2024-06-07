@@ -97,9 +97,7 @@
       min-width: 4.375rem;
     }
 
-    &.wrap {
-      flex-wrap: wrap;
-    }
+    
   }
 
   &__preferences,
@@ -111,6 +109,10 @@
     display: flex;
     gap: 0.5rem;
     align-items: center;
+  }
+
+  &__fetish {
+    align-items: stretch;
   }
 
   &__reviews,
@@ -265,10 +267,6 @@
     &__fetish {
       flex-direction: column;
     }
-
-    &__location {
-      flex-wrap: wrap;
-    }
   }
 }
 
@@ -287,6 +285,11 @@
 
       & .heading_h6 {
         text-align: left;
+      }
+    }
+    &__form {
+      &.wrap {
+        flex-wrap: wrap;
       }
     }
   }
