@@ -95,16 +95,7 @@ body {
   font-optical-sizing: auto;
   background-color: var(--color-surface-secondary);
   color: var(--color-text-primary);
-  -webkit-animation: 0.7s opacity;
-          animation: 0.7s opacity;
-}
-@-webkit-keyframes opacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  animation: 0.7s opacity;
 }
 @keyframes opacity {
   0% {
@@ -416,12 +407,12 @@ body.darkmode {
   max-height: 0rem;
   padding: 0 1.25rem;
   margin-top: 0.5rem;
-  transition: opacity 0.4s, max-height 0.3s 0.3s, height 0.3s 0.3s, margin 0s 0.3s;
+  transition: opacity 0.3s, max-height 0.3s, height 0.3s;
   pointer-events: none;
   gap: 0.5rem;
 }
 .dropdown-city__body.active {
-  transition: opacity 0.4s 0.3s, max-height 0.9s, height 0.9s, margin 0.1s 0.2s;
+  transition: opacity 0.3s 0.2s, max-height 0.7s, height 0.7s;
   height: 100%;
   max-height: 150rem;
   opacity: 1;
@@ -857,10 +848,10 @@ body.darkmode {
   max-height: 0rem;
   margin-top: 0.5rem;
   pointer-events: none;
-  transition: opacity 0.4s, max-height 0.3s 0.3s, height 0.3s 0.3s, margin 0s 0.3s;
+  transition: opacity 0.3s, max-height 0.3s, height 0.3s;
 }
 .dropdown-filter.active {
-  transition: opacity 0.4s 0.3s, max-height 0.6s, height 0.6s, margin 0.1s 0.2s;
+  transition: opacity 0.3s 0.2s, max-height 0.7s, height 0.7s;
   height: 100%;
   max-height: 150rem;
   opacity: 1;
@@ -1012,7 +1003,6 @@ body.darkmode {
 label {
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 
@@ -1082,9 +1072,6 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
   margin: 0;
 }
 input[type=number]::-moz-placeholder {
-  color: var(--color-text-secondary);
-}
-input[type=number]:-ms-input-placeholder {
   color: var(--color-text-secondary);
 }
 input[type=number]::placeholder {
@@ -1318,7 +1305,6 @@ input[type=number]:disabled {
 }
 .navmenu-header__item {
   display: block;
-  max-width: -webkit-min-content;
   max-width: -moz-min-content;
   max-width: min-content;
   position: relative;
@@ -1411,17 +1397,21 @@ input[type=number]:disabled {
     align-items: center;
     background-color: var(--color-surface-primary);
     position: absolute;
-    transition: top 1s ease-in;
+    transition: top 0.5s ease, visibility 0s 0.5s, opacity 0s 0.2s ease-in;
     z-index: 1000;
-    top: -250vh;
+    top: -120vh;
     left: 0;
     width: 100vw;
     padding: 1.25rem;
     gap: 0rem;
+    visibility: hidden;
+    opacity: 0;
   }
   .header__body.active {
     top: 4rem;
-    transition: top 1s ease;
+    transition: top 0.6s ease-out, visibility 0s, opacity 0s ease-in;
+    visibility: visible;
+    opacity: 1;
   }
   .header__navmenu {
     margin-bottom: 0rem;
@@ -1518,7 +1508,6 @@ input[type=number]:disabled {
 }
 .navmenu-footer__item {
   display: block;
-  max-width: -webkit-min-content;
   max-width: -moz-min-content;
   max-width: min-content;
   position: relative;
