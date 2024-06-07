@@ -9,6 +9,13 @@
     gap: 4rem;
   }
 
+  &__title {
+    color: $color-text-primary;
+    &-counter {
+      color: $color-text-secondary;
+    }
+  }
+
   &__heading {
     @include flex(row, center, center);
     white-space: nowrap;
