@@ -1004,9 +1004,6 @@ input[type=number]:disabled {
   padding-left: 0.75rem;
   padding-bottom: 0.5rem;
 }
-.dropdown-lang__btn:hover {
-  background-color: var(--color-surface-primary);
-}
 .dropdown-lang__btn.active {
   background-color: var(--color-surface-primary);
 }
