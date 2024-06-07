@@ -948,7 +948,7 @@ input[type=number].medium {
 .dropdown-lang {
   width: 5.125rem;
   height: 1.5rem;
-  z-index: 100;
+  z-index: 101;
 }
 .dropdown-lang__btn {
   display: flex;

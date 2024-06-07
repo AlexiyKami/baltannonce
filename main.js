@@ -7,27 +7,7 @@ import './components/footer.js'
 import './components/lang-dropdown.js'
 import './components/theme-switch.js'
 
-const isCityMenuOpened = true;
-const isFilterMenuOpened = false;
-const isFilterModalMenuOpened = false;
-const isDropdownMenuOpened = false;
-
-const setIsFilterModalMenuOpened = (value) => {
-  isFilterModalMenuOpened = value;
-};
-
-const isMenuOpened = false;
-const isLangMenuOpened = false;
-
-const isDarkMode = false;
-
-const toggleDarkMode = () => {
-  document.body.classList.toggle('darkmode');
-  isDarkMode = !isDarkMode;
-};
-
 const headerBurger = document.querySelector('.burger-header');
-
 const headerBody = document.querySelector('.header__body');
 const navmenuHeaderItem = document.querySelector('.navmenu-header__item');
 
@@ -41,14 +21,26 @@ navmenuHeaderItem.addEventListener('click', () => {
   headerBody.classList.remove('active');
 }) 
 
+const langMenuBtn = document.querySelector('.dropdown-lang');
+const langMenuChevron = document.querySelector('.dropdown-lang__chevron');
+const langMenuBody = document.querySelector('.dropdown-lang__body');
+
+langMenuBtn.addEventListener('click', () => {
+  langMenuBody.classList.toggle('active');
+  langMenuChevron.classList.toggle('active');
+})
+
 const themeSwitch = document.querySelector('.theme-switch');
+
 themeSwitch.addEventListener('click', () => {
   themeSwitch.classList.toggle('darkmode');
+  document.body.classList.toggle('darkmode');
 }) 
 
 const dropdownCityBtn = document.querySelector('.dropdown-city__btn');
 const dropdownCityChevron = document.querySelector('.dropdown-city__chevron');
 const dropdownCityBody = document.querySelector('.dropdown-city__body');
+
 dropdownCityBtn.addEventListener('click', () => {
   dropdownCityBtn.classList.toggle('active');
   dropdownCityChevron.classList.toggle('active');
@@ -57,7 +49,21 @@ dropdownCityBtn.addEventListener('click', () => {
 
 const heroFilterBtn = document.querySelector('.hero__filter-btn');
 const dropdownFilter = document.querySelector('.dropdown-filter');
+
 heroFilterBtn.addEventListener('click', () => {
   heroFilterBtn.classList.toggle('active');
   dropdownFilter.classList.toggle('active');
 }) 
+
+const extendedFilterBtn = document.querySelector('.hero__extended-filter-btn');
+const extendedFilterModalOverlay = document.querySelector('.modal-overlay');
+const extendedFilterModalMenu = document.querySelector('.modal-menu');
+
+extendedFilterBtn.addEventListener('click', () => {
+  extendedFilterModalMenu.classList.toggle('closed');
+}) 
+
+extendedFilterModalOverlay.addEventListener('click', () => {
+  extendedFilterModalMenu.classList.add('closed');
+})
+
