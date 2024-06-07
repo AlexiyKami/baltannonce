@@ -11,6 +11,7 @@
 
   &__title {
     color: $color-text-primary;
+
     &-counter {
       color: $color-text-secondary;
     }
@@ -84,9 +85,11 @@
   padding: 5px;
   border-radius: 0.75rem;
   background: $color-border-secondary;
+
   &_gold {
     background: $gradient-linear-gold;
   }
+
   &_silver {
     background: $gradient-linear-silver;
     padding: 5px;
@@ -116,12 +119,12 @@
 
   &__img-container {
     overflow: hidden;
-    object-fit: cover;
     min-height: 23.75rem;
 
     & > img {
       transform: scale(1);
       transition: transform $transition-hover;
+      object-fit: cover;
     }
   }
 
@@ -216,6 +219,9 @@
   }
 
   &__rating {
+    @include flex(row, center, center);
+    gap: 4px;
+
     &>svg {
       color: $color-border-icons;
     }
@@ -270,10 +276,6 @@
     &__cards-container {
       width: 100%
     }
-  }
-
-  .card-home {
-    @include flex(column);
   }
 }
 
