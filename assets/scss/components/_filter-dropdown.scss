@@ -104,6 +104,8 @@
 
 .popup-dropdown-filter {
   position: absolute;
+  top: -50px;
+  left: 40px;
   background-color: $color-surface-highlight;
   height: 224px;
   border-radius: 8px;
@@ -121,7 +123,7 @@
   }
   &__cross {
     color: $color-border-icons;
-    cursor: pointer;
+    cursor: pointer; 
   }
   &__list {
     margin-top: 12px;

@@ -66,35 +66,35 @@ filterDropdown.innerHTML = `
     <span class="dropdown-filter__btn-text button__text">Больше</span>
     <div class="dropdown-filter__popup popup-dropdown-filter">
       <div class="popup-dropdown-filter__heading">
-        <h5 class="popup-dropdown-filter__title">Размер груди</h5>
+        <h5 class="popup-dropdown-filter__title">Возраст</h5>
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="popup-dropdown-filter__cross button_icon-primary">
           <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </div>
       <div class="popup-dropdown-filter__list">
         <div class="popup-dropdown-filter__item">
-          <input id="A-popup" type="checkbox" name="breast-size">
-          <label for="A-popup">A</label>
+          <input id="18-20-popup" type="checkbox" name="years-old">
+          <label for="18-20-popup">18-20</label>
         </div>
         <div class="popup-dropdown-filter__item">
-          <input id="B-popup" type="checkbox" name="breast-size">
-          <label for="B-popup">B</label>
+          <input id="21-24-popup" type="checkbox" name="years-old">
+          <label for="21-24-popup">21-24</label>
         </div>
         <div class="popup-dropdown-filter__item">
-          <input id="C-popup" type="checkbox" name="breast-size">
-          <label for="C-popup">C</label>
+          <input id="25-29-popup" type="checkbox" name="years-old">
+          <label for="25-29-popup">25-29</label>
         </div>
         <div class="popup-dropdown-filter__item">
-          <input id="D-popup" type="checkbox" name="breast-size">
-          <label for="D-popup">D</label>
+          <input id="30-35-popup" type="checkbox" name="years-old">
+          <label for="30-35-popup">30-35</label>
         </div>
         <div class="popup-dropdown-filter__item">
-          <input id="DD-popup" type="checkbox" name="breast-size">
-          <label for="DD-popup">DD</label>
+          <input id="36-40-popup" type="checkbox" name="years-old">
+          <label for="36-40-popup">36-40</label>
         </div>
         <div class="popup-dropdown-filter__item">
-          <input id="G-popup" type="checkbox" name="breast-size">
-          <label for="G-popup">G</label>
+          <input id="40-popup" type="checkbox" name="years-old">
+          <label for="40-popup">40+</label>
         </div>
       </div>
       <div class="popup-dropdown-filter__btns">
@@ -152,6 +152,47 @@ filterDropdown.innerHTML = `
   <div class="dropdown-filter__item">
     <input id="G" type="checkbox" name="breast-size">
     <label for="G">G</label>
+  </div>
+  <div class="dropdown-filter__btn-more button__text">
+    <span class="dropdown-filter__btn-text button__text">Больше</span>
+    <div class="dropdown-filter__popup popup-dropdown-filter">
+      <div class="popup-dropdown-filter__heading">
+        <h5 class="popup-dropdown-filter__title">Размер груди</h5>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="popup-dropdown-filter__cross button_icon-primary">
+          <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="popup-dropdown-filter__list">
+        <div class="popup-dropdown-filter__item">
+          <input id="A-popup" type="checkbox" name="breast-size">
+          <label for="A-popup">A</label>
+        </div>
+        <div class="popup-dropdown-filter__item">
+          <input id="B-popup" type="checkbox" name="breast-size">
+          <label for="B-popup">B</label>
+        </div>
+        <div class="popup-dropdown-filter__item">
+          <input id="C-popup" type="checkbox" name="breast-size">
+          <label for="C-popup">C</label>
+        </div>
+        <div class="popup-dropdown-filter__item">
+          <input id="D-popup" type="checkbox" name="breast-size">
+          <label for="D-popup">D</label>
+        </div>
+        <div class="popup-dropdown-filter__item">
+          <input id="DD-popup" type="checkbox" name="breast-size">
+          <label for="DD-popup">DD</label>
+        </div>
+        <div class="popup-dropdown-filter__item">
+          <input id="G-popup" type="checkbox" name="breast-size">
+          <label for="G-popup">G</label>
+        </div>
+      </div>
+      <div class="popup-dropdown-filter__btns">
+        <div class="popup-dropdown-filter__btn button button_secondary button_small">Отменить</div>
+        <div class="popup-dropdown-filter__btn button button_primary button_small">Отфильтровать</div>
+      </div>
+    </div>
   </div>
 </form>
 <form class="dropdown-filter__form dropdown-filter__language">
