@@ -26,6 +26,7 @@
   outline: 0.0625rem solid $color-surface-highlight;
 
   &:hover {
+    background-color: $color-surface-secondary;
     outline: 0.0625rem solid $color-border-accent;
   }
 }
@@ -42,6 +43,38 @@
 
   &:hover {
     outline-width: 0.125rem;
+  }
+}
+
+.button_icon-button-primary {
+  color: $color-surface-invert;
+  &:hover {
+    color: $color-button;
+  }
+  &[disabled], &:disabled {
+    color: $color-border-icons;
+  }
+}
+
+.button_icon-button-secondary {
+  color: $color-border-icons;
+  &:hover {
+    color: $color-surface-invert;
+  }
+  &[disabled], &:disabled {
+    color: $color-border-icons;
+  }
+}
+
+.button_icon-button-colored {
+  color: $color-button;
+  &:hover {
+    color: $color-button;
+    background-color: $color-surface-primary;
+  }
+  &.active {
+    color: $color-button;
+    background-color: $color-surface-primary;
   }
 }
 

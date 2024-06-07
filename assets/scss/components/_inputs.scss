@@ -49,7 +49,7 @@ input[type="radio"] {
 }
 
 input[type="number"] {
-  border: 0.0625rem solid $color-border-primary;
+  outline: 0.0625rem solid $color-border-primary;
   background-color: transparent;
   border-radius: 0.25rem;
   min-height: 2.25rem;
@@ -72,5 +72,15 @@ input[type="number"] {
 
   &.medium {
     width: 6.125rem;
+  }
+  &:hover {
+    outline-color: $color-border-accent;
+  }
+  &:focus {
+    outline: 0.125rem solid $color-border-accent;
+  }
+  &:disabled {
+    outline-color: $color-border-primary;
+    background-color: $color-surface-highlight;
   }
 }

@@ -9,6 +9,12 @@
     cursor: pointer;
     padding-left: 0.75rem;
     padding-bottom: 0.5rem;
+    &:hover {
+      background-color: $color-surface-primary;
+    }
+    &.active {
+      background-color: $color-surface-primary;
+    }
   }
 
   &__chevron {
