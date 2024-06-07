@@ -8,6 +8,7 @@
   z-index: 10001;
   @include size(100%);
   @include flex(column, center, center);
+
   &.closed {
     display: none;
   }
@@ -29,30 +30,36 @@
   padding: 2rem 2.5rem;
   border-radius: 0.5rem;
   background-color: $color-surface-primary;
+
   &__title {
     color: $color-brand-rose-600;
     margin-bottom: 2rem;
     text-align: center;
   }
+
   &__containers {
     @include flex(column);
     gap: 2.5rem;
   }
+
   &__container {
     @include flex(row, space-between);
     gap: 1.5rem;
     width: 100%;
   }
+
   &__container-reviews {
     & .item-extended-filter__forms {
       flex: 1 1 50%;
     }
   }
+
   &__container-additional {
     .item-extended-filter__forms {
       gap: 1.5rem;
     }
   }
+
   &__button {
     margin-top: 2.5rem;
   }
@@ -62,46 +69,63 @@
   @include flex(column);
   gap: 0.5rem;
   width: 100%;
+
   &__stripe {
     height: 0.0625rem;
     width: 100%;
     background-color: $color-border-primary;
     margin-bottom: 0.75rem;
   }
+
   &__subtitle {
     margin-top: 0.75rem;
   }
+
   &__unit {
     color: $color-text-secondary;
   }
+
   &__form {
     @include flex(row, flex-start, center);
     gap: 0.5rem;
+
     & label {
       min-width: 4.375rem;
     }
+
     &.wrap {
       flex-wrap: wrap;
     }
   }
-  &__preferences, &__reviews, &__additional, &__appearance, &__fetish, &__location {
+
+  &__preferences,
+  &__reviews,
+  &__additional,
+  &__appearance,
+  &__fetish,
+  &__location {
     display: flex;
     gap: 0.5rem;
     align-items: center;
   }
 
-  &__reviews, &__additional, &__appearance, &__fetish, &__location {
+  &__reviews,
+  &__additional,
+  &__appearance,
+  &__fetish,
+  &__location {
     & .heading_h6 {
       min-width: 9rem;
       width: 9rem;
       text-align: right;
+
       &.heading__align-self_start {
         align-self: flex-start;
       }
     }
   }
 
-  &__fetish > &__row {
+  &__fetish>&__row {
     flex: 1 1 50%;
   }
 
@@ -118,14 +142,18 @@
     flex: 1 1 33%;
     @include flex(column);
     gap: 0.5rem;
-    &-appearance, &-location {
+
+    &-appearance,
+    &-location {
       gap: 1.5rem;
     }
   }
+
   &__column {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+
     &_gap-md {
       gap: 0.75rem;
     }
@@ -135,21 +163,26 @@
     &_wrap {
       flex-wrap: wrap;
     }
+
     &_gap-big {
       gap: 1.5rem;
     }
+
     display: flex;
     align-items: center;
     gap: 0.5rem;
+
     & label {
       width: auto;
     }
   }
+
   &__has-passport {
     display: flex;
     gap: 0.5rem;
     margin-top: 1.5rem;
   }
+
   &__create-questionary {
     display: flex;
     gap: 0.5rem;
@@ -165,20 +198,27 @@
 @media screen and (max-width: $desktop-sm) {
   .extended-filter {
     padding: 1.25rem 1.25rem 2rem;
+
     &__container {
       flex-wrap: wrap;
     }
-    &__container-preferences, &__container-reviews, &__container-additional {
+
+    &__container-preferences,
+    &__container-reviews,
+    &__container-additional {
       .item-extended-filter {
         width: 100%;
       }
     }
   }
+
   .item-extended-filter {
     width: auto;
+
     &__row {
       flex-wrap: wrap;
     }
+
     &__fetish {
       input[type="number"] {
         &.medium {
@@ -187,8 +227,9 @@
       }
     }
   }
-  
+
 }
+
 @media screen and (max-width: $tablet) {
   .extended-filter {
     &__container-reviews {
@@ -197,24 +238,30 @@
       }
     }
   }
+
   .item-extended-filter {
     width: 100%;
+
     &__forms-container {
       flex-direction: column;
     }
+
     &__appearance {
       &.wrap {
         flex-wrap: wrap;
       }
     }
+
     &__additional {
       .dropdown.wide {
         width: 14.875rem;
       }
     }
+
     &__fetish {
       flex-direction: column;
     }
+
     &__location {
       flex-wrap: wrap;
     }
@@ -223,9 +270,17 @@
 
 @media screen and (max-width: $mobile-md) {
   .item-extended-filter {
-    &__piercing, &__tattoo, &__additional, &__appearance, &__fetish, &__location, &__languages{
+
+    &__piercing,
+    &__tattoo,
+    &__additional,
+    &__appearance,
+    &__fetish,
+    &__location,
+    &__languages {
       flex-direction: column;
       align-items: stretch;
+
       & .heading_h6 {
         text-align: left;
       }

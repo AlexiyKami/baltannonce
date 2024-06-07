@@ -74,16 +74,16 @@ textarea {
   --color-text-primary: #111827;
   --color-text-secondary: #6B7280;
   --color-text-invert: #FFFFFF;
-  --color-surface-primary:#FFFFFF;
-  --color-surface-secondary:#F9FAFB;
-  --color-surface-highlight:#F3F4F6;
-  --color-surface-invert:#111827;
-  --color-button:#BE123C;
-  --color-border-invert:#FFFFFF;
-  --color-border-primary:#D1D5DB;
-  --color-border-secondary:#E5E7EB;
-  --color-border-icons:#9CA3AF;
-  --color-border-accent:#BE123C;
+  --color-surface-primary: #FFFFFF;
+  --color-surface-secondary: #F9FAFB;
+  --color-surface-highlight: #F3F4F6;
+  --color-surface-invert: #111827;
+  --color-button: #BE123C;
+  --color-border-invert: #FFFFFF;
+  --color-border-primary: #D1D5DB;
+  --color-border-secondary: #E5E7EB;
+  --color-border-icons: #9CA3AF;
+  --color-border-accent: #BE123C;
   --color-gradient-flags: rgba(255, 255, 255, 0.6);
   --color-gradient-flags-hover: rgba(255, 255, 255, 0.5);
   --gradient-radial: radial-gradient(50% 50% at 50% 50%, #F3F4F6 0%, #f3f4f6 100%);
@@ -361,19 +361,20 @@ body.darkmode {
   justify-content: center;
   align-items: flex-start;
   background-color: var(--color-surface-primary);
-  padding: 0 1.25rem;
   border-radius: 0.75rem;
   opacity: 0;
+  min-height: 0rem;
   height: 0;
-  transition: opacity 0.4s, height 0.3s 0.3s, margin 0s 0.3s;
+  padding: 0 1.25rem;
+  margin-top: 0.5rem;
+  transition: opacity 0.4s, min-height 0.3s 0.3s, margin 0s 0.3s, padding 0.3s 0.3s;
   pointer-events: none;
   gap: 0.5rem;
 }
 .dropdown-city__body.active {
-  transition: opacity 0.4s 0.3s, height 0.3s, margin 0.1s 0.2s;
-  height: 18.5rem;
-  padding: 1.25rem;
-  margin: 0.5rem 0 1.75rem;
+  transition: opacity 0.4s 0.3s, min-height 0.3s, margin 0.1s 0.2s, padding 0.3s;
+  min-height: 18.5rem;
+  padding: 0 1.25rem;
   opacity: 1;
   pointer-events: all;
 }
@@ -395,6 +396,7 @@ body.darkmode {
 .dropdown-city__container.lt {
   background: linear-gradient(0deg, var(--color-gradient-flags), var(--color-gradient-flags)), url("../../assets/img/lithuania.jpg") no-repeat;
   background-size: cover;
+  margin-top: 20px;
 }
 .dropdown-city__container.lv {
   background: linear-gradient(0deg, var(--color-gradient-flags), var(--color-gradient-flags)), url("../../assets/img/latvia.jpg") no-repeat;
@@ -403,6 +405,7 @@ body.darkmode {
 .dropdown-city__container.ee {
   background: linear-gradient(0deg, var(--color-gradient-flags), var(--color-gradient-flags)), url("../../assets/img/estonia.jpg") no-repeat;
   background-size: cover;
+  margin-bottom: 20px;
 }
 .dropdown-city__list {
   display: flex;
@@ -436,9 +439,6 @@ body.darkmode {
   }
 }
 @media screen and (max-width: 64rem) {
-  .dropdown-city__body {
-    padding: 0.75rem;
-  }
   .dropdown-city__container {
     display: flex;
     flex-direction: column;
@@ -459,24 +459,20 @@ body.darkmode {
     font-weight: 600;
     line-height: 144%;
   }
-}
-@media screen and (max-width: 46.5rem) {
-  .dropdown-city__body.active {
-    min-height: 25.9375rem;
-    height: auto;
-  }
   .dropdown-city__container {
     min-height: 8.6875rem;
     height: auto;
   }
+  .dropdown-city__body.active {
+    min-height: 30rem;
+  }
+}
+@media screen and (max-width: 46.5rem) {
   .dropdown-city__list {
     flex-wrap: wrap;
   }
 }
 @media screen and (max-width: 26.875rem) {
-  .dropdown-city__body.active {
-    min-height: 31.1875rem;
-  }
   .dropdown-city__list {
     row-gap: 0.25rem;
     -moz-column-gap: 0.375rem;
@@ -881,7 +877,6 @@ body.darkmode {
 label {
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 
@@ -938,9 +933,6 @@ input[type=number]::-webkit-outer-spin-button, input[type=number]::-webkit-inner
   margin: 0;
 }
 input[type=number]::-moz-placeholder {
-  color: var(--color-text-secondary);
-}
-input[type=number]:-ms-input-placeholder {
   color: var(--color-text-secondary);
 }
 input[type=number]::placeholder {
@@ -1225,7 +1217,7 @@ input[type=number].medium {
   }
   .header__body.active {
     top: 3.5rem;
-    transition: top 1s cubic-bezier(0.07, 1.02, 0.34, 0.635);
+    transition: top 1s ease;
   }
   .header__navmenu {
     margin-bottom: 0rem;
@@ -1394,6 +1386,7 @@ input[type=number].medium {
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 0.5rem;
+  margin-top: 1.75rem;
   gap: 1rem;
 }
 .hero__filter-btns .button__icon {

@@ -31,8 +31,6 @@ const headerBurger = document.querySelector('.burger-header');
 const headerBody = document.querySelector('.header__body');
 const navmenuHeaderItem = document.querySelector('.navmenu-header__item');
 
-console.log(headerBurger, headerBody);
-
 headerBurger.addEventListener('click', () => {
   headerBurger.classList.toggle('active');
   headerBody.classList.toggle('active');

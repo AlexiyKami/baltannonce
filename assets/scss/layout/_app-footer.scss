@@ -2,6 +2,7 @@
 
 .footer {
   background-color: $color-surface-highlight;
+
   &__container {
     @include flex(column);
     @include padding-vertical(2.5rem);
@@ -15,6 +16,7 @@
 
   &__logo {
     flex: 0 0 8rem;
+
     & img {
       object-fit: contain;
     }
@@ -35,10 +37,12 @@
     color: $color-text-secondary;
   }
 }
+
 .navmenu-footer {
   &__list {
     @include flex(row, space-between)
   }
+
   &__item {
     white-space: nowrap;
   }
@@ -60,6 +64,7 @@
       @include flex(column, flex-start, flex-start);
       gap: 1.25rem;
     }
+
     &__logo {
       flex: 0 0 auto;
       width: 8rem;

@@ -14,6 +14,7 @@
 .button_primary {
   background-color: $color-button;
   color: $color-text-invert;
+
   &:hover {
     box-shadow: $hover-light-mode;
   }
@@ -23,6 +24,7 @@
   background-color: $color-surface-highlight;
   color: $color-button;
   outline: 0.0625rem solid $color-surface-highlight;
+
   &:hover {
     outline: 0.0625rem solid $color-border-accent;
   }
@@ -32,10 +34,12 @@
   min-height: 2.1875rem;
   @include font(0.875rem, 600, 136%);
 }
+
 .button_outlined {
   outline: 0.0625rem solid $color-border-accent;
   color: $color-button;
   transition: outline 0s;
+
   &:hover {
     outline-width: 0.125rem;
   }
@@ -46,6 +50,7 @@
   gap: 0.5rem;
   color: $color-text-primary;
   padding: 0rem 1rem;
+
   &:hover {
     background-color: $color-surface-primary;
   }
@@ -53,6 +58,7 @@
 
 .button_with-indicator {
   position: relative;
+
   &::after {
     content: '1';
     position: absolute;
@@ -61,7 +67,7 @@
     @include size(0.9375rem);
     @include font(0.6875rem, 600, 136%);
     color: $color-button;
-    outline:0.0625rem solid $color-button;
+    outline: 0.0625rem solid $color-button;
     background-color: $color-surface-primary;
     border-radius: 50%;
     z-index: 2;

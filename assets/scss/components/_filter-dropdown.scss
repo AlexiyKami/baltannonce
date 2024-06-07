@@ -13,40 +13,48 @@
   padding: 0 1.25rem;
   pointer-events: none;
   transition: opacity .4s, height .3s .3s, margin .0s .3s;
+
   &.active {
     height: 24.125rem;
     padding: 1.25rem;
     opacity: 1;
     pointer-events: all;
   }
+
   &__body {
     @include flex(row);
     gap: 1.5rem;
   }
+
   &__item {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     width: 9rem;
   }
+
   &__item-price {
     display: flex;
     gap: 0.5rem;
     flex-direction: column;
     align-items: flex-start;
   }
+
   &__item-number-inputs {
     display: flex;
     gap: 0.5rem;
     align-items: center
   }
+
   &__form {
     @include flex(column);
     gap: 0.5rem;
   }
+
   &__title {
     margin-top: 0.75rem;
   }
+
   &__btns {
     @include flex(column);
     gap: 0.75rem;
@@ -54,11 +62,13 @@
 
   &__other-filters {
     display: flex;
-    gap:1.5rem;
+    gap: 1.5rem;
+
     .dropdown-filter__form {
       gap: 0.25rem;
       min-width: 9rem;
-      & > .dropdown-filter__title {
+
+      &>.dropdown-filter__title {
         margin-bottom: 0rem;
       }
     }
@@ -67,9 +77,10 @@
   &__row-container {
     display: flex;
     gap: 1.5rem;
-      .dropdown-filter__item {
-        width: auto;
-      }
+
+    .dropdown-filter__item {
+      width: auto;
+    }
   }
 
   &__body-bottom {
@@ -77,7 +88,7 @@
     justify-content: space-between;
     gap: 1.5rem;
   }
-  
+
 }
 
 @media screen and (max-width:$desktop-md) {
@@ -85,9 +96,13 @@
     &.active {
       height: 45.875rem;
     }
-    &__body, &__body-bottom, &__other-filters {
+
+    &__body,
+    &__body-bottom,
+    &__other-filters {
       flex-wrap: wrap;
     }
+
     &__btns {
       flex-direction: row;
     }
@@ -97,6 +112,7 @@
 @media screen and (max-width:$tablet) {
   .dropdown-filter {
     overflow: scroll;
+
     &__body-bottom {
       justify-content: center;
     }
@@ -108,6 +124,7 @@
     &__body-bottom {
       justify-content: flex-start;
     }
+
     &__btns {
       flex-direction: column;
     }
