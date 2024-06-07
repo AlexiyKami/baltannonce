@@ -80,14 +80,32 @@
   }
 }
 
+.card-background {
+  padding: 5px;
+  border-radius: 0.75rem;
+  background: $color-border-secondary;
+  &_gold {
+    background: $gradient-linear-gold;
+  }
+  &_silver {
+    background: $gradient-linear-silver;
+    padding: 5px;
+    border-radius: 0.75rem;
+  }
+
+  &_bronze {
+    background: $gradient-linear-bronze;
+    padding: 5px;
+    border-radius: 0.75rem;
+  }
+}
+
 .card-home {
   min-height: 30rem;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto;
+  grid-template-rows: 1fr auto;
   position: relative;
-  background: $gradient-linear-silver;
-  border: 0.25rem solid silver;
   border-radius: 0.75rem;
   overflow: hidden;
   transition: transform $transition-hover;
@@ -109,7 +127,9 @@
 
   &__badges {
     position: absolute;
-    top: 0;
+    top: 0px;
+    left: 0px;
+    right: 0px;
     z-index: 4;
     width: 100%;
     display: flex;
