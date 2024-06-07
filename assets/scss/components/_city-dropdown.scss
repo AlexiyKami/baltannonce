@@ -38,7 +38,7 @@
   }
 
   &__body {
-    @include flex(column, center, flex-start);
+    @include flex(column);
     background-color: $color-surface-primary;
     border-radius: 0.75rem;
     opacity: 0;

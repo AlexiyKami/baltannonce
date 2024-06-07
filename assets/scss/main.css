@@ -398,8 +398,8 @@ body.darkmode {
 .dropdown-city__body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: flex-start;
+  align-items: stretch;
   background-color: var(--color-surface-primary);
   border-radius: 0.75rem;
   opacity: 0;
