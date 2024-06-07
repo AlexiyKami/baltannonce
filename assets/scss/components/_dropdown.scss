@@ -20,6 +20,21 @@
     border-radius: 0.25rem;
     color: $color-text-secondary;
     cursor: pointer;
+    &:hover {
+      outline-color: $color-border-accent;
+    }
+    &.active {
+      outline: 0.125rem solid $color-border-accent;
+    }
+    &[disabled], &:disabled {
+      cursor: auto;
+      pointer-events: none;
+      outline-color: $color-border-primary;
+      background-color: $color-surface-highlight;
+    }
+    &:disabled &__chevron {
+      color: $color-border-primary;
+    }
   }
 
   &__chevron {
