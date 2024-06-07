@@ -91,13 +91,16 @@
   border-radius: 0.75rem;
   overflow: hidden;
   transition: transform $transition-hover;
-  &:hover &__img-container > img {
+
+  &:hover &__img-container>img {
     transform: scale(1.1);
   }
+
   &__img-container {
     overflow: hidden;
     object-fit: cover;
     min-height: 23.75rem;
+
     & > img {
       transform: scale(1);
       transition: transform $transition-hover;
@@ -106,6 +109,7 @@
 
   &__badges {
     position: absolute;
+    top: 0;
     z-index: 4;
     width: 100%;
     display: flex;
@@ -118,8 +122,6 @@
     height: 2.625rem;
     background: $gradient-linear-accent;
     color: white;
-    border-top-left-radius: 0.75rem;
-    border-top-right-radius: 0.75rem;
   }
 
   &__tags-container {
