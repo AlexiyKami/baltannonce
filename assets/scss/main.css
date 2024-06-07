@@ -1523,11 +1523,10 @@ input[type=number]:disabled {
 }
 
 .card-home {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
   min-height: 30rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
   position: relative;
   background: linear-gradient(156.1deg, #C7CAD0 -1.47%, #F4F4F4 45.72%, #BBC0C9 100%);
   border: 0.25rem solid silver;
@@ -1594,7 +1593,6 @@ input[type=number]:disabled {
   justify-content: flex-start;
   align-items: stretch;
   gap: 0.25rem;
-  height: 5.75rem;
   padding: 0.75rem 1rem;
   border-bottom-left-radius: 0.75rem;
   border-bottom-right-radius: 0.75rem;
