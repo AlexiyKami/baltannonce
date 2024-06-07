@@ -111,12 +111,21 @@
   border-radius: 8px;
   border: 1px solid $color-border-primary;
   padding: 12px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity $transition-hover;
+  
   &__heading {
     display: flex;
     min-height: 48px;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid $color-border-primary;
+  }
+  &.active {
+    visibility: visible;
+    transition: opacity $transition-hover;
+    opacity: 1;
   }
   &__title {
 
