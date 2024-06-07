@@ -41,14 +41,13 @@
     height: 0;
     padding: 0 1.25rem;
     margin-top: 0.5rem;
-    transition: opacity .4s, min-height .3s .3s, margin .0s .3s, padding .3s .3s;
+    transition: opacity .4s, min-height .3s .3s, margin .0s .3s;
     pointer-events: none;
     gap: 0.5rem;
 
     &.active {
-      transition: opacity .4s .3s, min-height .3s, margin .1s .2s, padding .3s;
+      transition: opacity .4s .3s, min-height .3s, margin .1s .2s;
       min-height: 18.5rem;
-      padding: 0 1.25rem;
       opacity: 1;
       pointer-events: all;
     }

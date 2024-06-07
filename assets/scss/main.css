@@ -367,14 +367,13 @@ body.darkmode {
   height: 0;
   padding: 0 1.25rem;
   margin-top: 0.5rem;
-  transition: opacity 0.4s, min-height 0.3s 0.3s, margin 0s 0.3s, padding 0.3s 0.3s;
+  transition: opacity 0.4s, min-height 0.3s 0.3s, margin 0s 0.3s;
   pointer-events: none;
   gap: 0.5rem;
 }
 .dropdown-city__body.active {
-  transition: opacity 0.4s 0.3s, min-height 0.3s, margin 0.1s 0.2s, padding 0.3s;
+  transition: opacity 0.4s 0.3s, min-height 0.3s, margin 0.1s 0.2s;
   min-height: 18.5rem;
-  padding: 0 1.25rem;
   opacity: 1;
   pointer-events: all;
 }
@@ -769,16 +768,17 @@ body.darkmode {
   background-color: var(--color-surface-primary);
   border-radius: 0.5rem;
   overflow: hidden;
-  padding: 1.25rem;
-  opacity: 0;
-  height: 0;
   padding: 0 1.25rem;
+  opacity: 0;
+  min-height: 0rem;
+  max-height: 0rem;
+  margin-top: 0.5rem;
   pointer-events: none;
-  transition: opacity 0.4s, height 0.3s 0.3s, margin 0s 0.3s;
+  transition: opacity 0.4s, min-height 0.3s 0.3s, height 0.3s 0.3s, margin 0s 0.3s;
 }
 .dropdown-filter.active {
-  height: 24.125rem;
-  padding: 1.25rem;
+  transition: opacity 0.4s 0.3s, min-height 0.3s, height 0.3s, margin 0.1s 0.2s;
+  min-height: 25rem;
   opacity: 1;
   pointer-events: all;
 }
@@ -788,6 +788,7 @@ body.darkmode {
   justify-content: flex-start;
   align-items: stretch;
   gap: 1.5rem;
+  padding-top: 1.25rem;
 }
 .dropdown-filter__item {
   display: flex;
@@ -845,12 +846,10 @@ body.darkmode {
   display: flex;
   justify-content: space-between;
   gap: 1.5rem;
+  padding-bottom: 1.25rem;
 }
 
 @media screen and (max-width: 90rem) {
-  .dropdown-filter.active {
-    height: 45.875rem;
-  }
   .dropdown-filter__body, .dropdown-filter__body-bottom, .dropdown-filter__other-filters {
     flex-wrap: wrap;
   }
@@ -859,9 +858,6 @@ body.darkmode {
   }
 }
 @media screen and (max-width: 46.5rem) {
-  .dropdown-filter {
-    overflow: scroll;
-  }
   .dropdown-filter__body-bottom {
     justify-content: center;
   }

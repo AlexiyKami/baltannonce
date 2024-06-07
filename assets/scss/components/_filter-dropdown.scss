@@ -7,16 +7,17 @@
   background-color: $color-surface-primary;
   border-radius: 0.5rem;
   overflow: hidden;
-  padding: 1.25rem;
-  opacity: 0;
-  height: 0;
   padding: 0 1.25rem;
+  opacity: 0;
+  min-height: 0rem;
+  max-height: 0rem;
+  margin-top: 0.5rem;
   pointer-events: none;
-  transition: opacity .4s, height .3s .3s, margin .0s .3s;
+  transition: opacity .4s, min-height .3s .3s, height .3s .3s, margin .0s .3s;
 
   &.active {
-    height: 24.125rem;
-    padding: 1.25rem;
+    transition: opacity .4s .3s, min-height .3s, height .3s, margin .1s .2s;
+    min-height: 25rem;
     opacity: 1;
     pointer-events: all;
   }
@@ -24,6 +25,7 @@
   &__body {
     @include flex(row);
     gap: 1.5rem;
+    padding-top: 1.25rem;
   }
 
   &__item {
@@ -87,16 +89,12 @@
     display: flex;
     justify-content: space-between;
     gap: 1.5rem;
+    padding-bottom: 1.25rem;
   }
-
 }
 
 @media screen and (max-width:$desktop-md) {
   .dropdown-filter {
-    &.active {
-      height: 45.875rem;
-    }
-
     &__body,
     &__body-bottom,
     &__other-filters {
@@ -111,8 +109,6 @@
 
 @media screen and (max-width:$tablet) {
   .dropdown-filter {
-    overflow: scroll;
-
     &__body-bottom {
       justify-content: center;
     }
