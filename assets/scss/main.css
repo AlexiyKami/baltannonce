@@ -94,12 +94,22 @@ body {
   font-optical-sizing: auto;
   background-color: var(--color-surface-secondary);
   color: var(--color-text-primary);
+  animation: 0.7s opacity;
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .wrapper {
   min-height: 100vh;
   margin: 0 auto;
   position: relative;
+  overflow-x: hidden;
 }
 
 ._container {
@@ -111,10 +121,12 @@ body {
 
 ::-webkit-scrollbar {
   width: 0.625rem;
+  background-color: var(--color-surface-primary);
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 0.625rem;
+  background-color: var(--color-surface-highlight);
 }
 
 @media screen and (max-width: 46.5rem) {
@@ -542,7 +554,9 @@ body.darkmode {
   overflow: auto;
   top: 0;
   left: 0;
+  opacity: 1;
   z-index: 10001;
+  transition: all 0.6s;
   width: 100%;
   height: 100%;
   display: flex;
@@ -551,7 +565,9 @@ body.darkmode {
   align-items: center;
 }
 .modal-menu.closed {
-  display: none;
+  opacity: 0;
+  transition: all 0.6s;
+  visibility: hidden;
 }
 
 .modal-overlay {
@@ -770,15 +786,16 @@ body.darkmode {
   overflow: hidden;
   padding: 0 1.25rem;
   opacity: 0;
-  min-height: 0rem;
+  height: 0rem;
   max-height: 0rem;
   margin-top: 0.5rem;
   pointer-events: none;
-  transition: opacity 0.4s, min-height 0.3s 0.3s, height 0.3s 0.3s, margin 0s 0.3s;
+  transition: opacity 0.4s, max-height 0.3s 0.3s, height 0.3s 0.3s, margin 0s 0.3s;
 }
 .dropdown-filter.active {
-  transition: opacity 0.4s 0.3s, min-height 0.3s, height 0.3s, margin 0.1s 0.2s;
-  min-height: 25rem;
+  transition: opacity 0.4s 0.3s, max-height 0.6s, height 0.6s, margin 0.1s 0.2s;
+  height: 100%;
+  max-height: 2400px;
   opacity: 1;
   pointer-events: all;
 }
