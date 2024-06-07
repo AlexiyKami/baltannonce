@@ -82,6 +82,9 @@
   border-radius: 0.75rem;
   overflow: hidden;
   transition: transform $transition-hover;
+  &:hover &__img-container > img {
+    transform: scale(1.1);
+  }
   &__img-container {
     overflow: hidden;
     object-fit: cover;
@@ -89,9 +92,6 @@
     & > img {
       transform: scale(1);
       transition: transform $transition-hover;
-      &:hover {
-        transform: scale(1.1);
-      }
     }
   }
 
@@ -133,6 +133,11 @@
 
   &__tag_new {
     background-color: $color-other-blue;
+    transition: opacity $transition-hover;
+  }
+
+  &:hover &__tag_new {
+    opacity: 0;
   }
 
   &__info {

@@ -1578,6 +1578,9 @@ input[type=number]:disabled {
   overflow: hidden;
   transition: transform 0.3s;
 }
+.card-home:hover .card-home__img-container > img {
+  transform: scale(1.1);
+}
 .card-home__img-container {
   overflow: hidden;
   -o-object-fit: cover;
@@ -1587,9 +1590,6 @@ input[type=number]:disabled {
 .card-home__img-container > img {
   transform: scale(1);
   transition: transform 0.3s;
-}
-.card-home__img-container > img:hover {
-  transform: scale(1.1);
 }
 .card-home__badges {
   position: absolute;
@@ -1626,6 +1626,10 @@ input[type=number]:disabled {
 }
 .card-home__tag_new {
   background-color: #297CF9;
+  transition: opacity 0.3s;
+}
+.card-home:hover .card-home__tag_new {
+  opacity: 0;
 }
 .card-home__info {
   display: flex;
