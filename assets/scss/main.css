@@ -273,6 +273,7 @@ body.darkmode {
   outline: 0.0625rem solid var(--color-surface-highlight);
 }
 .button_secondary:hover {
+  background-color: var(--color-surface-secondary);
   outline: 0.0625rem solid var(--color-border-accent);
 }
 
@@ -290,6 +291,38 @@ body.darkmode {
 }
 .button_outlined:hover {
   outline-width: 0.125rem;
+}
+
+.button_icon-button-primary {
+  color: var(--color-surface-invert);
+}
+.button_icon-button-primary:hover {
+  color: var(--color-button);
+}
+.button_icon-button-primary[disabled], .button_icon-button-primary:disabled {
+  color: var(--color-border-icons);
+}
+
+.button_icon-button-secondary {
+  color: var(--color-border-icons);
+}
+.button_icon-button-secondary:hover {
+  color: var(--color-surface-invert);
+}
+.button_icon-button-secondary[disabled], .button_icon-button-secondary:disabled {
+  color: var(--color-border-icons);
+}
+
+.button_icon-button-colored {
+  color: var(--color-button);
+}
+.button_icon-button-colored:hover {
+  color: var(--color-button);
+  background-color: var(--color-surface-primary);
+}
+.button_icon-button-colored.active {
+  color: var(--color-button);
+  background-color: var(--color-surface-primary);
 }
 
 .button_with-icon {
@@ -504,6 +537,21 @@ body.darkmode {
   border-radius: 0.25rem;
   color: var(--color-text-secondary);
   cursor: pointer;
+}
+.dropdown__btn:hover {
+  outline-color: var(--color-border-accent);
+}
+.dropdown__btn.active {
+  outline: 0.125rem solid var(--color-border-accent);
+}
+.dropdown__btn[disabled], .dropdown__btn:disabled {
+  cursor: auto;
+  pointer-events: none;
+  outline-color: var(--color-border-primary);
+  background-color: var(--color-surface-highlight);
+}
+.dropdown__btn:disabled .dropdown__btn__chevron {
+  color: var(--color-border-primary);
 }
 .dropdown__chevron {
   color: var(--color-border-icons);
@@ -926,7 +974,7 @@ input[type=radio]:checked {
 }
 
 input[type=number] {
-  border: 0.0625rem solid var(--color-border-primary);
+  outline: 0.0625rem solid var(--color-border-primary);
   background-color: transparent;
   border-radius: 0.25rem;
   min-height: 2.25rem;
@@ -952,6 +1000,16 @@ input[type=number].small {
 input[type=number].medium {
   width: 6.125rem;
 }
+input[type=number]:hover {
+  outline-color: var(--color-border-accent);
+}
+input[type=number]:focus {
+  outline: 0.125rem solid var(--color-border-accent);
+}
+input[type=number]:disabled {
+  outline-color: var(--color-border-primary);
+  background-color: var(--color-surface-highlight);
+}
 
 .dropdown-lang {
   width: 5.125rem;
@@ -967,6 +1025,12 @@ input[type=number].medium {
   cursor: pointer;
   padding-left: 0.75rem;
   padding-bottom: 0.5rem;
+}
+.dropdown-lang__btn:hover {
+  background-color: var(--color-surface-primary);
+}
+.dropdown-lang__btn.active {
+  background-color: var(--color-surface-primary);
 }
 .dropdown-lang__chevron {
   color: var(--color-border-icons);
