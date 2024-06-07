@@ -1,7 +1,7 @@
 const extendedFilterModal = document.querySelector('.modal-menu');
 
 extendedFilterModal.innerHTML = `
-<div class="modal-overlay" @click="$emit('setIsFilterModalMenuOpened', false)"/>
+<div class="modal-overlay"></div>
 <div class="extended-filter">
 <h2 class="extended-filter__title heading_h2">Поиск анкет по параметрам</h2>
 <div class="extended-filter__containers">
