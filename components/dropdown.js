@@ -2,8 +2,8 @@ const dropdown = document.querySelectorAll('.dropdown');
 
 dropdown.forEach((item) => {
   item.innerHTML = `
-  <div class="dropdown__btn" @click="isDropdownMenuOpened = !isDropdownMenuOpened">
-    <span class="dropdown__text button__text"><slot/></span>
+  <div class="dropdown__btn">
+    <span class="dropdown__text button__text"></span>
     <svg
       width="24"
       height="24"
@@ -11,7 +11,7 @@ dropdown.forEach((item) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       class="dropdown__chevron"
-      :class="{active: isDropdownMenuOpened}"
+     
     >
       <path
         d="M6 9L12 15L18 9"
@@ -22,7 +22,7 @@ dropdown.forEach((item) => {
       />
     </svg>
   </div>
-  <div class="dropdown__body" :class="{active: isDropdownMenuOpened}">
+  <div class="dropdown__body">
     <div class="dropdown__item">
       <span class="dropdown__text button__text">test</span>
     </div>

@@ -1,7 +1,7 @@
 const langDropdown = document.querySelector('.dropdown-lang');
 
 langDropdown.innerHTML = `
-<div class="dropdown-lang__btn" @click="isLangMenuOpened = !isLangMenuOpened">
+<div class="dropdown-lang__btn">
 <img src="assets/icons/RUflag_round.svg" alt="flag" class="dropdown-lang__flag" >
 <span class="dropdown-lang__text button__text">RU</span>
 <svg
@@ -11,7 +11,6 @@ langDropdown.innerHTML = `
   fill="none"
   xmlns="http://www.w3.org/2000/svg"
   class="dropdown-lang__chevron"
-  :class="{active: isLangMenuOpened}"
 >
   <path
     d="M6 9L12 15L18 9"
@@ -22,7 +21,7 @@ langDropdown.innerHTML = `
   />
 </svg>
 </div>
-<div class="dropdown-lang__body" :class="{active: isLangMenuOpened}">
+<div class="dropdown-lang__body">
 <div class="dropdown-lang__item">
   <img src="assets/icons/ENflag_round.svg" alt="flag" class="dropdown-lang__flag" >
   <span class="dropdown-lang__text button__text">EN</span>
