@@ -989,17 +989,22 @@ input[type=number]:disabled {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  gap: 0.375rem;
+  gap: 6px;
   cursor: pointer;
-  padding-left: 0.75rem;
-  padding-bottom: 0.5rem;
 }
 .dropdown-lang__btn.active {
   background-color: var(--color-surface-primary);
 }
+.dropdown-lang__btn:hover .dropdown-lang__chevron {
+  color: var(--color-text-primary);
+}
 .dropdown-lang__chevron {
   color: var(--color-border-icons);
-  transition: transform 0.3s ease-in;
+  transition: transform 0.3s ease-in, color 0.3s;
+  min-height: 24px;
+  min-width: 24px;
+  position: relative;
+  bottom: 1px;
 }
 .dropdown-lang__chevron.active {
   transform: rotateZ(-180deg);
@@ -1012,6 +1017,9 @@ input[type=number]:disabled {
   opacity: 0;
   transition: opacity 0.5s;
   pointer-events: none;
+  position: relative;
+  right: 12px;
+  margin-top: 0.5rem;
 }
 .dropdown-lang__body.active {
   opacity: 1;
