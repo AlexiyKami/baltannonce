@@ -126,7 +126,7 @@
 
   .header__body.active {
     top: 3.5rem;
-    transition: top 1s cubic-bezier(0.070, 1.020, 0.340, 0.635);
+    transition: top 1s ease;
   }
 
   .header__navmenu {

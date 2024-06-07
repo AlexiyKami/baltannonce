@@ -8,14 +8,14 @@ footer.innerHTML = `
     </a>
     <nav class="footer__navmenu navmenu-footer">
       <ul class="navmenu-footer__list">
-        <a href="" class="navmenu-footer__item">Девушки</a>
-        <a href="" class="navmenu-footer__item">Мужчины</a>
-        <a href="" class="navmenu-footer__item">Спрос и предложение</a>
-        <a href="" class="navmenu-footer__item">Содержанки</a>
-        <a href="" class="navmenu-footer__item">В первый раз?</a>
-        <a href="" class="navmenu-footer__item">Поддержка и Оплата</a>
-        <a href="" class="navmenu-footer__item">Terms and Conditions</a>
-        <a href="" class="navmenu-footer__item">Privacy Policy</a>
+        <a href="#" class="navmenu-footer__item">Девушки</a>
+        <a href="#" class="navmenu-footer__item">Мужчины</a>
+        <a href="#" class="navmenu-footer__item">Спрос и предложение</a>
+        <a href="#" class="navmenu-footer__item">Содержанки</a>
+        <a href="#" class="navmenu-footer__item">В первый раз?</a>
+        <a href="#" class="navmenu-footer__item">Поддержка и Оплата</a>
+        <a href="#" class="navmenu-footer__item">Terms and Conditions</a>
+        <a href="#" class="navmenu-footer__item">Privacy Policy</a>
       </ul>
     </nav>
   </div>

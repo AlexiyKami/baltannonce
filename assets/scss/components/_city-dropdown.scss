@@ -3,6 +3,7 @@
 .dropdown-city {
   z-index: 100;
   width: 100%;
+
   &__btn {
     @include flex(row, flex-start, center);
     gap: 0.5rem;
@@ -11,6 +12,7 @@
     width: 11.75rem;
     padding: 0.75rem 1rem;
     border-radius: 0.5rem;
+
     &.active {
       background-color: $color-surface-primary;
     }
@@ -19,10 +21,12 @@
   &__chevron {
     color: $color-button;
     transition: transform $transition-hover ease-in;
+
     &.active {
       transform: rotateZ(-180deg);
     }
   }
+
   &__text {
     color: $color-text-primary;
     width: 16.25rem;
@@ -31,23 +35,24 @@
   &__body {
     @include flex(column, center, flex-start);
     background-color: $color-surface-primary;
-    padding: 0 1.25rem;
     border-radius: 0.75rem;
     opacity: 0;
+    min-height: 0rem;
     height: 0;
-    transition: opacity .4s, height .3s .3s, margin .0s .3s;
+    padding: 0 1.25rem;
+    margin-top: 0.5rem;
+    transition: opacity .4s, min-height .3s .3s, margin .0s .3s;
     pointer-events: none;
     gap: 0.5rem;
+
     &.active {
-      transition: opacity .4s .3s, height .3s, margin .1s .2s;
-      height: 18.5rem;
-      padding: 1.25rem;
-      margin: 0.5rem 0 1.75rem;
+      transition: opacity .4s .3s, min-height .3s, margin .1s .2s;
+      min-height: 18.5rem;
       opacity: 1;
       pointer-events: all;
     }
   }
-  
+
   &__container {
     position: relative;
     @include flex(row, flex-start, center);
@@ -57,29 +62,37 @@
     border-radius: 0.5rem;
     padding: 1.25rem 2.5rem;
     overflow: hidden;
+
     &.lt {
       background: linear-gradient(0deg, $color-gradient-flags, $color-gradient-flags), url('../../assets/img/lithuania.jpg') no-repeat;
       background-size: cover;
+      margin-top: 20px;
     }
+
     &.lv {
       background: linear-gradient(0deg, $color-gradient-flags, $color-gradient-flags), url('../../assets/img/latvia.jpg') no-repeat;
       background-size: cover;
     }
+
     &.ee {
       background: linear-gradient(0deg, $color-gradient-flags, $color-gradient-flags), url('../../assets/img/estonia.jpg') no-repeat;
       background-size: cover;
+      margin-bottom: 20px;
     }
   }
+
   &__list {
     @include flex(row);
     gap: 2.5rem;
   }
+
   &__item {
     @include font(1.125rem, 600, 144%);
     border-radius: 0.5rem;
     padding: 0.5rem 1rem;
     cursor: pointer;
     transition: background-color $transition-hover;
+
     &:hover {
       background-color: $color-gradient-flags-hover;
     }
@@ -91,59 +104,58 @@
     &__container {
       padding: 1.25rem 0.75rem;
     }
+
     &__list {
       gap: 0.375rem;
     }
+
     &__text {
       width: 8.25rem;
     }
   }
 }
+
 @media screen and (max-width: $desktop-sm) {
   .dropdown-city {
-    &__body {
-      padding: 0.75rem;
-    }
     &__container {
       @include flex(column, flex-start, flex-start);
       gap: 0.75rem;
       height: 6.0625rem;
       padding: 0.75rem;
     }
+
     &__item {
       @include font(1rem, 600, 137%);
       padding: 0.5rem;
     }
+
     &__text {
       @include font(1rem, 600, 144%);
     }
-  }
-}
-@media screen and (max-width: $tablet) {
-  .dropdown-city {
-    &__body {
-      &.active {
-        min-height: 25.9375rem;
-        height: auto;
-      }
-    }
+
     &__container {
       min-height: 8.6875rem;
       height: auto;
     }
 
+    &__body {
+      &.active {
+        min-height: 30rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .dropdown-city {
     &__list {
       flex-wrap: wrap;
     }
   }
 }
+
 @media screen and (max-width: $mobile-md) {
   .dropdown-city {
-    &__body {
-      &.active {
-        min-height: 31.1875rem;
-      }
-    }
     &__list {
       row-gap: 0.25rem;
       column-gap: 0.375rem;

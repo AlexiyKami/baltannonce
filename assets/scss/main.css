@@ -74,16 +74,16 @@ textarea {
   --color-text-primary: #111827;
   --color-text-secondary: #6B7280;
   --color-text-invert: #FFFFFF;
-  --color-surface-primary:#FFFFFF;
-  --color-surface-secondary:#F9FAFB;
-  --color-surface-highlight:#F3F4F6;
-  --color-surface-invert:#111827;
-  --color-button:#BE123C;
-  --color-border-invert:#FFFFFF;
-  --color-border-primary:#D1D5DB;
-  --color-border-secondary:#E5E7EB;
-  --color-border-icons:#9CA3AF;
-  --color-border-accent:#BE123C;
+  --color-surface-primary: #FFFFFF;
+  --color-surface-secondary: #F9FAFB;
+  --color-surface-highlight: #F3F4F6;
+  --color-surface-invert: #111827;
+  --color-button: #BE123C;
+  --color-border-invert: #FFFFFF;
+  --color-border-primary: #D1D5DB;
+  --color-border-secondary: #E5E7EB;
+  --color-border-icons: #9CA3AF;
+  --color-border-accent: #BE123C;
   --color-gradient-flags: rgba(255, 255, 255, 0.6);
   --color-gradient-flags-hover: rgba(255, 255, 255, 0.5);
   --gradient-radial: radial-gradient(50% 50% at 50% 50%, #F3F4F6 0%, #f3f4f6 100%);
@@ -94,12 +94,31 @@ body {
   font-optical-sizing: auto;
   background-color: var(--color-surface-secondary);
   color: var(--color-text-primary);
+  -webkit-animation: 0.7s opacity;
+          animation: 0.7s opacity;
+}
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .wrapper {
   min-height: 100vh;
   margin: 0 auto;
   position: relative;
+  overflow-x: hidden;
 }
 
 ._container {
@@ -111,10 +130,12 @@ body {
 
 ::-webkit-scrollbar {
   width: 0.625rem;
+  background-color: var(--color-surface-primary);
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 0.625rem;
+  background-color: var(--color-surface-highlight);
 }
 
 @media screen and (max-width: 46.5rem) {
@@ -394,19 +415,19 @@ body.darkmode {
   justify-content: center;
   align-items: flex-start;
   background-color: var(--color-surface-primary);
-  padding: 0 1.25rem;
   border-radius: 0.75rem;
   opacity: 0;
+  min-height: 0rem;
   height: 0;
-  transition: opacity 0.4s, height 0.3s 0.3s, margin 0s 0.3s;
+  padding: 0 1.25rem;
+  margin-top: 0.5rem;
+  transition: opacity 0.4s, min-height 0.3s 0.3s, margin 0s 0.3s;
   pointer-events: none;
   gap: 0.5rem;
 }
 .dropdown-city__body.active {
-  transition: opacity 0.4s 0.3s, height 0.3s, margin 0.1s 0.2s;
-  height: 18.5rem;
-  padding: 1.25rem;
-  margin: 0.5rem 0 1.75rem;
+  transition: opacity 0.4s 0.3s, min-height 0.3s, margin 0.1s 0.2s;
+  min-height: 18.5rem;
   opacity: 1;
   pointer-events: all;
 }
@@ -428,6 +449,7 @@ body.darkmode {
 .dropdown-city__container.lt {
   background: linear-gradient(0deg, var(--color-gradient-flags), var(--color-gradient-flags)), url("../../assets/img/lithuania.jpg") no-repeat;
   background-size: cover;
+  margin-top: 20px;
 }
 .dropdown-city__container.lv {
   background: linear-gradient(0deg, var(--color-gradient-flags), var(--color-gradient-flags)), url("../../assets/img/latvia.jpg") no-repeat;
@@ -436,6 +458,7 @@ body.darkmode {
 .dropdown-city__container.ee {
   background: linear-gradient(0deg, var(--color-gradient-flags), var(--color-gradient-flags)), url("../../assets/img/estonia.jpg") no-repeat;
   background-size: cover;
+  margin-bottom: 20px;
 }
 .dropdown-city__list {
   display: flex;
@@ -469,9 +492,6 @@ body.darkmode {
   }
 }
 @media screen and (max-width: 64rem) {
-  .dropdown-city__body {
-    padding: 0.75rem;
-  }
   .dropdown-city__container {
     display: flex;
     flex-direction: column;
@@ -492,24 +512,20 @@ body.darkmode {
     font-weight: 600;
     line-height: 144%;
   }
-}
-@media screen and (max-width: 46.5rem) {
-  .dropdown-city__body.active {
-    min-height: 25.9375rem;
-    height: auto;
-  }
   .dropdown-city__container {
     min-height: 8.6875rem;
     height: auto;
   }
+  .dropdown-city__body.active {
+    min-height: 30rem;
+  }
+}
+@media screen and (max-width: 46.5rem) {
   .dropdown-city__list {
     flex-wrap: wrap;
   }
 }
 @media screen and (max-width: 26.875rem) {
-  .dropdown-city__body.active {
-    min-height: 31.1875rem;
-  }
   .dropdown-city__list {
     row-gap: 0.25rem;
     -moz-column-gap: 0.375rem;
@@ -595,7 +611,9 @@ body.darkmode {
   overflow: auto;
   top: 0;
   left: 0;
+  opacity: 1;
   z-index: 10001;
+  transition: all 0.6s;
   width: 100%;
   height: 100%;
   display: flex;
@@ -604,7 +622,9 @@ body.darkmode {
   align-items: center;
 }
 .modal-menu.closed {
-  display: none;
+  opacity: 0;
+  transition: all 0.6s;
+  visibility: hidden;
 }
 
 .modal-overlay {
@@ -821,16 +841,18 @@ body.darkmode {
   background-color: var(--color-surface-primary);
   border-radius: 0.5rem;
   overflow: hidden;
-  padding: 1.25rem;
-  opacity: 0;
-  height: 0;
   padding: 0 1.25rem;
+  opacity: 0;
+  height: 0rem;
+  max-height: 0rem;
+  margin-top: 0.5rem;
   pointer-events: none;
-  transition: opacity 0.4s, height 0.3s 0.3s, margin 0s 0.3s;
+  transition: opacity 0.4s, max-height 0.3s 0.3s, height 0.3s 0.3s, margin 0s 0.3s;
 }
 .dropdown-filter.active {
-  height: 24.125rem;
-  padding: 1.25rem;
+  transition: opacity 0.4s 0.3s, max-height 0.6s, height 0.6s, margin 0.1s 0.2s;
+  height: 100%;
+  max-height: 2400px;
   opacity: 1;
   pointer-events: all;
 }
@@ -840,6 +862,7 @@ body.darkmode {
   justify-content: flex-start;
   align-items: stretch;
   gap: 1.5rem;
+  padding-top: 1.25rem;
 }
 .dropdown-filter__item {
   display: flex;
@@ -897,12 +920,10 @@ body.darkmode {
   display: flex;
   justify-content: space-between;
   gap: 1.5rem;
+  padding-bottom: 1.25rem;
 }
 
 @media screen and (max-width: 90rem) {
-  .dropdown-filter.active {
-    height: 45.875rem;
-  }
   .dropdown-filter__body, .dropdown-filter__body-bottom, .dropdown-filter__other-filters {
     flex-wrap: wrap;
   }
@@ -911,9 +932,6 @@ body.darkmode {
   }
 }
 @media screen and (max-width: 46.5rem) {
-  .dropdown-filter {
-    overflow: scroll;
-  }
   .dropdown-filter__body-bottom {
     justify-content: center;
   }
@@ -1289,7 +1307,7 @@ input[type=number]:disabled {
   }
   .header__body.active {
     top: 3.5rem;
-    transition: top 1s cubic-bezier(0.07, 1.02, 0.34, 0.635);
+    transition: top 1s ease;
   }
   .header__navmenu {
     margin-bottom: 0rem;
@@ -1458,6 +1476,7 @@ input[type=number]:disabled {
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 0.5rem;
+  margin-top: 1.75rem;
   gap: 1rem;
 }
 .hero__filter-btns .button__icon {

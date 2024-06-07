@@ -7,12 +7,24 @@ body {
   font-optical-sizing: auto;
   background-color: $color-surface-secondary;
   color: $color-text-primary;
+  animation: 0.7s opacity;
+
+  @keyframes opacity {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
 }
 
 .wrapper {
   min-height: 100vh;
   margin: 0 auto;
   position: relative;
+  overflow-x: hidden;
 }
 
 ._container {
@@ -23,10 +35,12 @@ body {
 
 ::-webkit-scrollbar {
   width: 0.625rem;
+  background-color: $color-surface-primary;
 }
 
 ::-webkit-scrollbar-thumb {
   border-radius: 0.625rem;
+  background-color: $color-surface-highlight;
 }
 
 @media screen and (max-width: $tablet) {

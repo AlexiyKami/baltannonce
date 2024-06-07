@@ -20,6 +20,7 @@
   &__chevron {
     color: $color-border-icons;
     transition: transform $transition-hover ease-in;
+
     &.active {
       transform: rotateZ(-180deg);
     }
@@ -30,12 +31,13 @@
     opacity: 0;
     transition: opacity .5s;
     pointer-events: none;
+
     &.active {
       opacity: 1;
       pointer-events: all;
     }
   }
-  
+
 
   &__item {
     @include flex(row, flex-start, center);
@@ -45,6 +47,7 @@
     gap: 0.375rem;
     background-color: $color-surface-primary;
     cursor: pointer;
+
     &:hover {
       background-color: $color-surface-secondary;
     }

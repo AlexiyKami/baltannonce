@@ -3,13 +3,16 @@
 .dropdown {
   width: 7.75rem;
   position: relative;
+
   &.wide {
     width: 100%;
     max-width: 21.25rem;
   }
+
   &.narrow {
     width: 6.125rem;
   }
+
   &__btn {
     @include flex(row, space-between, center);
     padding: 0.625rem 0.75rem;
@@ -37,6 +40,7 @@
   &__chevron {
     color: $color-border-icons;
     transition: transform $transition-hover ease-in;
+
     &.active {
       transform: rotateZ(-180deg);
     }
@@ -60,11 +64,13 @@
       pointer-events: all;
     }
   }
+
   &__item {
     cursor: pointer;
     width: 100%;
     background-color: $color-surface-secondary;
     padding: 0.625rem 0.75rem;
+
     &:hover {
       background-color: $color-surface-primary;
     }

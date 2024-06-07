@@ -13,9 +13,11 @@ input[type="checkbox"] {
   border: 0.0625rem solid $color-border-primary;
   padding: 0.5625rem;
   border-radius: 0.25rem;
+
   &:hover {
     border: 0.0625rem solid $color-border-accent;
   }
+
   &:checked {
     -webkit-appearance: auto;
     -moz-appearance: auto;
@@ -31,9 +33,11 @@ input[type="radio"] {
   border: 0.0625rem solid $color-border-primary;
   padding: 0.5625rem;
   border-radius: 50%;
+
   &:hover {
     border: 0.0625rem solid $color-border-accent;
   }
+
   &:checked {
     display: inline-block;
     background-clip: content-box;
@@ -51,16 +55,21 @@ input[type="number"] {
   min-height: 2.25rem;
   color: $color-text-primary;
   padding: 0.5rem 0.75rem;
-  &::-webkit-outer-spin-button, &::-webkit-inner-spin-button {
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
   }
+
   &::placeholder {
     color: $color-text-secondary;
   }
+
   &.small {
     width: 3.75rem;
   }
+
   &.medium {
     width: 6.125rem;
   }
