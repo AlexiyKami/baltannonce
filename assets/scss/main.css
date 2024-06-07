@@ -316,6 +316,7 @@ body.darkmode {
 }
 
 .button_icon-primary {
+  cursor: pointer;
   color: var(--color-surface-invert);
 }
 .button_icon-primary:hover {
@@ -326,6 +327,7 @@ body.darkmode {
 }
 
 .button_icon-secondary {
+  cursor: pointer;
   color: var(--color-border-icons);
 }
 .button_icon-secondary:hover {
@@ -639,6 +641,9 @@ body.darkmode {
   margin-bottom: 2rem;
   text-align: center;
 }
+.extended-filter__cross {
+  display: none;
+}
 .extended-filter__containers {
   display: flex;
   flex-direction: column;
@@ -775,6 +780,17 @@ body.darkmode {
   .extended-filter {
     padding: 1.25rem 1.25rem 2rem;
   }
+  .extended-filter__title {
+    text-align: left;
+  }
+  .extended-filter__cross {
+    display: block;
+    position: absolute;
+    z-index: 1000;
+    margin: 18px;
+    top: 0;
+    right: 0;
+  }
   .extended-filter__container {
     flex-wrap: wrap;
   }
@@ -792,6 +808,11 @@ body.darkmode {
   }
 }
 @media screen and (max-width: 46.5rem) {
+  .extended-filter__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 136%;
+  }
   .extended-filter__container-reviews .item-extended-filter__forms {
     gap: 1.5rem;
   }
@@ -858,6 +879,7 @@ body.darkmode {
 }
 .dropdown-filter__btn-text {
   color: var(--color-button);
+  cursor: pointer;
 }
 .dropdown-filter__item {
   display: flex;
@@ -1314,12 +1336,10 @@ input[type=number]:disabled {
   height: 0.0625rem;
   background-color: var(--color-border-accent);
   transition: all 0.3s ease;
-  opacity: 1;
-  transform: translate3d(-100%, 0, 0);
+  opacity: 0;
 }
 .navmenu-header__item:hover::after, .navmenu-header__item:focus::after {
   opacity: 1;
-  transform: translate3d(0, 0, 0);
 }
 
 .dropdown-lang-header__btn {
@@ -1516,12 +1536,13 @@ input[type=number]:disabled {
   height: 0.0625rem;
   background-color: var(--color-border-accent);
   transition: all 0.3s ease;
-  opacity: 1;
-  transform: translate3d(-100%, 0, 0);
+  opacity: 0;
 }
 .navmenu-footer__item:hover::after, .navmenu-footer__item:focus::after {
   opacity: 1;
-  transform: translate3d(0, 0, 0);
+}
+.navmenu-footer__item.active::after {
+  background-color: var(--color-border-icons);
 }
 
 @media screen and (max-width: 90rem) {
@@ -1769,9 +1790,6 @@ input[type=number]:disabled {
 .card-home__tag_new {
   background-color: #297CF9;
   transition: opacity 0.3s;
-}
-.card-home:hover .card-home__tag_new {
-  opacity: 0;
 }
 .card-home__info {
   display: flex;

@@ -59,6 +59,7 @@ const extendedFilterBtn = document.querySelector('.hero__extended-filter-btn');
 const extendedFilterModalOverlay = document.querySelector('.modal-overlay');
 const extendedFilterModalMenu = document.querySelector('.modal-menu');
 const extendedFilterButton = document.querySelector('.extended-filter__button');
+const extendedFilterCrossBtn = document.querySelector('.extended-filter__cross');
 
 extendedFilterBtn.addEventListener('click', () => {
   extendedFilterModalMenu.classList.toggle('closed');
@@ -71,6 +72,11 @@ extendedFilterModalOverlay.addEventListener('click', () => {
 })
 
 extendedFilterButton.addEventListener('click', () => {
+  extendedFilterModalMenu.classList.add('closed');
+  document.body.style.overflow = 'auto';
+})
+
+extendedFilterCrossBtn.addEventListener('click', () => {
   extendedFilterModalMenu.classList.add('closed');
   document.body.style.overflow = 'auto';
 })

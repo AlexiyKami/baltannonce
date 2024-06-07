@@ -67,7 +67,7 @@ filterDropdown.innerHTML = `
     <div class="dropdown-filter__popup popup-dropdown-filter">
       <div class="popup-dropdown-filter__heading">
         <h5 class="popup-dropdown-filter__title">Возраст</h5>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="popup-dropdown-filter__cross button_icon-primary">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="popup-dropdown-filter__cross button_icon-secondary">
           <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </div>
@@ -150,7 +150,7 @@ filterDropdown.innerHTML = `
     <div class="dropdown-filter__popup popup-dropdown-filter">
       <div class="popup-dropdown-filter__heading">
         <h5 class="popup-dropdown-filter__title">Размер груди</h5>
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="popup-dropdown-filter__cross button_icon-primary">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="popup-dropdown-filter__cross button_icon-secondary">
           <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </div>

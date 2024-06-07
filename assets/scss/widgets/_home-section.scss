@@ -171,10 +171,6 @@
     transition: opacity $transition-hover;
   }
 
-  &:hover &__tag_new {
-    opacity: 0;
-  }
-
   &__info {
     @include flex(column);
     gap: 0.25rem;
