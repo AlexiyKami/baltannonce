@@ -14,7 +14,9 @@
     align-items: center;
     gap: 0.25rem;
     color: $color-text-primary;
-
+    margin-left: 1rem;
+    margin-right: 1rem;
+    
     &-counter {
       color: $color-text-secondary;
     }
@@ -32,8 +34,6 @@
       height: 0.0625rem;
       width: 100%;
       background-color: $color-border-primary;
-      margin-left: 1rem;
-      margin-right: 1rem;
     }
   }
 
