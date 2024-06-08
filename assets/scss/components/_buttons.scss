@@ -47,6 +47,7 @@
 
 .button_icon-primary {
   cursor: pointer;
+  transition: color $transition-hover;
   color: $color-surface-invert;
   &:hover {
     color: $color-button;
@@ -58,6 +59,7 @@
 
 .button_icon-secondary {
   cursor: pointer;
+  transition: color $transition-hover;
   color: $color-border-icons;
   &:hover {
     color: $color-surface-invert;
