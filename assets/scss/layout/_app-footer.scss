@@ -16,6 +16,7 @@
 
   &__logo {
     flex: 0 0 8rem;
+    color: $color-brand-rose-500;
 
     & img {
       object-fit: contain;
@@ -68,7 +69,9 @@
     &:focus::after {
       opacity: 1;
     }
+    
     &.active::after {
+      opacity: 1;
       background-color: $color-border-icons;
     }
   }

@@ -20,6 +20,7 @@
   &__logo {
     flex: 0 0 10rem;
     z-index: 101;
+    color: $color-button;
   }
 
   &__body {
@@ -36,8 +37,8 @@
     @include flex(row, flex-start, flex-start);
     gap: 0.5rem;
 
-    &__button {
-      text-wrap: nowrap;
+    & .button {
+      white-space: nowrap;
     }
   }
 
@@ -78,6 +79,11 @@
     &:hover::after,
     &:focus::after {
       opacity: 1;
+    }
+
+    &.active::after {
+      opacity: 1;
+      background-color: $color-border-icons;
     }
   }
 }
