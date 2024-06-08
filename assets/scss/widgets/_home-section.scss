@@ -42,6 +42,7 @@
     background-color: $color-surface-primary;
     border: 0.0625rem solid $color-border-secondary;
     border-radius: 0.75rem;
+    padding: 0rem 1rem;
   }
 
   &__verified-cards,
@@ -59,30 +60,41 @@
 
   &__cards-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: minmax(calc(33% - 0.25rem), 1fr) minmax(calc(33% - 0.25rem), 1fr) minmax(calc(33% - 0.25rem), 1fr);
     grid-template-rows: auto;
     gap: 0.75rem;
   }
 
+  &__advertisement-section {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 0.5rem;
+  }
+
   &__advertisement {
     flex: 0 0 19%;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
     gap: 1.4375rem;
 
     &-block {
       @include flex(column, center, center);
       font-size: 2.5rem;
       min-width: 17.5rem;
-      min-height: 32.875rem;
+      // min-height: 32.875rem;
       border-radius: 0.75rem;
       background-color: $color-surface-highlight;
+      &_horizontal {
+        min-height: 11.25rem;
+        margin: 1.25rem 0rem;
+      }
     }
   }
 }
 
 .card-background {
-  padding: 5px;
+  padding: 0.3125rem;
   border-radius: 0.75rem;
   background: $color-border-secondary;
 
@@ -92,13 +104,13 @@
 
   &_silver {
     background: $gradient-linear-silver;
-    padding: 5px;
+    padding: 0.3125rem;
     border-radius: 0.75rem;
   }
 
   &_bronze {
     background: $gradient-linear-bronze;
-    padding: 5px;
+    padding: 0.3125rem;
     border-radius: 0.75rem;
   }
 }
@@ -131,9 +143,9 @@
 
   &__badges {
     position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
+    top: 0rem;
+    left: 0rem;
+    right: 0rem;
     z-index: 4;
     width: 100%;
     display: flex;
@@ -180,8 +192,15 @@
     background-color: $color-surface-primary;
   }
 
+  &__name {
+    @include text-truncate();
+  }
+
   &__row {
-    @include flex(row, space-between, flex-start);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto;
+    gap: 1rem;
   }
 
   &__location {
@@ -217,7 +236,7 @@
 
   &__rating {
     @include flex(row, center, center);
-    gap: 4px;
+    gap: 0.25rem;
 
     &>svg {
       color: $color-border-icons;
@@ -242,11 +261,14 @@
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto;
       gap: 1rem;
-
+      
       &-block {
         flex: 0 1 45%;
         min-height: auto;
         height: 12.3125rem;
+        &:nth-child(5), &:nth-child(6), &:nth-child(7), &:nth-child(8) {
+          display: none;
+        }
       }
     }
   }
@@ -255,7 +277,7 @@
 @media screen and (max-width: $desktop-sm) {
   .home {
     &__cards-container {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: minmax(calc(50% - 0.375rem), 1fr) minmax(calc(50% - 0.375rem), 1fr);
     }
   }
 }
@@ -263,7 +285,7 @@
 @media screen and (max-width: $tablet) {
   .home {
     &__cards-container {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(100%, 1fr);
     }
   }
 }
@@ -271,7 +293,7 @@
 @media screen and (max-width: $mobile-md) {
   .home {
     &__cards-container {
-      width: 100%
+      width: 100%;
     }
   }
 }
