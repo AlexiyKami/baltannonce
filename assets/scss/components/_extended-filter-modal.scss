@@ -42,7 +42,12 @@
   }
 
   &__cross {
-    display: none;
+    display: block;
+    position: absolute;
+    z-index: 1000;
+    margin: 1.125rem;
+    top: 0;
+    right: 0;
   }
 
   &__containers {
@@ -210,14 +215,6 @@
     padding: 1.25rem 1.25rem 2rem;
     &__title {
       text-align: left;
-    }
-    &__cross {
-      display: block;
-      position: absolute;
-      z-index: 1000;
-      margin: 18px;
-      top: 0;
-      right: 0;
     }
 
     &__container {
