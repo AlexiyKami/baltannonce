@@ -18,7 +18,7 @@ input[type="checkbox"] {
 
   &:checked {
     background-size: cover;
-    padding: 2px;
+    padding: 0.125rem;
   }
 
   &:not(:disabled):checked {

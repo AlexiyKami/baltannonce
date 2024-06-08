@@ -105,23 +105,23 @@
 
 .popup-dropdown-filter {
   position: absolute;
-  top: -50px;
-  left: 40px;
+  top: -3.125rem;
+  left: 2.5rem;
   background-color: $color-surface-highlight;
-  height: 224px;
-  border-radius: 8px;
-  border: 1px solid $color-border-primary;
-  padding: 12px;
+  height: 14rem;
+  border-radius: 0.5rem;
+  border: 0.0625rem solid $color-border-primary;
+  padding: 0.75rem;
   visibility: hidden;
   opacity: 0;
   transition: opacity $transition-hover;
 
   &__heading {
     display: flex;
-    min-height: 48px;
+    min-height: 3rem;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid $color-border-primary;
+    border-bottom: 0.0625rem solid $color-border-primary;
   }
 
   &.active {
@@ -136,24 +136,24 @@
   }
 
   &__list {
-    margin-top: 12px;
+    margin-top: 0.75rem;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    gap: 10px;
-    height: 86px;
+    gap: 0.625rem;
+    height: 5.375rem;
   }
 
   &__item {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 0.5rem;
   }
 
   &__btns {
     display: flex;
-    gap: 8px;
-    margin-top: 20px;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
   }
 }
 

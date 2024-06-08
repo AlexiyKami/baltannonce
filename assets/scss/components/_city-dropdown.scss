@@ -92,7 +92,7 @@
 
   &__item {
     display: flex;
-    gap: 4px;
+    gap: 0.25rem;
     @include font(1.125rem, 600, 144%);
     border-radius: 0.5rem;
     padding: 0.5rem 1rem;
