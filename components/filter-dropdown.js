@@ -38,9 +38,9 @@ filterDropdown.innerHTML = `
   <div class="dropdown-filter__item dropdown-filter__item-price">
     <label for="">Свои значения:</label>
     <div class="dropdown-filter__item-number-inputs">
-      <input id="custom-price" type="number" name="price" class="small" min="0" placeholder="----">
+      <input id="custom-price-min" type="number" name="price" class="small" min="0" placeholder="----">
       <span>-</span>
-      <input id="custom-price" type="number" name="price" class="small" min="0" placeholder="----">
+      <input id="custom-price-max" type="number" name="price" class="small" min="0" placeholder="----">
     </div>
   </div>
 </form>
