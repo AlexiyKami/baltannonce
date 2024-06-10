@@ -3,7 +3,7 @@ const filterDropdown = document.querySelector('.dropdown-filter');
 filterDropdown.innerHTML = `
 <div class="dropdown-filter__body">
 <form class="dropdown-filter__form dropdown-filter__sortby">
-  <h5 class="dropdown-filter__title heading_h5">Сортировать по</h5>
+  <h3 class="dropdown-filter__title heading_h5">Сортировать по</h3>
   <div class="dropdown-filter__item">
     <input id="new-first" type="radio" name="sortby">
     <label for="new-first">Новые первые</label>
@@ -22,7 +22,7 @@ filterDropdown.innerHTML = `
   </div>
 </form>
 <form class="dropdown-filter__form dropdown-filter__price">
-  <h5 class="dropdown-filter__title heading_h5">Цена за час</h5>
+  <h3 class="dropdown-filter__title heading_h5">Цена за час</h3>
   <div class="dropdown-filter__item">
     <input id="100-200" type="checkbox" name="price">
     <label for="100-200">От 100 до 200</label>
@@ -45,7 +45,7 @@ filterDropdown.innerHTML = `
   </div>
 </form>
 <form class="dropdown-filter__form dropdown-filter__years-old">
-  <h5 class="dropdown-filter__title heading_h5">Возраст</h5>
+  <h3 class="dropdown-filter__title heading_h5">Возраст</h3>
   <div class="dropdown-filter__item">
     <input id="18-20" type="checkbox" name="years-old">
     <label for="18-20">18-20</label>
@@ -66,7 +66,7 @@ filterDropdown.innerHTML = `
     <span class="dropdown-filter__btn-text button__text">Больше</span>
     <div class="dropdown-filter__popup popup-dropdown-filter">
       <div class="popup-dropdown-filter__heading">
-        <h5 class="popup-dropdown-filter__title">Возраст</h5>
+        <h3 class="popup-dropdown-filter__title">Возраст</h3>
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="popup-dropdown-filter__cross button_icon-secondary">
           <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -105,7 +105,7 @@ filterDropdown.innerHTML = `
   </div>
 </form>
 <form class="dropdown-filter__form dropdown-filter__hair-color">
-  <h5 class="dropdown-filter__title heading_h5">Цвет волос</h5>
+  <h3 class="dropdown-filter__title heading_h5">Цвет волос</h3>
   <div class="dropdown-filter__item">
     <input id="blonde" type="checkbox" name="hair-color">
     <label for="blonde">Блондинка</label>
@@ -128,7 +128,7 @@ filterDropdown.innerHTML = `
   </div>
 </form>
 <form class="dropdown-filter__form dropdown-filter__breast-size">
-  <h5 class="dropdown-filter__title heading_h5">Размер груди</h5>
+  <h3 class="dropdown-filter__title heading_h5">Размер груди</h3>
   <div class="dropdown-filter__item">
     <input id="A" type="checkbox" name="breast-size">
     <label for="A">A</label>
@@ -149,7 +149,7 @@ filterDropdown.innerHTML = `
     <span class="dropdown-filter__btn-text button__text">Больше</span>
     <div class="dropdown-filter__popup popup-dropdown-filter">
       <div class="popup-dropdown-filter__heading">
-        <h5 class="popup-dropdown-filter__title">Размер груди</h5>
+        <h3 class="popup-dropdown-filter__title">Размер груди</h3>
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="popup-dropdown-filter__cross button_icon-secondary">
           <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -188,7 +188,7 @@ filterDropdown.innerHTML = `
   </div>
 </form>
 <form class="dropdown-filter__form dropdown-filter__language">
-  <h5 class="dropdown-filter__title heading_h5">Язык</h5>
+  <h3 class="dropdown-filter__title heading_h5">Язык</h3>
   <div class="dropdown-filter__item">
     <input id="LT" type="checkbox" name="language">
     <label for="LT">Литовский</label>
@@ -211,7 +211,7 @@ filterDropdown.innerHTML = `
   </div>
 </form>
 <form class="dropdown-filter__form dropdown-filter__race">
-  <h5 class="dropdown-filter__title heading_h5">Раса</h5>
+  <h3 class="dropdown-filter__title heading_h5">Раса</h3>
   <div class="dropdown-filter__item">
     <input id="white" type="checkbox" name="race">
     <label for="white">Белая</label>
@@ -234,7 +234,7 @@ filterDropdown.innerHTML = `
   </div>
 </form>
 <form class="dropdown-filter__form dropdown-filter__available">
-  <h5 class="dropdown-filter__title heading_h5">Доступна</h5>
+  <h3 class="dropdown-filter__title heading_h5">Доступна</h3>
   <div class="dropdown-filter__item">
     <input id="incall-a" type="checkbox" name="available">
     <label for="incall-a">Апартаменты Incall</label>
@@ -253,11 +253,11 @@ filterDropdown.innerHTML = `
   </div>
 </form>
 </div>
-<h5 class="dropdown-filter__title heading_h5">Другое</h5>
+<h3 class="dropdown-filter__title heading_h5">Другое</h3>
 <div class="dropdown-filter__body-bottom">
 <div class="dropdown-filter__other-filters">
   <form class="dropdown-filter__form dropdown-filter__questionary">
-    <h5 class="dropdown-filter__title heading_h5">Анкета с видео:</h5>
+    <h3 class="dropdown-filter__title heading_h5">Анкета с видео:</h3>
     <div class="dropdown-filter__row-container">
       <div class="dropdown-filter__item">
       <input id="questionary-yes" type="checkbox" name="questionary">
@@ -270,7 +270,7 @@ filterDropdown.innerHTML = `
     </div>
   </form>
   <form class="dropdown-filter__form dropdown-filter__smoking">
-    <h5 class="dropdown-filter__title heading_h5">Курит:</h5>
+    <h3 class="dropdown-filter__title heading_h5">Курит:</h3>
     <div class="dropdown-filter__row-container">
       <div class="dropdown-filter__item">
       <input id="smoking-yes" type="checkbox" name="smoking">
@@ -283,7 +283,7 @@ filterDropdown.innerHTML = `
     </div>
   </form>
   <form class="dropdown-filter__form dropdown-filter__silicone">
-    <h5 class="dropdown-filter__title heading_h5">Силикон:</h5>
+    <h3 class="dropdown-filter__title heading_h5">Силикон:</h3>
     <div class="dropdown-filter__row-container">
       <div class="dropdown-filter__item">
       <input id="silicone-yes" type="checkbox" name="silicone">
@@ -296,7 +296,7 @@ filterDropdown.innerHTML = `
     </div>
   </form>
   <form class="dropdown-filter__form dropdown-filter__bdsm">
-    <h5 class="dropdown-filter__title heading_h5">БДСМ:</h5>
+    <h3 class="dropdown-filter__title heading_h5">БДСМ:</h3>
     <div class="dropdown-filter__row-container">
       <div class="dropdown-filter__item">
       <input id="bdsm-yes" type="checkbox" name="bdsm">
@@ -309,7 +309,7 @@ filterDropdown.innerHTML = `
     </div>
   </form>
   <form class="dropdown-filter__form dropdown-filter__contacts">
-    <h5 class="dropdown-filter__title heading_h5">Способ связи:</h5>
+    <h3 class="dropdown-filter__title heading_h5">Способ связи:</h3>
     <div class="dropdown-filter__row-container">
       <div class="dropdown-filter__item">
         <input id="telegram" type="checkbox" name="contacts">
@@ -322,7 +322,7 @@ filterDropdown.innerHTML = `
     </div>
   </form>
   <form class="dropdown-filter__form dropdown-filter__verified">
-    <h5 class="dropdown-filter__title heading_h5">Проверены лично:</h5>
+    <h3 class="dropdown-filter__title heading_h5">Проверены лично:</h3>
     <div class="dropdown-filter__row-container">
       <div class="dropdown-filter__item">
       <input id="verified-yes" type="checkbox" name="verified">

@@ -20,14 +20,30 @@ footer.innerHTML = `
     </a>
     <nav class="footer__navmenu navmenu-footer">
       <ul class="navmenu-footer__list">
-        <a href="#" class="navmenu-footer__item active">Девушки</a>
-        <a href="#" class="navmenu-footer__item">Мужчины</a>
-        <a href="#" class="navmenu-footer__item">Спрос и предложение</a>
-        <a href="#" class="navmenu-footer__item">Содержанки</a>
-        <a href="#" class="navmenu-footer__item">В первый раз?</a>
-        <a href="#" class="navmenu-footer__item">Поддержка и Оплата</a>
-        <a href="#" class="navmenu-footer__item">Terms and Conditions</a>
-        <a href="#" class="navmenu-footer__item">Privacy Policy</a>
+        <li class="navmenu-footer__item">
+        <a href="#" class="navmenu-footer__link active">Девушки</a>
+        </li>
+        <li class="navmenu-footer__item">
+        <a href="#" class="navmenu-footer__link">Мужчины</a>
+        </li>
+        <li class="navmenu-footer__item">
+        <a href="#" class="navmenu-footer__link">Спрос и предложение</a>
+        </li>
+        <li class="navmenu-footer__item">
+        <a href="#" class="navmenu-footer__link">Содержанки</a>
+        </li>
+        <li class="navmenu-footer__item">
+        <a href="#" class="navmenu-footer__link">В первый раз?</a>
+        </li>
+        <li class="navmenu-footer__item">
+        <a href="#" class="navmenu-footer__link">Поддержка и Оплата</a>
+        </li>
+        <li class="navmenu-footer__item">
+        <a href="#" class="navmenu-footer__link">Terms and Conditions</a>
+        </li>
+        <li class="navmenu-footer__item">
+        <a href="#" class="navmenu-footer__link">Privacy Policy</a>
+        </li>
       </ul>
     </nav>
   </div>

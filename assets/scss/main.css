@@ -1527,7 +1527,7 @@ input[type=number]:disabled {
   justify-content: space-between;
   align-items: stretch;
 }
-.navmenu-footer__item {
+.navmenu-footer__link {
   display: block;
   max-width: -webkit-min-content;
   max-width: -moz-min-content;
@@ -1538,7 +1538,7 @@ input[type=number]:disabled {
   padding-bottom: 0.5rem;
   margin-bottom: -0.5rem;
 }
-.navmenu-footer__item::after {
+.navmenu-footer__link::after {
   content: "";
   position: absolute;
   bottom: 0rem;
@@ -1549,10 +1549,10 @@ input[type=number]:disabled {
   transition: all 0.3s ease;
   opacity: 0;
 }
-.navmenu-footer__item:hover::after, .navmenu-footer__item:focus::after {
+.navmenu-footer__link:hover::after, .navmenu-footer__link:focus::after {
   opacity: 1;
 }
-.navmenu-footer__item.active::after {
+.navmenu-footer__link.active::after {
   opacity: 1;
   background-color: var(--color-border-icons);
 }
@@ -1720,6 +1720,9 @@ input[type=number]:disabled {
   grid-template-rows: repeat(8, 1fr);
   gap: 1.4375rem;
 }
+.home__advertisement-title {
+  color: var(--color-text-secondary);
+}
 .home__advertisement-block {
   display: flex;
   flex-direction: column;
@@ -1813,7 +1816,7 @@ input[type=number]:disabled {
   background: linear-gradient(90.74deg, #881337 0%, #be123c 49%, #881337 100%);
 }
 .card-home__tag_new {
-  background-color: #297CF9;
+  background-color: #0651C1;
   transition: opacity 0.3s;
 }
 .card-home__info {
