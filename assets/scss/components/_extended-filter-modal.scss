@@ -144,7 +144,7 @@
     flex: 1 1 50%;
   }
 
-  &__languages {
+  &__languages, &__beard-type {
     flex-wrap: wrap;
   }
 
@@ -198,7 +198,7 @@
   }
 }
 
-@media screen and (max-width: $desktop-md) {
+@media screen and (max-width: $desktop-lg) {
   .extended-filter {
     max-width: 64rem;
   }
