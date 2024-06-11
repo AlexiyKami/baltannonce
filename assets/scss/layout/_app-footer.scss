@@ -77,7 +77,7 @@
   }
 }
 
-@media screen and (max-width: $desktop-md) {
+@media screen and (max-width: $desktop-lg) {
   .navmenu-footer {
     &__list {
       display: grid;
@@ -102,7 +102,7 @@
   }
 }
 
-@media screen and (max-width:$desktop-md) {
+@media screen and (max-width:$desktop-lg) {
   .footer {
     &__content {
       @include flex(column, flex-start, flex-start);

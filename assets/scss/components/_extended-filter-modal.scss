@@ -144,7 +144,7 @@
     flex: 1 1 50%;
   }
 
-  &__languages {
+  &__languages, &__beard-type {
     flex-wrap: wrap;
   }
 
@@ -192,19 +192,13 @@
     }
   }
 
-  &__has-passport {
-    display: flex;
-    gap: 0.5rem;
-    margin-top: 1.5rem;
-  }
-
   &__create-questionary {
     display: flex;
     gap: 0.5rem;
   }
 }
 
-@media screen and (max-width: $desktop-md) {
+@media screen and (max-width: $desktop-lg) {
   .extended-filter {
     max-width: 64rem;
   }

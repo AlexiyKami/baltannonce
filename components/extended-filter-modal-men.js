@@ -100,6 +100,17 @@ extendedFilterModal.innerHTML = `
       <div class="item-extended-filter__stripe"></div>
       <div class="item-extended-filter__forms-container">
         <div class="item-extended-filter__forms">
+        <h5 class="item-extended-filter__subtitle heading_h5">Тип секс услуг: *</h5>
+        <div class="item-extended-filter__row">
+          <div class="item-extended-filter__preferences">
+            <input id="item01" type="checkbox" name="">
+            <label for="item01">Актив</label>
+          </div>
+          <div class="item-extended-filter__preferences">
+            <input id="item02" type="checkbox" name="">
+            <label for="item02">Пассив</label>
+          </div>
+        </div>
         <h5 class="item-extended-filter__subtitle heading_h5">Секс</h5>
         <div class="item-extended-filter__preferences">
           <input id="item1" type="checkbox" name="available">
@@ -310,6 +321,10 @@ extendedFilterModal.innerHTML = `
             <input id="item50" type="checkbox" name="available">
             <label for="item50">Cекс по телефону</label>
           </div>
+          <div class="item-extended-filter__preferences">
+            <input id="item51" type="checkbox" name="available">
+            <label for="item51">GFE</label>
+          </div>
         </div>
       </div>
     </div>
@@ -357,10 +372,6 @@ extendedFilterModal.innerHTML = `
             <div class="dropdown wide">Не выбрано</div>
           </div>
           <div class="item-extended-filter__additional">
-            <label class="heading_h6" for="">Сортировать по разделу</label>
-            <div class="dropdown wide">Не выбрано</div>
-          </div>
-          <div class="item-extended-filter__additional">
             <label class="heading_h6" for="">Часы работы:</label>
             <div class="dropdown narrow">-</div>
             <span>-</span>
@@ -390,6 +401,17 @@ extendedFilterModal.innerHTML = `
             <label class="heading_h6" for="">Анкет с уникальным номером телефона:</label>
             <div class="dropdown">-</div>
           </div>
+          <div class="item-extended-filter__additional">
+            <label class="heading_h6" for="">Водительские права:</label>
+            <div class="item-extended-filter__row">
+              <input id="driver-license-auto" type="checkbox" name="contacts">
+              <label for="driver-license-auto">Автомобиль</label>
+            </div>
+            <div class="item-extended-filter__row">
+              <input id="driver-license-motorcycle" type="checkbox" name="contacts">
+              <label for="driver-license-motorcycle">Мотоцикл</label>
+            </div>
+          </div>
           <div class="item-extended-filter__row">
               <input id="questionary-video" type="checkbox" name="">
               <label for="questionary-video">Анкеты с видео</label>
@@ -403,8 +425,12 @@ extendedFilterModal.innerHTML = `
               <label for="drinking">Пьет алкоголь</label>
             </div>
             <div class="item-extended-filter__row">
-              <input id="friends" type="checkbox" name="">
-              <label for="friends">Подружки</label>
+              <input id="education" type="checkbox" name="">
+              <label for="education">Образование</label>
+            </div>
+            <div class="item-extended-filter__row">
+              <input id="hobbies" type="checkbox" name="">
+              <label for="hobbies">Хобби</label>
             </div>
         </div>
       </div>
@@ -446,23 +472,23 @@ extendedFilterModal.innerHTML = `
             <div class="item-extended-filter__row wrap">
               <div class="item-extended-filter__row">
                 <input id="blonde2" type="checkbox" name="haircolor">
-                <label for="blonde2">Блондинка</label>
+                <label for="blonde2">Блондин</label>
               </div>
               <div class="item-extended-filter__row">
                 <input id="brown2" type="checkbox" name="haircolor">
-                <label for="brown2">Шатенка</label>
+                <label for="brown2">Шатен</label>
               </div>
               <div class="item-extended-filter__row">
                 <input id="brunette2" type="checkbox" name="haircolor">
-                <label for="brunette2">Брюнетка</label>
+                <label for="brunette2">Брюнет</label>
               </div>
               <div class="item-extended-filter__row">
                 <input id="light-brown2" type="checkbox" name="haircolor">
-                <label for="light-brown2">Русая</label>
+                <label for="light-brown2">Русый</label>
               </div>
               <div class="item-extended-filter__row">
                 <input id="red2" type="checkbox" name="haircolor">
-                <label for="red2">Рыжая</label>
+                <label for="red2">Рыжий</label>
               </div>
             </div>
           </div>
@@ -530,25 +556,35 @@ extendedFilterModal.innerHTML = `
             
           </div>
           <div class="item-extended-filter__appearance">
-            <label class="heading_h6 heading__align-self_start" for="">Грудь:</label>
-            <div class="item-extended-filter__row item-extended-filter__row_gap-big">
-              <div class="item-extended-filter__column">
-                <span>Размер:</span>
-                <div class="item-extended-filter__row">
-                  <input id="" type="number" name="" class="small" min="0" placeholder="----">
-                  <span>-</span>
-                  <input id="" type="number" name="" class="small" min="0" placeholder="----">
-                  <span class="item-extended-filter__unit">A-G или 1-6</span>
-                </div>
+            <label class="heading_h6 heading__align-self_start" for="">Борода:</label>
+            <div class="item-extended-filter__row item-extended-filter__beard-type">
+              <div class="item-extended-filter__row">
+                <input id="beardless" type="checkbox" name="">
+                <label for="beardless">Полностью выбритый</label>
               </div>
-              <div class="item-extended-filter__column">
-                <span>Тип:</span>
-                <div class="item-extended-filter__row">
-                  <input id="breast-type-n" type="checkbox" name="breast-type">
-                  <label for="breast-type-n">Натуральная</label>
-                  <input id="breast-type-a" type="checkbox" name="breast-type">
-                  <label for="breast-type-a">Искусственная</label>
-                </div>
+              <div class="item-extended-filter__row">
+                <input id="beard-light" type="checkbox" name="">
+                <label for="beard-light">Легкая щетина</label>
+              </div>
+              <div class="item-extended-filter__row">
+                <input id="beard-short" type="checkbox" name="">
+                <label for="beard-short">Короткая борода</label>
+              </div>
+              <div class="item-extended-filter__row">
+                <input id="beard-mid" type="checkbox" name="">
+                <label for="beard-mid">Средняя борода</label>
+              </div>
+              <div class="item-extended-filter__row">
+                <input id="beard-long" type="checkbox" name="">
+                <label for="beard-long">Длинная борода</label>
+              </div>
+              <div class="item-extended-filter__row">
+                <input id="beard-mustache" type="checkbox" name="">
+                <label for="beard-mustache">Борода с усами</label>
+              </div>
+              <div class="item-extended-filter__row">
+                <input id="beard-whiskers" type="checkbox" name="">
+                <label for="beard-whiskers">Бакенбарды</label>
               </div>
             </div>
             
@@ -688,6 +724,7 @@ extendedFilterModal.innerHTML = `
               <div class="item-extended-filter__row">
                 <input id="race-exotic" type="checkbox" name="">
                 <label for="race-exotic">Экзотическая</label>
+                <span class="item-extended-filter__unit">(Индийская, Арабская, Кавказская и тд.)</span>
               </div>
             </div>
           </div>

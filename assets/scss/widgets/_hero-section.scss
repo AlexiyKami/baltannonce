@@ -1,7 +1,7 @@
 @use '../utils' as *;
 
 .hero {
-  @include padding-vertical(1.75rem);
+  @include padding-vertical(1.5rem);
   outline: 0.0625rem solid $color-border-secondary;
   background: $gradient-radial;
   background-repeat: no-repeat;

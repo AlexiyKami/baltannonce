@@ -1,6 +1,4 @@
-import './components/extended-filter-modal.js'
 import './components/city-dropdown.js'
-import './components/filter-dropdown.js'
 import './components/dropdown.js'
 import './components/header.js'
 import './components/footer.js'

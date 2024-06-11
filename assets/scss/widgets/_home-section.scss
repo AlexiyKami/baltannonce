@@ -1,40 +1,27 @@
 @use '../utils' as *;
 
 .home {
-  padding: 1.25rem 0rem;
-  margin-top: 2rem;
+  padding: 1.5rem 0rem;
 
   &__container {
     display: flex;
-    gap: 4rem;
+    gap: 2.75rem;
   }
 
   &__title {
     display: flex;
     align-items: center;
     gap: 0.25rem;
-    color: $color-text-primary;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    
-    &-counter {
-      color: $color-text-secondary;
-    }
+    color: white;
   }
 
   &__heading {
     @include flex(row, center, center);
     white-space: nowrap;
-    gap: 0.5rem;
     margin-bottom: 1.25rem;
-
-    &::before,
-    &::after {
-      content: '';
-      height: 0.0625rem;
-      width: 100%;
-      background-color: $color-border-primary;
-    }
+    padding: 0.75rem 0rem;
+    background: $gradient-linear-accent;
+    border-radius: 0.5rem;
   }
 
   &__all-cards {
@@ -43,7 +30,7 @@
     flex: 1 1 81%;
     gap: 0.75rem;
     background-color: $color-surface-primary;
-    border: 0.0625rem solid $color-border-secondary;
+    border: 0.0625rem solid $color-border-primary;
     border-radius: 0.75rem;
     padding: 0rem 1rem;
   }
@@ -58,7 +45,7 @@
   &__verified-cards,
   &__coming-soon-cards,
   &__random-cards {
-    padding: 1.25rem 0rem;
+    padding: 1rem 0rem;
   }
 
   &__cards-container {
@@ -78,7 +65,6 @@
     flex: 0 0 19%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(8, 1fr);
     gap: 1.4375rem;
 
     &-title {
@@ -87,15 +73,85 @@
 
     &-block {
       @include flex(column, center, center);
+      @include font(2.5rem, 600, 120%);
+      font-family: Inter;
+      color: $color-text-secondary;
       font-size: 2.5rem;
-      min-width: 17.5rem;
-      // min-height: 32.875rem;
+      min-width: 18.75rem;
+      min-height: 37.5rem;
       border-radius: 0.75rem;
       background-color: $color-surface-highlight;
       &_horizontal {
         min-height: 11.25rem;
         margin: 1.25rem 0rem;
       }
+    }
+  }
+
+  &__image-block {
+    @include flex(column, center, center);
+    @include font(2.5rem, 600, 120%);
+    position: relative;
+    font-family: Inter;
+    color: $color-text-secondary;
+    font-size: 2.5rem;
+    min-width: 18.75rem;
+    min-height: 37.5rem;
+    border-radius: 0.75rem;
+    background-color: $color-surface-highlight;
+    &_horizontal {
+      min-height: 12.5rem;
+      margin: 1.25rem 0rem;
+    }
+    & img {
+      position: absolute;
+    }
+  }
+
+  &__cards-in-tab {
+    display: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity $transition-hover;
+    &.active {
+      display: block;
+      opacity: 1;
+    }
+  }
+
+  &__tabs-btns {
+    display: flex;
+    flex-direction: row;
+    border: 0.0625rem solid $color-border-primary;
+    border-bottom: none;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    overflow: hidden
+    
+  }
+  &__tab-btn {
+    @include flex(row,center,center);
+    background-color: $color-surface-primary;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    width: 100%;
+    padding: 0.75rem 0rem;
+    color: $color-text-primary;
+    transition: background-color $transition-hover;
+    &:hover {
+      background-color: $color-surface-highlight;
+    }
+    &.active {
+      background-color: $color-button;
+      color: $color-text-invert;
+      & .home__title-counter {
+        color: $color-text-invert;
+      }
+    }
+    & .home__title-counter {
+      color: $color-text-secondary;
     }
   }
 }
@@ -186,7 +242,7 @@
   }
 
   &__tag_new {
-    background-color: $color-other-blue-dark;
+    background-color: $color-other-blue;
     transition: opacity $transition-hover;
   }
 
@@ -230,15 +286,43 @@
   &__verified {
     display: flex;
     gap: 0.25rem;
+    color: $color-checked-not-verified;
 
-    &>svg {
+    & > svg {
       flex: 0 0 1rem;
-      color: $color-border-icons;
+      color: $color-checked-not-verified;
     }
-  }
 
-  &__verified-text {
-    color: $color-text-secondary;
+    &_similar {
+      color: $color-checked-similar;
+      svg {
+        color: $color-checked-similar;
+      }
+    }
+    &_not-similar {
+      color: $color-checked-not-similar;
+      svg {
+        color: $color-checked-not-similar;
+      }
+    }
+    &_by-photo {
+      color: $color-checked-by-photo;
+      svg {
+        color: $color-checked-by-photo;
+      }
+    }
+    &_by-admin {
+      color: $color-checked-personally;
+      svg {
+        color: $color-checked-personally;
+      }
+    }
+    &_by-video {
+      color: $color-checked-by-video;
+      svg {
+        color: $color-checked-by-video;
+      }
+    }
   }
 
   &__rating {
@@ -255,12 +339,12 @@
   }
 }
 
-@media screen and (max-width: $desktop-md) {
+@media screen and (max-width: $desktop-lg) {
   .home {
     &__container {
       display: flex;
       flex-direction: column;
-      gap: 4rem;
+      gap: 1.5rem;
     }
 
     &__advertisement {
@@ -268,6 +352,7 @@
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto;
       gap: 1rem;
+      column-gap: 1.4375rem;
       
       &-block {
         flex: 0 1 45%;

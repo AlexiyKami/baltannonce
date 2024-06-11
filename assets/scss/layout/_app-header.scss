@@ -132,7 +132,7 @@
   border-radius: 0.625rem;
 }
 
-@media screen and (max-width: $desktop-md) {
+@media screen and (max-width: $desktop-lg) {
   .navmenu-header__list {
     flex-direction: column;
     gap: 2rem;
