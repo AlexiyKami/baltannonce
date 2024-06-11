@@ -88,6 +88,26 @@
       }
     }
   }
+
+  &__image-block {
+    @include flex(column, center, center);
+    @include font(40px, 600, 120%);
+    position: relative;
+    font-family: Inter;
+    color: $color-text-secondary;
+    font-size: 2.5rem;
+    min-width: 18.75rem;
+    min-height: 37.5rem;
+    border-radius: 0.75rem;
+    background-color: $color-surface-highlight;
+    &_horizontal {
+      min-height: 12.5rem;
+      margin: 1.25rem 0rem;
+    }
+    & img {
+      position: absolute;
+    }
+  }
 }
 
 .card-background {
@@ -220,15 +240,43 @@
   &__verified {
     display: flex;
     gap: 0.25rem;
+    color: $color-checked-not-verified;
 
-    &>svg {
+    & > svg {
       flex: 0 0 1rem;
-      color: $color-border-icons;
+      color: $color-checked-not-verified;
     }
-  }
 
-  &__verified-text {
-    color: $color-text-secondary;
+    &_similar {
+      color: $color-checked-similar;
+      svg {
+        color: $color-checked-similar;
+      }
+    }
+    &_not-similar {
+      color: $color-checked-not-similar;
+      svg {
+        color: $color-checked-not-similar;
+      }
+    }
+    &_by-photo {
+      color: $color-checked-by-photo;
+      svg {
+        color: $color-checked-by-photo;
+      }
+    }
+    &_by-admin {
+      color: $color-checked-personally;
+      svg {
+        color: $color-checked-personally;
+      }
+    }
+    &_by-video {
+      color: $color-checked-by-video;
+      svg {
+        color: $color-checked-by-video;
+      }
+    }
   }
 
   &__rating {
