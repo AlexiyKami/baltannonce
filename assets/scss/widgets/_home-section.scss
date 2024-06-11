@@ -1,40 +1,27 @@
 @use '../utils' as *;
 
 .home {
-  padding: 1.25rem 0rem;
-  margin-top: 2rem;
+  padding: 1.5rem 0rem;
 
   &__container {
     display: flex;
-    gap: 4rem;
+    gap: 2.75rem;
   }
 
   &__title {
     display: flex;
     align-items: center;
     gap: 0.25rem;
-    color: $color-text-primary;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    
-    &-counter {
-      color: $color-text-secondary;
-    }
+    color: white;
   }
 
   &__heading {
     @include flex(row, center, center);
     white-space: nowrap;
-    gap: 0.5rem;
     margin-bottom: 1.25rem;
-
-    &::before,
-    &::after {
-      content: '';
-      height: 0.0625rem;
-      width: 100%;
-      background-color: $color-border-primary;
-    }
+    padding: 0.75rem 0rem;
+    background: $gradient-linear-accent;
+    border-radius: 0.5rem;
   }
 
   &__all-cards {
@@ -58,7 +45,7 @@
   &__verified-cards,
   &__coming-soon-cards,
   &__random-cards {
-    padding: 1.25rem 0rem;
+    padding: 1rem 0rem;
   }
 
   &__cards-container {
@@ -87,9 +74,12 @@
 
     &-block {
       @include flex(column, center, center);
+      @include font(40px, 600, 120%);
+      font-family: Inter;
+      color: $color-text-secondary;
       font-size: 2.5rem;
-      min-width: 17.5rem;
-      // min-height: 32.875rem;
+      min-width: 18.75rem;
+      min-height: 37.5rem;
       border-radius: 0.75rem;
       background-color: $color-surface-highlight;
       &_horizontal {
@@ -186,7 +176,7 @@
   }
 
   &__tag_new {
-    background-color: $color-other-blue-dark;
+    background-color: $color-other-blue;
     transition: opacity $transition-hover;
   }
 
@@ -260,7 +250,7 @@
     &__container {
       display: flex;
       flex-direction: column;
-      gap: 4rem;
+      gap: 1.5rem;
     }
 
     &__advertisement {
@@ -268,6 +258,7 @@
       grid-template-columns: 1fr 1fr;
       grid-template-rows: auto;
       gap: 1rem;
+      column-gap: 1.4375rem;
       
       &-block {
         flex: 0 1 45%;

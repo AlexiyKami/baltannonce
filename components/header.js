@@ -43,7 +43,7 @@ header.innerHTML = `<div class="header__container _container">
     <div class="header__dropdown-lang dropdown-lang"></div>
       <div class="header__login-btns">
         <a href="#" class="button button_secondary button_filled">Войти</a>
-        <a href="#" class="button button_primary button_filled">Зарегистрироваться</a>
+        <a href="#" class="button button_primary button_filled">Регистрация</a>
       </div>
       <div class="header__theme-switch theme-switch"></div>
     </div>

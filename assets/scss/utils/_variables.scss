@@ -17,6 +17,9 @@
   --color-border-icons: #9CA3AF;
   --color-border-accent: #BE123C;
 
+  --color-brand-rose-500: #F43F5E;
+  --color-brand-rose-600: #BE123C;
+
   --color-gradient-flags: rgba(255, 255, 255, 0.6);
   --color-gradient-flags-hover: rgba(255, 255, 255, 0.5);
   --gradient-radial: radial-gradient(50% 50% at 50% 50%, #F3F4F6 0%, #f3f4f6 100%);
@@ -36,12 +39,11 @@ $color-other-silver: #8E94A1;
 $color-other-golden: #C4A020;
 $color-other-bronze: #A66417;
 $color-other-green: #18A215;
-$color-other-blue: #297CF9;
-$color-other-blue-dark: #0651C1;
+$color-other-blue: #0651C1;
 $color-other-red: #BE1212;
 
-$color-brand-rose-500: #F43F5E;
-$color-brand-rose-600: #BE123C;
+$color-brand-rose-500: var(--color-brand-rose-500);
+$color-brand-rose-600: var(--color-brand-rose-600);
 
 $color-button: var(--color-button);
 
