@@ -10,7 +10,7 @@ extendedFilterModal.innerHTML = `
 <div class="extended-filter__containers">
   <div class="extended-filter__container">
     <div class="extended-filter__item item-extended-filter">
-      <h4 class="item-extended-filter__title">Основные параметры</h4>
+      <h4 class="item-extended-filter__title heading_h4">Основные параметры</h4>
       <div class="item-extended-filter__stripe"></div>
       <form class="item-extended-filter__form wrap">
         <label class="heading_h6" for="">Возраст:</label>
@@ -42,7 +42,7 @@ extendedFilterModal.innerHTML = `
       </form>
     </div>
     <div class="extended-filter__item item-extended-filter">
-      <h4 class="item-extended-filter__title">Расценки</h4>
+      <h4 class="item-extended-filter__title heading_h4">Расценки</h4>
       <div class="item-extended-filter__stripe"></div>
       <form class="item-extended-filter__form wrap">
         <label class="heading_h6" for="">1 час:</label>
@@ -70,7 +70,7 @@ extendedFilterModal.innerHTML = `
       </form>
     </div>
     <div class="extended-filter__item item-extended-filter">
-      <h4 class="item-extended-filter__title">Место встречи</h4>
+      <h4 class="item-extended-filter__title heading_h4">Место встречи</h4>
       <div class="item-extended-filter__stripe"></div>
       <div class="item-extended-filter__form">
         <input id="incall-aa" type="checkbox" name="available">
@@ -96,7 +96,7 @@ extendedFilterModal.innerHTML = `
   </div>
   <div class="extended-filter__container extended-filter__container-preferences">
     <div class="extended-filter__item item-extended-filter">
-      <h4 class="item-extended-filter__title">Предпочтения</h4>
+      <h4 class="item-extended-filter__title heading_h4">Предпочтения</h4>
       <div class="item-extended-filter__stripe"></div>
       <div class="item-extended-filter__forms-container">
         <div class="item-extended-filter__forms">
@@ -316,7 +316,7 @@ extendedFilterModal.innerHTML = `
   </div>
   <div class="extended-filter__container extended-filter__container-reviews">
     <div class="extended-filter__item item-extended-filter">
-      <h4 class="item-extended-filter__title">Отзывы и оценки</h4>
+      <h4 class="item-extended-filter__title heading_h4">Отзывы и оценки</h4>
       <div class="item-extended-filter__stripe"></div>
       <div class="item-extended-filter__forms-container">
         <div class="item-extended-filter__forms">
@@ -344,7 +344,7 @@ extendedFilterModal.innerHTML = `
   </div>
   <div class="extended-filter__container extended-filter__container-additional">
     <div class="extended-filter__item item-extended-filter">
-      <h4 class="item-extended-filter__title">Дополнительные параметры</h4>
+      <h4 class="item-extended-filter__title heading_h4">Дополнительные параметры</h4>
       <div class="item-extended-filter__stripe"></div>
       <div class="item-extended-filter__forms-container">
         <div class="item-extended-filter__forms">
@@ -412,10 +412,35 @@ extendedFilterModal.innerHTML = `
   </div>
   <div class="extended-filter__container extended-filter__container-appearance">
     <div class="extended-filter__item item-extended-filter">
-      <h4 class="item-extended-filter__title">Внешность</h4>
+      <h4 class="item-extended-filter__title heading_h4">Внешность</h4>
       <div class="item-extended-filter__stripe"></div>
       <div class="item-extended-filter__forms-container">
         <div class="item-extended-filter__forms item-extended-filter__forms-appearance">
+          <div class="item-extended-filter__appearance">
+            <label class="heading_h6 heading__align-self_start" for="">Цвет глаз:</label>
+            <div class="item-extended-filter__row wrap">
+              <div class="item-extended-filter__row">
+                <input id="black-eyed" type="checkbox" name="eyecolor">
+                <label for="black-eyed">Черный</label>
+              </div>
+              <div class="item-extended-filter__row">
+                <input id="green-eyed" type="checkbox" name="eyecolor">
+                <label for="green-eyed">Зеленый</label>
+              </div>
+              <div class="item-extended-filter__row">
+                <input id="blue-eyed" type="checkbox" name="eyecolor">
+                <label for="blue-eyed">Голубой</label>
+              </div>
+              <div class="item-extended-filter__row">
+                <input id="grey-eyed" type="checkbox" name="eyecolor">
+                <label for="grey-eyed">Серый</label>
+              </div>
+              <div class="item-extended-filter__row">
+                <input id="yellow-eyed" type="checkbox" name="eyecolor">
+                <label for="yellow-eyed">Желтый</label>
+              </div>
+            </div>
+          </div>
           <div class="item-extended-filter__appearance">
             <label class="heading_h6 heading__align-self_start" for="">Цвет волос:</label>
             <div class="item-extended-filter__row wrap">
@@ -440,6 +465,36 @@ extendedFilterModal.innerHTML = `
                 <label for="red2">Рыжая</label>
               </div>
             </div>
+          </div>
+          <div class="item-extended-filter__appearance">
+            <label class="heading_h6 heading__align-self_start" for="">Длина волос:</label>
+            <div class="item-extended-filter__row wrap">
+              <div class="item-extended-filter__row">
+                <input id="hairless" type="checkbox" name="hairlength">
+                <label for="hairless">Без волос</label>
+              </div>
+              <div class="item-extended-filter__row">
+                <input id="short-hair" type="checkbox" name="hairlength">
+                <label for="short-hair">Короткая стрижка</label>
+              </div>
+              <div class="item-extended-filter__row">
+                <input id="shoulder-hair" type="checkbox" name="hairlength">
+                <label for="shoulder-hair">До плеч</label>
+              </div>
+              <div class="item-extended-filter__row">
+                <input id="shoulder-blades-hair" type="checkbox" name="hairlength">
+                <label for="shoulder-blades-hair">До лопаток</label>
+              </div>
+              <div class="item-extended-filter__row">
+                <input id="waist-hair" type="checkbox" name="hairlength">
+                <label for="waist-hair">До талии</label>
+              </div>
+            </div>
+          </div>
+          <div class="item-extended-filter__appearance">
+            <label class="heading_h6" for="">Рост:</label>
+            <div class="dropdown">-</div>
+            <span class="item-extended-filter__unit">см</span>
           </div>
           <div class="item-extended-filter__appearance">
             <label class="heading_h6 heading__align-self_start" for="">Параметры</label>
@@ -697,17 +752,20 @@ extendedFilterModal.innerHTML = `
               </div>
             </div>
           </div>
+          <div class="item-extended-filter__appearance">
+            <label class="heading_h6 heading__align-self_start" for="">Паспорт:</label>
+            <div class="item-extended-filter__row wrap item-extended-filter__has-passport">
+              <input id="has-passport" type="checkbox" name="">
+              <label for="has-passport">Есть паспорт для путешествий</label>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="item-extended-filter__has-passport">
-        <input id="has-passport" type="checkbox" name="">
-        <label for="has-passport">Есть паспорт для путешествий</label>
       </div>
     </div>
   </div>
   <div class="extended-filter__container extended-filter__container-fetish">
     <div class="extended-filter__item item-extended-filter">
-      <h4 class="item-extended-filter__title">Фетишизм</h4>
+      <h4 class="item-extended-filter__title heading_h4">Фетишизм</h4>
       <div class="item-extended-filter__stripe"></div>
       <div class="item-extended-filter__forms-container">
         <div class="item-extended-filter__forms item-extended-filter__forms-fetish">
@@ -737,7 +795,7 @@ extendedFilterModal.innerHTML = `
   </div>
   <div class="extended-filter__container extended-filter__container-location">
     <div class="extended-filter__item item-extended-filter">
-      <h4 class="item-extended-filter__title">Расположение</h4>
+      <h4 class="item-extended-filter__title heading_h4">Расположение</h4>
       <div class="item-extended-filter__stripe"></div>
       <div class="item-extended-filter__forms-container">
         <div class="item-extended-filter__forms item-extended-filter__forms-location">
@@ -807,16 +865,6 @@ extendedFilterModal.innerHTML = `
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="extended-filter__container extended-filter__container-appearance">
-    <div class="extended-filter__item item-extended-filter">
-      <h4 class="item-extended-filter__title">Спрос и Предложение</h4>
-      <div class="item-extended-filter__stripe"></div>
-      <div class="item-extended-filter__create-questionary">
-          <input id="create-questionary" type="checkbox" name="">
-          <label for="create-questionary">Создать как анкету в Спросе</label>
-        </div>
     </div>
   </div>
 </div>

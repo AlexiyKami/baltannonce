@@ -771,11 +771,6 @@ body.darkmode {
 .item-extended-filter__row label {
   width: auto;
 }
-.item-extended-filter__has-passport {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 1.5rem;
-}
 .item-extended-filter__create-questionary {
   display: flex;
   gap: 0.5rem;
