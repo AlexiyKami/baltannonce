@@ -121,6 +121,17 @@
     }
   }
 
+  &__tab-title {
+    @include font(1.25rem, 700, 136%);
+    display: flex;
+    gap: 0.25rem;
+    align-items: flex-end;
+  }
+
+  &__title-icon {
+    color: $color-surface-highlight;
+  }
+
   &__tabs-btns {
     display: flex;
     flex-direction: row;
@@ -133,6 +144,7 @@
   }
   &__tab-btn {
     @include flex(row,center,center);
+    cursor: pointer;
     background-color: $color-surface-primary;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
@@ -143,8 +155,19 @@
     &:hover {
       background-color: $color-surface-highlight;
     }
+    & .home__title-icon {
+      &-text {
+        color: $color-border-icons;
+      }
+    }
+    &.active .home__title-icon {
+      color: $color-accent-secondary;
+      &-text {
+        color: $color-border-secondary;
+      }
+    }
     &.active {
-      background-color: $color-button;
+      background-color: $color-accent-primary;
       color: $color-text-invert;
       & .home__title-counter {
         color: $color-text-invert;
@@ -152,6 +175,7 @@
     }
     & .home__title-counter {
       color: $color-text-secondary;
+      @include font(1.125rem, 600, 144%);
     }
   }
 }
@@ -339,12 +363,18 @@
   }
 }
 
-@media screen and (max-width: $desktop-lg) {
+@media screen and (max-width: $desktop-md) {
   .home {
     &__container {
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &__cards-in-tab {
+      padding: 1.25rem 1.5rem;
     }
 
     &__advertisement {
@@ -371,6 +401,9 @@
     &__cards-container {
       grid-template-columns: minmax(calc(50% - 0.375rem), 1fr) minmax(calc(50% - 0.375rem), 1fr);
     }
+    &__cards-in-tab {
+      padding: 1.25rem 1rem;
+    }
   }
 }
 
@@ -386,6 +419,11 @@
   .home {
     &__cards-container {
       width: 100%;
+    }
+    &__tab-btn {
+      & .home__tab-title, & .home__title-counter {
+        @include font(0.875rem, 700, 143%);
+      }
     }
   }
 }

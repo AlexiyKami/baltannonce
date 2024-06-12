@@ -16,7 +16,7 @@
 
   &__logo {
     flex: 0 0 8rem;
-    color: $color-brand-rose-500;
+    color: $color-accent-primary;
 
     & img {
       object-fit: contain;
@@ -41,38 +41,18 @@
 
 .navmenu-footer {
   &__list {
-    @include flex(row, space-between)
+    @include flex(row, space-between);
+    @include font(1rem, 600, 137%);
   }
 
   &__link {
     display: block;
     max-width: min-content;
-    position: relative;
     white-space: nowrap;
-    overflow-x: hidden;
-    padding-bottom: 0.5rem;
-    margin-bottom: -0.5rem;
-  
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0rem;
-      left: 0;
-      width: 100%;
-      height: 0.0625rem;
-      background-color: $color-border-accent;
-      transition: all 0.3s ease;
-      opacity: 0;
-    }
-  
-    &:hover::after,
-    &:focus::after {
-      opacity: 1;
-    }
-    
-    &.active::after {
-      opacity: 1;
-      background-color: $color-border-icons;
+    opacity: 1;
+    transition: opacity $transition-hover;
+    &:hover {
+      opacity: 0.6;
     }
   }
 }

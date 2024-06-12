@@ -19,15 +19,6 @@ navmenuHeaderItems.forEach((item) => item.addEventListener('click', () => {
   headerBody.classList.remove('active');
 }))
 
-const langMenuBtn = document.querySelector('.dropdown-lang');
-const langMenuChevron = document.querySelector('.dropdown-lang__chevron');
-const langMenuBody = document.querySelector('.dropdown-lang__body');
-
-langMenuBtn.addEventListener('click', () => {
-  langMenuBody.classList.toggle('active');
-  langMenuChevron.classList.toggle('active');
-})
-
 const dropdownCityBtn = document.querySelector('.dropdown-city__btn');
 const dropdownCityChevron = document.querySelector('.dropdown-city__chevron');
 const dropdownCityBody = document.querySelector('.dropdown-city__body');

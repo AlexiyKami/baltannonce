@@ -1,6 +1,7 @@
-const langDropdown = document.querySelector('.dropdown-lang');
+const langDropdown = document.querySelectorAll('.dropdown-lang');
 
-langDropdown.innerHTML = `
+langDropdown.forEach((item) => {
+  item.innerHTML = `
 <div class="dropdown-lang__btn">
 <img src="assets/icons/RUflag_round.svg" alt="flag" class="dropdown-lang__flag" >
 <span class="dropdown-lang__text button__text">RU</span>
@@ -51,4 +52,14 @@ langDropdown.innerHTML = `
   <span class="dropdown-lang__text button__text">DE</span>
 </div>
 </div>
-`
+`;
+
+const langMenuChevron = item.querySelector('.dropdown-lang__chevron');
+const langMenuBody = item.querySelector('.dropdown-lang__body');
+
+item.addEventListener('click', () => {
+  langMenuBody.classList.toggle('active');
+  langMenuChevron.classList.toggle('active');
+})
+
+})

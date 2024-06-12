@@ -17,8 +17,8 @@
   --color-border-icons: #9CA3AF;
   --color-border-accent: #BE123C;
 
-  --color-brand-rose-500: #F43F5E;
-  --color-brand-rose-600: #BE123C;
+  --color-accent-primary: #F43F5E;
+  --color-accent-secondary: #BE123C;
 
   --color-gradient-flags: rgba(255, 255, 255, 0.6);
   --color-gradient-flags-hover: rgba(255, 255, 255, 0.5);
@@ -53,8 +53,8 @@ $color-feedback-normal: #0651C133;
 $color-feedback-negative: #DA121233;
 $color-warning: #FBBF24;
 
-$color-brand-rose-500: var(--color-brand-rose-500);
-$color-brand-rose-600: var(--color-brand-rose-600);
+$color-accent-primary: var(--color-accent-primary);
+$color-accent-secondary: var(--color-accent-secondary);
 
 $color-button: var(--color-button);
 
