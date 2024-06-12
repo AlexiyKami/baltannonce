@@ -1269,7 +1269,7 @@ input[type=number]:disabled {
 .header {
   width: 100%;
   position: relative;
-  background-color: var(--color-surface-primary) !important;
+  background-color: var(--color-surface-primary);
 }
 .header__container {
   display: flex;

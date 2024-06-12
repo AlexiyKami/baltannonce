@@ -3,7 +3,7 @@
 .header {
   width: 100%;
   position: relative;
-  background-color: $color-surface-primary !important;
+  background-color: $color-surface-primary;
 
   &__container {
     @include flex(row, space-between, center);
