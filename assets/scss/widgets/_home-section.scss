@@ -433,6 +433,9 @@
       width: 100%;
     }
     &__tab-btn {
+      & .home__tab-title {
+        align-items: center;
+      }
       & .home__tab-title, & .home__title-counter {
         @include font(0.875rem, 700, 143%);
       }

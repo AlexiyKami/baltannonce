@@ -2106,6 +2106,9 @@ input[type=number]:disabled {
   .home__cards-container {
     width: 100%;
   }
+  .home__tab-btn .home__tab-title {
+    align-items: center;
+  }
   .home__tab-btn .home__tab-title, .home__tab-btn .home__title-counter {
     font-size: 0.875rem;
     font-weight: 700;
