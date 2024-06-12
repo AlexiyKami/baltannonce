@@ -3,6 +3,7 @@
 .theme-switch {
   @include flex(row);
   @include size(4.25rem, 2.25rem);
+  min-width: 4.25rem;
   border-radius: 1.5rem;
   background-color: $color-surface-secondary;
   box-shadow: 0rem 0.0625rem 0.25rem rgba(0, 0, 0, 0.12);

@@ -1,6 +1,7 @@
-const themeSwitch = document.querySelector('.theme-switch');
+const themeSwitch = document.querySelectorAll('.theme-switch');
 
-themeSwitch.innerHTML = `
+themeSwitch.forEach((item) => {
+  item.innerHTML = `
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_2012_16051)">
   <path
@@ -26,4 +27,13 @@ themeSwitch.innerHTML = `
   class="theme-switch__icon-dark"
 />
 </svg>
-`
+`;
+item.addEventListener('click', () => {
+  themeSwitch.forEach((themeSwitchItem) => {
+    themeSwitchItem.classList.toggle('darkmode');
+  })
+  document.body.classList.toggle('darkmode');
+})
+})
+
+

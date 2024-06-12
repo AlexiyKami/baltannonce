@@ -2,7 +2,8 @@
 
 .dropdown-lang {
   @include size(5.125rem, 1.5rem);
-  z-index: 101;
+  z-index: 1001;
+  user-select: none;
   &__btn {
     @include flex(row, flex-start, center);
     gap: 0.375rem;

@@ -141,7 +141,7 @@ body {
   background-color: var(--color-surface-highlight);
 }
 
-@media screen and (max-width: 46.5rem) {
+@media screen and (max-width: 64rem) {
   ._container {
     padding-left: 1.25rem;
     padding-right: 1.25rem;
@@ -1114,7 +1114,11 @@ input[type=number]:disabled {
 .dropdown-lang {
   width: 5.125rem;
   height: 1.5rem;
-  z-index: 101;
+  z-index: 1001;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .dropdown-lang__btn {
   display: flex;
@@ -1222,6 +1226,7 @@ input[type=number]:disabled {
   align-items: stretch;
   width: 4.25rem;
   height: 2.25rem;
+  min-width: 4.25rem;
   border-radius: 1.5rem;
   background-color: var(--color-surface-secondary);
   box-shadow: 0rem 0.0625rem 0.25rem rgba(0, 0, 0, 0.12);
@@ -1291,12 +1296,15 @@ input[type=number]:disabled {
   align-items: center;
   gap: 2rem;
 }
-.header__buttons {
+.header__buttons-burger {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   gap: 0.75rem;
+}
+.header__buttons {
+  display: none;
 }
 .header__login-btns {
   display: flex;
@@ -1399,7 +1407,10 @@ input[type=number]:disabled {
   border-radius: 0.625rem;
 }
 
-@media screen and (max-width: 90rem) {
+@media screen and (max-width: 80rem) {
+  .header__content {
+    gap: 0.875rem;
+  }
   .navmenu-header__list {
     flex-direction: column;
     gap: 2rem;
@@ -1425,13 +1436,13 @@ input[type=number]:disabled {
     top: -120vh;
     left: 0;
     width: 100vw;
-    padding: 1.25rem;
+    padding: 2.5rem;
     gap: 0rem;
     visibility: hidden;
     opacity: 0;
   }
   .header__body.active {
-    top: 4rem;
+    top: 4.4375rem;
     transition: top 0.6s ease-out, visibility 0s, opacity 0s ease-in;
     visibility: visible;
     opacity: 1;
@@ -1439,20 +1450,15 @@ input[type=number]:disabled {
   .header__navmenu {
     margin-bottom: 0rem;
   }
-  .header__navmenu::after {
-    content: "";
-    width: 100%;
-    background-color: var(--color-border-primary);
-    height: 0.0625rem;
-    display: flex;
-    margin-top: 2.5rem;
-    margin-bottom: 1.5rem;
-  }
   .header__buttons {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    gap: 0.75rem;
+  }
+  .header__buttons-burger {
+    display: none;
     flex-wrap: wrap;
     width: 100%;
     gap: 0.5rem;
@@ -1464,14 +1470,44 @@ input[type=number]:disabled {
   .header__login-btns a {
     width: 100%;
   }
-  .header__theme-switch {
+}
+@media screen and (max-width: 46.5rem) {
+  .header__buttons .header__btn-register, .header__buttons .header__theme-switch {
+    display: none;
+  }
+  .header__buttons-burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+  }
+  .header__buttons-burger .header__btn-login, .header__buttons-burger .header__dropdown-lang {
+    display: none;
+  }
+  .header__buttons-burger .header__theme-switch {
     order: -1;
   }
-  .header__dropdown-lang {
-    order: -2;
+  .header__navmenu::after {
+    content: "";
+    width: 100%;
+    background-color: var(--color-border-primary);
+    height: 0.0625rem;
+    display: flex;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
   }
 }
 @media screen and (max-width: 26.875rem) {
+  .header__content {
+    gap: 0.5rem;
+  }
+  .header__buttons .header__login-btns {
+    display: none;
+  }
+  .header__buttons-burger .header__btn-login {
+    display: flex;
+  }
   .navmenu-header__list {
     font-size: 1.25rem;
     font-weight: 700;
@@ -1482,6 +1518,9 @@ input[type=number]:disabled {
   }
   .header__body {
     padding: 1rem;
+  }
+  .header__body.active {
+    top: 4.0625rem;
   }
 }
 .footer {
@@ -1609,7 +1648,7 @@ input[type=number]:disabled {
 .hero {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-  outline: 0.0625rem solid var(--color-border-secondary);
+  border: 0.0625rem solid var(--color-border-secondary);
   background: var(--gradient-radial);
   background-repeat: no-repeat;
   background-position: center;

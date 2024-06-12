@@ -28,13 +28,6 @@ langMenuBtn.addEventListener('click', () => {
   langMenuChevron.classList.toggle('active');
 })
 
-const themeSwitch = document.querySelector('.theme-switch');
-
-themeSwitch.addEventListener('click', () => {
-  themeSwitch.classList.toggle('darkmode');
-  document.body.classList.toggle('darkmode');
-})
-
 const dropdownCityBtn = document.querySelector('.dropdown-city__btn');
 const dropdownCityChevron = document.querySelector('.dropdown-city__chevron');
 const dropdownCityBody = document.querySelector('.dropdown-city__body');

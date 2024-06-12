@@ -28,9 +28,12 @@
     gap: 2rem;
   }
 
-  &__buttons {
+  &__buttons-burger {
     @include flex(row, flex-start, center);
     gap: 0.75rem;
+  }
+  &__buttons {
+    display: none;
   }
 
   &__login-btns {
@@ -132,7 +135,10 @@
   border-radius: 0.625rem;
 }
 
-@media screen and (max-width: $desktop-lg) {
+@media screen and (max-width: $desktop-md) {
+  .header__content {
+    gap: 0.875rem;
+  }
   .navmenu-header__list {
     flex-direction: column;
     gap: 2rem;
@@ -155,14 +161,14 @@
     top: -120vh;
     left: 0;
     width: 100vw;
-    padding: 1.25rem;
+    padding: 2.5rem;
     gap: 0rem;
     visibility: hidden;
     opacity: 0;
   }
 
   .header__body.active {
-    top: 4rem;
+    top: 4.4375rem;
     transition: top 0.6s ease-out, visibility 0s, opacity 0s ease-in;
     visibility: visible;
     opacity: 1;
@@ -172,18 +178,13 @@
     margin-bottom: 0rem;
   }
 
-  .header__navmenu::after {
-    content: '';
-    width: 100%;
-    background-color: $color-border-primary;
-    height: 0.0625rem;
-    display: flex;
-    margin-top: 2.5rem;
-    margin-bottom: 1.5rem;
+  .header__buttons {
+    @include flex(row, flex-start, center);
+    gap: 0.75rem;
   }
 
-  .header__buttons {
-    @include flex(row, center, center);
+  .header__buttons-burger {
+    display: none;
     flex-wrap: wrap;
     width: 100%;
     gap: 0.5rem;
@@ -197,17 +198,49 @@
       width: 100%;
     }
   }
+}
 
-  .header__theme-switch {
-    order: -1;
+@media screen and (max-width: $tablet) {
+  .header__buttons {
+    & .header__btn-register, .header__theme-switch {
+      display: none;
+    }
   }
-
-  .header__dropdown-lang {
-    order: -2;
+  .header__buttons-burger {
+    @include flex(column, center, center);
+    gap: 24px;
+    & .header__btn-login, .header__dropdown-lang {
+      display: none;
+    }
+    & .header__theme-switch {
+      order: -1;
+    }
+  }
+  .header__navmenu::after {
+    content: '';
+    width: 100%;
+    background-color: $color-border-primary;
+    height: 0.0625rem;
+    display: flex;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
   }
 }
 
 @media screen and (max-width: $mobile-md) {
+  .header__content {
+    gap: 0.5rem;
+  }
+  .header__buttons {
+    & .header__login-btns {
+      display: none;
+    }
+  }
+  .header__buttons-burger {
+    & .header__btn-login {
+      display: flex;
+    }
+  }
   .navmenu-header__list {
     @include font(1.25rem, 700, 136%);
   }
@@ -218,5 +251,8 @@
 
   .header__body {
     padding: 1rem;
+    &.active {
+      top: 4.0625rem;
+    }
   }
 }
