@@ -119,6 +119,7 @@ body {
 
 .wrapper {
   min-height: 100vh;
+  min-width: 20rem;
   margin: 0 auto;
   position: relative;
   overflow-x: hidden;
@@ -1447,7 +1448,7 @@ input[type=number]:disabled {
     z-index: 1000;
     top: -120vh;
     left: 0;
-    width: 100vw;
+    width: 100%;
     padding: 2.5rem;
     gap: 0rem;
     visibility: hidden;
