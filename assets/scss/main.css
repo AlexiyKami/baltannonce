@@ -811,6 +811,7 @@ body.darkmode {
     font-size: 1.25rem;
     font-weight: 700;
     line-height: 136%;
+    margin-right: 1.25rem;
   }
   .extended-filter__container-reviews .item-extended-filter__forms {
     gap: 1.5rem;
@@ -2061,6 +2062,10 @@ input[type=number]:disabled {
     padding-left: 0;
     padding-right: 0;
   }
+  .home__advertisement-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
   .home__cards-in-tab {
     padding: 1.25rem 1.5rem;
   }
@@ -2092,6 +2097,9 @@ input[type=number]:disabled {
 @media screen and (max-width: 46.5rem) {
   .home__cards-container {
     grid-template-columns: minmax(100%, 1fr);
+  }
+  .home__advertisement-block:nth-child(2), .home__advertisement-block:nth-child(3), .home__advertisement-block:nth-child(4), .home__advertisement-block:nth-child(5), .home__advertisement-block:nth-child(6), .home__advertisement-block:nth-child(7), .home__advertisement-block:nth-child(8) {
+    display: none;
   }
 }
 @media screen and (max-width: 26.875rem) {
