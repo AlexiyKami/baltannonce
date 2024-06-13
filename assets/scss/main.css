@@ -85,8 +85,8 @@ textarea {
   --color-border-secondary: #E5E7EB;
   --color-border-icons: #9CA3AF;
   --color-border-accent: #BE123C;
-  --color-accent-primary: #F43F5E;
-  --color-accent-secondary: #BE123C;
+  --color-accent-primary: #BE123C;
+  --color-accent-secondary: #F43F5E;
   --color-gradient-flags: rgba(255, 255, 255, 0.6);
   --color-gradient-flags-hover: rgba(255, 255, 255, 0.5);
   --gradient-radial: radial-gradient(50% 50% at 50% 50%, #F3F4F6 0%, #f3f4f6 100%);
@@ -264,8 +264,8 @@ body.darkmode {
   --color-border-secondary: #612A58;
   --color-border-icons: #E5E7EB;
   --color-border-accent: #BE123C;
-  --color-accent-primary: #BE123C;
-  --color-accent-secondary: #F43F5E;
+  --color-accent-primary: #F43F5E;
+  --color-accent-secondary: #BE123C;
   --color-gradient-flags: rgba(50, 11, 56, 0.5);
   --color-gradient-flags-hover:rgba(50, 11, 56, 0.7);
   --gradient-radial: radial-gradient(50% 50% at 50% 50%, rgb(190, 18, 60, 0.6) 0%, rgb(50, 11, 56, 0.6) 100%);
