@@ -21,11 +21,16 @@ body {
 }
 
 .wrapper {
+  @include flex(column);
   min-height: 100vh;
   min-width: 20rem;
   margin: 0 auto;
   position: relative;
   overflow-x: hidden;
+}
+
+.main {
+  flex: 1 1 auto;
 }
 
 ._container {
