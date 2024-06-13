@@ -1,0 +1,25 @@
+body.darkmode {
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #d1d5db;
+  --color-text-invert: #111827;
+  --color-surface-primary: #410f39;
+  --color-surface-secondary: #320b38;
+  --color-surface-highlight: #521849;
+  --color-surface-invert: #ffffff;
+  --color-footer-background: #521849;
+  --color-button: #f43f5e;
+  --color-border-invert: #320b38;
+  --color-border-primary: #7e3a73;
+  --color-border-secondary: #612a58;
+  --color-border-icons: #e5e7eb;
+  --color-border-accent: #be123c;
+  --color-accent-primary: #f43f5e;
+  --color-accent-secondary: #be123c;
+  --color-gradient-flags: rgba(50, 11, 56, 0.5);
+  --color-gradient-flags-hover: rgba(50, 11, 56, 0.7);
+  --gradient-radial: radial-gradient(
+    50% 50% at 50% 50%,
+    rgb(190, 18, 60, 0.6) 0%,
+    rgb(50, 11, 56, 0.6) 100%
+  );
+}

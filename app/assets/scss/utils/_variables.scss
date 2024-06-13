@@ -1,28 +1,28 @@
 :root {
   --color-text-primary: #111827;
-  --color-text-secondary: #6B7280;
-  --color-text-invert: #FFFFFF;
+  --color-text-secondary: #6b7280;
+  --color-text-invert: #ffffff;
 
-  --color-surface-primary: #FFFFFF;
-  --color-surface-secondary: #F9FAFB;
-  --color-surface-highlight: #F3F4F6;
+  --color-surface-primary: #ffffff;
+  --color-surface-secondary: #f9fafb;
+  --color-surface-highlight: #f3f4f6;
   --color-surface-invert: #111827;
   --color-footer-background: #111827;
 
-  --color-button: #BE123C;
+  --color-button: #be123c;
 
-  --color-border-invert: #FFFFFF;
-  --color-border-primary: #D1D5DB;
-  --color-border-secondary: #E5E7EB;
-  --color-border-icons: #9CA3AF;
-  --color-border-accent: #BE123C;
+  --color-border-invert: #ffffff;
+  --color-border-primary: #d1d5db;
+  --color-border-secondary: #e5e7eb;
+  --color-border-icons: #9ca3af;
+  --color-border-accent: #be123c;
 
-  --color-accent-primary: #BE123C;
-  --color-accent-secondary: #F43F5E;
+  --color-accent-primary: #be123c;
+  --color-accent-secondary: #f43f5e;
 
   --color-gradient-flags: rgba(255, 255, 255, 0.6);
   --color-gradient-flags-hover: rgba(255, 255, 255, 0.5);
-  --gradient-radial: radial-gradient(50% 50% at 50% 50%, #F3F4F6 0%, #f3f4f6 100%);
+  --gradient-radial: radial-gradient(50% 50% at 50% 50%, #f3f4f6 0%, #f3f4f6 100%);
 }
 
 $color-text-primary: var(--color-text-primary);
@@ -33,25 +33,25 @@ $color-surface-primary: var(--color-surface-primary);
 $color-surface-secondary: var(--color-surface-secondary);
 $color-surface-highlight: var(--color-surface-highlight);
 $color-surface-invert: var(--color-surface-invert);
-$color-footer-background : var(--color-footer-background);
+$color-footer-background: var(--color-footer-background);
 
-$color-other-silver: #8E94A1;
-$color-other-golden: #C4A020;
-$color-other-bronze: #A66417;
-$color-other-green: #18A215;
-$color-other-blue: #0651C1;
-$color-other-red: #BE1212;
+$color-other-silver: #8e94a1;
+$color-other-golden: #c4a020;
+$color-other-bronze: #a66417;
+$color-other-green: #18a215;
+$color-other-blue: #0651c1;
+$color-other-red: #be1212;
 
-$color-checked-similar: #18A215;
-$color-checked-not-similar: #0651C1;
-$color-checked-by-photo: #A66417;
-$color-checked-personally: #C4A020;
-$color-checked-by-video: #8E94A1;
-$color-checked-not-verified: #DA1212;
+$color-checked-similar: #18a215;
+$color-checked-not-similar: #0651c1;
+$color-checked-by-photo: #a66417;
+$color-checked-personally: #c4a020;
+$color-checked-by-video: #8e94a1;
+$color-checked-not-verified: #da1212;
 $color-feedback-positive: #17a21533;
-$color-feedback-normal: #0651C133;
-$color-feedback-negative: #DA121233;
-$color-warning: #FBBF24;
+$color-feedback-normal: #0651c133;
+$color-feedback-negative: #da121233;
+$color-warning: #fbbf24;
 
 $color-accent-primary: var(--color-accent-primary);
 $color-accent-secondary: var(--color-accent-secondary);
@@ -64,11 +64,17 @@ $color-border-secondary: var(--color-border-secondary);
 $color-border-icons: var(--color-border-icons);
 $color-border-accent: var(--color-border-accent);
 
-$gradient-linear-silver: linear-gradient(156.1deg, #C7CAD0 -1.47%, #F4F4F4 45.72%, #BBC0C9 100%);
-$gradient-linear-gold: linear-gradient(90.74deg, #D0AF5B 0%, #FFE5B3 63.9%, #B69235 100%);
+$gradient-linear-silver: linear-gradient(156.1deg, #c7cad0 -1.47%, #f4f4f4 45.72%, #bbc0c9 100%);
+$gradient-linear-gold: linear-gradient(90.74deg, #d0af5b 0%, #ffe5b3 63.9%, #b69235 100%);
 $gradient-linear-accent: linear-gradient(90.74deg, #881337 0%, #be123c 49%, #881337 100%);
-$gradient-linear-bronze: linear-gradient(155.68deg, #B17938 1.15%, #FEE6CA 47.11%, #AD6C21 100%);
-$gradient-linear-variants: linear-gradient(270deg, #320b38 0%, #320b38 50%, #ffffff 50%, #ffffff 100%);
+$gradient-linear-bronze: linear-gradient(155.68deg, #b17938 1.15%, #fee6ca 47.11%, #ad6c21 100%);
+$gradient-linear-variants: linear-gradient(
+  270deg,
+  #320b38 0%,
+  #320b38 50%,
+  #ffffff 50%,
+  #ffffff 100%
+);
 $gradient-radial: var(--gradient-radial);
 $color-gradient-flags: var(--color-gradient-flags);
 $color-gradient-flags-hover: var(--color-gradient-flags-hover);
