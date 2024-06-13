@@ -1,0 +1,212 @@
+@use '@/app/assets/scss/utils' as *;
+
+.dropdown-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background-color: $color-surface-primary;
+  border-radius: 0.5rem;
+  // overflow: hidden;
+  padding: 0 1.25rem;
+  opacity: 0;
+  height: 0rem;
+  max-height: 0rem;
+  pointer-events: none;
+  transition:
+    opacity 0.3s,
+    max-height 0.3s,
+    height 0.3s,
+    margin 0.2s 0.2s;
+
+  &.active {
+    transition:
+      opacity 0.3s 0.2s,
+      max-height 0.7s,
+      height 0.7s,
+      margin 0.3s;
+    height: 100%;
+    margin-top: 0.5rem;
+    max-height: 150rem;
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  &__body {
+    @include flex(row, space-between);
+    gap: 1.5rem;
+    padding-top: 1.25rem;
+  }
+
+  &__btn-more {
+    position: relative;
+  }
+
+  &__btn-text {
+    color: $color-button;
+    cursor: pointer;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__item-price {
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__item-number-inputs {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  &__form {
+    @include flex(column);
+    gap: 0.5rem;
+  }
+
+  &__title {
+    margin-top: 0.75rem;
+  }
+
+  &__btns {
+    @include flex(column);
+    gap: 0.75rem;
+  }
+
+  &__other-filters {
+    display: flex;
+    gap: 1.5rem;
+
+    .dropdown-filter__form {
+      gap: 0.25rem;
+      min-width: 9rem;
+
+      & > .dropdown-filter__title {
+        margin-bottom: 0rem;
+      }
+    }
+  }
+
+  &__row-container {
+    display: flex;
+    gap: 1.5rem;
+
+    .dropdown-filter__item {
+      width: auto;
+    }
+  }
+
+  &__body-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding-bottom: 1.25rem;
+  }
+}
+
+.popup-dropdown-filter {
+  position: absolute;
+  top: 1.875rem;
+  right: -25%;
+  z-index: 100;
+  background-color: $color-surface-highlight;
+  height: 14rem;
+  border-radius: 0.5rem;
+  border: 0.0625rem solid $color-border-primary;
+  padding: 0.75rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity $transition-hover;
+
+  &__heading {
+    display: flex;
+    min-height: 3rem;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.0625rem solid $color-border-primary;
+  }
+
+  &.active {
+    visibility: visible;
+    transition: opacity $transition-hover;
+    opacity: 1;
+  }
+
+  &__cross {
+    color: $color-border-icons;
+    cursor: pointer;
+  }
+
+  &__list {
+    margin-top: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+    height: 5.375rem;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__btns {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1.25rem;
+  }
+}
+
+@media screen and (max-width: $desktop-lg) {
+  .dropdown-filter {
+    &__body,
+    &__body-bottom,
+    &__other-filters {
+      flex-wrap: wrap;
+    }
+
+    &__btns {
+      flex-direction: row;
+    }
+  }
+}
+
+@media screen and (max-width: $desktop-md) {
+  .dropdown-filter {
+    &__body {
+      justify-content: flex-start;
+    }
+
+    &__item {
+      width: 9rem;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .dropdown-filter {
+    &__body-bottom {
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-md) {
+  .dropdown-filter {
+    &__body-bottom {
+      justify-content: flex-start;
+    }
+
+    &__btns {
+      flex-direction: column;
+    }
+  }
+}

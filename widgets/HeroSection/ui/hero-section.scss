@@ -1,0 +1,48 @@
+@use '@/app/assets/scss/utils' as *;
+
+.hero {
+  @include padding-vertical(28px);
+  outline: 1px solid $color-border-secondary;
+  background: $gradient-radial;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+
+  &__container {
+    @include flex(column);
+  }
+
+  &__title {
+    margin-bottom: 28px;
+  }
+
+  &__filter-btns {
+    @include flex(row, flex-start, center);
+    margin-bottom: 8px;
+    gap: 16px;
+
+    .button__icon {
+      color: $color-button;
+    }
+  }
+
+  &__filter-btn {
+    &.active {
+      background-color: $color-surface-primary;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .hero {
+    &__filter-btns {
+      flex-wrap: wrap;
+    }
+
+    &__filter-btn {
+      .button__text {
+        display: none;
+      }
+    }
+  }
+}

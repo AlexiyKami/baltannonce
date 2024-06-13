@@ -1,0 +1,115 @@
+@use '@/app/assets/scss/utils' as *;
+
+.footer {
+  background-color: $color-footer-background;
+
+  &__container {
+    @include flex(column);
+    @include padding-vertical(2.5rem);
+    gap: 1.25rem;
+  }
+
+  &__content {
+    @include flex(row);
+    gap: 1.5rem;
+  }
+
+  &__logo {
+    flex: 0 0 8rem;
+    color: $color-accent-primary;
+
+    & img {
+      object-fit: contain;
+    }
+  }
+
+  &__navmenu {
+    color: white;
+    width: 100%;
+  }
+
+  &__line {
+    width: 100%;
+    height: 0.0625rem;
+    background-color: $color-border-icons;
+  }
+
+  &__copyright-text {
+    color: $color-text-secondary;
+  }
+}
+
+.navmenu-footer {
+  &__list {
+    @include flex(row, space-between);
+    @include font(1rem, 600, 137%);
+  }
+
+  &__link {
+    display: block;
+    max-width: min-content;
+    white-space: nowrap;
+    opacity: 1;
+    transition: opacity $transition-hover;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+@media screen and (max-width: $desktop-lg) {
+  .navmenu-footer {
+    &__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 10.0625rem;
+      grid-template-rows: auto;
+      column-gap: 1.25rem;
+      row-gap: 0.75rem;
+    }
+  }
+
+  .footer {
+    &__content {
+      @include flex(column, flex-start, flex-start);
+      gap: 1.25rem;
+    }
+
+    &__logo {
+      flex: 0 0 auto;
+      width: 8rem;
+      height: auto;
+    }
+  }
+}
+
+@media screen and (max-width: $desktop-lg) {
+  .footer {
+    &__content {
+      @include flex(column, flex-start, flex-start);
+      gap: 1.25rem;
+    }
+
+    &__logo {
+      flex: 0 0 auto;
+      width: 8rem;
+      height: auto;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .navmenu-footer {
+    &__list {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-md) {
+  .navmenu-footer {
+    &__list {
+      grid-template-columns: 1fr;
+    }
+  }
+}

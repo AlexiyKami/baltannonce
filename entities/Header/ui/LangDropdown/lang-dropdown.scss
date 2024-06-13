@@ -1,0 +1,92 @@
+@use '@/app/assets/scss/utils' as *;
+
+.dropdown-lang {
+  @include size(82px, 24px);
+  z-index: 100;
+
+  &__btn {
+    @include flex(row, flex-start, center);
+    gap: 6px;
+    cursor: pointer;
+    padding-left: 12px;
+    padding-bottom: 8px;
+  }
+
+  &__chevron {
+    color: $color-border-icons;
+    transition: transform $transition-hover ease-in;
+
+    &.active {
+      transform: rotateZ(-180deg);
+    }
+  }
+
+  &__body {
+    @include flex(column, center, flex-start);
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+
+    &.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
+  &__item {
+    @include flex(row, flex-start, center);
+    @include padding-horizontal(12px, 15px);
+    @include padding-vertical(8px);
+    width: 75px;
+    gap: 6px;
+    background-color: $color-surface-primary;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-surface-secondary;
+    }
+  }
+
+  & &__flag {
+    flex: 0 0 24px;
+  }
+}
+
+.dropdown-lang-header {
+  &__btn {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &__btn:hover &__content {
+    display: flex;
+  }
+
+  &__body {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__text {
+    font-size: 16px;
+  }
+
+  &__content {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    padding: 40px 0px;
+    gap: 10px;
+  }
+
+  &__item {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: $desktop-sm) {
+  .dropdown-lang-header__text {
+    @include font(20px, 600, 140%);
+  }
+}
