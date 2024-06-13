@@ -2499,6 +2499,11 @@ input[type=email]:disabled, input[type=password]:disabled, input[type=text]:disa
   width: 84px;
   height: 84px;
 }
+.reset-password__login-btn {
+  width: 100%;
+  max-width: 366px;
+}
+
 @media screen and (max-width: 64rem) {
   .reset-password__form, .reset-password__form-success {
     min-width: auto;
@@ -2513,6 +2518,79 @@ input[type=email]:disabled, input[type=password]:disabled, input[type=text]:disa
     padding-right: 0;
   }
   .reset-password__inputs-container {
+    max-width: none;
+    width: 100%;
+  }
+}
+.new-password__container {
+  display: flex;
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.new-password__body {
+  display: flex;
+  justify-content: center;
+}
+.new-password__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  background-color: var(--color-surface-primary);
+  border-radius: 12px;
+  padding: 40px 48px;
+  min-width: 840px;
+  max-width: 840px;
+}
+.new-password__form-success {
+  display: none;
+}
+.new-password__inputs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 366px;
+  width: 366px;
+}
+.new-password__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.new-password__success-message-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+.new-password__success-message-container img {
+  width: 84px;
+  height: 84px;
+}
+.new-password__login-btn {
+  width: 100%;
+  max-width: 366px;
+}
+
+@media screen and (max-width: 64rem) {
+  .new-password__body {
+    width: 100%;
+  }
+  .new-password__form, .new-password__form-success {
+    min-width: auto;
+    width: 840px;
+  }
+}
+@media screen and (max-width: 46.5rem) {
+  .new-password__form, .new-password__form-success {
+    padding: 24px 16px;
+  }
+  .new-password__container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .new-password__inputs-container {
     max-width: none;
     width: 100%;
   }
