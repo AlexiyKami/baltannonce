@@ -2461,4 +2461,59 @@ input[type=email]:disabled, input[type=password]:disabled, input[type=text]:disa
     text-align: center;
     justify-content: center;
   }
+}
+.reset-password__container {
+  display: flex;
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.reset-password__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  background-color: var(--color-surface-primary);
+  border-radius: 12px;
+  padding: 40px 48px;
+  min-width: 840px;
+  max-width: 840px;
+}
+.reset-password__form-success {
+  display: none;
+}
+.reset-password__inputs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 366px;
+  width: 366px;
+}
+.reset-password__success-message-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+.reset-password__success-message-container img {
+  width: 84px;
+  height: 84px;
+}
+@media screen and (max-width: 64rem) {
+  .reset-password__form, .reset-password__form-success {
+    min-width: auto;
+  }
+}
+@media screen and (max-width: 46.5rem) {
+  .reset-password__form, .reset-password__form-success {
+    padding: 24px 16px;
+  }
+  .reset-password__container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .reset-password__inputs-container {
+    max-width: none;
+    width: 100%;
+  }
 }/*# sourceMappingURL=main.css.map */
