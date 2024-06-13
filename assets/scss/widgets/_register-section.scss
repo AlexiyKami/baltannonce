@@ -1,0 +1,259 @@
+@use '../utils' as *;
+
+.register {
+
+  &__container {
+    display: flex;
+    gap: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__title {
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+    min-width: 840px;
+    max-width: 840px;
+    background-color: $color-surface-primary;
+    border-radius: 12px;
+    padding: 40px 48px;
+  }
+
+  &__user-type-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__form-title {
+  }
+
+  &__user-type {
+    display: flex;
+    gap: 12px;
+  }
+
+  &__card {
+    &-with-description {
+
+    }
+  }
+
+  &__gender-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__gender {
+    display: flex;
+    gap: 12px;
+  }
+
+  
+
+  &__locations-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__locations {
+  }
+
+  &__location {
+    display: flex;
+    gap: 40px;
+    & label {
+      min-width: 68px;
+    }
+  }
+
+  &__checkboxes-container {
+    display: flex;
+    column-gap: 24px;
+    row-gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  &__checkbox-container {
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+  }
+  
+  &__inputs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__inputs-title {
+  }
+
+  &__inputs {
+    display: flex;
+    column-gap: 12px;
+    row-gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  &__input {
+    flex: 0 1 49%;
+    height: 3rem;
+  }
+
+  &__input-email {
+  }
+
+  &__input-name {
+  }
+
+  &__input-password {
+  }
+
+  &__input-password-confirmation {
+  }
+
+  &__checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__actions-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  &__button {
+    width: 100%;
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__action {
+    display: flex;
+    gap: 4px;
+  }
+
+  &__login-link {
+  }
+}
+
+.card-register, .card-with-description-register {
+  width: 100%;
+  padding: 16px 20px;
+  background-color: $color-surface-secondary;
+  transition: border $transition-hover;
+  border: 1px solid $color-surface-secondary;
+  border-radius: 8px;
+  &__heading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  &__icon {
+    color: $color-border-accent;
+  }
+  &:hover {
+    border: 1px solid $color-border-accent;
+  }
+  &.selected {
+    border: 1px solid $color-border-accent;
+    background-color: $color-surface-brand;
+  }
+}
+
+.card-with-description-register {
+  &__heading {
+  }
+
+  &__name {
+  }
+
+  &__description {
+    color: $color-text-secondary;
+    @include font(0.875rem, 400, 143%);
+  }
+}
+.card-register {
+
+  &__heading {
+  }
+
+  &__name {
+  }
+}
+
+
+@media screen and (max-width:$desktop-md) {
+  .register {
+    &__container {
+      flex-direction: column;
+    }
+    &__form {
+      max-width: 840px;
+      min-width: auto;
+    }
+  }
+}
+
+@media screen and (max-width:$tablet) {
+  .register {
+    &__container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &__title {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    &__form {
+      padding: 1.5rem 1rem;
+    }
+    &__user-type, &__gender {
+      flex-direction: column;
+    }
+    &__inputs {
+      flex-direction: column;
+      gap: 12px;
+    }
+    &__input {
+      flex: 0 1 auto;
+    }
+    &__location {
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+}
+
+@media screen and (max-width:$mobile-md) {
+  .register {
+    &__title.heading_h1 {
+      @include font(1.5rem, 600, 136%);
+    }
+    &__action {
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
+    }
+  }
+}
