@@ -99,7 +99,7 @@ input[type="number"] {
   }
 }
 
-input[type="email"], input[type="password"] {
+input[type="email"], input[type="password"], input[type="text"] {
   box-shadow: 0 0 0 0.0625rem $color-border-primary;
   background-color: transparent;
   border-radius: 0.25rem;
