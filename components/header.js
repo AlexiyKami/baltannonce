@@ -21,8 +21,8 @@ header.innerHTML = `
     <div class="header__buttons">
       <div class="header__dropdown-lang dropdown-lang"></div>
       <div class="header__login-btns">
-        <a href="#" class="button button_secondary button_filled header__btn-login">Войти</a>
-        <a href="#" class="button button_primary button_filled header__btn-register">Регистрация</a>
+        <a href="login.html" class="button button_secondary button_filled header__btn-login">Войти</a>
+        <a href="register.html" class="button button_primary button_filled header__btn-register">Регистрация</a>
       </div>
       <div class="header__theme-switch theme-switch"></div>
     </div>
@@ -51,8 +51,8 @@ header.innerHTML = `
       <div class="header__buttons-burger">
         <div class="header__dropdown-lang dropdown-lang"></div>
         <div class="header__login-btns">
-          <a href="#" class="button button_secondary button_filled header__btn-login">Войти</a>
-          <a href="#" class="button button_primary button_filled header__btn-register">Регистрация</a>
+          <a href="login.html" class="button button_secondary button_filled header__btn-login">Войти</a>
+          <a href="register.html" class="button button_primary button_filled header__btn-register">Регистрация</a>
         </div>
         <div class="header__theme-switch theme-switch"></div>
       </div>

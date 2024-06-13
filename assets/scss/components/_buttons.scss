@@ -97,3 +97,15 @@
     z-index: 2;
   }
 }
+
+.text-button {
+  display: inline-flex;
+  padding: 0;
+  min-height: auto;
+  color: $color-accent-primary;
+  opacity: 1;
+  transition: opacity $transition-hover;
+  &:hover {
+    opacity: 0.6;
+  }
+}

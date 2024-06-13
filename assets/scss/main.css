@@ -118,11 +118,19 @@ body {
 }
 
 .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
   min-height: 100vh;
   min-width: 20rem;
   margin: 0 auto;
   position: relative;
   overflow-x: hidden;
+}
+
+.main {
+  flex: 1 1 auto;
 }
 
 ._container {
@@ -375,6 +383,18 @@ body.darkmode {
   background-color: var(--color-surface-primary);
   border-radius: 50%;
   z-index: 2;
+}
+
+.text-button {
+  display: inline-flex;
+  padding: 0;
+  min-height: auto;
+  color: var(--color-accent-primary);
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+.text-button:hover {
+  opacity: 0.6;
 }
 
 .dropdown-city {
@@ -645,7 +665,7 @@ body.darkmode {
   background-color: var(--color-surface-primary);
 }
 .extended-filter__title {
-  color: var(--color-accent-secondary);
+  color: var(--color-accent-primary);
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -1111,6 +1131,41 @@ input[type=number]:focus {
   box-shadow: 0 0 0 0.125rem var(--color-border-accent);
 }
 input[type=number]:disabled {
+  box-shadow: 0 0 0 0.0625rem var(--color-border-primary);
+  background-color: var(--color-surface-highlight);
+}
+
+input[type=email], input[type=password] {
+  box-shadow: 0 0 0 0.0625rem var(--color-border-primary);
+  background-color: transparent;
+  border-radius: 0.25rem;
+  min-height: 2.5rem;
+  color: var(--color-text-primary);
+  padding: 0.625rem 0.75rem;
+  transition: box-shadow 0.3s;
+}
+input[type=email]::-moz-placeholder, input[type=password]::-moz-placeholder {
+  color: var(--color-text-secondary);
+}
+input[type=email]:-ms-input-placeholder, input[type=password]:-ms-input-placeholder {
+  color: var(--color-text-secondary);
+}
+input[type=email]::placeholder, input[type=password]::placeholder {
+  color: var(--color-text-secondary);
+}
+input[type=email].small, input[type=password].small {
+  width: 3.75rem;
+}
+input[type=email].medium, input[type=password].medium {
+  width: 6.125rem;
+}
+input[type=email]:hover, input[type=password]:hover {
+  box-shadow: 0 0 0 0.0625rem var(--color-border-accent);
+}
+input[type=email]:focus, input[type=password]:focus {
+  box-shadow: 0 0 0 0.125rem var(--color-border-accent);
+}
+input[type=email]:disabled, input[type=password]:disabled {
   box-shadow: 0 0 0 0.0625rem var(--color-border-primary);
   background-color: var(--color-surface-highlight);
 }
@@ -2119,5 +2174,96 @@ input[type=number]:disabled {
 @media screen and (max-width: 46.5rem) {
   .home__advertisement {
     grid-template-columns: 1fr;
+  }
+}
+.login__container {
+  display: flex;
+  gap: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.login__body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.login__form {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+  min-width: 840px;
+  background-color: var(--color-surface-primary);
+  border-radius: 12px;
+  padding: 40px 48px;
+}
+.login__inputs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.login__inputs {
+  display: flex;
+  gap: 12px;
+}
+.login__input {
+  width: 100%;
+  height: 3rem;
+}
+.login__actions-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.login__button {
+  width: 100%;
+}
+.login__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.login__action {
+  display: flex;
+  gap: 4px;
+}
+.login__description {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 144%;
+}
+
+@media screen and (max-width: 80rem) {
+  .login__container {
+    flex-direction: column;
+  }
+  .login__form {
+    max-width: 840px;
+    min-width: auto;
+  }
+}
+@media screen and (max-width: 46.5rem) {
+  .login__form {
+    padding: 1.5rem 1rem;
+  }
+  .login__inputs {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 26.875rem) {
+  .login__title.heading_h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 136%;
+  }
+  .login__action {
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+  }
+  .login__description {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 143%;
   }
 }/*# sourceMappingURL=main.css.map */

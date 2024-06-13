@@ -98,3 +98,38 @@ input[type="number"] {
     background-color: $color-surface-highlight;
   }
 }
+
+input[type="email"], input[type="password"] {
+  box-shadow: 0 0 0 0.0625rem $color-border-primary;
+  background-color: transparent;
+  border-radius: 0.25rem;
+  min-height: 2.5rem;
+  color: $color-text-primary;
+  padding: 0.625rem 0.75rem;
+  transition: box-shadow $transition-hover;
+
+  &::placeholder {
+    color: $color-text-secondary;
+  }
+
+  &.small {
+    width: 3.75rem;
+  }
+
+  &.medium {
+    width: 6.125rem;
+  }
+
+  &:hover {
+    box-shadow: 0 0 0 0.0625rem $color-border-accent;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0.125rem $color-border-accent;
+  }
+
+  &:disabled {
+    box-shadow: 0 0 0 0.0625rem $color-border-primary;
+    background-color: $color-surface-highlight;
+  }
+}
