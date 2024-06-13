@@ -908,3 +908,29 @@ extendedFilterModal.innerHTML = `
 <div class="extended-filter__button button button_primary">Найти</div>
 
 </div>`
+
+const extendedFilterBtn = document.querySelector('.hero__extended-filter-btn');
+const extendedFilterModalOverlay = document.querySelector('.modal-overlay');
+const extendedFilterModalMenu = document.querySelector('.modal-menu');
+const extendedFilterButton = document.querySelector('.extended-filter__button');
+const extendedFilterCrossBtn = document.querySelector('.extended-filter__cross');
+
+extendedFilterBtn.addEventListener('click', () => {
+  extendedFilterModalMenu.classList.toggle('closed');
+  document.body.style.overflow = 'hidden';
+})
+
+extendedFilterModalOverlay.addEventListener('click', () => {
+  extendedFilterModalMenu.classList.add('closed');
+  document.body.style.overflow = 'auto';
+})
+
+extendedFilterButton.addEventListener('click', () => {
+  extendedFilterModalMenu.classList.add('closed');
+  document.body.style.overflow = 'auto';
+})
+
+extendedFilterCrossBtn.addEventListener('click', () => {
+  extendedFilterModalMenu.classList.add('closed');
+  document.body.style.overflow = 'auto';
+})

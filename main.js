@@ -1,5 +1,3 @@
-import './components/city-dropdown.js'
-import './components/dropdown.js'
 import './components/header.js'
 import './components/footer.js'
 import './components/lang-dropdown.js'
@@ -19,47 +17,4 @@ navmenuHeaderItems.forEach((item) => item.addEventListener('click', () => {
   headerBody.classList.remove('active');
 }))
 
-const dropdownCityBtn = document.querySelector('.dropdown-city__btn');
-const dropdownCityChevron = document.querySelector('.dropdown-city__chevron');
-const dropdownCityBody = document.querySelector('.dropdown-city__body');
-
-dropdownCityBtn.addEventListener('click', () => {
-  dropdownCityBtn.classList.toggle('active');
-  dropdownCityChevron.classList.toggle('active');
-  dropdownCityBody.classList.toggle('active');
-})
-
-const heroFilterBtn = document.querySelector('.hero__filter-btn');
-const dropdownFilter = document.querySelector('.dropdown-filter');
-
-heroFilterBtn.addEventListener('click', () => {
-  heroFilterBtn.classList.toggle('active');
-  dropdownFilter.classList.toggle('active');
-})
-
-const extendedFilterBtn = document.querySelector('.hero__extended-filter-btn');
-const extendedFilterModalOverlay = document.querySelector('.modal-overlay');
-const extendedFilterModalMenu = document.querySelector('.modal-menu');
-const extendedFilterButton = document.querySelector('.extended-filter__button');
-const extendedFilterCrossBtn = document.querySelector('.extended-filter__cross');
-
-extendedFilterBtn.addEventListener('click', () => {
-  extendedFilterModalMenu.classList.toggle('closed');
-  document.body.style.overflow = 'hidden';
-})
-
-extendedFilterModalOverlay.addEventListener('click', () => {
-  extendedFilterModalMenu.classList.add('closed');
-  document.body.style.overflow = 'auto';
-})
-
-extendedFilterButton.addEventListener('click', () => {
-  extendedFilterModalMenu.classList.add('closed');
-  document.body.style.overflow = 'auto';
-})
-
-extendedFilterCrossBtn.addEventListener('click', () => {
-  extendedFilterModalMenu.classList.add('closed');
-  document.body.style.overflow = 'auto';
-})
 

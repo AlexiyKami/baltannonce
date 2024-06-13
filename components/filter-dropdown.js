@@ -356,3 +356,11 @@ popupBtnClose.forEach((item, index) => {
     popupDropdownFilter[index].classList.remove('active');
   })
 })
+
+const heroFilterBtn = document.querySelector('.hero__filter-btn');
+const dropdownFilter = document.querySelector('.dropdown-filter');
+
+heroFilterBtn.addEventListener('click', () => {
+  heroFilterBtn.classList.toggle('active');
+  dropdownFilter.classList.toggle('active');
+})

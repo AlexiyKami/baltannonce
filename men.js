@@ -1,3 +1,5 @@
+import './components/city-dropdown.js'
+import './components/dropdown.js'
 import './components/filter-dropdown-men.js'
 import './components/extended-filter-modal-men.js'
 

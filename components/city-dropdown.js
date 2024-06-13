@@ -72,3 +72,13 @@ document.querySelectorAll('.dropdown-city__item').forEach((item) => {
     item.classList.toggle('active');
   })
 });
+
+const dropdownCityBtn = document.querySelector('.dropdown-city__btn');
+const dropdownCityChevron = document.querySelector('.dropdown-city__chevron');
+const dropdownCityBody = document.querySelector('.dropdown-city__body');
+
+dropdownCityBtn.addEventListener('click', () => {
+  dropdownCityBtn.classList.toggle('active');
+  dropdownCityChevron.classList.toggle('active');
+  dropdownCityBody.classList.toggle('active');
+})
