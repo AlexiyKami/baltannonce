@@ -1,9 +1,17 @@
 <script setup>
 import './filter-dropdown.scss';
+import { PopupDropdownFilter } from '@/shared/ui';
+
+defineProps(['isFilterDropdownOpened']);
 </script>
 
 <template>
-  <div class="hero__dropdown-filter dropdown-filter">
+  <div
+    class="hero__dropdown-filter dropdown-filter"
+    :class="{
+      active: isFilterDropdownOpened
+    }"
+  >
     <div class="dropdown-filter__body">
       <form class="dropdown-filter__form dropdown-filter__sortby">
         <h3 class="dropdown-filter__title heading_h5">Сортировать по</h3>

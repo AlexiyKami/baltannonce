@@ -3,6 +3,7 @@ import './hero-section.scss';
 import { CityDropdown, ExtendedFilterModal, FilterDropdown } from '@/entities/Girls';
 
 const isCityDropdownOpened = ref(true);
+const isFilterDropdownOpened = ref(false);
 </script>
 
 <template>
@@ -38,7 +39,13 @@ const isCityDropdownOpened = ref(true);
             />
           </svg>
         </div>
-        <div class="button button_with-icon hero__filter-btn button_with-indicator">
+        <div
+          class="button button_with-icon hero__filter-btn button_with-indicator"
+          :class="{
+            active: isFilterDropdownOpened
+          }"
+          @click="isFilterDropdownOpened = !isFilterDropdownOpened"
+        >
           <span class="button__text">Фильтры</span>
           <svg
             width="24"
@@ -62,7 +69,7 @@ const isCityDropdownOpened = ref(true);
         </div>
       </div>
       <CityDropdown :isCityDropdownOpened="isCityDropdownOpened" />
-      <FilterDropdown />
+      <FilterDropdown :isFilterDropdownOpened="isFilterDropdownOpened" />
       <ExtendedFilterModal />
     </div>
   </section>
