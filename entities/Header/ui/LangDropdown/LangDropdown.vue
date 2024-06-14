@@ -1,18 +1,25 @@
 <script setup>
 import './lang-dropdown.scss';
+import { languages } from '../../model/languages';
 
 const isDropdownOpened = ref(false);
+
+const currentLanguage = ref(languages[0]);
+const options = computed(() => {
+  return languages.filter((lang) => lang.title !== currentLanguage.value.title);
+});
+
+const setCurrentLanguage = (value) => {
+  currentLanguage.value = value;
+  isDropdownOpened.value = false;
+};
 </script>
 
 <template>
-  <div class="header__dropdown-lang dropdown-lang" @click="isDropdownOpened = !isDropdownOpened">
-    <div class="dropdown-lang__btn">
-      <img
-        src="@/app/assets/images/icons/ru-flag-round.svg"
-        alt="flag"
-        class="dropdown-lang__flag"
-      />
-      <span class="dropdown-lang__text button__text">RU</span>
+  <div class="header__dropdown-lang dropdown-lang">
+    <div class="dropdown-lang__btn" @click="isDropdownOpened = !isDropdownOpened">
+      <img :src="currentLanguage.image" alt="flag" class="dropdown-lang__flag" />
+      <span class="dropdown-lang__text button__text">{{ currentLanguage.title }}</span>
       <svg
         width="24"
         height="24"
@@ -39,61 +46,14 @@ const isDropdownOpened = ref(false);
         active: isDropdownOpened
       }"
     >
-      <div class="dropdown-lang__item">
-        <img
-          src="@/app/assets/images/icons/en-flag-round.svg"
-          alt="flag"
-          class="dropdown-lang__flag"
-        />
-        <span class="dropdown-lang__text button__text">EN</span>
-      </div>
-      <div class="dropdown-lang__item">
-        <img
-          src="@/app/assets/images/icons/lv-flag-round.svg"
-          alt="flag"
-          class="dropdown-lang__flag"
-        />
-        <span class="dropdown-lang__text button__text">LV</span>
-      </div>
-      <div class="dropdown-lang__item">
-        <img
-          src="@/app/assets/images/icons/lt-flag-round.svg"
-          alt="flag"
-          class="dropdown-lang__flag"
-        />
-        <span class="dropdown-lang__text button__text">LT</span>
-      </div>
-      <div class="dropdown-lang__item">
-        <img
-          src="@/app/assets/images/icons/ee-flag-round.svg"
-          alt="flag"
-          class="dropdown-lang__flag"
-        />
-        <span class="dropdown-lang__text button__text">EE</span>
-      </div>
-      <div class="dropdown-lang__item">
-        <img
-          src="@/app/assets/images/icons/es-flag-round.svg"
-          alt="flag"
-          class="dropdown-lang__flag"
-        />
-        <span class="dropdown-lang__text button__text">ES</span>
-      </div>
-      <div class="dropdown-lang__item">
-        <img
-          src="@/app/assets/images/icons/pt-flag-round.svg"
-          alt="flag"
-          class="dropdown-lang__flag"
-        />
-        <span class="dropdown-lang__text button__text">PT</span>
-      </div>
-      <div class="dropdown-lang__item">
-        <img
-          src="@/app/assets/images/icons/de-flag-round.svg"
-          alt="flag"
-          class="dropdown-lang__flag"
-        />
-        <span class="dropdown-lang__text button__text">DE</span>
+      <div
+        class="dropdown-lang__item"
+        v-for="option in options"
+        :key="option.title"
+        @click="setCurrentLanguage(option)"
+      >
+        <img :src="option.image" alt="flag" class="dropdown-lang__flag" />
+        <span class="dropdown-lang__text button__text">{{ option.title }}</span>
       </div>
     </div>
   </div>
