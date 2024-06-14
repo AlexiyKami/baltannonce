@@ -6,13 +6,8 @@ import { HomeSection } from '@/widgets/HomeSection';
 
 <template>
   <div>
-    <Suspense>
-      <div>
-        <HeroSection />
-        <AdvertisementSection />
-        <HomeSection />
-      </div>
-      <template #fallback>Loading...</template>
-    </Suspense>
+    <HeroSection />
+    <AdvertisementSection />
+    <HomeSection />
   </div>
 </template>

@@ -1,10 +1,17 @@
 <script setup>
 import './city-dropdown.scss';
+
+defineProps(['isCityDropdownOpened']);
 </script>
 
 <template>
   <div class="hero__dropdown-city dropdown-city">
-    <div class="dropdown-city__body active">
+    <div
+      class="dropdown-city__body"
+      :class="{
+        active: isCityDropdownOpened
+      }"
+    >
       <div class="dropdown-city__container lt">
         <span class="dropdown-city__text">Литва</span>
         <ul class="dropdown-city__list">
