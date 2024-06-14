@@ -1,0 +1,193 @@
+@use '@/app/assets/scss/utils' as *;
+
+.card-background {
+  padding: 0.3125rem;
+  border-radius: 0.75rem;
+  background: $color-border-secondary;
+
+  &_gold {
+    background: $gradient-linear-gold;
+  }
+
+  &_silver {
+    background: $gradient-linear-silver;
+    padding: 0.3125rem;
+    border-radius: 0.75rem;
+  }
+
+  &_bronze {
+    background: $gradient-linear-bronze;
+    padding: 0.3125rem;
+    border-radius: 0.75rem;
+  }
+}
+
+.card-home {
+  min-height: 30rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto;
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: transform $transition-hover;
+  height: 100%;
+
+  &:hover &__img-container > img {
+    transform: scale(1.1);
+  }
+
+  &__img-container {
+    overflow: hidden;
+    min-height: 23.75rem;
+
+    & > img {
+      transform: scale(1);
+      transition: transform $transition-hover;
+      object-fit: cover;
+    }
+  }
+
+  &__badges {
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    right: 0rem;
+    z-index: 4;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__of-the-day {
+    @include flex(row, center, center);
+    width: 100%;
+    height: 2.625rem;
+    background: $gradient-linear-accent;
+    color: white;
+  }
+
+  &__tags-container {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.625rem;
+    margin-left: 0.5rem;
+  }
+
+  &__tag_video,
+  &__tag_new {
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+  }
+
+  &__tag_video {
+    background: $gradient-linear-accent;
+  }
+
+  &__tag_new {
+    background-color: $color-other-blue;
+    transition: opacity $transition-hover;
+  }
+
+  &__info {
+    @include flex(column);
+    gap: 0.25rem;
+    padding: 0.75rem 1rem;
+    border-bottom-left-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+    background-color: $color-surface-primary;
+  }
+
+  &__name {
+    @include text-truncate();
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto;
+    gap: 1rem;
+  }
+
+  &__location {
+    display: flex;
+    gap: 0.25rem;
+
+    & > svg {
+      flex: 0 0 1rem;
+    }
+  }
+
+  &__location-icon {
+    color: $color-border-icons;
+  }
+
+  &__date {
+    color: $color-text-secondary;
+  }
+
+  &__verified {
+    display: flex;
+    gap: 0.25rem;
+    color: $color-checked-not-verified;
+
+    & > svg {
+      flex: 0 0 1rem;
+      color: $color-checked-not-verified;
+    }
+
+    &_similar {
+      color: $color-checked-similar;
+
+      svg {
+        color: $color-checked-similar;
+      }
+    }
+
+    &_not-similar {
+      color: $color-checked-not-similar;
+
+      svg {
+        color: $color-checked-not-similar;
+      }
+    }
+
+    &_by-photo {
+      color: $color-checked-by-photo;
+
+      svg {
+        color: $color-checked-by-photo;
+      }
+    }
+
+    &_by-admin {
+      color: $color-checked-personally;
+
+      svg {
+        color: $color-checked-personally;
+      }
+    }
+
+    &_by-video {
+      color: $color-checked-by-video;
+
+      svg {
+        color: $color-checked-by-video;
+      }
+    }
+  }
+
+  &__rating {
+    @include flex(row, center, center);
+    gap: 0.25rem;
+
+    & > svg {
+      color: $color-border-icons;
+    }
+  }
+
+  &__rating-text {
+    color: $color-text-secondary;
+  }
+}

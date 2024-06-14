@@ -1,9 +1,9 @@
 <script setup>
-import './advertisement-section.scss';
+import './home-advertisements.scss';
 </script>
 
 <template>
-  <section class="home__advertisement-section">
+  <div class="home__advertisements">
     <h3 class="home__advertisement-title heading_h5">Реклама</h3>
     <div class="home__advertisement">
       <div class="home__advertisement-block">Реклама</div>
@@ -15,5 +15,5 @@ import './advertisement-section.scss';
       <div class="home__advertisement-block">Реклама</div>
       <div class="home__advertisement-block">Реклама</div>
     </div>
-  </section>
+  </div>
 </template>

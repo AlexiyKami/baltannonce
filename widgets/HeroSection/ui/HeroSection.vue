@@ -1,6 +1,15 @@
 <script setup>
 import './hero-section.scss';
 import { CityDropdown, ExtendedFilterModal, FilterDropdown } from '@/entities/Girls';
+
+const isCityDropdownOpened = ref(true);
+const isFilterDropdownOpened = ref(false);
+const isExtendedFilterModalOpened = ref(false);
+
+const setIsExtendedFilterModalOpened = (value) => {
+  isExtendedFilterModalOpened.value = value;
+  value ? (document.body.style.overflow = 'hidden') : (document.body.style.overflow = 'auto');
+};
 </script>
 
 <template>
@@ -8,7 +17,13 @@ import { CityDropdown, ExtendedFilterModal, FilterDropdown } from '@/entities/Gi
     <div class="hero__container _container">
       <h1 class="hero__title heading_h1">Высококлассный Эскорт в странах Прибалтики</h1>
       <div class="hero__filter-btns">
-        <div class="dropdown-city__btn active">
+        <div
+          class="dropdown-city__btn"
+          :class="{
+            active: isCityDropdownOpened
+          }"
+          @click="isCityDropdownOpened = !isCityDropdownOpened"
+        >
           <span class="dropdown-city__btn-text button__text">Выберите город</span>
           <svg
             width="24"
@@ -16,7 +31,10 @@ import { CityDropdown, ExtendedFilterModal, FilterDropdown } from '@/entities/Gi
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            class="dropdown-city__chevron active"
+            class="dropdown-city__chevron"
+            :class="{
+              active: isCityDropdownOpened
+            }"
           >
             <path
               d="M6 9L12 15L18 9"
@@ -27,7 +45,13 @@ import { CityDropdown, ExtendedFilterModal, FilterDropdown } from '@/entities/Gi
             />
           </svg>
         </div>
-        <div class="button button_with-icon hero__filter-btn button_with-indicator">
+        <div
+          class="button button_with-icon hero__filter-btn button_with-indicator"
+          :class="{
+            active: isFilterDropdownOpened
+          }"
+          @click="isFilterDropdownOpened = !isFilterDropdownOpened"
+        >
           <span class="button__text">Фильтры</span>
           <svg
             width="24"
@@ -46,13 +70,19 @@ import { CityDropdown, ExtendedFilterModal, FilterDropdown } from '@/entities/Gi
             />
           </svg>
         </div>
-        <div class="button button_outlined hero__extended-filter-btn button_with-indicator">
+        <div
+          class="button button_outlined hero__extended-filter-btn button_with-indicator"
+          @click="setIsExtendedFilterModalOpened(!isExtendedFilterModalOpened)"
+        >
           <span class="button__text">Продвинутый поиск</span>
         </div>
       </div>
-      <CityDropdown />
-      <FilterDropdown />
-      <ExtendedFilterModal />
+      <CityDropdown :isCityDropdownOpened="isCityDropdownOpened" />
+      <FilterDropdown :isFilterDropdownOpened="isFilterDropdownOpened" />
+      <ExtendedFilterModal
+        :isExtendedFilterModalOpened="isExtendedFilterModalOpened"
+        @setIsExtendedFilterModalOpened="setIsExtendedFilterModalOpened"
+      />
     </div>
   </section>
 </template>
