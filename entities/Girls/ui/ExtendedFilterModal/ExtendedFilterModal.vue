@@ -1,10 +1,18 @@
 <script setup>
 import './extended-filter-modal.scss';
+
+defineProps(['isExtendedFilterModalOpened']);
+defineEmits(['setIsExtendedFilterModalOpened']);
 </script>
 
 <template>
-  <div class="modal-menu closed">
-    <div class="modal-overlay"></div>
+  <div
+    class="modal-menu"
+    :class="{
+      closed: !isExtendedFilterModalOpened
+    }"
+  >
+    <div class="modal-overlay" @click="$emit('setIsExtendedFilterModalOpened', false)"></div>
     <div class="extended-filter">
       <h2 class="extended-filter__title heading_h2">Поиск анкет по параметрам</h2>
       <svg
@@ -14,6 +22,7 @@ import './extended-filter-modal.scss';
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         class="extended-filter__cross button_icon-secondary"
+        @click="$emit('setIsExtendedFilterModalOpened', false)"
       >
         <path
           d="M18 6L6 18M6 6L18 18"
