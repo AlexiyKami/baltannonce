@@ -70,6 +70,10 @@
   & &__flag {
     flex: 0 0 1.5rem;
   }
+
+  &__text {
+    text-transform: uppercase;
+  }
 }
 
 .dropdown-lang-header {
