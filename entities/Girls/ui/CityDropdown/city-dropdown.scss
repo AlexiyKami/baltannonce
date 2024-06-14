@@ -101,24 +101,6 @@
     @include flex(row);
     gap: 2.5rem;
   }
-
-  &__item {
-    display: flex;
-    gap: 0.25rem;
-    @include font(1.125rem, 600, 144%);
-    border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    transition: background-color $transition-hover;
-
-    &:hover {
-      background-color: $color-gradient-flags-hover;
-    }
-
-    &.active {
-      background-color: $color-gradient-flags-hover;
-    }
-  }
 }
 
 @media screen and (max-width: $desktop-lg) {
@@ -143,11 +125,6 @@
       @include flex(column, flex-start, flex-start);
       gap: 0.75rem;
       padding: 0.75rem;
-    }
-
-    &__item {
-      @include font(1rem, 600, 137%);
-      padding: 0.5rem;
     }
 
     &__text {
