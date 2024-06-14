@@ -60,28 +60,28 @@ import './app-footer.scss';
         <nav class="footer__navmenu navmenu-footer">
           <ul class="navmenu-footer__list">
             <li class="navmenu-footer__item">
-              <a href="index.html" class="navmenu-footer__link active">Девушки</a>
+              <NuxtLink to="/" class="navmenu-footer__link">Девушки</NuxtLink>
             </li>
             <li class="navmenu-footer__item">
-              <a href="men.html" class="navmenu-footer__link">Мужчины</a>
+              <NuxtLink to="/men" class="navmenu-footer__link">Мужчины</NuxtLink>
             </li>
             <li class="navmenu-footer__item">
-              <a href="#" class="navmenu-footer__link">Спрос и предложение</a>
+              <NuxtLink to="" class="navmenu-footer__link">Спрос и предложение</NuxtLink>
             </li>
             <li class="navmenu-footer__item">
-              <a href="#" class="navmenu-footer__link">Содержанки</a>
+              <NuxtLink to="" class="navmenu-footer__link">Содержанки</NuxtLink>
             </li>
             <li class="navmenu-footer__item">
-              <a href="#" class="navmenu-footer__link">В первый раз?</a>
+              <NuxtLink to="" class="navmenu-footer__link">В первый раз?</NuxtLink>
             </li>
             <li class="navmenu-footer__item">
-              <a href="#" class="navmenu-footer__link">Поддержка и Оплата</a>
+              <NuxtLink to="" class="navmenu-footer__link">Поддержка и Оплата</NuxtLink>
             </li>
             <li class="navmenu-footer__item">
-              <a href="#" class="navmenu-footer__link">Terms and Conditions</a>
+              <NuxtLink to="" class="navmenu-footer__link">Terms and Conditions</NuxtLink>
             </li>
             <li class="navmenu-footer__item">
-              <a href="#" class="navmenu-footer__link">Privacy Policy</a>
+              <NuxtLink to="" class="navmenu-footer__link">Privacy Policy</NuxtLink>
             </li>
           </ul>
         </nav>

@@ -99,17 +99,17 @@ const isMenuOpened = ref(false);
                 >
               </li>
               <li class="navmenu-header__item">
-                <NuxtLink to="/" class="navmenu-header__link" @click="isMenuOpened = false"
+                <NuxtLink to="" class="navmenu-header__link" @click="isMenuOpened = false"
                   >Спрос и предложение</NuxtLink
                 >
               </li>
               <li class="navmenu-header__item">
-                <NuxtLink to="/" class="navmenu-header__link" @click="isMenuOpened = false"
+                <NuxtLink to="" class="navmenu-header__link" @click="isMenuOpened = false"
                   >Содержанки</NuxtLink
                 >
               </li>
               <li class="navmenu-header__item">
-                <NuxtLink to="/" class="navmenu-header__link" @click="isMenuOpened = false"
+                <NuxtLink to="" class="navmenu-header__link" @click="isMenuOpened = false"
                   >В первый раз?</NuxtLink
                 >
               </li>
