@@ -1,13 +1,15 @@
 <script setup>
 import './app-header.scss';
 import { ThemeSwitch, LangDropdown } from '@/entities/Header';
+
+const isMenuOpened = ref(false);
 </script>
 
 <template>
   <div class="header">
     <div class="header__container _container">
       <div class="header__content">
-        <a href="index.html" class="header__logo" aria-label="Главная">
+        <NuxtLink to="/" class="header__logo" aria-label="Главная">
           <svg
             width="161"
             height="20"
@@ -57,50 +59,72 @@ import { ThemeSwitch, LangDropdown } from '@/entities/Header';
               fill="currentColor"
             />
           </svg>
-        </a>
+        </NuxtLink>
         <div class="header__buttons">
-          <div class="header__dropdown-lang dropdown-lang"></div>
+          <LangDropdown />
           <div class="header__login-btns">
-            <a href="login.html" class="button button_secondary button_filled header__btn-login"
-              >Войти</a
+            <NuxtLink to="/login" class="button button_secondary button_filled header__btn-login"
+              >Войти</NuxtLink
             >
-            <a href="register.html" class="button button_primary button_filled header__btn-register"
-              >Регистрация</a
+            <NuxtLink
+              to="/register"
+              class="button button_primary button_filled header__btn-register"
+              >Регистрация</NuxtLink
             >
           </div>
+          <ThemeSwitch />
         </div>
-        <div class="header__burger burger-header">
+        <div
+          class="header__burger burger-header"
+          @click="isMenuOpened = !isMenuOpened"
+          :class="{
+            active: isMenuOpened
+          }"
+        >
           <div class="burger-header__stripe burger-header__stripe_1"></div>
           <div class="burger-header__stripe burger-header__stripe_2"></div>
           <div class="burger-header__stripe burger-header__stripe_3"></div>
         </div>
-        <div class="header__body">
+        <div
+          class="header__body"
+          :class="{
+            active: isMenuOpened
+          }"
+        >
           <nav class="header__navmenu navmenu-header">
             <ul class="navmenu-header__list">
               <li class="navmenu-header__item">
-                <a href="men.html" class="navmenu-header__link">Мужчины</a>
+                <NuxtLink to="/men" class="navmenu-header__link" @click="isMenuOpened = false"
+                  >Мужчины</NuxtLink
+                >
               </li>
               <li class="navmenu-header__item">
-                <a href="#" class="navmenu-header__link">Спрос и предложение</a>
+                <NuxtLink to="/" class="navmenu-header__link" @click="isMenuOpened = false"
+                  >Спрос и предложение</NuxtLink
+                >
               </li>
               <li class="navmenu-header__item">
-                <a href="#" class="navmenu-header__link">Содержанки</a>
+                <NuxtLink to="/" class="navmenu-header__link" @click="isMenuOpened = false"
+                  >Содержанки</NuxtLink
+                >
               </li>
               <li class="navmenu-header__item">
-                <a href="#" class="navmenu-header__link">В первый раз?</a>
+                <NuxtLink to="/" class="navmenu-header__link" @click="isMenuOpened = false"
+                  >В первый раз?</NuxtLink
+                >
               </li>
             </ul>
           </nav>
           <div class="header__buttons-burger">
             <LangDropdown />
             <div class="header__login-btns">
-              <a href="login.html" class="button button_secondary button_filled header__btn-login"
-                >Войти</a
+              <NuxtLink to="/login" class="button button_secondary button_filled header__btn-login"
+                >Войти</NuxtLink
               >
-              <a
-                href="register.html"
+              <NuxtLink
+                to="/register"
                 class="button button_primary button_filled header__btn-register"
-                >Регистрация</a
+                >Регистрация</NuxtLink
               >
             </div>
             <ThemeSwitch />
