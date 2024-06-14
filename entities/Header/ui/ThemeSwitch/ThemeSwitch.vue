@@ -1,9 +1,22 @@
 <script setup>
 import './theme-switch.scss';
+
+const isDarkMode = ref(false);
+
+const switchTheme = () => {
+  isDarkMode.value = !isDarkMode.value;
+  document.body.classList.toggle('darkmode');
+};
 </script>
 
 <template>
-  <div class="header__theme-switch theme-switch">
+  <div
+    class="header__theme-switch theme-switch"
+    @click="switchTheme"
+    :class="{
+      darkmode: isDarkMode
+    }"
+  >
     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clip-path="url(#clip0_2012_16051)">
         <path

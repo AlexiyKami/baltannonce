@@ -84,7 +84,7 @@
       opacity: 1;
     }
 
-    &.active::after {
+    &.router-link-exact-active::after {
       opacity: 1;
       background-color: $color-border-icons;
     }

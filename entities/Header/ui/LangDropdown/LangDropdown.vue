@@ -1,9 +1,11 @@
 <script setup>
 import './lang-dropdown.scss';
+
+const isDropdownOpened = ref(false);
 </script>
 
 <template>
-  <div class="header__dropdown-lang dropdown-lang">
+  <div class="header__dropdown-lang dropdown-lang" @click="isDropdownOpened = !isDropdownOpened">
     <div class="dropdown-lang__btn">
       <img
         src="@/app/assets/images/icons/ru-flag-round.svg"
@@ -18,6 +20,9 @@ import './lang-dropdown.scss';
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         class="dropdown-lang__chevron"
+        :class="{
+          active: isDropdownOpened
+        }"
       >
         <path
           d="M6 9L12 15L18 9"
@@ -28,7 +33,12 @@ import './lang-dropdown.scss';
         />
       </svg>
     </div>
-    <div class="dropdown-lang__body">
+    <div
+      class="dropdown-lang__body"
+      :class="{
+        active: isDropdownOpened
+      }"
+    >
       <div class="dropdown-lang__item">
         <img
           src="@/app/assets/images/icons/en-flag-round.svg"
