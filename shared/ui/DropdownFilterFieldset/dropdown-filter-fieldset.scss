@@ -6,12 +6,42 @@
     gap: 0.5rem;
   }
 
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
   &__title {
     margin-top: 0.75rem;
   }
 
-  &__item {
-    width: auto;
+  &__row-container {
+    display: flex;
+    gap: 1.5rem;
+
+    .dropdown-filter__item {
+      width: auto;
+    }
+  }
+
+  &__column-container {
+    @include flex(column);
+    gap: 0.5rem;
+  }
+
+  &__other-filters {
+    display: flex;
+    gap: 1.5rem;
+
+    .dropdown-filter__fieldset {
+      gap: 0.25rem;
+      min-width: 9rem;
+
+      & > .dropdown-filter__title {
+        margin-bottom: 0rem;
+      }
+    }
   }
 }
 

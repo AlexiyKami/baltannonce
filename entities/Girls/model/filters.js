@@ -157,3 +157,69 @@ export const availableOptions = [
     id: 'outcall-h'
   }
 ];
+
+export const questionaryOptions = [
+  {
+    text: 'Да',
+    id: 'questionary-yes'
+  },
+  {
+    text: 'Нет',
+    id: 'questionary-no'
+  }
+];
+
+export const smokingOptions = [
+  {
+    text: 'Да',
+    id: 'smoking-yes'
+  },
+  {
+    text: 'Нет',
+    id: 'smoking-no'
+  }
+];
+
+export const siliconeOptions = [
+  {
+    text: 'Да',
+    id: 'silicone-yes'
+  },
+  {
+    text: 'Нет',
+    id: 'silicone-no'
+  }
+];
+
+export const bdsmOptions = [
+  {
+    text: 'Да',
+    id: 'bdsm-yes'
+  },
+  {
+    text: 'Нет',
+    id: 'bdsm-no'
+  }
+];
+
+export const contactsOptions = [
+  {
+    text: 'Telegram',
+    id: 'telegram'
+  },
+  {
+    text: 'Whatsapp',
+    id: 'whatsapp'
+  }
+];
+
+export const verifiedOptions = [
+  {
+    text: 'Да',
+    id: 'verified-yes'
+  },
+  {
+    text: 'Нет',
+    id: 'verified-no'
+  }
+];

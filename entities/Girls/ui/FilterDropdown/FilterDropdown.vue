@@ -9,7 +9,13 @@ import {
   breastSizeOptions,
   languageOptions,
   raceOptions,
-  availableOptions
+  availableOptions,
+  questionaryOptions,
+  smokingOptions,
+  siliconeOptions,
+  bdsmOptions,
+  contactsOptions,
+  verifiedOptions
 } from '../../model/filters';
 
 defineProps(['isFilterDropdownOpened']);
@@ -27,12 +33,14 @@ defineProps(['isFilterDropdownOpened']);
         title="Сортировать по"
         name="sortby"
         type="radio"
+        container="column"
         :options="sortOptions"
       />
       <DropdownFilterFieldset
         title="Цена за час"
         name="price"
         type="checkbox"
+        container="column"
         :options="priceOptions"
       >
         <div class="dropdown-filter__item dropdown-filter__item-price">
@@ -62,6 +70,7 @@ defineProps(['isFilterDropdownOpened']);
         title="Возраст"
         name="years-old"
         type="checkbox"
+        container="column"
         :options="ageOptions"
       >
         <PopupDropdownFilter
@@ -73,12 +82,14 @@ defineProps(['isFilterDropdownOpened']);
         title="Цвет волос"
         name="hair-color"
         type="checkbox"
+        container="column"
         :options="hairColorOptions"
       />
       <DropdownFilterFieldset
         title="Размер груди"
         name="breast-size"
         type="checkbox"
+        container="column"
         :options="breastSizeOptions"
       >
         <PopupDropdownFilter title="Размер груди" :options="['A', 'B', 'C', 'D', 'DD', 'G']" />
@@ -87,97 +98,69 @@ defineProps(['isFilterDropdownOpened']);
         title="Язык"
         name="language"
         type="checkbox"
+        container="column"
         :options="languageOptions"
       />
-      <DropdownFilterFieldset title="Раса" name="race" type="checkbox" :options="raceOptions" />
+      <DropdownFilterFieldset
+        title="Раса"
+        name="race"
+        type="checkbox"
+        container="column"
+        :options="raceOptions"
+      />
       <DropdownFilterFieldset
         title="Доступна"
         name="available"
         type="checkbox"
+        container="column"
         :options="availableOptions"
       />
     </div>
     <h3 class="dropdown-filter__title heading_h5">Другое</h3>
     <div class="dropdown-filter__body-bottom">
       <div class="dropdown-filter__other-filters">
-        <form class="dropdown-filter__form dropdown-filter__questionary">
-          <h3 class="dropdown-filter__title heading_h5">Анкета с видео:</h3>
-          <div class="dropdown-filter__row-container">
-            <div class="dropdown-filter__item">
-              <input id="questionary-yes" type="checkbox" name="questionary" />
-              <label for="questionary-yes">Да</label>
-            </div>
-            <div class="dropdown-filter__item">
-              <input id="questionary-no" type="checkbox" name="questionary" />
-              <label for="questionary-no">Нет</label>
-            </div>
-          </div>
-        </form>
-        <form class="dropdown-filter__form dropdown-filter__smoking">
-          <h3 class="dropdown-filter__title heading_h5">Курит:</h3>
-          <div class="dropdown-filter__row-container">
-            <div class="dropdown-filter__item">
-              <input id="smoking-yes" type="checkbox" name="smoking" />
-              <label for="smoking-yes">Да</label>
-            </div>
-            <div class="dropdown-filter__item">
-              <input id="smoking-no" type="checkbox" name="smoking" />
-              <label for="smoking-no">Нет</label>
-            </div>
-          </div>
-        </form>
-        <form class="dropdown-filter__form dropdown-filter__silicone">
-          <h3 class="dropdown-filter__title heading_h5">Силикон:</h3>
-          <div class="dropdown-filter__row-container">
-            <div class="dropdown-filter__item">
-              <input id="silicone-yes" type="checkbox" name="silicone" />
-              <label for="silicone-yes">Да</label>
-            </div>
-            <div class="dropdown-filter__item">
-              <input id="silicone-no" type="checkbox" name="silicone" />
-              <label for="silicone-no">Нет</label>
-            </div>
-          </div>
-        </form>
-        <form class="dropdown-filter__form dropdown-filter__bdsm">
-          <h3 class="dropdown-filter__title heading_h5">БДСМ:</h3>
-          <div class="dropdown-filter__row-container">
-            <div class="dropdown-filter__item">
-              <input id="bdsm-yes" type="checkbox" name="bdsm" />
-              <label for="bdsm-yes">Да</label>
-            </div>
-            <div class="dropdown-filter__item">
-              <input id="bdsm-no" type="checkbox" name="bdsm" />
-              <label for="bdsm-no">Нет</label>
-            </div>
-          </div>
-        </form>
-        <form class="dropdown-filter__form dropdown-filter__contacts">
-          <h3 class="dropdown-filter__title heading_h5">Способ связи:</h3>
-          <div class="dropdown-filter__row-container">
-            <div class="dropdown-filter__item">
-              <input id="telegram" type="checkbox" name="contacts" />
-              <label for="telegram">Telegram</label>
-            </div>
-            <div class="dropdown-filter__item">
-              <input id="whatsapp" type="checkbox" name="contacts" />
-              <label for="whatsapp">Whatsapp</label>
-            </div>
-          </div>
-        </form>
-        <form class="dropdown-filter__form dropdown-filter__verified">
-          <h3 class="dropdown-filter__title heading_h5">Проверены лично:</h3>
-          <div class="dropdown-filter__row-container">
-            <div class="dropdown-filter__item">
-              <input id="verified-yes" type="checkbox" name="verified" />
-              <label for="verified-yes">Да</label>
-            </div>
-            <div class="dropdown-filter__item">
-              <input id="verified-no" type="checkbox" name="verified" />
-              <label for="verified-no">Нет</label>
-            </div>
-          </div>
-        </form>
+        <DropdownFilterFieldset
+          title="Анкета с видео:"
+          name="questionary"
+          type="checkbox"
+          container="row"
+          :options="questionaryOptions"
+        />
+        <DropdownFilterFieldset
+          title="Курит:"
+          name="smoking"
+          type="checkbox"
+          container="row"
+          :options="smokingOptions"
+        />
+        <DropdownFilterFieldset
+          title="Силикон:"
+          name="silicone"
+          type="checkbox"
+          container="row"
+          :options="siliconeOptions"
+        />
+        <DropdownFilterFieldset
+          title="БДСМ:"
+          name="bdsm"
+          type="checkbox"
+          container="row"
+          :options="bdsmOptions"
+        />
+        <DropdownFilterFieldset
+          title="Способ связи:"
+          name="contacts"
+          type="checkbox"
+          container="row"
+          :options="contactsOptions"
+        />
+        <DropdownFilterFieldset
+          title="Проверены лично:"
+          name="verified"
+          type="checkbox"
+          container="row"
+          :options="verifiedOptions"
+        />
       </div>
       <div class="dropdown-filter__btns">
         <div class="button button_secondary button_small">Сбросить фильтры</div>

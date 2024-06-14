@@ -45,12 +45,6 @@
     cursor: pointer;
   }
 
-  &__item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-
   &__item-price {
     display: flex;
     gap: 0.5rem;
@@ -64,41 +58,9 @@
     align-items: center;
   }
 
-  &__form {
-    @include flex(column);
-    gap: 0.5rem;
-  }
-
-  &__title {
-    margin-top: 0.75rem;
-  }
-
   &__btns {
     @include flex(column);
     gap: 0.75rem;
-  }
-
-  &__other-filters {
-    display: flex;
-    gap: 1.5rem;
-
-    .dropdown-filter__form {
-      gap: 0.25rem;
-      min-width: 9rem;
-
-      & > .dropdown-filter__title {
-        margin-bottom: 0rem;
-      }
-    }
-  }
-
-  &__row-container {
-    display: flex;
-    gap: 1.5rem;
-
-    .dropdown-filter__item {
-      width: auto;
-    }
   }
 
   &__body-bottom {
@@ -127,10 +89,6 @@
   .dropdown-filter {
     &__body {
       justify-content: flex-start;
-    }
-
-    &__item {
-      width: 9rem;
     }
   }
 }
