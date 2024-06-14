@@ -23,7 +23,7 @@ input[type='checkbox'] {
 
   &:not(:disabled):checked {
     background-color: $color-button;
-    background-image: url(../../assets/icons/checkbox.svg);
+    background-image: url(@/app/assets/images/icons/checkbox.svg);
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: center;
