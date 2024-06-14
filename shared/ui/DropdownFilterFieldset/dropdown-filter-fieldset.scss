@@ -1,0 +1,24 @@
+@use '@/app/assets/scss/utils' as *;
+
+.dropdown-filter {
+  &__fieldset {
+    @include flex(column);
+    gap: 0.5rem;
+  }
+
+  &__title {
+    margin-top: 0.75rem;
+  }
+
+  &__item {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: $desktop-md) {
+  .dropdown-filter {
+    &__item {
+      width: 9rem;
+    }
+  }
+}

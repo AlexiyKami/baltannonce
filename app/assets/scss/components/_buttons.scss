@@ -14,6 +14,7 @@
 .button_primary {
   background-color: $color-button;
   color: $color-text-invert;
+  transition: box-shadow $transition-hover;
 
   &:hover {
     box-shadow: $hover-light-mode;
