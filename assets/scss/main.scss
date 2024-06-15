@@ -1,6 +1,7 @@
 @use './base';
 @use './theme';
 
+@use './components/breadcrumbs.scss';
 @use './components/buttons.scss';
 @use './components/city-dropdown.scss';
 @use './components/dropdown.scss';
@@ -19,3 +20,4 @@
 @use './widgets/register-section.scss';
 @use './widgets/reset-password-section.scss';
 @use './widgets/new-password-section.scss';
+@use './widgets/form-section.scss';

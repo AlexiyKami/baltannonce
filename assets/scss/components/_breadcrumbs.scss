@@ -1,0 +1,29 @@
+@use '../utils' as *;
+
+.breadcrumbs {
+  background-color: $color-surface-highlight;
+  border: 1px solid $color-border-secondary;
+  &__container {
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 12px;
+    align-items: center;
+  }
+
+  &__link {
+    color: $color-text-secondary;
+    &_current {
+      color: $color-accent-primary;
+      @include font(1rem, 600, 144%);
+    }
+  }
+}
+
+@media screen and (max-width:$mobile-md) {
+  .breadcrumbs {
+    &__container {
+      flex-wrap: wrap;
+    }
+  }
+}

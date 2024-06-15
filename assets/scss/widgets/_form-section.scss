@@ -1,0 +1,377 @@
+@use '../utils' as *;
+
+.form-section {
+  padding: 32px 0px;
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__details {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 16px;
+    color: $color-text-secondary;
+  }
+
+  &__date-create {
+  }
+
+  &__date-create-value {
+  }
+
+  &__date-update {
+  }
+
+  &__main-block {
+  }
+
+  &__info-container {
+  }
+}
+
+.main-block-form-section {
+  display: flex;
+  gap: 20px;
+  &__media {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    flex: 1 1 auto;
+  }
+
+  &__photo-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__slider {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 6px;
+    background: $gradient-linear-gold;
+    border-radius: 12px;
+  }
+
+  &__slider-img-container {
+    display: flex;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    overflow: hidden;
+  }
+
+  &__slider-photo {
+  }
+
+  &__slider-btn {
+    position: absolute;
+    &_left {
+      top: 50%;
+      left: 0.875rem;
+    }
+    &_right {
+      top: 50%;
+      right: 0.875rem;
+    }
+  }
+
+  &__slider-tag {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-surface-primary;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 13px 20px;
+  }
+
+  &__slider-verified {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: $color-checked-not-verified;
+    &_similar {
+      color: $color-checked-similar;
+    }
+    &_not-similar {
+      color: $color-checked-not-similar;
+    }
+    &_by-photo {
+      color: $color-checked-by-photo;
+    }
+    &_by-admin {
+      color: $color-checked-personally;
+    }
+    &_by-video {
+      color: $color-checked-by-video;
+    }
+  }
+
+  &__slider-verified-text {
+    @include font(1.125rem, 600, 144%);
+  }
+
+  &__slider-rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__slider-rating-text {
+    @include font(1.125rem, 600, 144%);
+  }
+
+  &__photo-info {
+    display: flex;
+    justify-content: space-between;
+    color: $color-text-secondary;
+  }
+
+  &__photo-info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__photo-date-create {
+  }
+
+  &__photo-date-create-value {
+  }
+
+  &__search-photo {
+  }
+
+  &__search-photo-link {
+    cursor: pointer;
+    color: $color-accent-primary;
+    text-decoration: underline;
+    @include font(1rem, 600, 136%);
+  }
+
+  &__alert-fake-btn {
+
+  }
+
+  &__video-container {
+    position: relative;
+    max-height: 440px;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+
+  &__video {
+    &-btn {
+      cursor: pointer;
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: rgba(0, 0, 0, 0.5);
+      transition: color $transition-hover;
+      &:hover {
+        color: rgba(0, 0, 0, 0.7);
+      }
+    }
+  }
+
+
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 0 1 49.9%;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__name-block {
+  }
+
+  &__name {
+    @include font(1.5rem, 600, 136%);
+  }
+
+  &__last-online {
+    color: $color-text-secondary;
+  }
+
+  &__favourite-btn {
+    background-color: $color-surface-highlight;
+    &.active &-icon {
+      color: $color-accent-primary;
+    }
+  }
+
+  &__favourite-btn-icon {
+    color: transparent;
+    
+  }
+}
+
+.info-container-form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: $color-surface-primary;
+  border: 1px solid $color-border-secondary;
+  border-radius: 12px;
+  padding: 24px 20px;
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      margin-top: 8px;
+      background-color: $color-border-primary
+    }
+  }
+
+  &__title {
+    @include font(1.25rem, 700, 136%);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 198px 1fr;
+    row-gap: 4px;
+    column-gap: 12px;
+  }
+
+  &__column {
+    display: grid;
+    row-gap: 4px;
+    column-gap: 12px;
+    grid-template-rows: auto 1fr;
+  }
+
+  &__row-title, &__column-title {
+    @include font(1rem, 600, 144%);
+  }
+
+  &__row-text {
+    display: flex;
+    word-break: break-word;
+  }
+
+  &__site-btn {
+    background-color: $color-surface-highlight;
+  }
+}
+
+@media screen and (max-width:$desktop-md) {
+  .main-block-form-section {
+    &__details {
+      flex: 0 0 47%;
+    }
+
+    &__photo-info {
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media screen and (max-width:$desktop-sm) {
+  .main-block-form-section {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width:$tablet) {
+  .form-section {
+    &__details {
+      flex-direction: column;
+      gap: 8px;
+    }
+  }
+  .main-block-form-section {
+    flex-direction: column;
+    &__alert-fake-btn {
+      @include font(0.875rem, 600, 136%);
+    }
+
+    &__header {
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+  }
+  .info-container-form-section {
+    padding: 12px;
+    &__heading {
+      gap: 8px;
+    }
+  }
+}
+
+@media screen and (max-width:$mobile-md) {
+  .form-section {
+    padding: 20px 0px;
+    &__container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &__details {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      @include font(0.875rem, 400, 143%);
+    }
+  }
+
+  .main-block-form-section {
+    &__photo-info {
+      @include font(0.875rem, 400, 143%);
+    }
+    &__photo-info, &__header {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    &__name {
+      @include font(1.25rem, 700, 136%);
+    }
+    &__last-online {
+      @include font(0.875rem, 400, 143%);
+    }
+    &__slider-verified-text, &__slider-rating-text {
+      @include font(0.875rem, 700, 143%);
+    }
+  }
+
+  .info-container-form-section {
+    &__title {
+      @include font(1.125rem, 600, 144%);
+    }
+
+    &__row {
+      grid-template-columns: 174px 1fr;
+    }
+
+    &__row-title, &__column-title {
+      @include font(0.875rem, 700, 143%);
+    }
+
+    &__row-text {
+      @include font(0.875rem, 400, 143%);
+    }
+  }
+
+}

@@ -109,3 +109,17 @@
     opacity: 0.6;
   }
 }
+
+.filled-round-button {
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba($color: #ffffff, $alpha: 0.4);
+  border-radius: 50%;
+  transition: background-color $transition-hover;
+  &:hover {
+    background-color: $color-surface-primary;
+  }
+}
