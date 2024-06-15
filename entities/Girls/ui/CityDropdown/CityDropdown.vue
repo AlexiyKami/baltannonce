@@ -1,7 +1,7 @@
 <script setup>
 import './city-dropdown.scss';
 import { DropdownItemWithCount } from '@/shared/ui';
-import { lithuanianCities, latvianCities, estonianCities } from '../../model/cities';
+import { cities } from '../../model/cities';
 
 defineProps(['isCityDropdownOpened']);
 </script>
@@ -18,8 +18,8 @@ defineProps(['isCityDropdownOpened']);
         <span class="dropdown-city__text">Литва</span>
         <ul class="dropdown-city__list">
           <DropdownItemWithCount
-            v-for="city in lithuanianCities"
-            :key="city.title"
+            v-for="city in cities.lithuanianCities"
+            :key="city.id"
             :title="city.title"
             :count="city.count"
           />
@@ -29,8 +29,8 @@ defineProps(['isCityDropdownOpened']);
         <span class="dropdown-city__text">Латвия</span>
         <ul class="dropdown-city__list">
           <DropdownItemWithCount
-            v-for="city in latvianCities"
-            :key="city.title"
+            v-for="city in cities.latvianCities"
+            :key="city.id"
             :title="city.title"
             :count="city.count"
           />
@@ -40,8 +40,8 @@ defineProps(['isCityDropdownOpened']);
         <span class="dropdown-city__text">Эстония</span>
         <ul class="dropdown-city__list">
           <DropdownItemWithCount
-            v-for="city in estonianCities"
-            :key="city.title"
+            v-for="city in cities.estonianCities"
+            :key="city.id"
             :title="city.title"
             :count="city.count"
           />
