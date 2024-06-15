@@ -1,8 +1,24 @@
 <script setup>
 import './app-header.scss';
 import { ThemeSwitch, LangDropdown } from '@/entities/Header';
+import { debounce } from '../lib/helpers/debounce';
 
+const breakpoint = 1280;
 const isMenuOpened = ref(false);
+
+const closeMenuOnResize = () => {
+  if (window.innerWidth > breakpoint) {
+    isMenuOpened.value = false;
+  }
+};
+
+onMounted(() => {
+  window.addEventListener('resize', debounce(closeMenuOnResize, 100));
+});
+
+onUnmounted(() => {
+  window.removeEventListener('resize', closeMenuOnResize);
+});
 </script>
 
 <template>
