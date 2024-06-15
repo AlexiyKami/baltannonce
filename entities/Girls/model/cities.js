@@ -1,56 +1,68 @@
-export const lithuanianCities = [
-  {
-    title: 'Вильнюс',
-    count: 0
-  },
-  {
-    title: 'Каунас',
-    count: 0
-  },
-  {
-    title: 'Клайпеда',
-    count: 0
-  },
-  {
-    title: 'Шяуляй',
-    count: 0
-  },
-  {
-    title: 'Паневежис',
-    count: 0
-  }
-];
-
-export const latvianCities = [
-  {
-    title: 'Рига',
-    count: 0
-  },
-  {
-    title: 'Юрмала',
-    count: 0
-  },
-  {
-    title: 'Даугавпилс',
-    count: 0
-  },
-  {
-    title: 'Лиепая',
-    count: 0
-  }
-];
-
-export const estonianCities = [
-  {
-    title: 'Таллин',
-    count: 0
-  },
-  {
-    title: 'Тарту',
-    count: 0
-  },
-  {
-    title: 'Нарва',
-    count: 0
-  }
-];
+export const cities = {
+  lithuanianCities: [
+    {
+      title: 'Вильнюс',
+      count: 0,
+      id: 'vilnius'
+    },
+    {
+      title: 'Каунас',
+      count: 0,
+      id: 'kaunas'
+    },
+    {
+      title: 'Клайпеда',
+      count: 0,
+      id: 'klaipeda'
+    },
+    {
+      title: 'Шяуляй',
+      count: 0,
+      id: 'siauliai'
+    },
+    {
+      title: 'Паневежис',
+      count: 0,
+      id: 'panevezys'
+    }
+  ],
+  latvianCities: [
+    {
+      title: 'Рига',
+      count: 0,
+      id: 'riga'
+    },
+    {
+      title: 'Юрмала',
+      count: 0,
+      id: 'jurmala'
+    },
+    {
+      title: 'Даугавпилс',
+      count: 0,
+      id: 'daugavpils'
+    },
+    {
+      title: 'Лиепая',
+      count: 0,
+      id: 'liepaja'
+    }
+  ],
+  estonianCities: [
+    {
+      title: 'Таллин',
+      count: 0,
+      id: 'tallinn'
+    },
+    {
+      title: 'Тарту',
+      count: 0,
+      id: 'tartu'
+    },
+    {
+      title: 'Нарва',
+      count: 0,
+      id: 'narva'
+    }
+  ]
+};

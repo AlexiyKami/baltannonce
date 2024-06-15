@@ -1,0 +1,84 @@
+@use '@/app/assets/scss/utils' as *;
+
+.dropdown {
+  width: 7.75rem;
+  position: relative;
+
+  &.wide {
+    width: 100%;
+    max-width: 21.25rem;
+  }
+
+  &.narrow {
+    width: 6.125rem;
+  }
+
+  &__btn {
+    @include flex(row, space-between, center);
+    padding: 0.625rem 0.75rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 0 0.0625rem $color-border-primary;
+    color: $color-text-secondary;
+    transition: box-shadow $transition-hover;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 0 0 0.0625rem $color-border-accent;
+    }
+
+    &.active {
+      box-shadow: 0 0 0 0.125rem $color-border-accent;
+    }
+
+    &[disabled],
+    &:disabled {
+      cursor: auto;
+      pointer-events: none;
+      box-shadow: 0 0 0 0.0625rem $color-border-primary;
+      background-color: $color-surface-highlight;
+    }
+
+    &:disabled &__chevron {
+      color: $color-border-primary;
+    }
+  }
+
+  &__chevron {
+    color: $color-border-icons;
+    transition: transform $transition-hover ease-in;
+
+    &.active {
+      transform: rotateZ(-180deg);
+    }
+  }
+
+  &__body {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    width: 100%;
+    @include flex(column, center, flex-start);
+    opacity: 0;
+    transition: opacity 0.5s;
+    pointer-events: none;
+    background-color: $color-surface-primary;
+    outline: 0.0625rem solid $color-border-primary;
+    border-radius: 0.25rem;
+
+    &.active {
+      z-index: 3;
+      opacity: 1;
+      pointer-events: all;
+    }
+  }
+
+  &__item {
+    cursor: pointer;
+    width: 100%;
+    background-color: $color-surface-secondary;
+    padding: 0.625rem 0.75rem;
+
+    &:hover {
+      background-color: $color-surface-primary;
+    }
+  }
+}

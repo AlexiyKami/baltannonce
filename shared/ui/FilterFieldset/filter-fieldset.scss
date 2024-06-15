@@ -1,6 +1,6 @@
 @use '@/app/assets/scss/utils' as *;
 
-.dropdown-filter {
+.filter {
   &__fieldset {
     @include flex(column);
     gap: 0.5rem;
@@ -20,7 +20,7 @@
     display: flex;
     gap: 1.5rem;
 
-    .dropdown-filter__item {
+    .filter__item {
       width: auto;
     }
   }
@@ -28,27 +28,5 @@
   &__column-container {
     @include flex(column);
     gap: 0.5rem;
-  }
-
-  &__other-filters {
-    display: flex;
-    gap: 1.5rem;
-
-    .dropdown-filter__fieldset {
-      gap: 0.25rem;
-      min-width: 9rem;
-
-      & > .dropdown-filter__title {
-        margin-bottom: 0rem;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: $desktop-md) {
-  .dropdown-filter {
-    &__item {
-      width: 9rem;
-    }
   }
 }

@@ -69,6 +69,20 @@
     gap: 1.5rem;
     padding-bottom: 1.25rem;
   }
+
+  &__other-filters {
+    display: flex;
+    gap: 1.5rem;
+
+    .filter__fieldset {
+      gap: 0.25rem;
+      min-width: 9rem;
+
+      & > .filter__title {
+        margin-bottom: 0rem;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: $desktop-lg) {

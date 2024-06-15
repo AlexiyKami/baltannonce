@@ -1,22 +1,7 @@
 <script setup>
 import './filter-dropdown.scss';
-import { PopupDropdownFilter, DropdownFilterFieldset } from '@/shared/ui';
-import {
-  sortOptions,
-  priceOptions,
-  ageOptions,
-  hairColorOptions,
-  breastSizeOptions,
-  languageOptions,
-  raceOptions,
-  availableOptions,
-  questionaryOptions,
-  smokingOptions,
-  siliconeOptions,
-  bdsmOptions,
-  contactsOptions,
-  verifiedOptions
-} from '../../model/filters';
+import { PopupDropdownFilter, FilterFieldset } from '@/shared/ui';
+import { filters } from '../../model/filters';
 
 defineProps(['isFilterDropdownOpened']);
 </script>
@@ -29,19 +14,19 @@ defineProps(['isFilterDropdownOpened']);
     }"
   >
     <div class="dropdown-filter__body">
-      <DropdownFilterFieldset
+      <FilterFieldset
         title="Сортировать по"
         name="sortby"
         type="radio"
         container="column"
-        :options="sortOptions"
+        :options="filters.sortOptions"
       />
-      <DropdownFilterFieldset
+      <FilterFieldset
         title="Цена за час"
         name="price"
         type="checkbox"
         container="column"
-        :options="priceOptions"
+        :options="filters.priceOptions"
       >
         <div class="dropdown-filter__item dropdown-filter__item-price">
           <label for="">Свои значения:</label>
@@ -65,101 +50,101 @@ defineProps(['isFilterDropdownOpened']);
             />
           </div>
         </div>
-      </DropdownFilterFieldset>
-      <DropdownFilterFieldset
+      </FilterFieldset>
+      <FilterFieldset
         title="Возраст"
         name="years-old"
         type="checkbox"
         container="column"
-        :options="ageOptions"
+        :options="filters.ageOptions"
       >
         <PopupDropdownFilter
           title="Возраст"
           :options="['18-20', '21-24', '25-29', '30-35', '36-40', '40+']"
         />
-      </DropdownFilterFieldset>
-      <DropdownFilterFieldset
+      </FilterFieldset>
+      <FilterFieldset
         title="Цвет волос"
         name="hair-color"
         type="checkbox"
         container="column"
-        :options="hairColorOptions"
+        :options="filters.hairColorOptions"
       />
-      <DropdownFilterFieldset
+      <FilterFieldset
         title="Размер груди"
         name="breast-size"
         type="checkbox"
         container="column"
-        :options="breastSizeOptions"
+        :options="filters.breastSizeOptions"
       >
         <PopupDropdownFilter title="Размер груди" :options="['A', 'B', 'C', 'D', 'DD', 'G']" />
-      </DropdownFilterFieldset>
-      <DropdownFilterFieldset
+      </FilterFieldset>
+      <FilterFieldset
         title="Язык"
         name="language"
         type="checkbox"
         container="column"
-        :options="languageOptions"
+        :options="filters.languageOptions"
       />
-      <DropdownFilterFieldset
+      <FilterFieldset
         title="Раса"
         name="race"
         type="checkbox"
         container="column"
-        :options="raceOptions"
+        :options="filters.raceOptions"
       />
-      <DropdownFilterFieldset
+      <FilterFieldset
         title="Доступна"
         name="available"
         type="checkbox"
         container="column"
-        :options="availableOptions"
+        :options="filters.availableOptions"
       />
     </div>
     <h3 class="dropdown-filter__title heading_h5">Другое</h3>
     <div class="dropdown-filter__body-bottom">
       <div class="dropdown-filter__other-filters">
-        <DropdownFilterFieldset
+        <FilterFieldset
           title="Анкета с видео:"
           name="questionary"
           type="checkbox"
           container="row"
-          :options="questionaryOptions"
+          :options="filters.questionaryOptions"
         />
-        <DropdownFilterFieldset
+        <FilterFieldset
           title="Курит:"
           name="smoking"
           type="checkbox"
           container="row"
-          :options="smokingOptions"
+          :options="filters.smokingOptions"
         />
-        <DropdownFilterFieldset
+        <FilterFieldset
           title="Силикон:"
           name="silicone"
           type="checkbox"
           container="row"
-          :options="siliconeOptions"
+          :options="filters.siliconeOptions"
         />
-        <DropdownFilterFieldset
+        <FilterFieldset
           title="БДСМ:"
           name="bdsm"
           type="checkbox"
           container="row"
-          :options="bdsmOptions"
+          :options="filters.bdsmOptions"
         />
-        <DropdownFilterFieldset
+        <FilterFieldset
           title="Способ связи:"
           name="contacts"
           type="checkbox"
           container="row"
-          :options="contactsOptions"
+          :options="filters.contactsOptions"
         />
-        <DropdownFilterFieldset
+        <FilterFieldset
           title="Проверены лично:"
           name="verified"
           type="checkbox"
           container="row"
-          :options="verifiedOptions"
+          :options="filters.verifiedOptions"
         />
       </div>
       <div class="dropdown-filter__btns">
