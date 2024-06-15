@@ -1,6 +1,8 @@
 <script setup>
 import './extended-filter-modal.scss';
 import { FilterFieldset, RowFilterFieldset, BaseDropdown } from '@/shared/ui';
+import { extendedFilters } from '../../model/extended-filters';
+import { cities } from '../../model/cities';
 
 defineProps(['isExtendedFilterModalOpened']);
 defineEmits(['setIsExtendedFilterModalOpened']);
@@ -181,25 +183,13 @@ defineEmits(['setIsExtendedFilterModalOpened']);
           <div class="extended-filter__item item-extended-filter">
             <h4 class="item-extended-filter__title heading_h4">Место встречи</h4>
             <div class="item-extended-filter__stripe"></div>
-            <div class="item-extended-filter__form">
-              <input id="incall-aa" type="checkbox" name="available" />
-              <label for="incall-aa">Апартаменты Incall</label>
-            </div>
-            <div class="item-extended-filter__form">
-              <input id="incall-hh" type="checkbox" name="available" />
-              <label for="incall-hh">Отель Incall</label>
-            </div>
-            <div class="item-extended-filter__form">
-              <input id="outcall-aa" type="checkbox" name="available" />
-              <label for="outcall-aa">Апартаменты Outcall</label>
-            </div>
-            <div class="item-extended-filter__form">
-              <input id="outcall-hh" type="checkbox" name="available" />
-              <label for="outcall-hh">Отель Outcall</label>
-            </div>
-            <div class="item-extended-filter__form">
-              <input id="invite" type="checkbox" name="available" />
-              <label for="invite">Путешествия по приглашению</label>
+            <div
+              class="item-extended-filter__form"
+              v-for="option in extendedFilters.meetingPointOptions"
+              :key="option.id"
+            >
+              <input :id="option.id" type="checkbox" name="meeting-point" />
+              <label :for="option.id">{{ option.title }}</label>
             </div>
           </div>
         </div>
