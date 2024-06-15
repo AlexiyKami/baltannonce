@@ -1,7 +1,7 @@
 import './components/city-dropdown.js'
-import './components/dropdown.js'
 import './components/filter-dropdown-men.js'
 import './components/extended-filter-modal-men.js'
+import './components/dropdown.js'
 
 const tabContentStrippers = document.querySelector('.home__cards-in-tab_strippers');
 const tabContentEscort = document.querySelector('.home__cards-in-tab_escort');
