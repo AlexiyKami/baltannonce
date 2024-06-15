@@ -257,7 +257,7 @@ defineEmits(['setIsExtendedFilterModalOpened']);
               <div class="item-extended-filter__forms">
                 <div class="item-extended-filter__reviews">
                   <label class="heading_h6" for="">Отзывов, не менее:</label>
-                  <div class="dropdown">-</div>
+                  <BaseDropdown />
                 </div>
                 <div class="item-extended-filter__reviews">
                   <label class="heading_h6" for="">С оценками пользователей:</label>
@@ -267,11 +267,11 @@ defineEmits(['setIsExtendedFilterModalOpened']);
               <div class="item-extended-filter__forms">
                 <div class="item-extended-filter__reviews">
                   <label class="heading_h6" for="">Оценок, не менее:</label>
-                  <div class="dropdown">-</div>
+                  <BaseDropdown />
                 </div>
                 <div class="item-extended-filter__reviews">
                   <label class="heading_h6" for="">С новыми отзывами за последние:</label>
-                  <div class="dropdown">-</div>
+                  <BaseDropdown />
                 </div>
               </div>
             </div>
@@ -285,7 +285,7 @@ defineEmits(['setIsExtendedFilterModalOpened']);
               <div class="item-extended-filter__forms">
                 <div class="item-extended-filter__additional">
                   <label class="heading_h6" for="">Новые за:</label>
-                  <div class="dropdown">-</div>
+                  <BaseDropdown />
                 </div>
                 <div class="item-extended-filter__additional">
                   <label class="heading_h6" for="">Сортировать по верификации</label>
@@ -297,9 +297,9 @@ defineEmits(['setIsExtendedFilterModalOpened']);
                 </div>
                 <div class="item-extended-filter__additional">
                   <label class="heading_h6" for="">Часы работы:</label>
-                  <div class="dropdown narrow">-</div>
+                  <BaseDropdown class="narrow" />
                   <span>-</span>
-                  <div class="dropdown narrow">-</div>
+                  <BaseDropdown class="narrow" />
                 </div>
                 <div class="item-extended-filter__additional">
                   <label class="heading_h6" for="">Принимает в возрасте от:</label>
@@ -322,7 +322,7 @@ defineEmits(['setIsExtendedFilterModalOpened']);
               <div class="item-extended-filter__forms">
                 <div class="item-extended-filter__additional">
                   <label class="heading_h6" for="">Анкет с уникальным номером телефона:</label>
-                  <div class="dropdown">-</div>
+                  <BaseDropdown />
                 </div>
                 <div class="item-extended-filter__row">
                   <input id="questionary-video" type="checkbox" name="" />
