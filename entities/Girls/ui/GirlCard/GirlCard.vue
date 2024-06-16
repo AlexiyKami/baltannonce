@@ -1,7 +1,7 @@
 <script setup>
 import './girl-card.scss';
 
-defineProps(['girl']);
+defineProps({ girl: Object });
 </script>
 
 <template>

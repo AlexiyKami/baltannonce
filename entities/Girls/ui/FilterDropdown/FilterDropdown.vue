@@ -3,7 +3,7 @@ import './filter-dropdown.scss';
 import { PopupDropdownFilter, FilterFieldset } from '@/shared/ui';
 import { filters } from '../../model/filters';
 
-defineProps(['isFilterDropdownOpened']);
+defineProps({ isFilterDropdownOpened: Boolean });
 </script>
 
 <template>
@@ -38,7 +38,7 @@ defineProps(['isFilterDropdownOpened']);
               class="small"
               min="0"
               placeholder="----"
-            />
+            >
             <span>-</span>
             <input
               id="custom-price-max"
@@ -47,7 +47,7 @@ defineProps(['isFilterDropdownOpened']);
               class="small"
               min="0"
               placeholder="----"
-            />
+            >
           </div>
         </div>
       </FilterFieldset>

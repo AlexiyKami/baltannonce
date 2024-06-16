@@ -2,7 +2,14 @@
 import './popup-dropdown-filter.scss';
 
 const isPopupOpened = ref(false);
-defineProps(['title', 'options']);
+defineProps(
+  {
+    title: String
+  },
+  {
+    options: Array
+  }
+);
 </script>
 
 <template>

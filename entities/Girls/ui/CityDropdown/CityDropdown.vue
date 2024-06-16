@@ -1,9 +1,9 @@
 <script setup>
 import './city-dropdown.scss';
 import { DropdownItemWithCount } from '@/shared/ui';
-import { cities } from '../../model/cities';
+import { cities } from '@/shared/model/cities';
 
-defineProps(['isCityDropdownOpened']);
+defineProps({ isCityDropdownOpened: Boolean });
 </script>
 
 <template>

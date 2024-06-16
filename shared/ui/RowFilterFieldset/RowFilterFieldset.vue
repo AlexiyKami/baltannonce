@@ -1,5 +1,18 @@
 <script setup>
-defineProps(['title', 'options', 'type', 'name']);
+defineProps(
+  {
+    title: String
+  },
+  {
+    options: Array
+  },
+  {
+    type: String
+  },
+  {
+    name: String
+  }
+);
 </script>
 
 <template>
