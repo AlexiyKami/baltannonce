@@ -1,6 +1,7 @@
 <script setup>
 import './hero-section.scss';
-import { CityDropdown, ExtendedFilterModal, FilterDropdown } from '@/entities/Girls';
+import { CityDropdown, FilterDropdown } from '@/entities/Girls';
+import { ExtendedFilterModal } from '@/widgets/ExtendedFilterModal';
 
 const isCityDropdownOpened = ref(true);
 const isFilterDropdownOpened = ref(false);
@@ -77,11 +78,11 @@ const setIsExtendedFilterModalOpened = (value) => {
           <span class="button__text">Продвинутый поиск</span>
         </div>
       </div>
-      <CityDropdown :isCityDropdownOpened="isCityDropdownOpened" />
-      <FilterDropdown :isFilterDropdownOpened="isFilterDropdownOpened" />
+      <CityDropdown :is-city-dropdown-opened="isCityDropdownOpened" />
+      <FilterDropdown :is-filter-dropdown-opened="isFilterDropdownOpened" />
       <ExtendedFilterModal
-        :isExtendedFilterModalOpened="isExtendedFilterModalOpened"
-        @setIsExtendedFilterModalOpened="setIsExtendedFilterModalOpened"
+        :is-extended-filter-modal-opened="isExtendedFilterModalOpened"
+        @set-is-extended-filter-modal-opened="setIsExtendedFilterModalOpened"
       />
     </div>
   </section>

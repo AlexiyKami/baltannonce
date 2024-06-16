@@ -86,7 +86,7 @@ import './app-footer.scss';
           </ul>
         </nav>
       </div>
-      <div class="footer__line"></div>
+      <div class="footer__line" />
       <div class="footer__copyright">
         <p class="footer__copyright-text body-text_2">
           Copyright © 2024-2024 Baltannonce.net. All Rights Reserved.

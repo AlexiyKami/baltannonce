@@ -14,14 +14,14 @@ defineProps(['title', 'type', 'name', 'options', 'container']);
       }"
     >
       <div
+        v-for="option in options"
+        :key="option"
         class="filter__item"
         :style="{
           'min-width': container === 'column' ? '9rem' : 'none'
         }"
-        v-for="option in options"
-        :key="option"
       >
-        <input :id="option.id" :type="type" :name="name" />
+        <input :id="option.id" :type="type" :name="name" >
         <label :for="option.id">{{ option.title }}</label>
       </div>
     </div>

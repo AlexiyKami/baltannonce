@@ -8,21 +8,21 @@
             <h2 class="login__inputs-title heading_h3">Ввести информацию</h2>
             <div class="login__inputs">
               <input
+                id=""
                 class="login__input login__input-email"
                 type="email"
                 name=""
-                id=""
                 placeholder="Email"
                 required
-              />
+              >
               <input
+                id=""
                 class="login__input login__input-password"
                 type="password"
                 name=""
-                id=""
                 placeholder="Пароль"
                 required
-              />
+              >
             </div>
           </div>
           <div class="login__actions-container">

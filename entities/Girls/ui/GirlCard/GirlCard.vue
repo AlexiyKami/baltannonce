@@ -22,7 +22,7 @@ defineProps(['girl']);
         </div>
       </div>
       <div class="card-home__img-container">
-        <img :src="girl.photo" alt="photo" />
+        <img :src="girl.photo" alt="photo" >
       </div>
       <div class="card-home__info">
         <div class="card-home__row">
@@ -63,14 +63,14 @@ defineProps(['girl']);
         </div>
         <div class="card-home__row">
           <div
-            class="card-home__verified card-home__verified"
             v-if="girl.verified === 'Not verified'"
+            class="card-home__verified card-home__verified"
           >
             <span class="card-home__verified-text body-text_3">Не проверено</span>
           </div>
           <div
-            class="card-home__verified card-home__verified_by-admin"
             v-if="girl.verified === 'By admin'"
+            class="card-home__verified card-home__verified_by-admin"
           >
             <svg
               width="16"
@@ -97,8 +97,8 @@ defineProps(['girl']);
             <span class="card-home__verified-text body-text_3">Проверено лично</span>
           </div>
           <div
-            class="card-home__verified card-home__verified_by-video"
             v-if="girl.verified === 'By video'"
+            class="card-home__verified card-home__verified_by-video"
           >
             <svg
               width="16"
@@ -125,8 +125,8 @@ defineProps(['girl']);
             <span class="card-home__verified-text body-text_3">Проверено по видеозвонку</span>
           </div>
           <div
-            class="card-home__verified card-home__verified_by-photo"
             v-if="girl.verified === 'By photo'"
+            class="card-home__verified card-home__verified_by-photo"
           >
             <svg
               width="16"
@@ -153,8 +153,8 @@ defineProps(['girl']);
             <span class="card-home__verified-text body-text_3">Проверено по фото</span>
           </div>
           <div
-            class="card-home__verified card-home__verified_similar"
             v-if="girl.verified === 'Similar'"
+            class="card-home__verified card-home__verified_similar"
           >
             <svg
               width="16"
@@ -181,8 +181,8 @@ defineProps(['girl']);
             <span class="card-home__verified-text body-text_3">Проверено, похожа</span>
           </div>
           <div
-            class="card-home__verified card-home__verified_not-similar"
             v-if="girl.verified === 'Not similar'"
+            class="card-home__verified card-home__verified_not-similar"
           >
             <svg
               width="16"

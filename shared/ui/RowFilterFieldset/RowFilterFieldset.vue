@@ -11,8 +11,8 @@ defineProps(['title', 'options', 'type', 'name']);
         'item-extended-filter__languages': name === 'languages'
       }"
     >
-      <div class="item-extended-filter__row" v-for="option in options" :key="option.id">
-        <input :id="option.id" :type="type" :name="name" />
+      <div v-for="option in options" :key="option.id" class="item-extended-filter__row">
+        <input :id="option.id" :type="type" :name="name" >
         <label :for="option.id">{{ option.title }}</label>
       </div>
     </div>
