@@ -1,7 +1,7 @@
 <script setup>
 import './girl-card.scss';
 
-defineProps({ girl: Object });
+defineProps({ girl: { type: Object, required: true } });
 </script>
 
 <template>

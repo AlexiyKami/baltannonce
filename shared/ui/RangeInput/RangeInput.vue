@@ -1,20 +1,16 @@
 <script setup>
-defineProps(
-  {
-    name: String
-  },
-  {
-    title: String
-  },
-  { container: String }
-);
+defineProps({
+  name: { type: String, required: true },
+  title: { type: String, required: true },
+  container: { type: String, default: 'column' }
+});
 </script>
 
 <template>
   <div
     class="item-extended-filter__form wrap"
     :class="{
-      'item-extended-filter__form  wrap': !container,
+      'item-extended-filter__form  wrap': container === 'column',
       'item-extended-filter__row': container === 'row'
     }"
   >

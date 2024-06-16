@@ -52,8 +52,8 @@ import { girls, comingSoonGirls, randomGirls } from '../model/girls';
             </h2>
           </div>
           <picture class="home__image-block home__image-block_horizontal">
-            <source srcset="@/app/assets/images/cats/cat-mobile.jpg" media="(max-width: 430px)" />
-            <img src="@/app/assets/images/cats/cat-desktop.jpg" alt="cat-image" />
+            <source srcset="@/app/assets/images/cats/cat-mobile.jpg" media="(max-width: 430px)" >
+            <img src="@/app/assets/images/cats/cat-desktop.jpg" alt="cat-image" >
           </picture>
           <ul class="home__cards-container">
             <GirlCard v-for="(girl, index) in randomGirls" :key="index" :girl="girl" />
