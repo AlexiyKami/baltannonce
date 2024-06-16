@@ -50,8 +50,8 @@ import { ExtendedFilterModal } from '@/entities/Men';
             <span class="button__text">Продвинутый поиск</span>
           </div>
         </div>
-        <div class="hero__dropdown-city dropdown-city"></div>
-        <div class="hero__dropdown-filter dropdown-filter"></div>
+        <div class="hero__dropdown-city dropdown-city" />
+        <div class="hero__dropdown-filter dropdown-filter" />
         <ExtendedFilterModal />
       </div>
     </section>
@@ -106,7 +106,7 @@ import { ExtendedFilterModal } from '@/entities/Men';
                     </div>
                   </div>
                   <div class="card-home__img-container">
-                    <img src="../assets/img/man02.jpg" alt="photo" />
+                    <img src="../assets/img/man02.jpg" alt="photo" >
                   </div>
                   <div class="card-home__info">
                     <div class="card-home__row">
@@ -203,7 +203,7 @@ import { ExtendedFilterModal } from '@/entities/Men';
                     </div>
                   </div>
                   <div class="card-home__img-container">
-                    <img src="../assets/img/man03.jpg" alt="photo" />
+                    <img src="../assets/img/man03.jpg" alt="photo" >
                   </div>
                   <div class="card-home__info">
                     <div class="card-home__row">
@@ -299,7 +299,7 @@ import { ExtendedFilterModal } from '@/entities/Men';
                     </div>
                   </div>
                   <div class="card-home__img-container">
-                    <img src="../assets/img/man04.jpg" alt="photo" />
+                    <img src="../assets/img/man04.jpg" alt="photo" >
                   </div>
                   <div class="card-home__info">
                     <div class="card-home__row">
@@ -398,7 +398,7 @@ import { ExtendedFilterModal } from '@/entities/Men';
                     </div>
                   </div>
                   <div class="card-home__img-container">
-                    <img src="../assets/img/man01.jpg" alt="photo" />
+                    <img src="../assets/img/man01.jpg" alt="photo" >
                   </div>
                   <div class="card-home__info">
                     <div class="card-home__row">
@@ -471,7 +471,7 @@ import { ExtendedFilterModal } from '@/entities/Men';
                     </div>
                   </div>
                   <div class="card-home__img-container">
-                    <img src="../assets/img/man06.jpg" alt="photo" />
+                    <img src="../assets/img/man06.jpg" alt="photo" >
                   </div>
                   <div class="card-home__info">
                     <div class="card-home__row">
@@ -569,7 +569,7 @@ import { ExtendedFilterModal } from '@/entities/Men';
                     </div>
                   </div>
                   <div class="card-home__img-container">
-                    <img src="../assets/img/man05.jpg" alt="photo" />
+                    <img src="../assets/img/man05.jpg" alt="photo" >
                   </div>
                   <div class="card-home__info">
                     <div class="card-home__row">
@@ -667,7 +667,7 @@ import { ExtendedFilterModal } from '@/entities/Men';
                     </div>
                   </div>
                   <div class="card-home__img-container">
-                    <img src="../assets/img/man03.jpg" alt="photo" />
+                    <img src="../assets/img/man03.jpg" alt="photo" >
                   </div>
                   <div class="card-home__info">
                     <div class="card-home__row">
@@ -765,7 +765,7 @@ import { ExtendedFilterModal } from '@/entities/Men';
                     </div>
                   </div>
                   <div class="card-home__img-container">
-                    <img src="../assets/img/man01.jpg" alt="photo" />
+                    <img src="../assets/img/man01.jpg" alt="photo" >
                   </div>
                   <div class="card-home__info">
                     <div class="card-home__row">
@@ -861,7 +861,7 @@ import { ExtendedFilterModal } from '@/entities/Men';
                     </div>
                   </div>
                   <div class="card-home__img-container">
-                    <img src="../assets/img/man02.jpg" alt="photo" />
+                    <img src="../assets/img/man02.jpg" alt="photo" >
                   </div>
                   <div class="card-home__info">
                     <div class="card-home__row">
@@ -957,7 +957,7 @@ import { ExtendedFilterModal } from '@/entities/Men';
                     </div>
                   </div>
                   <div class="card-home__img-container">
-                    <img src="../assets/img/man04.jpg" alt="photo" />
+                    <img src="../assets/img/man04.jpg" alt="photo" >
                   </div>
                   <div class="card-home__info">
                     <div class="card-home__row">
@@ -1060,7 +1060,7 @@ import { ExtendedFilterModal } from '@/entities/Men';
                     </div>
                   </div>
                   <div class="card-home__img-container">
-                    <img src="../assets/img/man01.jpg" alt="photo" />
+                    <img src="../assets/img/man01.jpg" alt="photo" >
                   </div>
                   <div class="card-home__info">
                     <div class="card-home__row">
@@ -1135,7 +1135,7 @@ import { ExtendedFilterModal } from '@/entities/Men';
                     </div>
                   </div>
                   <div class="card-home__img-container">
-                    <img src="../assets/img/man02.jpg" alt="photo" />
+                    <img src="../assets/img/man02.jpg" alt="photo" >
                   </div>
                   <div class="card-home__info">
                     <div class="card-home__row">
@@ -1232,7 +1232,7 @@ import { ExtendedFilterModal } from '@/entities/Men';
                     </div>
                   </div>
                   <div class="card-home__img-container">
-                    <img src="../assets/img/man03.jpg" alt="photo" />
+                    <img src="../assets/img/man03.jpg" alt="photo" >
                   </div>
                   <div class="card-home__info">
                     <div class="card-home__row">
@@ -1328,7 +1328,7 @@ import { ExtendedFilterModal } from '@/entities/Men';
                     </div>
                   </div>
                   <div class="card-home__img-container">
-                    <img src="../assets/img/man04.jpg" alt="photo" />
+                    <img src="../assets/img/man04.jpg" alt="photo" >
                   </div>
                   <div class="card-home__info">
                     <div class="card-home__row">
@@ -1426,7 +1426,7 @@ import { ExtendedFilterModal } from '@/entities/Men';
                     </div>
                   </div>
                   <div class="card-home__img-container">
-                    <img src="../assets/img/man05.jpg" alt="photo" />
+                    <img src="../assets/img/man05.jpg" alt="photo" >
                   </div>
                   <div class="card-home__info">
                     <div class="card-home__row">
@@ -1523,7 +1523,7 @@ import { ExtendedFilterModal } from '@/entities/Men';
                     </div>
                   </div>
                   <div class="card-home__img-container">
-                    <img src="../assets/img/man06.jpg" alt="photo" />
+                    <img src="../assets/img/man06.jpg" alt="photo" >
                   </div>
                   <div class="card-home__info">
                     <div class="card-home__row">
@@ -1621,7 +1621,7 @@ import { ExtendedFilterModal } from '@/entities/Men';
                     </div>
                   </div>
                   <div class="card-home__img-container">
-                    <img src="../assets/img/man01.jpg" alt="photo" />
+                    <img src="../assets/img/man01.jpg" alt="photo" >
                   </div>
                   <div class="card-home__info">
                     <div class="card-home__row">
@@ -1717,7 +1717,7 @@ import { ExtendedFilterModal } from '@/entities/Men';
                     </div>
                   </div>
                   <div class="card-home__img-container">
-                    <img src="../assets/img/man02.jpg" alt="photo" />
+                    <img src="../assets/img/man02.jpg" alt="photo" >
                   </div>
                   <div class="card-home__info">
                     <div class="card-home__row">
@@ -1813,7 +1813,7 @@ import { ExtendedFilterModal } from '@/entities/Men';
                     </div>
                   </div>
                   <div class="card-home__img-container">
-                    <img src="../assets/img/man03.jpg" alt="photo" />
+                    <img src="../assets/img/man03.jpg" alt="photo" >
                   </div>
                   <div class="card-home__info">
                     <div class="card-home__row">
@@ -1911,7 +1911,7 @@ import { ExtendedFilterModal } from '@/entities/Men';
                     </div>
                   </div>
                   <div class="card-home__img-container">
-                    <img src="../assets/img/man04.jpg" alt="photo" />
+                    <img src="../assets/img/man04.jpg" alt="photo" >
                   </div>
                   <div class="card-home__info">
                     <div class="card-home__row">
@@ -2009,7 +2009,7 @@ import { ExtendedFilterModal } from '@/entities/Men';
                     </div>
                   </div>
                   <div class="card-home__img-container">
-                    <img src="../assets/img/man05.jpg" alt="photo" />
+                    <img src="../assets/img/man05.jpg" alt="photo" >
                   </div>
                   <div class="card-home__info">
                     <div class="card-home__row">
@@ -2106,7 +2106,7 @@ import { ExtendedFilterModal } from '@/entities/Men';
                     </div>
                   </div>
                   <div class="card-home__img-container">
-                    <img src="../assets/img/man06.jpg" alt="photo" />
+                    <img src="../assets/img/man06.jpg" alt="photo" >
                   </div>
                   <div class="card-home__info">
                     <div class="card-home__row">

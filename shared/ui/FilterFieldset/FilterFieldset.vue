@@ -1,7 +1,21 @@
 <script setup>
 import './filter-fieldset.scss';
 
-defineProps(['title', 'type', 'name', 'options', 'container']);
+defineProps(
+  {
+    title: String
+  },
+  { type: String },
+  {
+    name: String
+  },
+  {
+    options: Array
+  },
+  {
+    container: String
+  }
+);
 </script>
 
 <template>
@@ -14,14 +28,14 @@ defineProps(['title', 'type', 'name', 'options', 'container']);
       }"
     >
       <div
+        v-for="option in options"
+        :key="option"
         class="filter__item"
         :style="{
           'min-width': container === 'column' ? '9rem' : 'none'
         }"
-        v-for="option in options"
-        :key="option"
       >
-        <input :id="option.id" :type="type" :name="name" />
+        <input :id="option.id" :type="type" :name="name" >
         <label :for="option.id">{{ option.title }}</label>
       </div>
     </div>

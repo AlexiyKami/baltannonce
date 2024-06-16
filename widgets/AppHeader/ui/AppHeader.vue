@@ -92,14 +92,14 @@ onUnmounted(() => {
         </div>
         <div
           class="header__burger burger-header"
-          @click="isMenuOpened = !isMenuOpened"
           :class="{
             active: isMenuOpened
           }"
+          @click="isMenuOpened = !isMenuOpened"
         >
-          <div class="burger-header__stripe burger-header__stripe_1"></div>
-          <div class="burger-header__stripe burger-header__stripe_2"></div>
-          <div class="burger-header__stripe burger-header__stripe_3"></div>
+          <div class="burger-header__stripe burger-header__stripe_1" />
+          <div class="burger-header__stripe burger-header__stripe_2" />
+          <div class="burger-header__stripe burger-header__stripe_3" />
         </div>
         <div
           class="header__body"

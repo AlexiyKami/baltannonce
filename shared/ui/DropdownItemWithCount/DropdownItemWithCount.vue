@@ -1,7 +1,12 @@
 <script setup>
 import './dropdown-item-with-count.scss';
 
-defineProps(['title', 'count']);
+defineProps(
+  {
+    title: String
+  },
+  { count: Number }
+);
 
 const isActive = ref(false);
 </script>
@@ -9,10 +14,10 @@ const isActive = ref(false);
 <template>
   <li
     class="dropdown-item"
-    @click="isActive = !isActive"
     :class="{
       active: isActive
     }"
+    @click="isActive = !isActive"
   >
     <p class="dropdown-item__title">{{ title }}</p>
     <span class="dropdown-item__count">({{ count }})</span>

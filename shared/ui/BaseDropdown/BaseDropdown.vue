@@ -9,10 +9,10 @@ const isDropdownOpened = ref(false);
     <slot />
     <div
       class="dropdown__btn"
-      @click="isDropdownOpened = !isDropdownOpened"
       :class="{
         active: isDropdownOpened
       }"
+      @click="isDropdownOpened = !isDropdownOpened"
     >
       <span class="dropdown__text button__text">-</span>
       <svg

@@ -2,7 +2,14 @@
 import './popup-dropdown-filter.scss';
 
 const isPopupOpened = ref(false);
-defineProps(['title', 'options']);
+defineProps(
+  {
+    title: String
+  },
+  {
+    options: Array
+  }
+);
 </script>
 
 <template>
@@ -37,8 +44,8 @@ defineProps(['title', 'options']);
         </svg>
       </div>
       <div class="popup-dropdown-filter__list">
-        <div class="popup-dropdown-filter__item" v-for="option in options" :key="option">
-          <input :id="option + 'popup'" type="checkbox" name="years-old" />
+        <div v-for="option in options" :key="option" class="popup-dropdown-filter__item">
+          <input :id="option + 'popup'" type="checkbox" name="years-old" >
           <label :for="option + 'popup'">{{ option }}</label>
         </div>
       </div>
