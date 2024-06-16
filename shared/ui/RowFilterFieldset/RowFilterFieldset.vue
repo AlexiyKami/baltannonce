@@ -1,18 +1,10 @@
 <script setup>
-defineProps(
-  {
-    title: String
-  },
-  {
-    options: Array
-  },
-  {
-    type: String
-  },
-  {
-    name: String
-  }
-);
+defineProps({
+  title: { type: String, required: true },
+  options: { type: Array, required: true },
+  type: { type: String, required: true },
+  name: { type: String, required: true }
+});
 </script>
 
 <template>

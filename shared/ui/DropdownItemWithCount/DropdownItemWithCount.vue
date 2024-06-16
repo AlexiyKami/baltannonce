@@ -1,12 +1,10 @@
 <script setup>
 import './dropdown-item-with-count.scss';
 
-defineProps(
-  {
-    title: String
-  },
-  { count: Number }
-);
+defineProps({
+  title: { type: String, required: true },
+  count: { type: Number, required: true }
+});
 
 const isActive = ref(false);
 </script>

@@ -1,3 +1,7 @@
+<script setup>
+import { RegisterSection } from '@/widgets/RegisterSection';
+</script>
+
 <template>
-  <div>Register</div>
+  <RegisterSection />
 </template>

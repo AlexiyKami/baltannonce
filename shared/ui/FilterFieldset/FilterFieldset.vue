@@ -1,21 +1,13 @@
 <script setup>
 import './filter-fieldset.scss';
 
-defineProps(
-  {
-    title: String
-  },
-  { type: String },
-  {
-    name: String
-  },
-  {
-    options: Array
-  },
-  {
-    container: String
-  }
-);
+defineProps({
+  title: { type: String, required: true },
+  type: { type: String, required: true },
+  name: { type: String, required: true },
+  options: { type: Array, required: true },
+  container: { type: String, required: true }
+});
 </script>
 
 <template>
