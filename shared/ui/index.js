@@ -5,6 +5,7 @@ import RowFilterFieldset from './RowFilterFieldset/RowFilterFieldset.vue';
 import BaseDropdown from './BaseDropdown/BaseDropdown.vue';
 import RangeInput from './RangeInput/RangeInput.vue';
 import RangeInputSmall from './RangeInputSmall/RangeInputSmall.vue';
+import PasswordIcon from './PasswordIcon/PasswordIcon.vue';
 
 export { PopupDropdownFilter };
 export { DropdownItemWithCount };
@@ -13,3 +14,4 @@ export { RowFilterFieldset };
 export { BaseDropdown };
 export { RangeInput };
 export { RangeInputSmall };
+export { PasswordIcon };
