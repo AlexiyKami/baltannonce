@@ -2795,9 +2795,13 @@ input[type=email]:disabled, input[type=password]:disabled, input[type=text]:disa
 }
 .main-block-form-section__video-container {
   position: relative;
-  max-height: 27.5rem;
+  padding-bottom: 58.15%;
   overflow: hidden;
   border-radius: 0.5rem;
+  height: 0;
+}
+.main-block-form-section__video {
+  position: absolute;
 }
 .main-block-form-section__video-btn {
   cursor: pointer;

@@ -157,12 +157,14 @@
 
   &__video-container {
     position: relative;
-    max-height: 27.5rem;
+    padding-bottom: 58.15%;
     overflow: hidden;
     border-radius: 0.5rem;
+    height: 0;
   }
 
   &__video {
+    position: absolute;
     &-btn {
       cursor: pointer;
       position: absolute;
