@@ -13,12 +13,14 @@ const handleInput = (e) => {
 </script>
 
 <template>
-  <input
-    class="register__input register__input-email"
-    :type="type"
-    :value="value"
-    :placeholder="placeholder"
-    required
-    @input="handleInput"
-  >
+  <div class="register__input-container">
+    <input
+      class="register__input"
+      :type="type"
+      :value="value"
+      :placeholder="placeholder"
+      @input="handleInput"
+    >
+    <slot />
+  </div>
 </template>
