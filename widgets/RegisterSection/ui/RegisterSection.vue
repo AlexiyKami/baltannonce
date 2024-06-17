@@ -1,5 +1,6 @@
 <script setup>
 import './register-section.scss';
+import { PasswordIcon } from '@/shared/ui';
 import {
   RegisterCardWithDescription,
   RegisterGenderCard,
@@ -7,6 +8,7 @@ import {
   RegisterLocations
 } from '@/entities/Register';
 import { cities } from '@/shared/model/cities';
+import Loader from '@/shared/api/api';
 
 const type = ref('user');
 const gender = ref('male');
@@ -17,8 +19,16 @@ const password = ref('');
 const passwordConfirmation = ref('');
 const privacyPolicy = ref(false);
 const wantToReceiveLetters = ref(false);
+const passwordTips = ref({
+  min: false,
+  lowercaseLetter: false,
+  capitalLetter: false,
+  number: false
+});
+const showPassword = ref(false);
+const showPasswordConfirmation = ref(false);
 
-const sendForm = () => {
+const sendForm = async () => {
   console.log({
     type: type.value,
     gender: gender.value,
@@ -29,6 +39,12 @@ const sendForm = () => {
     privacyPolicy: privacyPolicy.value,
     wantToReceiveLetters: wantToReceiveLetters.value
   });
+  await Loader.register({
+    username: nick.value,
+    email: email.value,
+    password: password.value,
+    cities: locations.value
+  });
 };
 
 const setLocations = (value) => {
@@ -38,6 +54,17 @@ const setLocations = (value) => {
     locations.value.push(value);
   }
 };
+
+function hasFalseValue(obj) {
+  return Object.values(obj).some((value) => value === false);
+}
+
+watch(password, () => {
+  passwordTips.value.min = password.value.length >= 8;
+  passwordTips.value.lowercaseLetter = /\p{Ll}/u.test(password.value);
+  passwordTips.value.capitalLetter = /\p{Lu}/u.test(password.value);
+  passwordTips.value.number = /\d/.test(password.value);
+});
 </script>
 
 <template>
@@ -45,7 +72,7 @@ const setLocations = (value) => {
     <div class="register__container _container">
       <div class="register__body">
         <h1 class="register__title heading_h1">Добро пожаловать в Baltannonce</h1>
-        <form class="register__form" @submit.prevent="sendForm">
+        <form class="register__form" novalidate @submit.prevent="sendForm">
           <div class="register__user-type-container">
             <h2 class="register__form-title heading_h3">Выберите тип</h2>
             <div class="register__user-type">
@@ -145,17 +172,59 @@ const setLocations = (value) => {
                 @set-value="(value) => (nick = value)"
               />
               <RegisterTextField
-                type="password"
+                :type="showPassword ? 'text' : 'password'"
                 placeholder="Пароль"
                 :value="password"
                 @set-value="(value) => (password = value)"
-              />
+              >
+                <div
+                  class="register__inputs-tips"
+                  :class="{
+                    active: password && hasFalseValue(passwordTips)
+                  }"
+                >
+                  <span
+                    class="register__inputs-tip"
+                    :class="{
+                      'register__inputs-tip_correct': passwordTips.min
+                    }"
+                    >Минимум 8 символов</span
+                  >
+                  <span
+                    class="register__inputs-tip"
+                    :class="{
+                      'register__inputs-tip_correct': passwordTips.lowercaseLetter
+                    }"
+                    >Минимум 1 строчная буква</span
+                  >
+                  <span
+                    class="register__inputs-tip"
+                    :class="{
+                      'register__inputs-tip_correct': passwordTips.capitalLetter
+                    }"
+                    >Минимум 1 заглавная буква</span
+                  >
+                  <span
+                    class="register__inputs-tip"
+                    :class="{
+                      'register__inputs-tip_correct': passwordTips.number
+                    }"
+                    >Минимум 1 цифра</span
+                  >
+                  <span class="register__inputs-tip register__inputs-tip_no-symbol"
+                    >Можно использовать специальные символы</span
+                  >
+                </div>
+                <PasswordIcon @click="showPassword = !showPassword" />
+              </RegisterTextField>
               <RegisterTextField
-                type="password"
+                :type="showPasswordConfirmation ? 'text' : 'password'"
                 placeholder="Подтверждение пароля"
                 :value="passwordConfirmation"
                 @set-value="(value) => (passwordConfirmation = value)"
-              />
+              >
+                <PasswordIcon @click="showPasswordConfirmation = !showPasswordConfirmation" />
+              </RegisterTextField>
             </div>
           </div>
           <div class="register__checkboxes">
@@ -167,7 +236,7 @@ const setLocations = (value) => {
                 <a href="#" class="button text-button">Условия и положения</a>
               </label>
             </div>
-            <div class="register__checkbox-container">
+            <div v-if="type === 'user'" class="register__checkbox-container">
               <input id="register-subscribe-email" v-model="wantToReceiveLetters" type="checkbox" >
               <label for="register-subscribe-email"
                 >Я хочу получать письма от рекламодателя в фаворитах</label
@@ -176,16 +245,8 @@ const setLocations = (value) => {
           </div>
           <div class="register__actions-container">
             <button class="button button_primary register__button" @submit.prevent="sendForm">
-              Войти
+              Регистрация
             </button>
-            <div class="register__actions">
-              <p class="register__action">
-                Вы уже зарегистрированы?
-                <NuxtLink to="/login" class="button text-button register__login-link"
-                  >Войти</NuxtLink
-                >
-              </p>
-            </div>
           </div>
         </form>
       </div>
