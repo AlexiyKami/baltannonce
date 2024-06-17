@@ -40,13 +40,15 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 0.625rem;
-  background-color: $color-surface-primary;
+  width: 1.25rem;
+  background-color: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 0.625rem;
-  background-color: $color-surface-highlight;
+  border: 0.25rem solid transparent;
+  background-clip: padding-box;
+  border-radius: 1.25rem;
+  background-color: $color-border-primary;
 }
 
 @media screen and (max-width: $desktop-sm) {
