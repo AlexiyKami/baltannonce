@@ -1,7 +1,9 @@
 <script setup>
 import './hero-section.scss';
-import { CityDropdown, FilterDropdown } from '@/entities/Girls';
+import { CityDropdown, FilterDropdown } from '@/entities/Filters';
 import { ExtendedFilterModal } from '@/widgets/ExtendedFilterModal';
+import { girlsFilters } from '../model/girls-filters';
+import { girlsExtendedFilters } from '../model/girls-extended-filters';
 
 const isCityDropdownOpened = ref(true);
 const isFilterDropdownOpened = ref(false);
@@ -79,9 +81,11 @@ const setIsExtendedFilterModalOpened = (value) => {
         </div>
       </div>
       <CityDropdown :is-city-dropdown-opened="isCityDropdownOpened" />
-      <FilterDropdown :is-filter-dropdown-opened="isFilterDropdownOpened" />
+      <FilterDropdown :is-filter-dropdown-opened="isFilterDropdownOpened" :filters="girlsFilters" />
       <ExtendedFilterModal
         :is-extended-filter-modal-opened="isExtendedFilterModalOpened"
+        :filters="girlsExtendedFilters"
+        gender="girls"
         @set-is-extended-filter-modal-opened="setIsExtendedFilterModalOpened"
       />
     </div>
