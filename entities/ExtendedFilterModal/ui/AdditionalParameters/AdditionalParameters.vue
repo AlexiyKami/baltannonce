@@ -1,5 +1,7 @@
 <script setup>
 import { BaseDropdown, RangeInput } from '@/shared/ui';
+
+defineProps({ gender: { type: String, required: true } });
 </script>
 
 <template>
@@ -17,7 +19,7 @@ import { BaseDropdown, RangeInput } from '@/shared/ui';
             <h6 class="heading_h6">Сортировать по верификации</h6>
             <BaseDropdown class="wide">Не выбрано</BaseDropdown>
           </div>
-          <div class="item-extended-filter__additional">
+          <div v-if="gender === 'girls'" class="item-extended-filter__additional">
             <h6 class="heading_h6">Сортировать по разделу</h6>
             <BaseDropdown class="wide">Не выбрано</BaseDropdown>
           </div>
@@ -31,7 +33,7 @@ import { BaseDropdown, RangeInput } from '@/shared/ui';
             <RangeInput name="accepts-ages-from" title="Принимает в возрасте от" />
           </div>
           <div class="item-extended-filter__additional">
-            <label class="heading_h6" for="">Способ связи:</label>
+            <h6 class="heading_h6">Способ связи:</h6>
             <div class="item-extended-filter__row">
               <input id="telegramm" type="checkbox" name="contacts" >
               <label for="telegramm">Telegram</label>
@@ -42,26 +44,63 @@ import { BaseDropdown, RangeInput } from '@/shared/ui';
             </div>
           </div>
         </div>
-        <div class="item-extended-filter__forms">
+        <div v-if="gender === 'girls'" class="item-extended-filter__forms">
           <div class="item-extended-filter__additional">
             <h6 class="heading_h6">Анкет с уникальным номером телефона:</h6>
             <BaseDropdown>-</BaseDropdown>
           </div>
           <div class="item-extended-filter__row">
-            <input id="questionary-video" type="checkbox" name="" >
+            <input id="questionary-video" type="checkbox" >
             <label for="questionary-video">Анкеты с видео</label>
           </div>
           <div class="item-extended-filter__row">
-            <input id="smoking1" type="checkbox" name="" >
+            <input id="smoking1" type="checkbox" >
             <label for="smoking1">Курит</label>
           </div>
           <div class="item-extended-filter__row">
-            <input id="drinking" type="checkbox" name="" >
+            <input id="drinking" type="checkbox" >
             <label for="drinking">Пьет алкоголь</label>
           </div>
           <div class="item-extended-filter__row">
-            <input id="friends" type="checkbox" name="" >
+            <input id="friends" type="checkbox" >
             <label for="friends">Подружки</label>
+          </div>
+        </div>
+        <div v-if="gender === 'men'" class="item-extended-filter__forms">
+          <div class="item-extended-filter__additional">
+            <h6 class="heading_h6">Анкет с уникальным номером телефона:</h6>
+            <BaseDropdown>-</BaseDropdown>
+          </div>
+          <div class="item-extended-filter__additional">
+            <label class="heading_h6" for="">Водительские права:</label>
+            <div class="item-extended-filter__row">
+              <input id="driver-license-auto" type="checkbox" name="contacts" >
+              <label for="driver-license-auto">Автомобиль</label>
+            </div>
+            <div class="item-extended-filter__row">
+              <input id="driver-license-motorcycle" type="checkbox" name="contacts" >
+              <label for="driver-license-motorcycle">Мотоцикл</label>
+            </div>
+          </div>
+          <div class="item-extended-filter__row">
+            <input id="questionary-video" type="checkbox" >
+            <label for="questionary-video">Анкеты с видео</label>
+          </div>
+          <div class="item-extended-filter__row">
+            <input id="smoking1" type="checkbox" >
+            <label for="smoking1">Курит</label>
+          </div>
+          <div class="item-extended-filter__row">
+            <input id="drinking" type="checkbox" >
+            <label for="drinking">Пьет алкоголь</label>
+          </div>
+          <div class="item-extended-filter__row">
+            <input id="education" type="checkbox" >
+            <label for="education">Образование</label>
+          </div>
+          <div class="item-extended-filter__row">
+            <input id="hobby" type="checkbox" >
+            <label for="hobby">Хобби</label>
           </div>
         </div>
       </div>
