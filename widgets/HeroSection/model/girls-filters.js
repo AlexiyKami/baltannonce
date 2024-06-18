@@ -1,4 +1,4 @@
-export const filters = {
+export const girlsFilters = {
   sortOptions: [
     {
       title: 'Новые первые',
@@ -15,6 +15,10 @@ export const filters = {
     {
       title: 'Рейтингу',
       id: 'rating'
+    },
+    {
+      title: 'Проверенные',
+      id: 'verified'
     }
   ],
   priceOptions: [
