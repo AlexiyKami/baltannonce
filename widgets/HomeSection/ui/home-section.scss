@@ -81,17 +81,10 @@
   }
 
   &__cards-in-tab {
-    display: none;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     padding: 1rem;
-    opacity: 0;
     transition: opacity $transition-hover;
-
-    &.active {
-      display: block;
-      opacity: 1;
-    }
   }
 
   &__tab-title {

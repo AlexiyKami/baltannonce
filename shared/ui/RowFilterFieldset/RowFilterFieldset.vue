@@ -13,7 +13,8 @@ defineProps({
     <div
       class="item-extended-filter__row wrap"
       :class="{
-        'item-extended-filter__languages': name === 'languages'
+        'item-extended-filter__languages': name === 'languages',
+        'item-extended-filter__beard-type': name === 'beard'
       }"
     >
       <div v-for="option in options" :key="option.id" class="item-extended-filter__row">
