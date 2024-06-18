@@ -10,7 +10,11 @@ import {
   FetishismFilter
 } from '@/entities/ExtendedFilterModal';
 
-defineProps({ isExtendedFilterModalOpened: Boolean });
+defineProps({
+  isExtendedFilterModalOpened: Boolean,
+  filters: { type: Object, required: true },
+  gender: { type: String, required: true }
+});
 defineEmits(['setIsExtendedFilterModalOpened']);
 </script>
 
@@ -42,11 +46,11 @@ defineEmits(['setIsExtendedFilterModalOpened']);
         />
       </svg>
       <div class="extended-filter__containers">
-        <MainParameters />
-        <PreferencesFilter />
+        <MainParameters :filters="filters.meetingPointOptions" />
+        <PreferencesFilter :filters="filters" />
         <ReviewsRatingsFilter />
-        <AdditionalParameters />
-        <AppearanceFilter />
+        <AdditionalParameters :gender="gender" />
+        <AppearanceFilter :filters="filters" :gender="gender" />
         <FetishismFilter />
         <LocationFilter />
       </div>
