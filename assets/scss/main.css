@@ -257,6 +257,12 @@ body {
   line-height: 136%;
 }
 
+.small-link-text {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 136%;
+}
+
 .v-enter-active,
 .v-leave-active {
   transition: opacity 0.3s ease;
@@ -446,6 +452,41 @@ body.darkmode {
 }
 .filled-round-button:hover {
   background-color: var(--color-surface-primary);
+}
+
+.button_social {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 136%;
+  position: relative;
+  cursor: pointer;
+  min-height: 1.5rem;
+  display: flex;
+  gap: 0.25rem;
+  padding: 0px;
+  color: var(--color-text-primary);
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+.button_social.small {
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 136%;
+}
+.button_social:hover {
+  color: var(--color-accent-primary);
+}
+.button_social.telegram::before {
+  content: "";
+  background: url("../icons/logos_telegram.svg");
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.button_social.whatsapp::before {
+  content: "";
+  background: url("../icons/logos_whatsapp-icon.svg");
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .dropdown-city {

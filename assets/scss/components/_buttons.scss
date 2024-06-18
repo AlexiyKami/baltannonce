@@ -123,3 +123,35 @@
     background-color: $color-surface-primary;
   }
 }
+
+.button_social {
+  @include font(1rem, 600, 136%);
+  position: relative;
+  cursor: pointer;
+  min-height: 1.5rem;
+  display: flex;
+  gap: 0.25rem;
+  padding: 0px;
+  color: $color-text-primary;
+  text-decoration: underline;
+  transition: color $transition-hover;
+  &.small {
+    @include font(0.875rem, 500, 136%);
+  }
+
+  &:hover {
+    color: $color-accent-primary;
+  }
+
+  &.telegram::before {
+    content: '';
+    background: url('../icons/logos_telegram.svg');
+    @include size(1.5rem);
+  }
+
+  &.whatsapp::before {
+    content: '';
+    background: url('../icons/logos_whatsapp-icon.svg');
+    @include size(1.5rem);
+  }
+}
