@@ -1,6 +1,6 @@
 <script setup>
 import { FilterFieldset } from '@/shared/ui';
-import { extendedFilters } from '../../model/extended-filters';
+defineProps({ filters: { type: Object, required: true } });
 </script>
 
 <template>
@@ -15,14 +15,14 @@ import { extendedFilters } from '../../model/extended-filters';
             name="sex"
             type="checkbox"
             container="column"
-            :options="extendedFilters.sexOptions"
+            :options="filters.sexOptions"
           />
           <FilterFieldset
             title="Стриптиз"
             name="striptease"
             type="checkbox"
             container="column"
-            :options="extendedFilters.stripteaseOptions"
+            :options="filters.stripteaseOptions"
           />
         </div>
         <div class="item-extended-filter__forms">
@@ -31,14 +31,14 @@ import { extendedFilters } from '../../model/extended-filters';
             name="massage"
             type="checkbox"
             container="column"
-            :options="extendedFilters.massageOptions"
+            :options="filters.massageOptions"
           />
           <FilterFieldset
             title="Экстрим"
             name="extreme"
             type="checkbox"
             container="column"
-            :options="extendedFilters.extremeOptions"
+            :options="filters.extremeOptions"
           />
         </div>
         <div class="item-extended-filter__forms">
@@ -47,14 +47,14 @@ import { extendedFilters } from '../../model/extended-filters';
             name="sado-maso"
             type="checkbox"
             container="column"
-            :options="extendedFilters.sadoMasoOptions"
+            :options="filters.sadoMasoOptions"
           />
           <FilterFieldset
             title="Разное"
             name="different"
             type="checkbox"
             container="column"
-            :options="extendedFilters.differentOptions"
+            :options="filters.differentOptions"
           />
         </div>
       </div>

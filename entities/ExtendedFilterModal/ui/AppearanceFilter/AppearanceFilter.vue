@@ -1,6 +1,9 @@
 <script setup>
 import { RowFilterFieldset, BaseDropdown, RangeInputSmall } from '@/shared/ui';
-import { extendedFilters } from '../../model/extended-filters';
+defineProps({
+  filters: { type: Object, required: true },
+  gender: { type: String, required: true }
+});
 </script>
 
 <template>
@@ -14,23 +17,23 @@ import { extendedFilters } from '../../model/extended-filters';
             title="Цвет глаз:"
             name="eyecolor"
             type="checkbox"
-            :options="extendedFilters.eyeColorOptions"
+            :options="filters.eyeColorOptions"
           />
           <RowFilterFieldset
             title="Цвет волос:"
             name="haircolor"
             type="checkbox"
-            :options="extendedFilters.hairColorOptions"
+            :options="filters.hairColorOptions"
           />
           <RowFilterFieldset
             title="Длина волос:"
             name="hair-length"
             type="checkbox"
-            :options="extendedFilters.hairLengthOptions"
+            :options="filters.hairLengthOptions"
           />
           <div class="item-extended-filter__appearance">
             <h6 class="heading_h6">Рост:</h6>
-            <BaseDropdown />
+            <BaseDropdown>-</BaseDropdown>
             <span class="item-extended-filter__unit">см</span>
           </div>
           <div class="item-extended-filter__appearance">
@@ -41,7 +44,14 @@ import { extendedFilters } from '../../model/extended-filters';
               <RangeInputSmall name="buttocks-input" title="Ягодицы">см</RangeInputSmall>
             </div>
           </div>
-          <div class="item-extended-filter__appearance">
+          <RowFilterFieldset
+            v-if="gender === 'men'"
+            title="Борода:"
+            name="beard"
+            type="checkbox"
+            :options="filters.beardOptions"
+          />
+          <div v-if="gender === 'girls'" class="item-extended-filter__appearance">
             <label class="heading_h6 heading__align-self_start" for="">Грудь:</label>
             <div class="item-extended-filter__row item-extended-filter__row_gap-big">
               <RangeInputSmall name="breast-size-input" title="Размер">A-G или 1-6</RangeInputSmall>
@@ -60,7 +70,7 @@ import { extendedFilters } from '../../model/extended-filters';
             title="Интимная стрижка:"
             name="intimate-haircut"
             type="checkbox"
-            :options="extendedFilters.intimateHaircutOptions"
+            :options="filters.intimateHaircutOptions"
           />
           <div class="item-extended-filter__appearance">
             <label class="heading_h6 heading__align-self_start" for="">Тату:</label>
@@ -74,7 +84,7 @@ import { extendedFilters } from '../../model/extended-filters';
               <div class="item-extended-filter__row item-extended-filter__tattoo">
                 <span>Места на теле:</span>
                 <div
-                  v-for="option in extendedFilters.tattooPlacesOptions"
+                  v-for="option in filters.tattooPlacesOptions"
                   :key="option.id"
                   class="item-extended-filter__row"
                 >
@@ -96,7 +106,7 @@ import { extendedFilters } from '../../model/extended-filters';
               <div class="item-extended-filter__row item-extended-filter__piercing">
                 <span>Места на теле:</span>
                 <div
-                  v-for="option in extendedFilters.piercingPlacesOptions"
+                  v-for="option in filters.piercingPlacesOptions"
                   :key="option.id"
                   class="item-extended-filter__row"
                 >
@@ -110,7 +120,7 @@ import { extendedFilters } from '../../model/extended-filters';
             title="Раса:"
             name="girls-race"
             type="checkbox"
-            :options="extendedFilters.raceOptions"
+            :options="filters.raceOptions"
           />
           <div class="item-extended-filter__appearance">
             <label class="heading_h6" for="">Национальности:</label>
@@ -120,7 +130,7 @@ import { extendedFilters } from '../../model/extended-filters';
             title="Языки:"
             name="languages"
             type="checkbox"
-            :options="extendedFilters.languageOptions"
+            :options="filters.languageOptions"
           />
           <div class="item-extended-filter__appearance">
             <label class="heading_h6 heading__align-self_start" for="">Паспорт:</label>

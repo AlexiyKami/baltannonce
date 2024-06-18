@@ -1,9 +1,11 @@
 <script setup>
 import './filter-dropdown.scss';
 import { PopupDropdownFilter, FilterFieldset } from '@/shared/ui';
-import { filters } from '../../model/filters';
 
-defineProps({ isFilterDropdownOpened: Boolean });
+defineProps({
+  isFilterDropdownOpened: { type: Boolean, required: true },
+  filters: { type: Object, required: true }
+});
 </script>
 
 <template>
@@ -71,6 +73,7 @@ defineProps({ isFilterDropdownOpened: Boolean });
         :options="filters.hairColorOptions"
       />
       <FilterFieldset
+        v-if="filters.breastSizeOptions"
         title="Размер груди"
         name="breast-size"
         type="checkbox"

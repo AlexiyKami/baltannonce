@@ -1,9 +1,8 @@
 <script setup>
-import './hero-section.scss';
 import { CityDropdown, FilterDropdown } from '@/entities/Filters';
 import { ExtendedFilterModal } from '@/widgets/ExtendedFilterModal';
-import { girlsFilters } from '../model/girls-filters';
-import { girlsExtendedFilters } from '../model/girls-extended-filters';
+import { menFilters } from '../model/men-filters';
+import { menExtendedFilters } from '../model/men-extended-filters';
 
 const isCityDropdownOpened = ref(true);
 const isFilterDropdownOpened = ref(false);
@@ -18,7 +17,7 @@ const setIsExtendedFilterModalOpened = (value) => {
 <template>
   <section class="hero">
     <div class="hero__container _container">
-      <h1 class="hero__title heading_h1">Высококлассный Эскорт в странах Прибалтики</h1>
+      <h1 class="hero__title heading_h1">Мужской Эскорт и Стриптизеры в странах Прибалтики</h1>
       <div class="hero__filter-btns">
         <div
           class="dropdown-city__btn"
@@ -81,11 +80,11 @@ const setIsExtendedFilterModalOpened = (value) => {
         </div>
       </div>
       <CityDropdown :is-city-dropdown-opened="isCityDropdownOpened" />
-      <FilterDropdown :is-filter-dropdown-opened="isFilterDropdownOpened" :filters="girlsFilters" />
+      <FilterDropdown :is-filter-dropdown-opened="isFilterDropdownOpened" :filters="menFilters" />
       <ExtendedFilterModal
         :is-extended-filter-modal-opened="isExtendedFilterModalOpened"
-        :filters="girlsExtendedFilters"
-        gender="girls"
+        :filters="menExtendedFilters"
+        gender="men"
         @set-is-extended-filter-modal-opened="setIsExtendedFilterModalOpened"
       />
     </div>

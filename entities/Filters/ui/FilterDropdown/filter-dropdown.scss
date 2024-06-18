@@ -30,6 +30,10 @@
     pointer-events: all;
   }
 
+  &__title {
+    margin-top: 0.75rem;
+  }
+
   &__body {
     @include flex(row, space-between);
     gap: 1.5rem;

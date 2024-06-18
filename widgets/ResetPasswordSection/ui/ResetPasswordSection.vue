@@ -46,7 +46,7 @@ const sendForm = () => {
               </h2>
               <img src="../assets/images/icons/email-send.png" alt="email-send" >
               <NuxtLink to="/" class="button button_primary reset-password__login-btn"
-                >Вернуться ко входу</NuxtLink
+                >Вернуться на главную</NuxtLink
               >
             </div>
           </div>

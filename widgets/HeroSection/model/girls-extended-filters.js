@@ -1,4 +1,4 @@
-export const extendedFilters = {
+export const girlsExtendedFilters = {
   meetingPointOptions: [
     {
       title: 'Апартаменты Incall',
@@ -213,24 +213,36 @@ export const extendedFilters = {
   ],
   differentOptions: [
     {
-      title: 'Ролевые игры',
+      title: 'GFE',
       id: 'item46'
     },
     {
-      title: 'Фото/видео съемка',
+      title: 'Ролевые игры',
       id: 'item47'
     },
     {
-      title: 'Эскорт',
+      title: 'Фото/видео съемка',
       id: 'item48'
     },
     {
-      title: 'Виртуальный секс',
+      title: 'Эскорт',
       id: 'item49'
     },
     {
-      title: 'Cекс по телефону',
+      title: 'Виртуальный секс',
       id: 'item50'
+    },
+    {
+      title: 'Cекс по телефону',
+      id: 'item51'
+    },
+    {
+      title: 'PSE',
+      id: 'item52'
+    },
+    {
+      title: 'Порнозвезда',
+      id: 'item53'
     }
   ],
   eyeColorOptions: [
@@ -403,36 +415,36 @@ export const extendedFilters = {
   ],
   piercingPlacesOptions: [
     {
-      title: 'Лицо',
-      id: 'piercing-face'
+      title: 'Hoc',
+      id: 'piercing-nose'
     },
     {
-      title: 'Руки',
-      id: 'piercing-hand'
+      title: 'Брови',
+      id: 'piercing-eyebrows'
     },
     {
-      title: 'Ноги',
-      id: 'piercing-leg'
+      title: 'Язык',
+      id: 'piercing-tongue'
+    },
+    {
+      title: 'Губы',
+      id: 'piercing-lips'
+    },
+    {
+      title: 'Уши',
+      id: 'piercing-ears'
+    },
+    {
+      title: 'Соски',
+      id: 'piercing-nipples'
+    },
+    {
+      title: 'Пупок',
+      id: 'piercing-navel'
     },
     {
       title: 'Пах',
       id: 'piercing-groin'
-    },
-    {
-      title: 'Спина',
-      id: 'piercing-spine'
-    },
-    {
-      title: 'Бедра',
-      id: 'piercing-hip'
-    },
-    {
-      title: 'Живот',
-      id: 'piercing-stomach'
-    },
-    {
-      title: 'Грудь',
-      id: 'piercing-breast'
     }
   ],
   raceOptions: [

@@ -6,7 +6,6 @@ const isDropdownOpened = ref(false);
 
 <template>
   <div class="dropdown">
-    <slot />
     <div
       class="dropdown__btn"
       :class="{
@@ -14,7 +13,7 @@ const isDropdownOpened = ref(false);
       }"
       @click="isDropdownOpened = !isDropdownOpened"
     >
-      <span class="dropdown__text button__text">-</span>
+      <span class="dropdown__text button__text"><slot /></span>
       <svg
         width="24"
         height="24"

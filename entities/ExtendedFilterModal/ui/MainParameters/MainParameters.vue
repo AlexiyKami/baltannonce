@@ -1,6 +1,7 @@
 <script setup>
 import { RangeInput } from '@/shared/ui';
-import { extendedFilters } from '../../model/extended-filters';
+
+defineProps({ filters: { type: Array, required: true } });
 </script>
 
 <template>
@@ -22,11 +23,7 @@ import { extendedFilters } from '../../model/extended-filters';
     <div class="extended-filter__item item-extended-filter">
       <h4 class="item-extended-filter__title heading_h4">Место встречи</h4>
       <div class="item-extended-filter__stripe" />
-      <div
-        v-for="option in extendedFilters.meetingPointOptions"
-        :key="option.id"
-        class="item-extended-filter__form"
-      >
+      <div v-for="option in filters" :key="option.id" class="item-extended-filter__form">
         <input :id="option.id" type="checkbox" name="meeting-point" >
         <label :for="option.id">{{ option.title }}</label>
       </div>
