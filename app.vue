@@ -6,16 +6,14 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="wrapper">
-    <NuxtLayout>
-      <NuxtErrorBoundary>
-        <div class="main">
-          <NuxtPage />
-        </div>
-        <template #error="{ error }">
-          <p>An error occurred: {{ error }}</p>
-        </template>
-      </NuxtErrorBoundary>
-    </NuxtLayout>
-  </div>
+  <NuxtLayout class="wrapper">
+    <NuxtErrorBoundary>
+      <main class="main">
+        <NuxtPage />
+      </main>
+      <template #error="{ error }">
+        <p>An error occurred: {{ error }}</p>
+      </template>
+    </NuxtErrorBoundary>
+  </NuxtLayout>
 </template>
