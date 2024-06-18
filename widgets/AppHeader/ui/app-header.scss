@@ -9,6 +9,7 @@
     @include flex(row, space-between, center);
     @include padding-vertical(0.75rem);
     min-height: 4rem;
+    position: relative;
   }
 
   &__content {
@@ -212,7 +213,7 @@
     width: 100%;
     justify-content: space-between;
 
-    & a {
+    & .button {
       width: 100%;
     }
   }
