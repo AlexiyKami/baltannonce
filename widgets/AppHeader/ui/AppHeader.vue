@@ -2,9 +2,11 @@
 import './app-header.scss';
 import { ThemeSwitch, LangDropdown } from '@/entities/Header';
 import { debounce } from '../lib/helpers/debounce';
+import { LoginPopup } from '@/features/Login';
 
 const breakpoint = 1280;
 const isMenuOpened = ref(false);
+const isLoginPopupOpened = ref(false);
 
 const closeMenuOnResize = () => {
   if (window.innerWidth > breakpoint) {
@@ -13,7 +15,7 @@ const closeMenuOnResize = () => {
 };
 
 onMounted(() => {
-  window.addEventListener('resize', debounce(closeMenuOnResize, 100));
+  window.addEventListener('resize', debounce(closeMenuOnResize, 10));
 });
 
 onUnmounted(() => {
@@ -79,9 +81,12 @@ onUnmounted(() => {
         <div class="header__buttons">
           <LangDropdown />
           <div class="header__login-btns">
-            <NuxtLink to="/login" class="button button_secondary button_filled header__btn-login"
-              >Войти</NuxtLink
+            <div
+              class="button button_secondary button_filled header__btn-login"
+              @click="isLoginPopupOpened = !isLoginPopupOpened"
             >
+              Войти
+            </div>
             <NuxtLink
               to="/register"
               class="button button_primary button_filled header__btn-register"
@@ -134,9 +139,12 @@ onUnmounted(() => {
           <div class="header__buttons-burger">
             <LangDropdown />
             <div class="header__login-btns">
-              <NuxtLink to="/login" class="button button_secondary button_filled header__btn-login"
-                >Войти</NuxtLink
+              <div
+                class="button button_secondary button_filled header__btn-login"
+                @click="isLoginPopupOpened = !isLoginPopupOpened"
               >
+                Войти
+              </div>
               <NuxtLink
                 to="/register"
                 class="button button_primary button_filled header__btn-register"
@@ -146,6 +154,7 @@ onUnmounted(() => {
             <ThemeSwitch />
           </div>
         </div>
+        <LoginPopup :is-login-popup-opened="isLoginPopupOpened" />
       </div>
     </div>
   </div>
