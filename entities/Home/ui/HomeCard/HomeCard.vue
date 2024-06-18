@@ -1,36 +1,37 @@
 <script setup>
-import './girl-card.scss';
+import './home-card.scss';
 
-defineProps({ girl: { type: Object, required: true } });
+defineProps({ card: { type: Object, required: true } });
 </script>
 
 <template>
   <li
     class="card-background"
     :class="{
-      'card-background_silver': girl.background === 'silver',
-      'card-background_gold': girl.background === 'gold',
-      'card-background_bronze': girl.background === 'bronze'
+      'card-background_silver': card.background === 'silver',
+      'card-background_gold': card.background === 'gold',
+      'card-background_bronze': card.background === 'bronze'
     }"
   >
     <div class="home__card card-home">
       <div class="card-home__badges">
-        <div v-if="girl.girlOfTheDay" class="card-home__of-the-day heading_h4">Девушка дня!</div>
+        <div v-if="card.girlOfTheDay" class="card-home__of-the-day heading_h4">Девушка дня!</div>
+        <div v-if="card.manOfTheDay" class="card-home__of-the-day heading_h4">Мужчина дня!</div>
         <div class="card-home__tags-container">
           <div class="card-home__tag_video">Видео</div>
-          <div v-if="girl.new" class="card-home__tag_new">Новая</div>
+          <div v-if="card.new" class="card-home__tag_new">Новая</div>
         </div>
       </div>
       <div class="card-home__img-container">
-        <img :src="girl.photo" alt="photo" >
+        <img :src="card.photo" alt="Photo" >
       </div>
       <div class="card-home__info">
         <div class="card-home__row">
           <h3 class="card-home__name heading_h5">
-            {{ girl.name }}
-            <span class="card-home__yeard-old">{{ girl.age }}</span>
+            {{ card.name }}
+            <span class="card-home__yeard-old">{{ card.age }}</span>
           </h3>
-          <h3 class="card-home__price heading_h5">{{ girl.price }}€</h3>
+          <h3 class="card-home__price heading_h5">{{ card.price }}€</h3>
         </div>
         <div class="card-home__row">
           <div class="card-home__location">
@@ -63,13 +64,13 @@ defineProps({ girl: { type: Object, required: true } });
         </div>
         <div class="card-home__row">
           <div
-            v-if="girl.verified === 'Not verified'"
+            v-if="card.verified === 'Not verified'"
             class="card-home__verified card-home__verified"
           >
             <span class="card-home__verified-text body-text_3">Не проверено</span>
           </div>
           <div
-            v-if="girl.verified === 'By admin'"
+            v-if="card.verified === 'By admin'"
             class="card-home__verified card-home__verified_by-admin"
           >
             <svg
@@ -97,7 +98,7 @@ defineProps({ girl: { type: Object, required: true } });
             <span class="card-home__verified-text body-text_3">Проверено лично</span>
           </div>
           <div
-            v-if="girl.verified === 'By video'"
+            v-if="card.verified === 'By video'"
             class="card-home__verified card-home__verified_by-video"
           >
             <svg
@@ -125,7 +126,7 @@ defineProps({ girl: { type: Object, required: true } });
             <span class="card-home__verified-text body-text_3">Проверено по видеозвонку</span>
           </div>
           <div
-            v-if="girl.verified === 'By photo'"
+            v-if="card.verified === 'By photo'"
             class="card-home__verified card-home__verified_by-photo"
           >
             <svg
@@ -153,7 +154,7 @@ defineProps({ girl: { type: Object, required: true } });
             <span class="card-home__verified-text body-text_3">Проверено по фото</span>
           </div>
           <div
-            v-if="girl.verified === 'Similar'"
+            v-if="card.verified === 'Similar'"
             class="card-home__verified card-home__verified_similar"
           >
             <svg
@@ -181,7 +182,7 @@ defineProps({ girl: { type: Object, required: true } });
             <span class="card-home__verified-text body-text_3">Проверено, похожа</span>
           </div>
           <div
-            v-if="girl.verified === 'Not similar'"
+            v-if="card.verified === 'Not similar'"
             class="card-home__verified card-home__verified_not-similar"
           >
             <svg
@@ -222,8 +223,8 @@ defineProps({ girl: { type: Object, required: true } });
               />
             </svg>
 
-            <span class="card-home__rating-text">{{ girl.rating }}</span>
-            <span class="card-home__rating-text">({{ girl.reviews }})</span>
+            <span class="card-home__rating-text">{{ card.rating }}</span>
+            <span class="card-home__rating-text">({{ card.reviews }})</span>
           </div>
         </div>
       </div>

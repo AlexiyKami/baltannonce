@@ -1,6 +1,6 @@
 <script setup>
 import './home-section.scss';
-import { HomeAdvertisements, GirlCard } from '@/entities/Girls';
+import { HomeAdvertisements, HomeCard } from '@/entities/Home';
 import { girls, comingSoonGirls, randomGirls } from '../model/girls';
 </script>
 
@@ -10,7 +10,7 @@ import { girls, comingSoonGirls, randomGirls } from '../model/girls';
       <div class="home__all-cards">
         <div class="home__verified-cards">
           <ul class="home__cards-container">
-            <GirlCard v-for="(girl, index) in girls" :key="index" :girl="girl" />
+            <HomeCard v-for="(girl, index) in girls" :key="index" :card="girl" />
           </ul>
         </div>
         <div class="home__coming-soon-cards">
@@ -21,7 +21,7 @@ import { girls, comingSoonGirls, randomGirls } from '../model/girls';
             </h2>
           </div>
           <ul class="home__cards-container">
-            <GirlCard v-for="(girl, index) in comingSoonGirls" :key="index" :girl="girl" />
+            <HomeCard v-for="(girl, index) in comingSoonGirls" :key="index" :card="girl" />
           </ul>
         </div>
         <div class="home__random-cards">
@@ -56,11 +56,11 @@ import { girls, comingSoonGirls, randomGirls } from '../model/girls';
             <img src="@/app/assets/images/cats/cat-desktop.jpg" alt="cat-image" >
           </picture>
           <ul class="home__cards-container">
-            <GirlCard v-for="(girl, index) in randomGirls" :key="index" :girl="girl" />
+            <HomeCard v-for="(girl, index) in randomGirls" :key="index" :card="girl" />
           </ul>
         </div>
       </div>
-      <HomeAdvertisements />
+      <HomeAdvertisements :count="8" />
     </div>
   </section>
 </template>
