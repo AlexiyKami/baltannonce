@@ -10,22 +10,22 @@ import { BaseDropdown, RangeInput } from '@/shared/ui';
       <div class="item-extended-filter__forms-container">
         <div class="item-extended-filter__forms">
           <div class="item-extended-filter__additional">
-            <label class="heading_h6" for="">Новые за:</label>
-            <BaseDropdown />
+            <h6 class="heading_h6">Новые за:</h6>
+            <BaseDropdown>-</BaseDropdown>
           </div>
           <div class="item-extended-filter__additional">
-            <label class="heading_h6" for="">Сортировать по верификации</label>
-            <div class="dropdown wide">Не выбрано</div>
+            <h6 class="heading_h6">Сортировать по верификации</h6>
+            <BaseDropdown class="wide">Не выбрано</BaseDropdown>
           </div>
           <div class="item-extended-filter__additional">
-            <label class="heading_h6" for="">Сортировать по разделу</label>
-            <div class="dropdown wide">Не выбрано</div>
+            <h6 class="heading_h6">Сортировать по разделу</h6>
+            <BaseDropdown class="wide">Не выбрано</BaseDropdown>
           </div>
           <div class="item-extended-filter__additional">
-            <label class="heading_h6" for="">Часы работы:</label>
-            <BaseDropdown class="narrow" />
+            <h6 class="heading_h6">Часы работы:</h6>
+            <BaseDropdown class="narrow">-</BaseDropdown>
             <span>-</span>
-            <BaseDropdown class="narrow" />
+            <BaseDropdown class="narrow">-</BaseDropdown>
           </div>
           <div class="item-extended-filter__additional">
             <RangeInput name="accepts-ages-from" title="Принимает в возрасте от" />
@@ -44,8 +44,8 @@ import { BaseDropdown, RangeInput } from '@/shared/ui';
         </div>
         <div class="item-extended-filter__forms">
           <div class="item-extended-filter__additional">
-            <label class="heading_h6" for="">Анкет с уникальным номером телефона:</label>
-            <BaseDropdown />
+            <h6 class="heading_h6">Анкет с уникальным номером телефона:</h6>
+            <BaseDropdown>-</BaseDropdown>
           </div>
           <div class="item-extended-filter__row">
             <input id="questionary-video" type="checkbox" name="" >

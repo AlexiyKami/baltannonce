@@ -30,7 +30,7 @@ import { extendedFilters } from '../../model/extended-filters';
           />
           <div class="item-extended-filter__appearance">
             <h6 class="heading_h6">Рост:</h6>
-            <BaseDropdown />
+            <BaseDropdown>-</BaseDropdown>
             <span class="item-extended-filter__unit">см</span>
           </div>
           <div class="item-extended-filter__appearance">

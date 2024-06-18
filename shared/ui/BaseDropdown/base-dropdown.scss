@@ -13,6 +13,10 @@
     width: 6.125rem;
   }
 
+  &__text {
+    @include font(0.875rem, 400, 142%);
+  }
+
   &__btn {
     @include flex(row, space-between, center);
     padding: 0.625rem 0.75rem;

@@ -11,7 +11,7 @@ import { BaseDropdown } from '@/shared/ui';
         <div class="item-extended-filter__forms">
           <div class="item-extended-filter__reviews">
             <label class="heading_h6" for="">Отзывов, не менее:</label>
-            <BaseDropdown />
+            <BaseDropdown>-</BaseDropdown>
           </div>
           <div class="item-extended-filter__reviews">
             <label class="heading_h6" for="">С оценками пользователей:</label>
@@ -21,11 +21,11 @@ import { BaseDropdown } from '@/shared/ui';
         <div class="item-extended-filter__forms">
           <div class="item-extended-filter__reviews">
             <label class="heading_h6" for="">Оценок, не менее:</label>
-            <BaseDropdown />
+            <BaseDropdown>-</BaseDropdown>
           </div>
           <div class="item-extended-filter__reviews">
             <label class="heading_h6" for="">С новыми отзывами за последние:</label>
-            <BaseDropdown />
+            <BaseDropdown>-</BaseDropdown>
           </div>
         </div>
       </div>
