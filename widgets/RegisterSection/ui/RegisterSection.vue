@@ -215,7 +215,10 @@ watch(password, () => {
                     >Можно использовать специальные символы</span
                   >
                 </div>
-                <PasswordIcon @click="showPassword = !showPassword" />
+                <PasswordIcon
+                  :show-password="showPassword"
+                  @set-visibility="(value) => (showPassword = value)"
+                />
               </RegisterTextField>
               <RegisterTextField
                 :type="showPasswordConfirmation ? 'text' : 'password'"
@@ -223,7 +226,10 @@ watch(password, () => {
                 :value="passwordConfirmation"
                 @set-value="(value) => (passwordConfirmation = value)"
               >
-                <PasswordIcon @click="showPasswordConfirmation = !showPasswordConfirmation" />
+                <PasswordIcon
+                  :show-password="showPasswordConfirmation"
+                  @set-visibility="(value) => (showPasswordConfirmation = value)"
+                />
               </RegisterTextField>
             </div>
           </div>
