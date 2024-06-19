@@ -403,12 +403,14 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    color: $color-text-secondary;
+    text-decoration: line-through;
     &::before {
       content: '';
       display: inline-block;
       width: 1.25rem;
       height: 1.25rem;
-      background-color: $color-checked-not-verified;
+      background-color: $color-surface-highlight;
       border-radius: 0.25rem;
     }
   }
@@ -433,51 +435,97 @@
   }
 
   &__row-span {
+    @include font(0.875rem, 400, 143%);
+    color: $color-checked-not-verified;
   }
 
-  &__btns {
+  &__social-btns {
+    display: flex;
+    gap: 1rem;
   }
 
   &__heading-working-hours {
   }
 
-  &__title-span {
+  &__working-hours-subtitle {
+    @include font(0.875rem, 700, 143%);
+  }
+
+  &__subtitle-span {
+    @include font(0.875rem, 400, 143%);
   }
 
   &__working-hours-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  &__working-hours-row {
+    display: grid;
+    grid-template-columns: 6.75rem 1fr;
+    column-gap: 0.75rem;
   }
 
   &__services-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
   }
 
   &__services-content-title {
+    @include font(1.125rem, 600, 144%);
+    color: $color-text-secondary;
   }
 
   &__services-content-lists {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 1.5rem;
   }
 
   &__services-content-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
   }
 
   &__checkbox-container {
-    &.active {
-
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    &.active .info-container-form-section__checkbox {
+      color: $color-text-primary;
+      text-decoration: none;
+      &::before {
+        background-color: $color-checked-not-verified;
+      }
     }
-    &.extra {
-
+    &.extra .info-container-form-section__checkbox {
+      color: $color-text-primary;
+      text-decoration: none;
+      &::before {
+        background-color: $color-checked-not-similar;
+      }
     }
-    &.description {
-
+    &.description .info-container-form-section__services-description {
+      display: block;
     }
   }
 
   &__checkbox-row {
+    display: grid;
+    grid-template-columns: 12.5rem 1fr;
   }
 
   &__checkbox-price {
+    color: $color-border-accent;
   }
 
   &__services-description {
+    display: none;
+    @include font(0.875rem, 400, 143%);
+    color: $color-text-secondary;
   }
 
   &__reviews-heading {
