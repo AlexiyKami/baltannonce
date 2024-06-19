@@ -26,7 +26,7 @@ body {
   min-width: 20rem;
   margin: 0 auto;
   position: relative;
-  overflow-x: hidden;
+  // overflow-x: hidden; // position:sticky isn't working with this
 }
 
 .main {

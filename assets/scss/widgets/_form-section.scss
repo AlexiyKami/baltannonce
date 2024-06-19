@@ -10,6 +10,7 @@
   &__content {
     display: flex;
     flex-direction: column;
+    gap: 1.25rem;
   }
 
 }
@@ -285,6 +286,9 @@
   &__row-text {
     display: flex;
     word-break: break-word;
+    &_grey {
+      color: $color-text-secondary;
+    }
   }
 
   &__column-text {
@@ -318,6 +322,229 @@
     background-color: $color-surface-highlight;
   }
 }
+
+.form-section {
+
+  &__additional-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+.additional-block-form-section {
+  &__tabs-container {
+    position: sticky;
+    top: 1rem;
+  }
+
+  &__tab-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    border: 0.0625rem solid $color-border-primary;
+    border-radius: 0.5rem;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__tab-item {
+    
+  }
+
+  &__tab-link {
+    cursor: pointer;
+    @include font(1rem, 700, 144%);
+    background-color: $color-surface-primary;
+    padding: 0.75rem 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color $transition-hover, color $transition-hover;
+    &.active {
+      background-color: $color-accent-primary;
+      color: $color-text-invert;
+    }
+  }
+
+  &__contacts-and-hours {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+}
+.info-container-form-section {
+
+  &__prices-content {
+    display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__incall-block, &__outcall-block, &__travel-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  &__incall-block-title, &__outcall-block-title, &__travel-block-title {
+    @include font(1.125rem, 600, 144%);
+    color: $color-text-secondary;
+  }
+
+  &__incall-block-title-span, &__outcall-block-title-span {
+    @include font(1rem, 400, 144%);
+  }
+
+  &__incall-subtitle, &__outcall-subtitle {
+    display: flex;
+    gap: 1.25rem;
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 1.25rem;
+      height: 1.25rem;
+      background-color: $color-checked-not-verified;
+      border-radius: 0.25rem;
+    }
+  }
+
+  &__incall-list, &__outcall-list, &__travel-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__incall-item, &__outcall-item, &__travel-item {
+    display: grid;
+    grid-template-columns: 12.375rem auto;
+  }
+
+  &__outcall-notice {
+    @include font(0.875rem, 400, 143%);
+    color: $color-checked-not-verified;
+  }
+
+  &__travel-subtitle {
+  }
+
+  &__row-span {
+  }
+
+  &__btns {
+  }
+
+  &__heading-working-hours {
+  }
+
+  &__title-span {
+  }
+
+  &__working-hours-content {
+  }
+
+  &__services-content {
+  }
+
+  &__services-content-title {
+  }
+
+  &__services-content-lists {
+  }
+
+  &__services-content-list {
+  }
+
+  &__checkbox-container {
+    &.active {
+
+    }
+    &.extra {
+
+    }
+    &.description {
+
+    }
+  }
+
+  &__checkbox-row {
+  }
+
+  &__checkbox-price {
+  }
+
+  &__services-description {
+  }
+
+  &__reviews-heading {
+  }
+
+  &__review-container {
+  }
+
+  &__review-heading {
+  }
+
+  &__review-title {
+  }
+
+  &__review-name {
+  }
+
+  &__review-date {
+  }
+
+  &__review-visit-confirmation {
+  }
+
+  &__review-score {
+  }
+
+  &__review-score-table-row {
+  }
+
+  &__review-score-item {
+  }
+
+  &__review-score-label {
+  }
+
+  &__review-score-value {
+  }
+
+  &__review-comment {
+  }
+
+  &__review-comment-heading, &__review-answer-heading {
+  }
+
+  &__review-comment-title, &__review-answer-title {
+  }
+
+  &__review-comment-text, &__review-answer-text {
+  }
+
+  &__review-experience {
+  }
+
+  &__review-experience-text-block {
+  }
+
+  &__review-experience-text {
+  }
+
+  &__review-experience-text-span {
+  }
+
+  &__review-answer {
+
+  }
+}
+
 
 @media screen and (max-width:$desktop-md) {
   .form-section {

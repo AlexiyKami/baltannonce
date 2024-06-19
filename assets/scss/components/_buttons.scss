@@ -80,6 +80,22 @@
   }
 }
 
+.button_with-icon-secondary {
+  @include flex(row, center, center);
+  gap: 0.5rem;
+  color: $color-text-primary;
+  padding: 0rem 1rem;
+  &:hover {
+    background-color: $color-surface-primary;
+  }
+  &.active {
+    background-color: $color-surface-primary;
+  }
+  &.small {
+    color: $color-accent-primary;
+  }
+}
+
 .button_with-indicator {
   position: relative;
 
