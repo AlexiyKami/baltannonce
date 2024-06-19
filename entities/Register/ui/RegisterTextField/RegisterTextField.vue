@@ -5,10 +5,14 @@ defineProps({
   value: { type: String, required: true }
 });
 
-const emit = defineEmits(['setValue']);
+const emits = defineEmits(['setValue', 'setFocus']);
 
 const handleInput = (e) => {
-  emit('setValue', e.target.value);
+  emits('setValue', e.target.value);
+};
+
+const handleFocus = (value) => {
+  emits('setFocus', value);
 };
 </script>
 
@@ -20,6 +24,8 @@ const handleInput = (e) => {
       :value="value"
       :placeholder="placeholder"
       @input="handleInput"
+      @focus="handleFocus(true)"
+      @blur="handleFocus(false)"
     >
     <slot />
   </div>
