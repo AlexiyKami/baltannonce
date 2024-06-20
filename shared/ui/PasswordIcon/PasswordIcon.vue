@@ -12,7 +12,7 @@ defineEmits(['setVisibility']);
     viewBox="0 0 22 17"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    class="register__input-password-icon"
+    class="register__input-password-icon new-password__input-password-icon"
     @click="$emit('setVisibility', false)"
   >
     <path
@@ -38,7 +38,7 @@ defineEmits(['setVisibility']);
     viewBox="0 0 22 21"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    class="register__input-password-icon"
+    class="register__input-password-icon new-password__input-password-icon"
     @click="$emit('setVisibility', true)"
   >
     <path
