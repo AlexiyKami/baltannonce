@@ -1,19 +1,18 @@
 <script setup>
 import './register-form.scss';
-import { PasswordIcon } from '@/shared/ui';
+import { BaseTextField } from '@/shared/ui';
 import {
   RegisterCardWithDescription,
   RegisterGenderCard,
-  RegisterTextField,
   RegisterLocations
 } from '@/entities/Register';
+import { PasswordField, PasswordConfirmationField } from '@/entities/Password';
 import { cities } from '@/shared/model/cities';
 import {
   isLocationsCorrect,
   isEmailCorrect,
-  isNickCorrect,
-  isPasswordCorrect
-} from '../../lib/helpers/fields-validation';
+  isNickCorrect
+} from '@/shared/lib/helpers/fields-validation';
 
 const router = useRouter();
 const { registerUser, isError: isUserError } = useUserStore();
@@ -28,18 +27,11 @@ const password = ref('');
 const passwordConfirmation = ref('');
 const privacyPolicy = ref(false);
 const wantToReceiveLetters = ref(false);
-const passwordRequirements = ref({
-  min: false,
-  lowercaseLetter: false,
-  capitalLetter: false,
-  number: false
-});
-const showPassword = ref(false);
-const showPasswordConfirmation = ref(false);
+
 const submitError = ref(false);
 
 const isNickInputFocused = ref(false);
-const isPasswordInputFocused = ref(false);
+const isPasswordCorrect = ref(false);
 
 const sendForm = async () => {
   if (
@@ -47,7 +39,7 @@ const sendForm = async () => {
     !isLocationsCorrect(locations.value) ||
     !isEmailCorrect(email.value) ||
     !isNickCorrect(nick.value) ||
-    !isPasswordCorrect(passwordRequirements.value) ||
+    !isPasswordCorrect.value ||
     !passwordConfirmation.value ||
     !privacyPolicy.value ||
     password.value !== passwordConfirmation.value
@@ -74,13 +66,6 @@ const setLocations = (city, country) => {
     locations.value.push({ city_name: city, country_name: country });
   }
 };
-
-watch(password, () => {
-  passwordRequirements.value.min = password.value.length >= 8;
-  passwordRequirements.value.lowercaseLetter = /\p{Ll}/u.test(password.value);
-  passwordRequirements.value.capitalLetter = /\p{Lu}/u.test(password.value);
-  passwordRequirements.value.number = /\d/.test(password.value);
-});
 </script>
 
 <template>
@@ -183,7 +168,7 @@ watch(password, () => {
     <div class="register__inputs-container">
       <h2 class="register__form-title heading_h3">Ввести информацию</h2>
       <div class="register__inputs">
-        <RegisterTextField
+        <BaseTextField
           type="email"
           placeholder="Email"
           :value="email"
@@ -199,8 +184,8 @@ watch(password, () => {
             class="register__error-message register__error-message_small"
             >Email который вы ввели не является допустимым</span
           >
-        </RegisterTextField>
-        <RegisterTextField
+        </BaseTextField>
+        <BaseTextField
           type="text"
           placeholder="Ник"
           :value="nick"
@@ -224,84 +209,19 @@ watch(password, () => {
               >От 2 до 10 символов</span
             >
           </div>
-        </RegisterTextField>
-        <RegisterTextField
-          :type="showPassword ? 'text' : 'password'"
-          placeholder="Пароль"
-          :value="password"
+        </BaseTextField>
+        <PasswordField
+          :password="password"
+          :submit-error="submitError"
           @set-value="(value) => (password = value)"
-          @set-focus="(value) => (isPasswordInputFocused = value)"
-        >
-          <span
-            v-if="submitError && !password"
-            class="register__error-message register__error-message_small"
-            >Пожалуйста, заполните поле</span
-          >
-          <div
-            v-if="
-              (password && isPasswordInputFocused) ||
-              (password && submitError && !isPasswordCorrect(passwordRequirements))
-            "
-            class="register__inputs-tips"
-          >
-            <span
-              class="register__inputs-tip"
-              :class="{
-                'register__inputs-tip_correct': passwordRequirements.min
-              }"
-              >Минимум 8 символов</span
-            >
-            <span
-              class="register__inputs-tip"
-              :class="{
-                'register__inputs-tip_correct': passwordRequirements.lowercaseLetter
-              }"
-              >Минимум 1 строчная буква</span
-            >
-            <span
-              class="register__inputs-tip"
-              :class="{
-                'register__inputs-tip_correct': passwordRequirements.capitalLetter
-              }"
-              >Минимум 1 заглавная буква</span
-            >
-            <span
-              class="register__inputs-tip"
-              :class="{
-                'register__inputs-tip_correct': passwordRequirements.number
-              }"
-              >Минимум 1 цифра</span
-            >
-            <span class="register__inputs-tip-no-symbol"
-              >Можно использовать специальные символы</span
-            >
-          </div>
-          <PasswordIcon
-            :show-password="showPassword"
-            @set-visibility="(value) => (showPassword = value)"
-          />
-        </RegisterTextField>
-        <RegisterTextField
-          :type="showPasswordConfirmation ? 'text' : 'password'"
-          placeholder="Подтверждение пароля"
-          :value="passwordConfirmation"
+          @set-is-password-correct="(value) => (isPasswordCorrect = value)"
+        />
+        <PasswordConfirmationField
+          :password="password"
+          :password-confirmation="passwordConfirmation"
+          :submit-error="submitError"
           @set-value="(value) => (passwordConfirmation = value)"
-        >
-          <span
-            v-if="submitError && !passwordConfirmation"
-            class="register__error-message register__error-message_small"
-            >Пожалуйста, заполните поле</span
-          >
-          <span
-            v-if="submitError && password !== passwordConfirmation && passwordConfirmation"
-            class="register__error-message register__error-message_small"
-            >Пароли не совпадают</span
-          >
-          <PasswordIcon
-            :show-password="showPasswordConfirmation"
-            @set-visibility="(value) => (showPasswordConfirmation = value)"
-          />
-        </RegisterTextField>
+        />
       </div>
     </div>
     <div class="register__checkboxes">
