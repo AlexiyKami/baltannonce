@@ -115,6 +115,8 @@
 }
 
 .text-button {
+  @include font(1rem, 600, 137%);
+  cursor: pointer;
   display: inline-flex;
   padding: 0;
   min-height: auto;

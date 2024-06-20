@@ -24,6 +24,13 @@
   --color-gradient-flags: rgba(255, 255, 255, 0.6);
   --color-gradient-flags-hover: rgba(255, 255, 255, 0.5);
   --gradient-radial: radial-gradient(50% 50% at 50% 50%, #F3F4F6 0%, #f3f4f6 100%);
+
+  --color-checked-not-similar:#0651C1;
+
+  --color-positive-bg:#22ad5c1a;
+  --color-normal-bg:#0651C11a;
+  --color-negative-bg:#DA12121a;
+  --color-warning-bg:#FBBF241a;
 }
 
 $color-text-primary: var(--color-text-primary);
@@ -44,8 +51,13 @@ $color-other-green: #18A215;
 $color-other-blue: #0651C1;
 $color-other-red: #BE1212;
 
+$color-other-positive-bg: var(--color-positive-bg);
+$color-other-normal-bg: var(--color-normal-bg);
+$color-other-negative-bg: var(--color-negative-bg);
+$color-other-warning-bg: var(--color-warning-bg);
+
 $color-checked-similar: #18A215;
-$color-checked-not-similar: #0651C1;
+$color-checked-not-similar: var(--color-checked-not-similar);
 $color-checked-by-photo: #A66417;
 $color-checked-personally: #C4A020;
 $color-checked-by-video: #8E94A1;
