@@ -6,6 +6,7 @@ import BaseDropdown from './BaseDropdown/BaseDropdown.vue';
 import RangeInput from './RangeInput/RangeInput.vue';
 import RangeInputSmall from './RangeInputSmall/RangeInputSmall.vue';
 import PasswordIcon from './PasswordIcon/PasswordIcon.vue';
+import BaseTextField from './BaseTextField/BaseTextField.vue';
 
 export { PopupDropdownFilter };
 export { DropdownItemWithCount };
@@ -15,3 +16,4 @@ export { BaseDropdown };
 export { RangeInput };
 export { RangeInputSmall };
 export { PasswordIcon };
+export { BaseTextField };

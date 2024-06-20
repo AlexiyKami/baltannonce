@@ -71,12 +71,10 @@
   opacity: 0;
 }
 
-.page-enter-active,
-.page-leave-active {
-  transition: opacity $transition-hover;
+.page-enter-active {
+  transition: opacity 0.7s;
 }
 
-.page-enter-from,
-.page-leave-to {
+.page-enter-from {
   opacity: 0;
 }
