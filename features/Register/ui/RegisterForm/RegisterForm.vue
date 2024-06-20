@@ -8,13 +8,16 @@ import {
   RegisterLocations
 } from '@/entities/Register';
 import { cities } from '@/shared/model/cities';
-import Loader from '@/shared/api/api';
 import {
   isLocationsCorrect,
   isEmailCorrect,
   isNickCorrect,
   isPasswordCorrect
 } from '../../lib/helpers/fields-validation';
+
+const router = useRouter();
+const { registerUser, isError: isUserError } = useUserStore();
+const { registerAdvertiser, isError: isAdvertiserError } = useAdvertiserStore();
 
 const type = ref('user');
 const gender = ref('');
@@ -51,27 +54,16 @@ const sendForm = async () => {
   ) {
     submitError.value = true;
   } else {
-    if (type.value === 'user') {
-      await Loader.registerUser({
-        username: nick.value,
-        email: email.value,
-        password: password.value,
-        cities: locations.value
-      });
-    } else {
-      await Loader.registerAdvertiser({
-        username: nick.value,
-        email: email.value,
-        password: password.value,
-        cities: locations.value
-      });
-    }
-    console.log({
+    const data = {
       username: nick.value,
       email: email.value,
       password: password.value,
       cities: locations.value
-    });
+    };
+    type.value === 'user' ? await registerUser(data) : await registerAdvertiser(data);
+    if (!isUserError && !isAdvertiserError) {
+      router.push('/');
+    }
   }
 };
 
@@ -286,12 +278,7 @@ watch(password, () => {
           </div>
           <PasswordIcon
             :show-password="showPassword"
-            @set-visibility="
-              (value) => {
-                showPassword = value;
-                isPasswordInputFocused = true;
-              }
-            "
+            @set-visibility="(value) => (showPassword = value)"
           />
         </RegisterTextField>
         <RegisterTextField
@@ -331,7 +318,6 @@ watch(password, () => {
           >Пожалуйста, подтвердите согласие с правилами</span
         >
       </div>
-
       <div v-if="type === 'user'" class="register__checkbox-container">
         <input id="register-subscribe-email" v-model="wantToReceiveLetters" type="checkbox" >
         <label for="register-subscribe-email"

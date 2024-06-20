@@ -7,7 +7,7 @@ body {
   font-optical-sizing: auto;
   background-color: $color-surface-secondary;
   color: $color-text-primary;
-  animation: 0.7s opacity;
+  animation: opacity 0.7s;
 
   @keyframes opacity {
     0% {
