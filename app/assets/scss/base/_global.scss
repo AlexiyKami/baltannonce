@@ -70,3 +70,13 @@
 .v-leave-to {
   opacity: 0;
 }
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity $transition-hover;
+}
+
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+}
