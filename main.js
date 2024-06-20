@@ -8,6 +8,7 @@ const headerBody = document.querySelector('.header__body');
 const navmenuHeaderItems = document.querySelectorAll('.navmenu-header__item');
 const headerLoginBtns = document.querySelectorAll('.header__btn-login');
 const headerLoginPopup = document.querySelector('.header__login-popup');
+const headerDropdownBtns = document.querySelectorAll('.header__dropdown-btn');
 
 headerBurger.addEventListener('click', () => {
   headerBurger.classList.toggle('active');
@@ -21,4 +22,8 @@ navmenuHeaderItems.forEach((item) => item.addEventListener('click', () => {
 
 headerLoginBtns.forEach((btn) => {
   btn.addEventListener('click', () => headerLoginPopup.classList.toggle('active'));
+})
+
+headerDropdownBtns.forEach((btn) => {
+  btn.addEventListener('click', () => btn.classList.toggle('active'));
 })
