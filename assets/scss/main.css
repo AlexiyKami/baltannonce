@@ -1431,6 +1431,42 @@ input[type=email]:disabled, input[type=password]:disabled, input[type=text]:disa
   z-index: 2;
 }
 
+.tooltip-container {
+  position: relative;
+}
+.tooltip-container:hover .tooltip__text {
+  visibility: visible;
+}
+
+.tooltip__text {
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 143%;
+  padding: 0.3125rem 0.875rem;
+  visibility: hidden;
+  max-width: 21.375rem;
+  width: 21.375rem;
+  background-color: var(--color-surface-primary);
+  color: var(--color-text-primary);
+  border-radius: 0.3125rem;
+  position: absolute;
+  z-index: 500;
+  bottom: 120%;
+  left: 50%;
+  margin-left: -10.75rem;
+  white-space: wrap;
+}
+.tooltip__text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--color-surface-primary) transparent transparent transparent;
+}
+
 .header {
   width: 100%;
   position: relative;
@@ -2030,7 +2066,7 @@ input[type=email]:disabled, input[type=password]:disabled, input[type=text]:disa
   justify-content: center;
   align-items: center;
   white-space: nowrap;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.5rem;
   padding: 0.75rem 0rem;
   background: linear-gradient(90.74deg, #881337 0%, #be123c 49%, #881337 100%);
   border-radius: 0.5rem;
@@ -2078,7 +2114,7 @@ input[type=email]:disabled, input[type=password]:disabled, input[type=text]:disa
 }
 .home__image-block_horizontal {
   min-height: 12.5rem;
-  margin: 1.25rem 0rem;
+  margin-bottom: 1.25rem;
 }
 .home__image-block img {
   position: absolute;
@@ -2103,6 +2139,10 @@ input[type=email]:disabled, input[type=password]:disabled, input[type=text]:disa
   gap: 0.25rem;
   align-items: flex-end;
 }
+.home__title-icon-container {
+  display: flex;
+  align-items: center;
+}
 .home__title-icon {
   color: var(--color-surface-highlight);
 }
@@ -2113,7 +2153,6 @@ input[type=email]:disabled, input[type=password]:disabled, input[type=text]:disa
   border-bottom: none;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
-  overflow: hidden;
 }
 .home__tab-btn {
   display: flex;

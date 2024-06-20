@@ -18,7 +18,7 @@
   &__heading {
     @include flex(row, center, center);
     white-space: nowrap;
-    margin-bottom: 1.25rem;
+    margin-bottom: 0.5rem;
     padding: 0.75rem 0rem;
     background: $gradient-linear-accent;
     border-radius: 0.5rem;
@@ -68,7 +68,7 @@
     background-color: $color-surface-highlight;
     &_horizontal {
       min-height: 12.5rem;
-      margin: 1.25rem 0rem;
+      margin-bottom: 1.25rem;
     }
     & img {
       position: absolute;
@@ -95,6 +95,11 @@
     align-items: flex-end;
   }
 
+  &__title-icon-container {
+    display: flex;
+    align-items: center;
+  }
+
   &__title-icon {
     color: $color-surface-highlight;
   }
@@ -106,7 +111,6 @@
     border-bottom: none;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
-    overflow: hidden
     
   }
   &__tab-btn {
