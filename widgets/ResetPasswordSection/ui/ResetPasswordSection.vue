@@ -1,10 +1,10 @@
 <script setup>
 import './reset-password-section.scss';
 
-const isFormSubmitted = ref(false);
+const isSuccess = ref(false);
 
 const sendForm = () => {
-  isFormSubmitted.value = true;
+  isSuccess.value = true;
 };
 </script>
 
@@ -12,12 +12,7 @@ const sendForm = () => {
   <section class="reset-password">
     <div class="reset-password__container _container">
       <div class="reset-password__body">
-        <form
-          v-if="!isFormSubmitted"
-          class="reset-password__form"
-          novalidate
-          @submit.prevent="sendForm"
-        >
+        <form v-if="!isSuccess" class="reset-password__form" novalidate @submit.prevent="sendForm">
           <h2 class="reset-password__inputs-title heading_h3">
             Забыли пароль? Введите свой адрес электронной почты ниже, и мы вышлем вам электронное
             письмо, позволяющее сбросить его.
@@ -39,7 +34,7 @@ const sendForm = () => {
           </div>
         </form>
         <Transition>
-          <div v-if="isFormSubmitted" class="reset-password__form reset-password__form-success">
+          <div v-if="isSuccess" class="reset-password__form reset-password__form-success">
             <div class="reset-password__success-message-container">
               <h2 class="reset-password__inputs-title heading_h3">
                 Мы отправили вам письмо с инструкцией по сбросу пароля
