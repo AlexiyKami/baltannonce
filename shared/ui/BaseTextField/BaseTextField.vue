@@ -17,9 +17,9 @@ const handleFocus = (value) => {
 </script>
 
 <template>
-  <div class="register__input-container">
+  <div class="register__input-container login-popup-header__input-container">
     <input
-      class="register__input"
+      class="register__input login-popup-header__input"
       :type="type"
       :value="value"
       :placeholder="placeholder"
