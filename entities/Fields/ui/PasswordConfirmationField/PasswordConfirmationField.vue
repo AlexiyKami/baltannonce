@@ -1,4 +1,5 @@
 <script setup>
+import './password-confirmation-field.scss';
 import { PasswordIcon, BaseTextField } from '@/shared/ui';
 
 defineProps({

@@ -1,6 +1,7 @@
 <script setup>
+import './password-field.scss';
 import { PasswordIcon, BaseTextField } from '@/shared/ui';
-import { isPasswordCorrect } from '../../lib/helpers/password-validation';
+import { isPasswordCorrect } from '@/shared/lib/helpers/fields-validation';
 
 const isPasswordInputFocused = ref(false);
 
@@ -43,9 +44,7 @@ const setPassword = (value) => {
     @set-value="setPassword"
     @set-focus="(value) => (isPasswordInputFocused = value)"
   >
-    <span
-      v-if="submitError && !password"
-      class="register__error-message register__error-message_small"
+    <span v-if="submitError && !password" class="error-message error-message_small"
       >Пожалуйста, заполните поле</span
     >
     <div
@@ -53,37 +52,37 @@ const setPassword = (value) => {
         (password && isPasswordInputFocused) ||
         (password && submitError && !isPasswordCorrect(passwordRequirements))
       "
-      class="register__inputs-tips"
+      class="inputs-tips"
     >
       <span
-        class="register__inputs-tip"
+        class="inputs-tip"
         :class="{
-          'register__inputs-tip_correct': passwordRequirements.min
+          'inputs-tip_correct': passwordRequirements.min
         }"
         >Минимум 8 символов</span
       >
       <span
-        class="register__inputs-tip"
+        class="inputs-tip"
         :class="{
-          'register__inputs-tip_correct': passwordRequirements.lowercaseLetter
+          'inputs-tip_correct': passwordRequirements.lowercaseLetter
         }"
         >Минимум 1 строчная буква</span
       >
       <span
-        class="register__inputs-tip"
+        class="inputs-tip"
         :class="{
-          'register__inputs-tip_correct': passwordRequirements.capitalLetter
+          'inputs-tip_correct': passwordRequirements.capitalLetter
         }"
         >Минимум 1 заглавная буква</span
       >
       <span
-        class="register__inputs-tip"
+        class="inputs-tip"
         :class="{
-          'register__inputs-tip_correct': passwordRequirements.number
+          'inputs-tip_correct': passwordRequirements.number
         }"
         >Минимум 1 цифра</span
       >
-      <span class="register__inputs-tip-no-symbol">Можно использовать специальные символы</span>
+      <span class="inputs-tip-no-symbol">Можно использовать специальные символы</span>
     </div>
     <PasswordIcon
       :show-password="showPassword"
