@@ -1,16 +1,17 @@
-import Loader from '@/shared/api/api';
+import AuthService from '@/shared/api/auth';
 
 export const useUserStore = defineStore('user', () => {
-  const user = ref(null);
+  const currentUser = ref(null);
   const isLoading = ref(false);
   const isError = ref(false);
 
-  const registerUser = async (user) => {
+  const login = async (user) => {
     isLoading.value = true;
     try {
-      const { data, status } = await Loader.registerUser(user);
-      if (status == 201) {
-        user.value = data;
+      const { data, status } = await AuthService.login(user);
+      if (status === 200) {
+        currentUser.value.token = data.access;
+        currentUser.value.refreshToken = data.refresh;
         isError.value = false;
       }
     } catch (error) {
@@ -21,5 +22,22 @@ export const useUserStore = defineStore('user', () => {
     }
   };
 
-  return { user, isLoading, isError, registerUser };
+  const register = async (user, pathSegment) => {
+    isLoading.value = true;
+    try {
+      const { data, status } = await AuthService.register(user, pathSegment);
+      if (status === 201) {
+        currentUser.value = data;
+        isError.value = false;
+        await login({ username: user.username, password: user.password });
+      }
+    } catch (error) {
+      console.log(error.message);
+      isError.value = true;
+    } finally {
+      isLoading.value = false;
+    }
+  };
+
+  return { currentUser, isLoading, isError, register, login };
 });
