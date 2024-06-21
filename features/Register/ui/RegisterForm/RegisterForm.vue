@@ -6,17 +6,12 @@ import {
   RegisterGenderCard,
   RegisterLocations
 } from '@/entities/Register';
-import { PasswordField, PasswordConfirmationField } from '@/entities/Password';
+import { PasswordField, PasswordConfirmationField, NickField } from '@/entities/Fields';
 import { cities } from '@/shared/model/cities';
-import {
-  isLocationsCorrect,
-  isEmailCorrect,
-  isNickCorrect
-} from '@/shared/lib/helpers/fields-validation';
+import { isLocationsCorrect, isEmailCorrect } from '@/shared/lib/helpers/fields-validation';
 
 const router = useRouter();
-const { registerUser, isError: isUserError } = useUserStore();
-const { registerAdvertiser, isError: isAdvertiserError } = useAdvertiserStore();
+const { register, isError } = useUserStore();
 
 const type = ref('user');
 const gender = ref('');
@@ -30,15 +25,15 @@ const wantToReceiveLetters = ref(false);
 
 const submitError = ref(false);
 
-const isNickInputFocused = ref(false);
 const isPasswordCorrect = ref(false);
+const isNickCorrect = ref(false);
 
 const sendForm = async () => {
   if (
     !gender.value ||
     !isLocationsCorrect(locations.value) ||
     !isEmailCorrect(email.value) ||
-    !isNickCorrect(nick.value) ||
+    !isNickCorrect.value ||
     !isPasswordCorrect.value ||
     !passwordConfirmation.value ||
     !privacyPolicy.value ||
@@ -52,10 +47,11 @@ const sendForm = async () => {
       password: password.value,
       cities: locations.value
     };
-    type.value === 'user' ? await registerUser(data) : await registerAdvertiser(data);
-    if (!isUserError && !isAdvertiserError) {
+    type.value === 'user' ? await register(data, 'customer') : await register(data, 'model');
+    if (!isError) {
       router.push('/');
     }
+    submitError.value = false;
   }
 };
 
@@ -185,31 +181,12 @@ const setLocations = (city, country) => {
             >Email который вы ввели не является допустимым</span
           >
         </BaseTextField>
-        <BaseTextField
-          type="text"
-          placeholder="Ник"
-          :value="nick"
+        <NickField
+          :nick="nick"
+          :submit-error="submitError"
           @set-value="(value) => (nick = value)"
-          @set-focus="(value) => (isNickInputFocused = value)"
-        >
-          <span
-            v-if="submitError && !nick"
-            class="register__error-message register__error-message_small"
-            >Пожалуйста, заполните поле</span
-          >
-          <div
-            v-if="(nick && isNickInputFocused) || (nick && submitError && !isNickCorrect(nick))"
-            class="register__inputs-tips"
-          >
-            <span
-              class="register__inputs-tip"
-              :class="{
-                'register__inputs-tip_correct': isNickCorrect(nick)
-              }"
-              >От 2 до 10 символов</span
-            >
-          </div>
-        </BaseTextField>
+          @set-is-nick-correct="(value) => (isNickCorrect = value)"
+        />
         <PasswordField
           :password="password"
           :submit-error="submitError"
