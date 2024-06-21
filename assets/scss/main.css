@@ -3546,9 +3546,6 @@ input[type=email]:disabled, input[type=password]:disabled, input[type=text]:disa
     flex-direction: column;
     gap: 1.5rem;
   }
-  .form-section__advertisement-section {
-    display: none;
-  }
   .main-block-form-section__details {
     flex: 0 0 47%;
   }
