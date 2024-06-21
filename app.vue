@@ -1,8 +1,13 @@
 <script setup>
+import { injectStore } from '@/shared/api/api';
+
 useSeoMeta({
   title: 'Baltannonce',
   ogTitle: 'Baltannonce'
 });
+
+const userStore = useUserStore();
+injectStore(userStore);
 </script>
 
 <template>

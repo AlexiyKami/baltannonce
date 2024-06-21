@@ -10,3 +10,7 @@ export const isEmailCorrect = (email) => {
 export const isNickCorrect = (nick) => {
   return nick.length >= 2 && nick.length <= 10;
 };
+
+export function isPasswordCorrect(passwordRequirements) {
+  return !Object.values(passwordRequirements).some((value) => value === false);
+}

@@ -1,36 +1,22 @@
 @use '@/app/assets/scss/utils' as *;
 
 .dropdown-lang {
-  @include size(5.125rem, 1.5rem);
+  @include size(3.25rem, 1.5rem);
   z-index: 1001;
   user-select: none;
 
   &__btn {
-    @include flex(row, flex-start, center);
+    @include flex(row, flex-end, center);
     gap: 0.375rem;
     cursor: pointer;
+    transition: opacity $transition-hover;
 
     &.active {
       background-color: $color-surface-primary;
     }
 
-    &:hover .dropdown-lang__chevron {
-      color: $color-text-primary;
-    }
-  }
-
-  &__chevron {
-    color: $color-border-icons;
-    transition:
-      transform $transition-hover ease-in,
-      color $transition-hover;
-    min-height: 1.5rem;
-    min-width: 1.5rem;
-    position: relative;
-    bottom: 0.0625rem;
-
-    &.active {
-      transform: rotateZ(-180deg);
+    &:hover {
+      opacity: 0.7;
     }
   }
 
@@ -53,6 +39,10 @@
     }
   }
 
+  &__text {
+    text-transform: uppercase;
+  }
+
   &__item {
     @include flex(row, flex-start, center);
     @include padding-horizontal(0.75rem, 0.9375rem);
@@ -69,10 +59,6 @@
 
   & &__flag {
     flex: 0 0 1.5rem;
-  }
-
-  &__text {
-    text-transform: uppercase;
   }
 }
 
