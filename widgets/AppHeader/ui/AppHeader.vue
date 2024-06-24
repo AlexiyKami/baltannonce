@@ -114,19 +114,25 @@ onUnmounted(() => {
         >
           <nav class="header__navmenu navmenu-header">
             <ul class="navmenu-header__list">
-              <li class="navmenu-header__item">
-                <NuxtLink to="/men" class="navmenu-header__link" @click="isMenuOpened = false"
-                  >Мужчины</NuxtLink
-                >
-              </li>
+              <ItemWithDropdown title="Девушки">
+                <NuxtLink to="/" class="header__item-dropdown">
+                  <p class="header__text">Эскорт</p>
+                </NuxtLink>
+                <NuxtLink to="/" class="header__item-dropdown">
+                  <p class="header__text">Содержанки</p>
+                </NuxtLink>
+              </ItemWithDropdown>
+              <ItemWithDropdown title="Мужчины">
+                <NuxtLink to="/men" class="header__item-dropdown">
+                  <p class="header__text">Эскорт</p>
+                </NuxtLink>
+                <NuxtLink to="/men" class="header__item-dropdown">
+                  <p class="header__text">Стриптизеры</p>
+                </NuxtLink>
+              </ItemWithDropdown>
               <li class="navmenu-header__item">
                 <NuxtLink to="" class="navmenu-header__link" @click="isMenuOpened = false"
                   >Спрос и предложение</NuxtLink
-                >
-              </li>
-              <li class="navmenu-header__item">
-                <NuxtLink to="" class="navmenu-header__link" @click="isMenuOpened = false"
-                  >Содержанки</NuxtLink
                 >
               </li>
               <li class="navmenu-header__item">
