@@ -80,7 +80,10 @@ defineProps({
         container="column"
         :options="filters.breastSizeOptions"
       >
-        <PopupDropdownFilter title="Размер груди" :options="['A', 'B', 'C', 'D', 'DD', 'G']" />
+        <PopupDropdownFilter
+          title="Размер груди"
+          :options="['A', 'B', 'C', 'D', 'DD', 'E', 'F', 'FF', 'G', 'J']"
+        />
       </FilterFieldset>
       <FilterFieldset
         title="Язык"

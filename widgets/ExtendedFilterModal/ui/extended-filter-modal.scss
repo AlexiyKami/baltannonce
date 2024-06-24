@@ -199,6 +199,14 @@
     display: flex;
     gap: 0.5rem;
   }
+
+  &__breast {
+    gap: 0.75rem;
+  }
+
+  &__row-span {
+    @include font(0.875rem, 700, 143%);
+  }
 }
 
 @media screen and (max-width: $desktop-lg) {

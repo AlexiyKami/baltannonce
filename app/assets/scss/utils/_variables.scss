@@ -11,6 +11,7 @@
   --color-footer-background: #111827;
 
   --color-button: #be123c;
+  --color-slider-round-button: rgba(255, 255, 255, 0.4);
 
   --color-border-invert: #ffffff;
   --color-border-primary: #d1d5db;
@@ -24,6 +25,13 @@
   --color-gradient-flags: rgba(255, 255, 255, 0.6);
   --color-gradient-flags-hover: rgba(255, 255, 255, 0.5);
   --gradient-radial: radial-gradient(50% 50% at 50% 50%, #f3f4f6 0%, #f3f4f6 100%);
+
+  --color-checked-not-similar: #0651c1;
+
+  --color-positive-bg: #22ad5c1a;
+  --color-normal-bg: #0651c11a;
+  --color-negative-bg: #da12121a;
+  --color-warning-bg: #fbbf241a;
 }
 
 $color-text-primary: var(--color-text-primary);
@@ -44,8 +52,13 @@ $color-other-green: #18a215;
 $color-other-blue: #0651c1;
 $color-other-red: #be1212;
 
+$color-other-positive-bg: var(--color-positive-bg);
+$color-other-normal-bg: var(--color-normal-bg);
+$color-other-negative-bg: var(--color-negative-bg);
+$color-other-warning-bg: var(--color-warning-bg);
+
 $color-checked-similar: #18a215;
-$color-checked-not-similar: #0651c1;
+$color-checked-not-similar: var(--color-checked-not-similar);
 $color-checked-by-photo: #a66417;
 $color-checked-personally: #c4a020;
 $color-checked-by-video: #8e94a1;
@@ -59,6 +72,7 @@ $color-accent-primary: var(--color-accent-primary);
 $color-accent-secondary: var(--color-accent-secondary);
 
 $color-button: var(--color-button);
+$color-slider-round-button: var(--color-slider-round-button);
 
 $color-border-invert: var(--color-border-invert);
 $color-border-primary: var(--color-border-primary);

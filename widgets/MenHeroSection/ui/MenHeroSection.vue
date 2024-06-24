@@ -50,7 +50,8 @@ const setIsExtendedFilterModalOpened = (value) => {
         <div
           class="button button_with-icon hero__filter-btn button_with-indicator"
           :class="{
-            active: isFilterDropdownOpened
+            active: isFilterDropdownOpened,
+            selected: isFilterDropdownOpened
           }"
           @click="isFilterDropdownOpened = !isFilterDropdownOpened"
         >
@@ -74,6 +75,9 @@ const setIsExtendedFilterModalOpened = (value) => {
         </div>
         <div
           class="button button_outlined hero__extended-filter-btn button_with-indicator"
+          :class="{
+            selected: isExtendedFilterModalOpened
+          }"
           @click="setIsExtendedFilterModalOpened(!isExtendedFilterModalOpened)"
         >
           <span class="button__text">Продвинутый поиск</span>

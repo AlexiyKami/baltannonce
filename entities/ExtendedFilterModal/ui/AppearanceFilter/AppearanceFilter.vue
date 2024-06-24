@@ -53,7 +53,7 @@ defineProps({
           />
           <div v-if="gender === 'girls'" class="item-extended-filter__appearance">
             <label class="heading_h6 heading__align-self_start" for="">Грудь:</label>
-            <div class="item-extended-filter__row item-extended-filter__row_gap-big">
+            <div class="item-extended-filter__column item-extended-filter__breast">
               <RangeInputSmall name="breast-size-input" title="Размер">A-G или 1-6</RangeInputSmall>
               <div class="item-extended-filter__column">
                 <span>Тип:</span>
@@ -82,7 +82,7 @@ defineProps({
                 <label for="tattoo-n">Нет</label>
               </div>
               <div class="item-extended-filter__row item-extended-filter__tattoo">
-                <span>Места на теле:</span>
+                <span class="item-extended-filter__row-span">Места на теле:</span>
                 <div
                   v-for="option in filters.tattooPlacesOptions"
                   :key="option.id"
@@ -104,7 +104,7 @@ defineProps({
                 <label for="piercing-n">Нет</label>
               </div>
               <div class="item-extended-filter__row item-extended-filter__piercing">
-                <span>Места на теле:</span>
+                <span class="item-extended-filter__row-span">Места на теле:</span>
                 <div
                   v-for="option in filters.piercingPlacesOptions"
                   :key="option.id"

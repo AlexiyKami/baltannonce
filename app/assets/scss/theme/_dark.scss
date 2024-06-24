@@ -6,8 +6,10 @@ body.darkmode {
   --color-surface-secondary: #320b38;
   --color-surface-highlight: #521849;
   --color-surface-invert: #ffffff;
+  --color-surface-brand: #f43f5e14;
   --color-footer-background: #521849;
   --color-button: #f43f5e;
+  --color-slider-round-button: rgba(65, 15, 57, 0.4);
   --color-border-invert: #320b38;
   --color-border-primary: #7e3a73;
   --color-border-secondary: #612a58;
@@ -15,6 +17,11 @@ body.darkmode {
   --color-border-accent: #be123c;
   --color-accent-primary: #f43f5e;
   --color-accent-secondary: #be123c;
+  --color-checked-not-similar: #217aff;
+  --color-positive-bg: #22ad5c1a;
+  --color-normal-bg: #217aff1a;
+  --color-negative-bg: #da12121a;
+  --color-warning-bg: #fbbf241a;
   --color-gradient-flags: rgba(50, 11, 56, 0.5);
   --color-gradient-flags-hover: rgba(50, 11, 56, 0.7);
   --gradient-radial: radial-gradient(
