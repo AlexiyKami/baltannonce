@@ -5,6 +5,15 @@
   position: relative;
   background-color: $color-surface-primary;
 
+  &.logged-in {
+    .header__profile-dropdown {
+      display: block;
+    }
+    .header__login-btns {
+      display: none;
+    }
+  }
+
   &__container {
     @include flex(row, space-between, center);
     @include padding-vertical(0.625rem);
@@ -86,6 +95,7 @@
       transform: rotateZ(-180deg);
     }
     &.active ~ .header__item-dropdown-body {
+      z-index: 1001;
       opacity: 1;
       pointer-events: all;
       transition: opacity $transition-hover, height $transition-hover, max-height $transition-hover;
@@ -137,6 +147,7 @@
   }
 
   &__profile-dropdown {
+    display: none;
     @include font(1rem, 600, 137%);
     height: 60px;
     
@@ -318,9 +329,6 @@
 
     &__profile-dropdown {
       max-height: 3.375rem;
-      .header__item-dropdown-body {
-        // height: auto;
-      }
     }
 
     &__item-with-dropdown {
@@ -328,7 +336,6 @@
     }
 
     &__item-dropdown-body {
-      // transition: height 1s;
       height: 0;
     }
 
@@ -421,6 +428,10 @@
     margin: 0 auto;
   }
 
+  .header.logged-in .header__profile-dropdown-burger {
+    display: none;
+  }
+
   .header__content {
     gap: 0.875rem;
   }
@@ -432,7 +443,7 @@
   .header__buttons-burger {
     @include flex(column, center, center);
     gap: 1.5rem;
-    & .header__btn-login, .header__dropdown-lang, .header__profile-dropdown {
+    & .header__btn-login, .header__dropdown-lang {
       display: none;
     }
     & .header__theme-switch {
@@ -460,19 +471,26 @@
     top: 50%;
     transform: translateY(50%);
   }
+
+  .header.logged-in .header__profile-dropdown {
+    display: none;
+  }
+
+  .header.logged-in .header__profile-dropdown-burger {
+    display: block;
+  }
+
+  
+
   .header__content {
     gap: 0.5rem;
   }
   .header__buttons {
-    & .header__login-btns, .header__profile-dropdown {
+    & .header__login-btns {
       display: none;
     }
   }
-  .header__buttons-burger {
-    & .header__btn-login, .header__profile-dropdown {
-      display: block;
-    }
-  }
+
   .navmenu-header__list {
     @include font(1.25rem, 700, 136%);
   }

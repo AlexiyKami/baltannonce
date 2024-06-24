@@ -95,7 +95,7 @@ header.innerHTML = `
       </nav>
       <div class="header__buttons-burger">
         <div class="header__dropdown-lang dropdown-lang"></div>
-        <div class="header__item-with-dropdown header__profile-dropdown">
+        <div class="header__item-with-dropdown header__profile-dropdown header__profile-dropdown-burger">
           <div class="header__dropdown-btn header__profile-btn">
             <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="52" height="52" rx="26" fill="var(--color-surface-highlight)"/>

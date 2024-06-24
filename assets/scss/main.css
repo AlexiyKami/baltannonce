@@ -1297,7 +1297,6 @@ input[type=email]:disabled, input[type=password]:disabled, input[type=text]:disa
 .dropdown-lang {
   width: 3.25rem;
   height: 1.5rem;
-  z-index: 1001;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -1347,6 +1346,7 @@ input[type=email]:disabled, input[type=password]:disabled, input[type=text]:disa
   border-bottom-right-radius: 0.25rem;
   overflow: hidden;
   width: 4.6875rem;
+  z-index: 1001;
 }
 .dropdown-lang__body.active {
   opacity: 1;
@@ -1490,6 +1490,12 @@ input[type=email]:disabled, input[type=password]:disabled, input[type=text]:disa
   position: relative;
   background-color: var(--color-surface-primary);
 }
+.header.logged-in .header__profile-dropdown {
+  display: block;
+}
+.header.logged-in .header__login-btns {
+  display: none;
+}
 .header__container {
   display: flex;
   flex-direction: row;
@@ -1572,6 +1578,7 @@ input[type=email]:disabled, input[type=password]:disabled, input[type=text]:disa
   transform: rotateZ(-180deg);
 }
 .header__dropdown-btn.active ~ .header__item-dropdown-body {
+  z-index: 1001;
   opacity: 1;
   pointer-events: all;
   transition: opacity 0.3s, height 0.3s, max-height 0.3s;
@@ -1616,6 +1623,7 @@ input[type=email]:disabled, input[type=password]:disabled, input[type=text]:disa
   white-space: nowrap;
 }
 .header__profile-dropdown {
+  display: none;
   font-size: 1rem;
   font-weight: 600;
   line-height: 137%;
@@ -1856,6 +1864,9 @@ input[type=email]:disabled, input[type=password]:disabled, input[type=text]:disa
     right: 0;
     margin: 0 auto;
   }
+  .header.logged-in .header__profile-dropdown-burger {
+    display: none;
+  }
   .header__content {
     gap: 0.875rem;
   }
@@ -1869,7 +1880,7 @@ input[type=email]:disabled, input[type=password]:disabled, input[type=text]:disa
     align-items: center;
     gap: 1.5rem;
   }
-  .header__buttons-burger .header__btn-login, .header__buttons-burger .header__dropdown-lang, .header__buttons-burger .header__profile-dropdown {
+  .header__buttons-burger .header__btn-login, .header__buttons-burger .header__dropdown-lang {
     display: none;
   }
   .header__buttons-burger .header__theme-switch {
@@ -1895,14 +1906,17 @@ input[type=email]:disabled, input[type=password]:disabled, input[type=text]:disa
     top: 50%;
     transform: translateY(50%);
   }
+  .header.logged-in .header__profile-dropdown {
+    display: none;
+  }
+  .header.logged-in .header__profile-dropdown-burger {
+    display: block;
+  }
   .header__content {
     gap: 0.5rem;
   }
-  .header__buttons .header__login-btns, .header__buttons .header__profile-dropdown {
+  .header__buttons .header__login-btns {
     display: none;
-  }
-  .header__buttons-burger .header__btn-login, .header__buttons-burger .header__profile-dropdown {
-    display: block;
   }
   .navmenu-header__list {
     font-size: 1.25rem;
