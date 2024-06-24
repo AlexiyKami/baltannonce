@@ -310,6 +310,14 @@ extendedFilterModal.innerHTML = `
             <input id="item50" type="checkbox" name="available">
             <label for="item50">Cекс по телефону</label>
           </div>
+          <div class="item-extended-filter__preferences">
+            <input id="item51" type="checkbox" name="available">
+            <label for="item51">PSE</label>
+          </div>
+          <div class="item-extended-filter__preferences">
+            <input id="item52" type="checkbox" name="available">
+            <label for="item52">Порнозвезда</label>
+          </div>
         </div>
       </div>
     </div>
@@ -497,7 +505,7 @@ extendedFilterModal.innerHTML = `
             <span class="item-extended-filter__unit">см</span>
           </div>
           <div class="item-extended-filter__appearance">
-            <label class="heading_h6 heading__align-self_start" for="">Параметры</label>
+            <label class="heading_h6 heading__align-self_start" for="">Параметры:</label>
             <div class="item-extended-filter__row item-extended-filter__row_gap-big">
               <div class="item-extended-filter__column">
               <span>Грудь:</span>
@@ -531,7 +539,7 @@ extendedFilterModal.innerHTML = `
           </div>
           <div class="item-extended-filter__appearance">
             <label class="heading_h6 heading__align-self_start" for="">Грудь:</label>
-            <div class="item-extended-filter__row item-extended-filter__row_gap-big">
+            <div class="item-extended-filter__column item-extended-filter__breast">
               <div class="item-extended-filter__column">
                 <span>Размер:</span>
                 <div class="item-extended-filter__row">
@@ -580,8 +588,8 @@ extendedFilterModal.innerHTML = `
                 <input id="tattoo-n" type="checkbox" name="">
                 <label for="tattoo-n">Нет</label>
               </div>
-              <div class="item-extended-filter__row  item-extended-filter__tattoo">
-                <span>Места на теле:</span>
+              <div class="item-extended-filter__row item-extended-filter__tattoo">
+                <span class="item-extended-filter__row-span">Места на теле:</span>
                 <div class="item-extended-filter__row">
                   <input id="tattoo-face" type="checkbox" name="">
                   <label for="tattoo-face">Лицо</label>
@@ -629,7 +637,7 @@ extendedFilterModal.innerHTML = `
                 <label for="piercing-n">Нет</label>
               </div>
               <div class="item-extended-filter__row item-extended-filter__piercing">
-                <span>Места на теле:</span>
+                <span class="item-extended-filter__row-span">Места на теле:</span>
                 <div class="item-extended-filter__row">
                   <input id="piercing-face" type="checkbox" name="">
                   <label for="piercing-face">Лицо</label>

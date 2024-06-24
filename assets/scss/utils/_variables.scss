@@ -11,6 +11,7 @@
   --color-footer-background: #111827;
 
   --color-button: #BE123C;
+  --color-slider-round-button: rgba(255, 255, 255, 0.4);
 
   --color-border-invert: #FFFFFF;
   --color-border-primary: #D1D5DB;
@@ -71,6 +72,7 @@ $color-accent-primary: var(--color-accent-primary);
 $color-accent-secondary: var(--color-accent-secondary);
 
 $color-button: var(--color-button);
+$color-slider-round-button: var(--color-slider-round-button);
 
 $color-border-invert: var(--color-border-invert);
 $color-border-primary: var(--color-border-primary);

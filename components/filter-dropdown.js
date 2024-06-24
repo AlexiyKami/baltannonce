@@ -176,8 +176,24 @@ filterDropdown.innerHTML = `
           <label for="DD-popup">DD</label>
         </div>
         <div class="popup-dropdown-filter__item">
+          <input id="E-popup" type="checkbox" name="breast-size">
+          <label for="E-popup">E</label>
+        </div>
+        <div class="popup-dropdown-filter__item">
+          <input id="F-popup" type="checkbox" name="breast-size">
+          <label for="F-popup">F</label>
+        </div>
+        <div class="popup-dropdown-filter__item">
+          <input id="FF-popup" type="checkbox" name="breast-size">
+          <label for="FF-popup">FF</label>
+        </div>
+        <div class="popup-dropdown-filter__item">
           <input id="G-popup" type="checkbox" name="breast-size">
           <label for="G-popup">G</label>
+        </div>
+        <div class="popup-dropdown-filter__item">
+          <input id="J-popup" type="checkbox" name="breast-size">
+          <label for="J-popup">J</label>
         </div>
       </div>
       <div class="popup-dropdown-filter__btns">

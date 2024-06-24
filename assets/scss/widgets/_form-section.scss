@@ -321,6 +321,23 @@
   &__site-btn {
     background-color: $color-surface-highlight;
   }
+
+  &__prices-comment {
+    display: flex;
+    gap: 4px;
+  }
+
+  &__prices-comment-text {
+    @include font(0.875rem, 400, 143%);
+  }
+
+  &__prices-comment-span {
+    @include font(0.875rem, 700, 143%);
+    &_red {
+      color: #DA1212;
+    }
+  }
+
 }
 
 .form-section {

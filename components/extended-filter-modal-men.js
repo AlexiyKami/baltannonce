@@ -258,7 +258,7 @@ extendedFilterModal.innerHTML = `
           </div>
           <div class="item-extended-filter__preferences">
             <input id="item35" type="checkbox" name="available">
-            <label for="item35">Госпожа</label>
+            <label for="item35">Господин</label>
           </div>
           <div class="item-extended-filter__preferences">
             <input id="item36" type="checkbox" name="available">
@@ -278,11 +278,11 @@ extendedFilterModal.innerHTML = `
           </div>
           <div class="item-extended-filter__preferences">
             <input id="item40" type="checkbox" name="available">
-            <label for="item40">Рабыня</label>
+            <label for="item40">Раб</label>
           </div>
           <div class="item-extended-filter__preferences">
             <input id="item41" type="checkbox" name="available">
-            <label for="item41">Легкая рабыня</label>
+            <label for="item41">Легкий раб</label>
           </div>
           <div class="item-extended-filter__preferences">
             <input id="item42" type="checkbox" name="available">
@@ -323,7 +323,7 @@ extendedFilterModal.innerHTML = `
           </div>
           <div class="item-extended-filter__preferences">
             <input id="item51" type="checkbox" name="available">
-            <label for="item51">GFE</label>
+            <label for="item51">BFE</label>
           </div>
         </div>
       </div>
