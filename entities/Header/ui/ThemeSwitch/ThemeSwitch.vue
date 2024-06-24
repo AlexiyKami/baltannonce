@@ -1,12 +1,23 @@
 <script setup>
 import './theme-switch.scss';
 
-const isDarkMode = ref(false);
+const isDarkMode = ref(useCookie('darkmode') || false);
 
 const switchTheme = () => {
   isDarkMode.value = !isDarkMode.value;
-  document.body.classList.toggle('darkmode');
 };
+
+watch(
+  isDarkMode,
+  () => {
+    if (import.meta.client) {
+      isDarkMode.value
+        ? document.body.classList.add('darkmode')
+        : document.body.classList.remove('darkmode');
+    }
+  },
+  { immediate: true }
+);
 </script>
 
 <template>
