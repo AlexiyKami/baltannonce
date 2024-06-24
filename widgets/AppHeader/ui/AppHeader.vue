@@ -1,6 +1,6 @@
 <script setup>
 import './app-header.scss';
-import { ThemeSwitch, LangDropdown } from '@/entities/Header';
+import { ThemeSwitch, LangDropdown, ItemWithDropdown, ProfileDropdown } from '@/entities/Header';
 import { debounce } from '../lib/helpers/debounce';
 import { LoginPopup } from '@/features/Login';
 
@@ -80,6 +80,7 @@ onUnmounted(() => {
         </NuxtLink>
         <div class="header__buttons">
           <LangDropdown />
+          <ProfileDropdown />
           <div class="header__login-btns">
             <div
               class="button button_secondary button_filled header__btn-login"
