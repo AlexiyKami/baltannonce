@@ -5,9 +5,19 @@
   position: relative;
   background-color: $color-surface-primary;
 
+  &.logged-in {
+    .header__profile-dropdown {
+      display: block;
+    }
+
+    .header__login-btns {
+      display: none;
+    }
+  }
+
   &__container {
     @include flex(row, space-between, center);
-    @include padding-vertical(0.75rem);
+    @include padding-vertical(0.625rem);
     min-height: 4rem;
     position: relative;
   }
@@ -47,8 +57,177 @@
     }
   }
 
+  &__login-popup {
+    position: absolute;
+    z-index: 1002;
+    top: 100%;
+    right: 18.6%;
+  }
+
   &__navmenu {
     position: relative;
+  }
+
+  &__dropdown-btn {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    transition:
+      background-color $transition-hover,
+      color $transition-hover;
+    border-radius: 0.375rem;
+
+    &:hover,
+    &:focus,
+    &.selected {
+      background-color: $color-surface-brand;
+    }
+
+    &:hover .header__chevron,
+    &:focus .header__chevron {
+      color: $color-accent-primary;
+    }
+
+    &.active {
+      background-color: $color-surface-highlight;
+    }
+
+    &.active .header__chevron {
+      color: $color-border-icons;
+      transform: rotateZ(-180deg);
+    }
+
+    &.active ~ .header__item-dropdown-body {
+      z-index: 1001;
+      opacity: 1;
+      pointer-events: all;
+      transition:
+        opacity $transition-hover,
+        height $transition-hover,
+        max-height $transition-hover;
+    }
+  }
+
+  &__item-dropdown-body {
+    pointer-events: none;
+    opacity: 0;
+    transition:
+      opacity $transition-hover,
+      height $transition-hover,
+      max-height $transition-hover;
+    border: 0.0625rem solid $color-border-accent;
+    border-radius: 0.375rem;
+    background-color: $color-surface-primary;
+    position: relative;
+    top: 0.3125rem;
+  }
+
+  &__item-with-dropdown {
+    height: 46px;
+  }
+
+  &__item-dropdown {
+    display: block;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition:
+      background-color $transition-hover,
+      color $transition-hover;
+
+    &:hover,
+    &:focus,
+    &.selected {
+      background-color: $color-surface-brand;
+    }
+
+    &.active {
+      background-color: $color-surface-highlight;
+    }
+  }
+
+  &__chevron {
+    color: $color-border-icons;
+    transition:
+      transform $transition-hover ease-in,
+      color $transition-hover;
+    min-height: 1.25rem;
+    min-width: 1.25rem;
+  }
+
+  &__text {
+    display: block;
+    max-width: min-content;
+    position: relative;
+    white-space: nowrap;
+  }
+
+  &__profile-dropdown {
+    display: none;
+    @include font(1rem, 600, 137%);
+    height: 60px;
+  }
+
+  &__profile-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0rem;
+    width: 6.25rem;
+    height: 100%;
+  }
+}
+
+.login-popup-header {
+  width: 20rem;
+  background-color: $color-surface-primary;
+  padding: 1rem;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity $transition-hover;
+  border-radius: 0.5rem;
+  border: 1px solid $color-border-secondary;
+  box-shadow: $sm-shadow;
+
+  &.active {
+    pointer-events: all;
+    opacity: 1;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  &__input-container {
+    position: relative;
+  }
+
+  &__input {
+    width: 100%;
+    height: 3rem;
+  }
+
+  &__input-password-icon {
+    cursor: pointer;
+    position: absolute;
+    top: 1.5rem;
+    right: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  &__actions-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 }
 
@@ -56,7 +235,26 @@
   &__list {
     @include flex(row, space-between, center);
     @include font(1rem, 600, 137%);
-    gap: 2rem;
+  }
+
+  &__item {
+    cursor: pointer;
+    display: flex;
+    padding: 0.75rem 1rem;
+    transition:
+      background-color $transition-hover,
+      color $transition-hover;
+    border-radius: 0.375rem;
+
+    &:hover,
+    &:focus,
+    &.selected {
+      background-color: $color-surface-brand;
+    }
+
+    &.active {
+      background-color: $color-surface-highlight;
+    }
   }
 
   &__link {
@@ -64,31 +262,6 @@
     max-width: min-content;
     position: relative;
     white-space: nowrap;
-    overflow-x: hidden;
-    padding-bottom: 0.5rem;
-    margin-bottom: -0.5rem;
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: 0rem;
-      left: 0;
-      width: 100%;
-      height: 0.0625rem;
-      background-color: $color-border-accent;
-      transition: all 0.3s ease;
-      opacity: 0;
-    }
-
-    &:hover::after,
-    &:focus::after {
-      opacity: 1;
-    }
-
-    &.router-link-exact-active::after {
-      opacity: 1;
-      background-color: $color-border-icons;
-    }
   }
 }
 
@@ -143,6 +316,36 @@
 }
 
 @media screen and (max-width: $desktop-md) {
+  .header {
+    &__dropdown-btn {
+      justify-content: space-between;
+    }
+
+    &__profile-btn {
+      justify-content: center;
+    }
+
+    &__profile-dropdown {
+      max-height: 3.375rem;
+    }
+
+    &__item-with-dropdown {
+      height: auto;
+    }
+
+    &__item-dropdown-body {
+      height: 0;
+    }
+
+    &__dropdown-btn.active ~ &__item-dropdown-body {
+      height: 100%;
+    }
+  }
+
+  .header__login-popup {
+    right: 25%;
+  }
+
   .header__content {
     gap: 1.6875rem;
   }
@@ -217,9 +420,25 @@
       width: 100%;
     }
   }
+
+  .navmenu-header {
+    &__list {
+      align-items: stretch;
+    }
+  }
 }
 
 @media screen and (max-width: $tablet) {
+  .header__login-popup {
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+
+  .header.logged-in .header__profile-dropdown-burger {
+    display: none;
+  }
+
   .header__content {
     gap: 0.875rem;
   }
@@ -262,6 +481,20 @@
 }
 
 @media screen and (max-width: $mobile-md) {
+  .header__login-popup {
+    width: 18rem;
+    top: 50%;
+    transform: translateY(50%);
+  }
+
+  .header.logged-in .header__profile-dropdown {
+    display: none;
+  }
+
+  .header.logged-in .header__profile-dropdown-burger {
+    display: block;
+  }
+
   .header__content {
     gap: 0.5rem;
   }
@@ -269,12 +502,6 @@
   .header__buttons {
     & .header__login-btns {
       display: none;
-    }
-  }
-
-  .header__buttons-burger {
-    & .header__btn-login {
-      display: flex;
     }
   }
 
