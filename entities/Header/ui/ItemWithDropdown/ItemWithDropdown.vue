@@ -33,7 +33,7 @@ const isDropdownOpened = ref(false);
         />
       </svg>
     </div>
-    <div class="header__item-dropdown-body">
+    <div class="header__item-dropdown-body" @click="isDropdownOpened = !isDropdownOpened">
       <slot />
     </div>
   </li>
