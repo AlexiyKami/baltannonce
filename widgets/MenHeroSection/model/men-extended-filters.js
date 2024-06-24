@@ -167,7 +167,7 @@ export const menExtendedFilters = {
       id: 'item34'
     },
     {
-      title: 'Госпожа',
+      title: 'Господин',
       id: 'item35'
     },
     {
@@ -187,11 +187,11 @@ export const menExtendedFilters = {
       id: 'item39'
     },
     {
-      title: 'Рабыня',
+      title: 'Раб',
       id: 'item40'
     },
     {
-      title: 'Легкая рабыня',
+      title: 'Легкий раб',
       id: 'item41'
     },
     {
