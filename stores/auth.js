@@ -2,6 +2,7 @@ import AuthService from '@/shared/api/auth';
 
 export const useAuthStore = defineStore('auth', () => {
   const token = ref(useCookie('token'));
+  const refreshToken = ref(useCookie('refresh'));
   const isLoading = ref(false);
   const isError = ref(false);
 
@@ -11,6 +12,7 @@ export const useAuthStore = defineStore('auth', () => {
       const { data, status } = await AuthService.login(user);
       if (status === 200) {
         token.value = data.access;
+        refreshToken.value = data.refresh;
         isError.value = false;
       }
     } catch (error) {
@@ -35,5 +37,10 @@ export const useAuthStore = defineStore('auth', () => {
     }
   };
 
-  return { token, isLoading, isError, register, login };
+  const updateTokens = (tokens) => {
+    token.value = tokens.access;
+    refreshToken.value = tokens.refresh;
+  };
+
+  return { token, refreshToken, isLoading, isError, register, login, updateTokens };
 });
