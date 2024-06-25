@@ -1,6 +1,16 @@
+<script setup>
+const isDropdownOpened = ref(false);
+</script>
+
 <template>
   <div class="header__item-with-dropdown header__profile-dropdown">
-    <div class="header__dropdown-btn header__profile-btn">
+    <div
+      class="header__dropdown-btn header__profile-btn"
+      :class="{
+        active: isDropdownOpened
+      }"
+      @click="isDropdownOpened = !isDropdownOpened"
+    >
       <svg
         width="52"
         height="52"
