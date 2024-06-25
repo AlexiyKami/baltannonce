@@ -10,8 +10,8 @@ export const injectStore = (_store) => {
   store = _store;
 };
 
-instance.interceptors.request.use(function (config) {
-  const token = store.currentUser?.token;
+instance.interceptors.request.use((config) => {
+  const token = store.token;
   config.headers.Authorization = token ? `Bearer ${token}` : '';
   console.log(config);
   return config;
