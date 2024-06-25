@@ -18,7 +18,7 @@ export const useAuthStore = defineStore('auth', () => {
         isError.value = false;
       }
     } catch (error) {
-      console.log(error.message);
+      console.log(error.response.data);
       isError.value = true;
     } finally {
       isLoading.value = false;
@@ -28,13 +28,13 @@ export const useAuthStore = defineStore('auth', () => {
   const register = async (user, pathSegment) => {
     isLoading.value = true;
     try {
-      const { status } = await AuthService.register(user, pathSegment);
-      if (status === 201) {
+      const response = await AuthService.register(user, pathSegment);
+      if (response.status === 201) {
         isError.value = false;
         await login({ username: user.username, password: user.password });
       }
     } catch (error) {
-      console.log(error.message);
+      console.log(error.response.data);
       isError.value = true;
     }
   };
