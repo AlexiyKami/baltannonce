@@ -6,7 +6,7 @@ defineProps({
   isLoginPopupOpened: { type: Boolean, required: true }
 });
 
-const { login } = useUserStore();
+const { login } = useAuthStore();
 
 const nick = ref('');
 const password = ref('');
