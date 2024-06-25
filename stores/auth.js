@@ -1,6 +1,8 @@
 import AuthService from '@/shared/api/auth';
 
 export const useAuthStore = defineStore('auth', () => {
+  const router = useRouter();
+
   const token = ref(useCookie('token'));
   const refreshToken = ref(useCookie('refresh'));
   const isLoading = ref(false);
@@ -37,10 +39,16 @@ export const useAuthStore = defineStore('auth', () => {
     }
   };
 
-  const updateTokens = (tokens) => {
-    token.value = tokens.access;
-    refreshToken.value = tokens.refresh;
+  const updateTokens = (data) => {
+    token.value = data.access;
+    refreshToken.value = data.refresh;
   };
 
-  return { token, refreshToken, isLoading, isError, register, login, updateTokens };
+  const logout = () => {
+    token.value = null;
+    refreshToken.value = null;
+    router.push('/');
+  };
+
+  return { token, refreshToken, isLoading, isError, register, login, updateTokens, logout };
 });

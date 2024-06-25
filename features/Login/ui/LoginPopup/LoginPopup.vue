@@ -6,6 +6,8 @@ defineProps({
   isLoginPopupOpened: { type: Boolean, required: true }
 });
 
+const emits = defineEmits(['closePopup']);
+
 const { login } = useAuthStore();
 
 const nick = ref('');
@@ -19,6 +21,7 @@ const sendForm = async () => {
     submitError.value = true;
   } else {
     await login({ username: nick.value, password: password.value });
+    emits('closePopup');
     submitError.value = false;
   }
 };

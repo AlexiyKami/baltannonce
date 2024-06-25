@@ -1,5 +1,11 @@
 <script setup>
 const isDropdownOpened = ref(false);
+
+const { logout } = useAuthStore();
+
+const handleLogoutButtonClick = () => {
+  logout();
+};
 </script>
 
 <template>
@@ -48,9 +54,9 @@ const isDropdownOpened = ref(false);
       <NuxtLink to="" class="header__item-dropdown">
         <p class="header__text">Профиль</p>
       </NuxtLink>
-      <NuxtLink to="" class="header__item-dropdown">
+      <div class="header__item-dropdown" @click="handleLogoutButtonClick">
         <p class="header__text">Выйти</p>
-      </NuxtLink>
+      </div>
     </div>
   </div>
 </template>

@@ -30,6 +30,7 @@ instance.interceptors.response.use(
         return instance.request(originalRequest);
       } catch (e) {
         console.log('User is not authorized');
+        authStore.logout();
       }
     }
     throw error;
