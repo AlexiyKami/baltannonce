@@ -4,7 +4,7 @@ import { languages } from '../../model/languages';
 
 const isDropdownOpened = ref(false);
 
-const currentLanguage = ref(useCookie('lang'));
+const currentLanguage = ref(useCookie('lang', { maxAge: 60 * 60 * 24 * 365 }));
 if (!currentLanguage.value) {
   currentLanguage.value = 'ru';
 }
@@ -19,7 +19,6 @@ const setCurrentLanguage = (value) => {
 };
 
 const getCurrentLanguageImage = computed(() => {
-  console.log(languages.find((lang) => lang.title === currentLanguage.value).image);
   return languages.find((lang) => lang.title === currentLanguage.value).image;
 });
 </script>
