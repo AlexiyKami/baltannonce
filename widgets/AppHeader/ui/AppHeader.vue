@@ -10,6 +10,8 @@ import {
 import { debounce } from '../lib/helpers/debounce';
 import { LoginPopup } from '@/features/Login';
 
+const { token } = useAuthStore();
+
 const breakpoint = 1280;
 const isMenuOpened = ref(false);
 const isLoginPopupOpened = ref(false);
@@ -30,7 +32,12 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="header">
+  <div
+    class="header"
+    :class="{
+      'logged-in': token
+    }"
+  >
     <div class="header__container _container">
       <div class="header__content">
         <HeaderLogo />
