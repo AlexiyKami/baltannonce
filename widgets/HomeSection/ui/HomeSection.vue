@@ -5,7 +5,7 @@ import { girls, comingSoonGirls, randomGirls } from '../model/girls';
 </script>
 
 <template>
-  <section class="home">
+  <section class="home home_girls">
     <div class="home__container _container">
       <div class="home__all-cards">
         <div class="home__verified-cards">
@@ -60,7 +60,7 @@ import { girls, comingSoonGirls, randomGirls } from '../model/girls';
           </ul>
         </div>
       </div>
-      <HomeAdvertisements :count="8" />
+      <HomeAdvertisements :count="4" />
     </div>
   </section>
 </template>

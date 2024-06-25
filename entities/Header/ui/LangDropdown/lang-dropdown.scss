@@ -2,7 +2,6 @@
 
 .dropdown-lang {
   @include size(3.25rem, 1.5rem);
-  z-index: 1001;
   user-select: none;
 
   &__btn {
@@ -32,6 +31,7 @@
     border-bottom-right-radius: 0.25rem;
     overflow: hidden;
     width: 4.6875rem;
+    z-index: 1001;
 
     &.active {
       opacity: 1;
