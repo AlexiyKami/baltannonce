@@ -11,7 +11,7 @@ import { cities } from '@/shared/model/cities';
 import { isLocationsCorrect, isEmailCorrect } from '@/shared/lib/helpers/fields-validation';
 
 const router = useRouter();
-const { register, isError } = useUserStore();
+const { register, isError } = useAuthStore();
 
 const type = ref('user');
 const gender = ref('');

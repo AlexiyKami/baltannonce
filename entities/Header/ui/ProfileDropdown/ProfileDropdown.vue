@@ -1,6 +1,22 @@
+<script setup>
+const isDropdownOpened = ref(false);
+
+const { logout } = useAuthStore();
+
+const handleLogoutButtonClick = () => {
+  logout();
+};
+</script>
+
 <template>
   <div class="header__item-with-dropdown header__profile-dropdown">
-    <div class="header__dropdown-btn header__profile-btn">
+    <div
+      class="header__dropdown-btn header__profile-btn"
+      :class="{
+        active: isDropdownOpened
+      }"
+      @click="isDropdownOpened = !isDropdownOpened"
+    >
       <svg
         width="52"
         height="52"
@@ -38,9 +54,9 @@
       <NuxtLink to="" class="header__item-dropdown">
         <p class="header__text">Профиль</p>
       </NuxtLink>
-      <NuxtLink to="" class="header__item-dropdown">
+      <div class="header__item-dropdown" @click="handleLogoutButtonClick">
         <p class="header__text">Выйти</p>
-      </NuxtLink>
+      </div>
     </div>
   </div>
 </template>

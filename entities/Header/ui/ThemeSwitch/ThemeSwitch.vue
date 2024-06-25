@@ -1,7 +1,7 @@
 <script setup>
 import './theme-switch.scss';
 
-const isDarkMode = ref(useCookie('darkmode'));
+const isDarkMode = ref(useCookie('darkmode', { maxAge: 60 * 60 * 24 * 365 }));
 
 const switchTheme = () => {
   isDarkMode.value = !isDarkMode.value;

@@ -1,7 +1,10 @@
 import AuthService from '@/shared/api/auth';
 
-export const useUserStore = defineStore('user', () => {
-  const currentUser = ref(null);
+export const useAuthStore = defineStore('auth', () => {
+  const router = useRouter();
+
+  const token = ref(useCookie('token'));
+  const refreshToken = ref(useCookie('refresh'));
   const isLoading = ref(false);
   const isError = ref(false);
 
@@ -10,8 +13,8 @@ export const useUserStore = defineStore('user', () => {
     try {
       const { data, status } = await AuthService.login(user);
       if (status === 200) {
-        currentUser.value.token = data.access;
-        currentUser.value.refreshToken = data.refresh;
+        token.value = data.access;
+        refreshToken.value = data.refresh;
         isError.value = false;
       }
     } catch (error) {
@@ -25,19 +28,27 @@ export const useUserStore = defineStore('user', () => {
   const register = async (user, pathSegment) => {
     isLoading.value = true;
     try {
-      const { data, status } = await AuthService.register(user, pathSegment);
+      const { status } = await AuthService.register(user, pathSegment);
       if (status === 201) {
-        currentUser.value = data;
         isError.value = false;
         await login({ username: user.username, password: user.password });
       }
     } catch (error) {
       console.log(error.message);
       isError.value = true;
-    } finally {
-      isLoading.value = false;
     }
   };
 
-  return { currentUser, isLoading, isError, register, login };
+  const updateTokens = (data) => {
+    token.value = data.access;
+    refreshToken.value = data.refresh;
+  };
+
+  const logout = () => {
+    token.value = null;
+    refreshToken.value = null;
+    router.push('/');
+  };
+
+  return { token, refreshToken, isLoading, isError, register, login, updateTokens, logout };
 });
