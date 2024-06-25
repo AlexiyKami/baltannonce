@@ -50,7 +50,7 @@ const handleLogoutButtonClick = () => {
         />
       </svg>
     </div>
-    <div class="header__item-dropdown-body">
+    <div class="header__item-dropdown-body header__item-profile-dropdown-body">
       <NuxtLink to="" class="header__item-dropdown">
         <p class="header__text">Профиль</p>
       </NuxtLink>

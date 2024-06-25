@@ -36,6 +36,15 @@
   }
 }
 
+@media screen and (max-width: $desktop-lg) {
+  .home__advertisement {
+    &-block {
+      min-width: 15rem;
+      min-height: 25rem;
+    }
+  }
+}
+
 @media screen and (max-width: $desktop-md) {
   .home {
     &__advertisements {

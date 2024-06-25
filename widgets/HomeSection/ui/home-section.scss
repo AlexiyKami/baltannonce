@@ -167,6 +167,21 @@
       padding: 1.25rem 1.5rem;
     }
   }
+
+  .home_girls {
+    background-color: $color-surface-primary;
+    padding: 0.5rem 0rem 1.5rem;
+
+    .home__container {
+      background-color: $color-surface-primary;
+    }
+
+    .home__all-cards {
+      border: 0rem;
+      border-radius: 0rem;
+      padding: 0rem 2.5rem;
+    }
+  }
 }
 
 @media screen and (max-width: $desktop-sm) {
@@ -179,12 +194,24 @@
       padding: 1.25rem 1rem;
     }
   }
+
+  .home_girls {
+    .home__all-cards {
+      padding: 0rem 1.25rem;
+    }
+  }
 }
 
 @media screen and (max-width: $tablet) {
   .home {
     &__cards-container {
       grid-template-columns: minmax(100%, 1fr);
+    }
+  }
+
+  .home_girls {
+    .home__all-cards {
+      padding: 0rem 1rem;
     }
   }
 }

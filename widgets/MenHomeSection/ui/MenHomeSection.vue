@@ -2,7 +2,8 @@
 import { HomeAdvertisements, HomeCard } from '@/entities/Home';
 import { escortMen, strippersMen } from '../model/men';
 
-const currentTab = ref('escort');
+const { currentTab } = storeToRefs(useMenStore());
+const { setCurrentTab } = useMenStore();
 </script>
 
 <template>
@@ -15,7 +16,7 @@ const currentTab = ref('escort');
             :class="{
               active: currentTab === 'strippers'
             }"
-            @click="currentTab = 'strippers'"
+            @click="setCurrentTab('strippers')"
           >
             <h2 class="home__tab-title">
               Стриптизеры
@@ -27,7 +28,7 @@ const currentTab = ref('escort');
             :class="{
               active: currentTab === 'escort'
             }"
-            @click="currentTab = 'escort'"
+            @click="setCurrentTab('escort')"
           >
             <h2 class="home__tab-title">
               Эскорт

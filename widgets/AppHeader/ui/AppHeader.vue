@@ -11,6 +11,7 @@ import { debounce } from '../lib/helpers/debounce';
 import { LoginPopup } from '@/features/Login';
 
 const { token } = storeToRefs(useAuthStore());
+const { setCurrentTab } = useMenStore();
 
 const breakpoint = 1280;
 const isMenuOpened = ref(false);
@@ -29,6 +30,11 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('resize', closeMenuOnResize);
 });
+
+const handleMenLinkClick = (value) => {
+  setCurrentTab(value);
+  isMenuOpened.value = false;
+};
 </script>
 
 <template>
@@ -38,7 +44,7 @@ onUnmounted(() => {
       'logged-in': token
     }"
   >
-    <div class="header__container _container">
+    <div class="header__container">
       <div class="header__content">
         <HeaderLogo />
         <div class="header__buttons">
@@ -87,10 +93,18 @@ onUnmounted(() => {
                 </NuxtLink>
               </ItemWithDropdown>
               <ItemWithDropdown title="Мужчины">
-                <NuxtLink to="/men" class="header__item-dropdown" @click="isMenuOpened = false">
+                <NuxtLink
+                  to="/men"
+                  class="header__item-dropdown"
+                  @click="handleMenLinkClick('escort')"
+                >
                   <p class="header__text">Эскорт</p>
                 </NuxtLink>
-                <NuxtLink to="/men" class="header__item-dropdown" @click="isMenuOpened = false">
+                <NuxtLink
+                  to="/men"
+                  class="header__item-dropdown"
+                  @click="handleMenLinkClick('strippers')"
+                >
                   <p class="header__text">Стриптизеры</p>
                 </NuxtLink>
               </ItemWithDropdown>
@@ -108,6 +122,7 @@ onUnmounted(() => {
           </nav>
           <div class="header__buttons-burger">
             <LangDropdown />
+            <ProfileDropdown class="header__profile-dropdown-burger" />
             <div class="header__login-btns">
               <div
                 class="button button_secondary button_filled header__btn-login"
