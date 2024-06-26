@@ -1,6 +1,9 @@
 <script setup>
 import { FilterFieldset } from '@/shared/ui';
-defineProps({ filters: { type: Object, required: true } });
+defineProps({
+  filters: { type: Object, required: true },
+  gender: { type: String, required: true }
+});
 </script>
 
 <template>
@@ -10,6 +13,14 @@ defineProps({ filters: { type: Object, required: true } });
       <div class="item-extended-filter__stripe" />
       <div class="item-extended-filter__forms-container">
         <div class="item-extended-filter__forms">
+          <FilterFieldset
+            v-if="gender === 'men'"
+            title="Тип секс услуг: *"
+            name="type-of-sex-services"
+            type="checkbox"
+            container="row"
+            :options="filters.typeOfSexServices"
+          />
           <FilterFieldset
             title="Секс"
             name="sex"

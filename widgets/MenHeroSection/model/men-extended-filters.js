@@ -21,6 +21,16 @@ export const menExtendedFilters = {
       id: 'invite'
     }
   ],
+  typeOfSexServices: [
+    {
+      title: 'Актив',
+      id: 'active'
+    },
+    {
+      title: 'Пассив',
+      id: 'passive'
+    }
+  ],
   sexOptions: [
     {
       title: 'Секс классический',
