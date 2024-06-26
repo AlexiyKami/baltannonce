@@ -10,8 +10,8 @@ import {
 import { debounce } from '../lib/helpers/debounce';
 import { LoginPopup } from '@/features/Login';
 
-const { token } = storeToRefs(useAuthStore());
-const { setCurrentTab } = useMenStore();
+const authStore = useAuthStore();
+const menStore = useMenStore();
 
 const breakpoint = 1280;
 const isMenuOpened = ref(false);
@@ -32,7 +32,7 @@ onUnmounted(() => {
 });
 
 const handleMenLinkClick = (value) => {
-  setCurrentTab(value);
+  menStore.setCurrentTab(value);
   isMenuOpened.value = false;
 };
 </script>
@@ -41,7 +41,7 @@ const handleMenLinkClick = (value) => {
   <div
     class="header"
     :class="{
-      'logged-in': token
+      'logged-in': authStore.token
     }"
   >
     <div class="header__container">

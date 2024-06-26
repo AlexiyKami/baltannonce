@@ -1,10 +1,10 @@
 <script setup>
 const isDropdownOpened = ref(false);
 
-const { logout } = useAuthStore();
+const authStore = useAuthStore();
 
 const handleLogoutButtonClick = () => {
-  logout();
+  authStore.logout();
 };
 </script>
 

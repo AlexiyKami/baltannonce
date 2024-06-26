@@ -2,8 +2,7 @@
 import { HomeAdvertisements, HomeCard } from '@/entities/Home';
 import { escortMen, strippersMen } from '../model/men';
 
-const { currentTab } = storeToRefs(useMenStore());
-const { setCurrentTab } = useMenStore();
+const menStore = useMenStore();
 </script>
 
 <template>
@@ -14,9 +13,9 @@ const { setCurrentTab } = useMenStore();
           <div
             class="home__tab-btn home__tab-btn_strippers"
             :class="{
-              active: currentTab === 'strippers'
+              active: menStore.currentTab === 'strippers'
             }"
-            @click="setCurrentTab('strippers')"
+            @click="menStore.setCurrentTab('strippers')"
           >
             <h2 class="home__tab-title">
               Стриптизеры
@@ -26,9 +25,9 @@ const { setCurrentTab } = useMenStore();
           <div
             class="home__tab-btn home__tab-btn_escort"
             :class="{
-              active: currentTab === 'escort'
+              active: menStore.currentTab === 'escort'
             }"
-            @click="setCurrentTab('escort')"
+            @click="menStore.setCurrentTab('escort')"
           >
             <h2 class="home__tab-title">
               Эскорт
@@ -59,7 +58,7 @@ const { setCurrentTab } = useMenStore();
           </div>
         </div>
         <div
-          v-if="currentTab === 'strippers'"
+          v-if="menStore.currentTab === 'strippers'"
           class="home__all-cards home__cards-in-tab home__cards-in-tab_strippers"
         >
           <ul class="home__cards-container">
@@ -67,7 +66,7 @@ const { setCurrentTab } = useMenStore();
           </ul>
         </div>
         <div
-          v-if="currentTab === 'escort'"
+          v-if="menStore.currentTab === 'escort'"
           class="home__all-cards home__cards-in-tab home__cards-in-tab_escort"
         >
           <ul class="home__cards-container">

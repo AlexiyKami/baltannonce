@@ -11,7 +11,7 @@ import { cities } from '@/shared/model/cities';
 import { isLocationsCorrect, isEmailCorrect } from '@/shared/lib/helpers/fields-validation';
 
 const router = useRouter();
-const { register, isError } = useAuthStore();
+const authStore = useAuthStore();
 
 const type = ref('user');
 const gender = ref('');
@@ -47,8 +47,10 @@ const sendForm = async () => {
       password: password.value,
       cities: locations.value
     };
-    type.value === 'user' ? await register(data, 'customer') : await register(data, 'model');
-    if (!isError) {
+    type.value === 'user'
+      ? await authStore.register(data, 'customer')
+      : await authStore.register(data, 'model');
+    if (!authStore.isError) {
       router.push('/');
     }
     submitError.value = false;

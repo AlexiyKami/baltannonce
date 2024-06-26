@@ -8,7 +8,7 @@ defineProps({
 
 const emits = defineEmits(['closePopup']);
 
-const { login } = useAuthStore();
+const authStore = useAuthStore();
 
 const nick = ref('');
 const password = ref('');
@@ -20,7 +20,7 @@ const sendForm = async () => {
   if (!isNickCorrect.value || !isPasswordCorrect.value) {
     submitError.value = true;
   } else {
-    await login({ username: nick.value, password: password.value });
+    await authStore.login({ username: nick.value, password: password.value });
     emits('closePopup');
     submitError.value = false;
   }
