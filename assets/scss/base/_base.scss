@@ -55,6 +55,9 @@ body {
   ._container {
     @include padding-horizontal(1.25rem);
   }
+  ::-webkit-scrollbar {
+    width: 0rem;
+  }
 }
 
 @media screen and (max-width: $mobile-md) {
