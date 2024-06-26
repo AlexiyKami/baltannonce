@@ -1,0 +1,59 @@
+@use '@/app/assets/scss/utils' as *;
+
+.tooltip-container {
+  position: relative;
+
+  &:hover .tooltip__text {
+    visibility: visible;
+  }
+}
+
+.tooltip__text {
+  @include font(0.875rem, 400, 143%);
+  padding: 0.3125rem 0.875rem;
+  visibility: hidden;
+  max-width: 21.375rem;
+  width: 21.375rem;
+  background-color: $color-surface-primary;
+  color: $color-text-primary;
+  border-radius: 0.3125rem;
+  position: absolute;
+  z-index: 500;
+  bottom: 120%;
+  left: 50%;
+  margin-left: -10.75rem;
+  white-space: wrap;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -0.3125rem;
+    border-width: 0.3125rem;
+    border-style: solid;
+    border-color: $color-surface-primary transparent transparent transparent;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .tooltip__text {
+    width: 19.375rem;
+    margin-left: -13.9375rem;
+
+    &::after {
+      left: 73%;
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-md) {
+  .tooltip__text {
+    width: 17.5rem;
+    margin-left: -15.375rem;
+
+    &::after {
+      left: 88%;
+    }
+  }
+}
