@@ -1,17 +1,14 @@
 <script setup>
 import './theme-switch.scss';
 
-const isDarkMode = ref(useCookie('darkmode', { maxAge: 60 * 60 * 24 * 365 }));
-
-const switchTheme = () => {
-  isDarkMode.value = !isDarkMode.value;
-};
+const settingsStore = useSettingsStore();
 
 watch(
-  isDarkMode,
+  () => settingsStore.isDarkMode,
   () => {
+    console.log(settingsStore.isDarkMode);
     if (import.meta.client) {
-      isDarkMode.value
+      settingsStore.isDarkMode
         ? document.body.classList.add('darkmode')
         : document.body.classList.remove('darkmode');
     }
@@ -24,9 +21,9 @@ watch(
   <div
     class="header__theme-switch theme-switch"
     :class="{
-      darkmode: isDarkMode
+      darkmode: settingsStore.isDarkMode
     }"
-    @click="switchTheme"
+    @click="settingsStore.switchTheme"
   >
     <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clip-path="url(#clip0_2012_16051)">
