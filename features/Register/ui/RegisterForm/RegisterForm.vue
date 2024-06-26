@@ -11,7 +11,7 @@ import { cities } from '@/shared/model/cities';
 import { isLocationsCorrect, isEmailCorrect } from '@/shared/lib/helpers/fields-validation';
 
 const router = useRouter();
-const { register, isError } = useAuthStore();
+const authStore = useAuthStore();
 
 const type = ref('user');
 const gender = ref('');
@@ -28,6 +28,8 @@ const submitError = ref(false);
 const isPasswordCorrect = ref(false);
 const isNickCorrect = ref(false);
 
+const disableBlur = ref(false);
+
 const sendForm = async () => {
   if (
     !gender.value ||
@@ -41,17 +43,21 @@ const sendForm = async () => {
   ) {
     submitError.value = true;
   } else {
+    disableBlur.value = true;
     const data = {
       username: nick.value,
       email: email.value,
       password: password.value,
       cities: locations.value
     };
-    type.value === 'user' ? await register(data, 'customer') : await register(data, 'model');
-    if (!isError) {
+    type.value === 'user'
+      ? await authStore.register(data, 'customer')
+      : await authStore.register(data, 'model');
+    if (!authStore.isError) {
       router.push('/');
     }
     submitError.value = false;
+    disableBlur.value = false;
   }
 };
 
@@ -184,12 +190,14 @@ const setLocations = (city, country) => {
         <NickField
           :nick="nick"
           :submit-error="submitError"
+          :disable-blur="disableBlur"
           @set-value="(value) => (nick = value)"
           @set-is-nick-correct="(value) => (isNickCorrect = value)"
         />
         <PasswordField
           :password="password"
           :submit-error="submitError"
+          :disable-blur="disableBlur"
           @set-value="(value) => (password = value)"
           @set-is-password-correct="(value) => (isPasswordCorrect = value)"
         />
@@ -223,7 +231,7 @@ const setLocations = (city, country) => {
       </div>
     </div>
     <div class="register__actions-container">
-      <button class="button button_primary register__button" @submit.prevent="sendForm">
+      <button class="button button_primary register__button" @mousedown="sendForm">
         Регистрация
       </button>
     </div>

@@ -10,8 +10,8 @@ import {
 import { debounce } from '../lib/helpers/debounce';
 import { LoginPopup } from '@/features/Login';
 
-const { token } = storeToRefs(useAuthStore());
-const { setCurrentTab } = useMenStore();
+const authStore = useAuthStore();
+const menStore = useMenStore();
 
 const breakpoint = 1280;
 const isMenuOpened = ref(false);
@@ -32,7 +32,7 @@ onUnmounted(() => {
 });
 
 const handleMenLinkClick = (value) => {
-  setCurrentTab(value);
+  menStore.setCurrentTab(value);
   isMenuOpened.value = false;
 };
 </script>
@@ -41,7 +41,7 @@ const handleMenLinkClick = (value) => {
   <div
     class="header"
     :class="{
-      'logged-in': token
+      'logged-in': authStore.token
     }"
   >
     <div class="header__container">
@@ -53,7 +53,7 @@ const handleMenLinkClick = (value) => {
           <div class="header__login-btns">
             <div
               class="button button_secondary button_filled header__btn-login"
-              @click="isLoginPopupOpened = !isLoginPopupOpened"
+              @click="isLoginPopupOpened = true"
             >
               Войти
             </div>
@@ -63,7 +63,11 @@ const handleMenLinkClick = (value) => {
               >Регистрация</NuxtLink
             >
           </div>
-          <ThemeSwitch />
+          <ThemeSwitch
+            :style="{
+              'z-index': isLoginPopupOpened ? '1002' : 0
+            }"
+          />
         </div>
         <div
           class="header__burger burger-header"
@@ -126,22 +130,28 @@ const handleMenLinkClick = (value) => {
             <div class="header__login-btns">
               <div
                 class="button button_secondary button_filled header__btn-login"
-                @click="isLoginPopupOpened = !isLoginPopupOpened"
+                @click="isLoginPopupOpened = true"
               >
                 Войти
               </div>
               <NuxtLink
                 to="/register"
                 class="button button_primary button_filled header__btn-register"
+                @click="isMenuOpened = false"
                 >Регистрация</NuxtLink
               >
             </div>
-            <ThemeSwitch />
+            <ThemeSwitch
+              :style="{
+                'z-index': isLoginPopupOpened ? '1002' : 0
+              }"
+            />
           </div>
         </div>
         <LoginPopup
           :is-login-popup-opened="isLoginPopupOpened"
           @close-popup="isLoginPopupOpened = false"
+          @close-menu="isMenuOpened = false"
         />
       </div>
     </div>

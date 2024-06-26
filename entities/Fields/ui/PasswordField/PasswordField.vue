@@ -4,10 +4,12 @@ import { PasswordIcon, BaseTextField } from '@/shared/ui';
 import { isPasswordCorrect } from '@/shared/lib/helpers/fields-validation';
 
 const isPasswordInputFocused = ref(false);
+// const disableBlur = ref(false)
 
 const props = defineProps({
   password: { type: String, required: true },
-  submitError: { type: Boolean, required: true }
+  submitError: { type: Boolean, required: true },
+  disableBlur: { type: Boolean, required: true }
 });
 
 const emits = defineEmits(['setValue', 'setIsPasswordCorrect']);
@@ -34,6 +36,16 @@ watch(
 const setPassword = (value) => {
   emits('setValue', value);
 };
+
+const setFocus = (value) => {
+  if (!value) {
+    if (!props.disableBlur) {
+      isPasswordInputFocused.value = value;
+    }
+  } else {
+    isPasswordInputFocused.value = value;
+  }
+};
 </script>
 
 <template>
@@ -42,7 +54,7 @@ const setPassword = (value) => {
     placeholder="Пароль"
     :value="password"
     @set-value="setPassword"
-    @set-focus="(value) => (isPasswordInputFocused = value)"
+    @set-focus="setFocus"
   >
     <span v-if="submitError && !password" class="error-message error-message_small"
       >Пожалуйста, заполните поле</span

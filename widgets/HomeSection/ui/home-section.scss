@@ -22,6 +22,10 @@
     padding: 0.75rem 0rem;
     background: $gradient-linear-accent;
     border-radius: 0.5rem;
+
+    &_random-cards {
+      margin-bottom: 0.5rem;
+    }
   }
 
   &__all-cards {
@@ -65,14 +69,13 @@
     font-family: Inter;
     color: $color-text-secondary;
     font-size: 2.5rem;
-    min-width: 18.75rem;
     min-height: 37.5rem;
     border-radius: 0.75rem;
     background-color: $color-surface-highlight;
 
     &_horizontal {
       min-height: 12.5rem;
-      margin: 1.25rem 0rem;
+      margin: 0.5rem 0rem 1.25rem 0rem;
     }
 
     & img {
@@ -94,6 +97,11 @@
     align-items: flex-end;
   }
 
+  &__title-icon-container {
+    display: flex;
+    align-items: center;
+  }
+
   &__title-icon {
     color: $color-surface-highlight;
   }
@@ -105,7 +113,6 @@
     border-bottom: none;
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
-    overflow: hidden;
   }
 
   &__tab-btn {

@@ -47,7 +47,7 @@ defineEmits(['setIsExtendedFilterModalOpened']);
       </svg>
       <div class="extended-filter__containers">
         <MainParameters :filters="filters.meetingPointOptions" />
-        <PreferencesFilter :filters="filters" />
+        <PreferencesFilter :gender="gender" :filters="filters" />
         <ReviewsRatingsFilter />
         <AdditionalParameters :gender="gender" />
         <AppearanceFilter :filters="filters" :gender="gender" />

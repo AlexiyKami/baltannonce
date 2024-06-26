@@ -3,8 +3,10 @@ import AuthService from '@/shared/api/auth';
 export const useAuthStore = defineStore('auth', () => {
   const router = useRouter();
 
-  const token = ref(useCookie('token'));
-  const refreshToken = ref(useCookie('refresh'));
+  const token = ref(useCookie('token', { expires: new Date(Date.now() + 5 * 60 * 1000) }));
+  const refreshToken = ref(
+    useCookie('refresh', { expires: new Date(Date.now() + 24 * 60 * 60 * 1000) })
+  );
   const isLoading = ref(false);
   const isError = ref(false);
 
@@ -16,6 +18,7 @@ export const useAuthStore = defineStore('auth', () => {
         token.value = data.access;
         refreshToken.value = data.refresh;
         isError.value = false;
+        router.push('/');
       }
     } catch (error) {
       console.log(error.response.data);

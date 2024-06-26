@@ -5,7 +5,8 @@ import { isNickCorrect } from '@/shared/lib/helpers/fields-validation';
 
 const props = defineProps({
   nick: { type: String, required: true },
-  submitError: { type: Boolean, required: true }
+  submitError: { type: Boolean, required: true },
+  disableBlur: { type: Boolean, required: true }
 });
 
 const emits = defineEmits(['setValue', 'setIsNickCorrect']);
@@ -22,6 +23,16 @@ watch(
     emits('setIsNickCorrect', isNickCorrect(props.nick));
   }
 );
+
+const setFocus = (value) => {
+  if (!value) {
+    if (!props.disableBlur) {
+      isNickInputFocused.value = value;
+    }
+  } else {
+    isNickInputFocused.value = value;
+  }
+};
 </script>
 
 <template>
@@ -30,7 +41,7 @@ watch(
     placeholder="Ник"
     :value="nick"
     @set-value="setNick"
-    @set-focus="(value) => (isNickInputFocused = value)"
+    @set-focus="setFocus"
   >
     <span v-if="submitError && !nick" class="error-message error-message_small"
       >Пожалуйста, заполните поле</span

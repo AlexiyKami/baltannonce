@@ -309,6 +309,13 @@
       }
     }
 
+    &__reviews {
+      & .heading_h6 {
+        width: 7rem;
+        min-width: 7rem;
+      }
+    }
+
     &__form {
       &.wrap {
         flex-wrap: wrap;
