@@ -63,7 +63,11 @@ const handleMenLinkClick = (value) => {
               >Регистрация</NuxtLink
             >
           </div>
-          <ThemeSwitch />
+          <ThemeSwitch
+            :style="{
+              'z-index': isLoginPopupOpened ? '1002' : 0
+            }"
+          />
         </div>
         <div
           class="header__burger burger-header"
@@ -133,10 +137,15 @@ const handleMenLinkClick = (value) => {
               <NuxtLink
                 to="/register"
                 class="button button_primary button_filled header__btn-register"
+                @click="isMenuOpened = false"
                 >Регистрация</NuxtLink
               >
             </div>
-            <ThemeSwitch />
+            <ThemeSwitch
+              :style="{
+                'z-index': isLoginPopupOpened ? '1002' : 0
+              }"
+            />
           </div>
         </div>
         <LoginPopup

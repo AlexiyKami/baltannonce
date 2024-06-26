@@ -60,13 +60,6 @@
     }
   }
 
-  &__login-popup {
-    position: absolute;
-    z-index: 1002;
-    top: 100%;
-    right: 18.6%;
-  }
-
   &__navmenu {
     position: relative;
   }
@@ -179,58 +172,6 @@
     padding: 0rem;
     width: 6.25rem;
     height: 100%;
-  }
-}
-
-.login-popup-header {
-  width: 20rem;
-  background-color: $color-surface-primary;
-  padding: 1rem;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity $transition-hover;
-  border-radius: 0.5rem;
-  border: 1px solid $color-border-secondary;
-  box-shadow: $sm-shadow;
-
-  &.active {
-    pointer-events: all;
-    opacity: 1;
-  }
-
-  &__form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-  }
-
-  &__inputs {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
-  &__input-container {
-    position: relative;
-  }
-
-  &__input {
-    width: 100%;
-    height: 3rem;
-  }
-
-  &__input-password-icon {
-    cursor: pointer;
-    position: absolute;
-    top: 1.5rem;
-    right: 0;
-    transform: translate(-50%, -50%);
-  }
-
-  &__actions-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
   }
 }
 
@@ -359,10 +300,6 @@
     }
   }
 
-  .header__login-popup {
-    right: 25%;
-  }
-
   .header__content {
     gap: 1.6875rem;
   }
@@ -452,12 +389,6 @@
     }
   }
 
-  .header__login-popup {
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-  }
-
   .header.logged-in .header__profile-dropdown-burger {
     display: none;
   }
@@ -504,12 +435,6 @@
 }
 
 @media screen and (max-width: $mobile-md) {
-  .header__login-popup {
-    width: 18rem;
-    top: 50%;
-    transform: translateY(50%);
-  }
-
   .header.logged-in .header__profile-dropdown {
     display: none;
   }
@@ -542,6 +467,12 @@
 
     &.active {
       top: 4.0625rem;
+    }
+  }
+
+  .header__buttons-burger {
+    & .header__btn-login {
+      display: flex;
     }
   }
 }
