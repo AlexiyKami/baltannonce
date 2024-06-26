@@ -360,6 +360,7 @@
     border: 0.0625rem solid $color-border-primary;
     border-radius: 0.5rem;
     width: 100%;
+    background-color: $color-surface-primary;
     overflow: hidden;
   }
 
@@ -392,7 +393,7 @@
 
   &__prices-content {
     display: grid;
-    // grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 1.5rem;
     grid-template-columns: repeat(3, 1fr);
   }
 
@@ -442,6 +443,8 @@
   &__incall-item, &__outcall-item, &__travel-item {
     display: grid;
     grid-template-columns: 12.375rem auto;
+    border-bottom: 0.0625rem solid $color-border-secondary;
+    max-width: 19.9375rem;
   }
 
   &__outcall-notice {
@@ -476,6 +479,8 @@
   &__working-hours-content {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 165px;
     gap: 0.75rem;
   }
 
@@ -497,18 +502,23 @@
   }
 
   &__services-content-lists {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    row-gap: 1.5rem;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr 1fr;
+    // column-gap: 1.5rem;
   }
 
   &__services-content-list {
     display: flex;
     flex-direction: column;
+    // max-width: 320px;
+    flex-wrap: wrap;
+    // flex-direction: column;
     gap: 0.75rem;
+    column-count: 3;
   }
 
   &__checkbox-container {
+    max-width: 320px;
     display: flex;
     flex-direction: column;
     gap: 0.25rem;
@@ -680,6 +690,7 @@
     width: 100%;
     padding: 0.25rem 0.5rem;
     border-radius: 0.25rem;
+    word-break: break-all;
   }
 
   &__review-comment {
@@ -751,10 +762,19 @@
   &__review-answer::before {
     content: '';
     display: inline-block;
-    height: 100%;
+    // height: 100%;
     width: 1px;
+    min-width: 1px;
     background-color: $color-border-icons;
     margin-left: 1.5rem;
+  }
+}
+
+@media screen and (max-width:$desktop-lg) {
+  .info-container-form-section {
+    &__working-hours-content {
+      max-height: none;
+    }
   }
 }
 
@@ -779,6 +799,7 @@
       flex-wrap: wrap;
     }
   }
+
 }
 
 @media screen and (max-width:$desktop-sm) {
@@ -800,6 +821,19 @@
     }
     &__services-content-lists {
       
+    }
+    &__language-item {
+      grid-template-columns: repeat(2, minmax(7.25rem, 1fr));
+    }
+
+    &__phone-text {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    &__working-hours-content {
+      max-height: 8.125rem;
     }
   }
 
@@ -825,12 +859,54 @@
     &__header {
       flex-wrap: wrap;
       gap: 0.75rem;
+      padding: 0rem;
     }
   }
   .info-container-form-section {
     padding: 0.75rem;
     &__heading {
-      gap: 0.5rem;
+      row-gap: 0.5rem;
+    }
+
+    &__language-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__social-btns {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__working-hours-content {
+      max-height: none;
+    }
+
+    &__review-score-table-row {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: auto;
+      flex-direction: column;
+    }
+    &__review-score-item {
+      display: flex;
+    }
+    &__review-experience {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+  .additional-block-form-section {
+    &__tab-list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__tab-item {
+      
+    }
+    &__tab-link {
+      padding: 0.75rem 1rem;
+      white-space: nowrap;
     }
   }
 }
