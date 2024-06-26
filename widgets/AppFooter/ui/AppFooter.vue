@@ -3,7 +3,7 @@ import './app-footer.scss';
 </script>
 
 <template>
-  <div class="footer">
+  <footer class="footer">
     <div class="footer__container _container">
       <div class="footer__content">
         <a href="index.html" class="footer__logo" aria-label="Главная">
@@ -93,5 +93,5 @@ import './app-footer.scss';
         </p>
       </div>
     </div>
-  </div>
+  </footer>
 </template>

@@ -36,20 +36,29 @@
   }
 }
 
-@media screen and (max-width: $tablet) {
+@media screen and (max-width: $desktop-sm) {
   .tooltip__text {
-    width: 19.375rem;
-    margin-left: -13.9375rem;
+    width: 18.75rem;
+    margin-left: -15rem;
 
     &::after {
-      left: 73%;
+      left: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .tooltip__text {
+    width: 17.5rem;
+
+    &::after {
+      left: 86%;
     }
   }
 }
 
 @media screen and (max-width: $mobile-md) {
   .tooltip__text {
-    width: 17.5rem;
     margin-left: -15.375rem;
 
     &::after {
