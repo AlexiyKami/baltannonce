@@ -6,7 +6,6 @@ const settingsStore = useSettingsStore();
 watch(
   () => settingsStore.isDarkMode,
   () => {
-    console.log(settingsStore.isDarkMode);
     if (import.meta.client) {
       settingsStore.isDarkMode
         ? document.body.classList.add('darkmode')

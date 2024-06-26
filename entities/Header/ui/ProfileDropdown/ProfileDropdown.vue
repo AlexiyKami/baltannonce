@@ -5,6 +5,7 @@ const authStore = useAuthStore();
 
 const handleLogoutButtonClick = () => {
   authStore.logout();
+  isDropdownOpened.value = false;
 };
 </script>
 

@@ -53,7 +53,7 @@ const handleMenLinkClick = (value) => {
           <div class="header__login-btns">
             <div
               class="button button_secondary button_filled header__btn-login"
-              @click="isLoginPopupOpened = !isLoginPopupOpened"
+              @click="isLoginPopupOpened = true"
             >
               Войти
             </div>
@@ -130,7 +130,7 @@ const handleMenLinkClick = (value) => {
             <div class="header__login-btns">
               <div
                 class="button button_secondary button_filled header__btn-login"
-                @click="isLoginPopupOpened = !isLoginPopupOpened"
+                @click="isLoginPopupOpened = true"
               >
                 Войти
               </div>
@@ -151,6 +151,7 @@ const handleMenLinkClick = (value) => {
         <LoginPopup
           :is-login-popup-opened="isLoginPopupOpened"
           @close-popup="isLoginPopupOpened = false"
+          @close-menu="isMenuOpened = false"
         />
       </div>
     </div>

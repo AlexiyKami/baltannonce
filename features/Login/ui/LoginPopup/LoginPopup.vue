@@ -6,7 +6,7 @@ defineProps({
   isLoginPopupOpened: { type: Boolean, required: true }
 });
 
-const emits = defineEmits(['closePopup']);
+const emits = defineEmits(['closePopup', 'closeMenu']);
 
 const authStore = useAuthStore();
 
@@ -16,13 +16,18 @@ const isNickCorrect = ref(false);
 const isPasswordCorrect = ref(false);
 const submitError = ref(false);
 
+const disableBlur = ref(false);
+
 const sendForm = async () => {
   if (!isNickCorrect.value || !isPasswordCorrect.value) {
     submitError.value = true;
   } else {
+    disableBlur.value = true;
     await authStore.login({ username: nick.value, password: password.value });
-    emits('closePopup');
     submitError.value = false;
+    emits('closePopup');
+    emits('closeMenu');
+    disableBlur.value = false;
   }
 };
 </script>
@@ -42,22 +47,21 @@ const sendForm = async () => {
             <NickField
               :nick="nick"
               :submit-error="submitError"
+              :disable-blur="disableBlur"
               @set-value="(value) => (nick = value)"
               @set-is-nick-correct="(value) => (isNickCorrect = value)"
             />
             <PasswordField
               :password="password"
               :submit-error="submitError"
+              :disable-blur="disableBlur"
               @set-value="(value) => (password = value)"
               @set-is-password-correct="(value) => (isPasswordCorrect = value)"
             />
           </div>
         </div>
         <div class="login-popup-header__actions-container">
-          <button
-            class="button button_primary login-popup-header__button"
-            @submit.prevent="sendForm"
-          >
+          <button class="button button_primary login-popup-header__button" @mousedown="sendForm">
             Войти
           </button>
           <div class="login-popup-header__actions">

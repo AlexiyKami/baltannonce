@@ -18,6 +18,7 @@ export const useAuthStore = defineStore('auth', () => {
         token.value = data.access;
         refreshToken.value = data.refresh;
         isError.value = false;
+        router.push('/');
       }
     } catch (error) {
       console.log(error.response.data);
