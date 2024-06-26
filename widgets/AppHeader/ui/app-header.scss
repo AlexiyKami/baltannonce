@@ -293,7 +293,7 @@
 }
 
 .burger-header.active .burger-header__stripe_1 {
-  transform: translateY(0.3125rem) rotate(45deg);
+  transform: translateY(0.1437rem) rotate(45deg);
 }
 
 .burger-header.active .burger-header__stripe_2 {
@@ -302,7 +302,7 @@
 }
 
 .burger-header.active .burger-header__stripe_3 {
-  transform: rotate(-45deg);
+  transform: translateY(-0.1437rem) rotate(-45deg);
 }
 
 .burger-header__stripe {
