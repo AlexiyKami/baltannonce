@@ -18,6 +18,10 @@ defineProps({
 });
 
 const alertsStore = useAlertsStore();
+
+onMounted(() => {
+  setTimeout(alertsStore.hideAlert, 3000);
+});
 </script>
 
 <template>
