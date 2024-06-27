@@ -13,7 +13,7 @@ defineProps({ card: { type: Object, required: true } });
       'card-background_bronze': card.background === 'bronze'
     }"
   >
-    <div class="home__card card-home">
+    <NuxtLink to="/girl-form" class="home__card card-home">
       <div class="card-home__badges">
         <div v-if="card.girlOfTheDay" class="card-home__of-the-day heading_h4">Девушка дня!</div>
         <div v-if="card.manOfTheDay" class="card-home__of-the-day heading_h4">Мужчина дня!</div>
@@ -228,6 +228,6 @@ defineProps({ card: { type: Object, required: true } });
           </div>
         </div>
       </div>
-    </div>
+    </NuxtLink>
   </li>
 </template>
