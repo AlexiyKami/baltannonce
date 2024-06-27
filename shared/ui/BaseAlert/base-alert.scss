@@ -1,0 +1,184 @@
+@use '@/app/assets/scss/utils' as *;
+
+.alert-wrapper {
+  @include flex(column);
+  z-index: 9998;
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    @include size(100%);
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.alert {
+  background-color: $color-surface-primary;
+  position: fixed;
+  z-index: 9999;
+  align-self: center;
+  top: 1.25rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  margin: 0 2.5rem;
+
+  &__box {
+    @include flex(row);
+    gap: 1.375rem;
+
+    &_align-center {
+      @include flex(row, flex-start, center);
+    }
+
+    &_gap_small {
+      gap: 0.75rem;
+    }
+  }
+
+  &__content {
+    @include flex(column);
+    gap: 0.875rem;
+  }
+
+  &__title {
+    color: $color-text-primary;
+  }
+
+  &__text {
+    @include font(16px, 400, 143%);
+    color: $color-text-secondary;
+  }
+
+  &__icon-container {
+    padding: 0.5rem;
+    @include flex(column, center, center);
+    border-radius: 0.375rem;
+    @include size(2.125rem);
+
+    &_rounded-borders {
+      border-radius: 50%;
+    }
+
+    &_density_compact {
+      transform: scale(0.7);
+    }
+
+    &_tonal-warning,
+    &_default-warning {
+      background-color: $color-warning;
+    }
+
+    &_tonal-success,
+    &_default-success {
+      background-color: $color-success;
+    }
+
+    &_tonal-error,
+    &_default-error {
+      background-color: $color-error;
+    }
+
+    &_tonal-info,
+    &_default-info {
+      background-color: $color-info;
+    }
+
+    &_outlined-warning {
+      background-color: $color-other-warning-bg;
+    }
+
+    &_outlined-success {
+      background-color: $color-other-positive-bg;
+    }
+
+    &_outlined-error {
+      background-color: $color-other-negative-bg;
+    }
+
+    &_outlined-info {
+      background-color: $color-other-normal-bg;
+    }
+  }
+
+  &__cross {
+    min-width: 1.5rem;
+  }
+}
+
+.alert__container {
+  &_default {
+    background-color: $color-surface-primary;
+  }
+
+  &_outlined {
+    background-color: $color-surface-primary;
+    box-shadow:
+      0.0625rem 0.0625rem 0.1875rem rgba(166, 175, 195, 0.4),
+      0.0625rem 0.0625rem 0.1875rem rgba(166, 175, 195, 0.4);
+  }
+
+  &_warning {
+    background-color: $color-other-warning-bg;
+  }
+
+  &_success {
+    background-color: $color-other-positive-bg;
+  }
+
+  &_error {
+    background-color: $color-other-negative-bg;
+  }
+
+  &_info {
+    background-color: $color-other-normal-bg;
+  }
+
+  &_density_default {
+    padding: 2.1875rem;
+    max-width: 54.125rem;
+  }
+
+  &_density_comfortable {
+    padding: 1.25rem;
+    max-width: 40.9375rem;
+  }
+
+  &_density_compact {
+    padding: 0.9375rem 1.125rem;
+    max-width: 22.9375rem;
+  }
+
+  &_border {
+    border-left: 0.5rem solid;
+  }
+
+  &_border_warning {
+    border-color: $color-warning;
+  }
+
+  &_border_success {
+    border-color: $color-success;
+  }
+
+  &_border_error {
+    border-color: $color-error;
+  }
+
+  &_border_info {
+    border-color: $color-info;
+  }
+}
+
+@media screen and (max-width: $desktop-sm) {
+  .alert {
+    margin: 1.25rem;
+  }
+}
+
+@media screen and (max-width: $mobile-md) {
+  .alert {
+    margin: 1rem;
+  }
+}

@@ -1,8 +1,10 @@
 <script setup>
-import { injectStore } from '@/shared/api/api';
+import { injectStores } from '@/shared/api/api';
+import { BaseAlert } from '@/shared/ui';
 
 const authStore = useAuthStore();
-injectStore(authStore);
+const alertsStore = useAlertsStore();
+injectStores(authStore, alertsStore);
 
 useSeoMeta({
   title: 'Baltannonce',
@@ -19,6 +21,18 @@ useSeoMeta({
       <template #error="{ error }">
         <p>An error occurred: {{ error }}</p>
       </template>
+      <Transition>
+        <BaseAlert
+          v-if="alertsStore.alert"
+          :title="alertsStore.alert.title"
+          :color="alertsStore.alert.color"
+          :density="alertsStore.alert.density"
+          :variant="alertsStore.alert.variant"
+          :closable="alertsStore.alert.closable"
+          :border="alertsStore.alert.border"
+          :text="alertsStore.alert.text"
+        />
+      </Transition>
     </NuxtErrorBoundary>
   </NuxtLayout>
 </template>

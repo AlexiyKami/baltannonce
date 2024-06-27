@@ -1,14 +1,15 @@
 import AuthService from '@/shared/api/auth';
+import { useAlertsStore } from './alerts';
 
 export const useAuthStore = defineStore('auth', () => {
   const router = useRouter();
+  const alertsStore = useAlertsStore();
 
   const token = ref(useCookie('token', { expires: new Date(Date.now() + 5 * 60 * 1000) }));
   const refreshToken = ref(
     useCookie('refresh', { expires: new Date(Date.now() + 24 * 60 * 60 * 1000) })
   );
   const isLoading = ref(false);
-  const isError = ref(false);
 
   const login = async (user) => {
     isLoading.value = true;
@@ -17,12 +18,20 @@ export const useAuthStore = defineStore('auth', () => {
       if (status === 200) {
         token.value = data.access;
         refreshToken.value = data.refresh;
-        isError.value = false;
         router.push('/');
       }
     } catch (error) {
-      console.log(error.response.data);
-      isError.value = true;
+      if (error.status === 401) {
+        alertsStore.displayAlert(
+          'error',
+          'Ошибка',
+          'Активная учетная запись с указанными учетными данными не найдена',
+          'tonal',
+          'default',
+          true,
+          false
+        );
+      }
     } finally {
       isLoading.value = false;
     }
@@ -33,12 +42,20 @@ export const useAuthStore = defineStore('auth', () => {
     try {
       const response = await AuthService.register(user, pathSegment);
       if (response.status === 201) {
-        isError.value = false;
         await login({ username: user.username, password: user.password });
       }
     } catch (error) {
-      console.log(error.response.data);
-      isError.value = true;
+      let alertText = '';
+      if (error.response.status === 400) {
+        if (error.response.data.email && error.response.data.username) {
+          alertText = 'Пользователь с этим адресом электронной почты и именем уже существует';
+        } else if (error.response.data.email) {
+          alertText = 'Пользователь с этим адресом электронной почты уже существует';
+        } else if (error.response.data.username) {
+          alertText = 'Пользователь с этим именем уже существует';
+        }
+        alertsStore.displayAlert('error', 'Ошибка', alertText, 'tonal', 'default', true, false);
+      }
     }
   };
 
@@ -53,5 +70,5 @@ export const useAuthStore = defineStore('auth', () => {
     router.push('/');
   };
 
-  return { token, refreshToken, isLoading, isError, register, login, updateTokens, logout };
+  return { token, refreshToken, isLoading, register, login, updateTokens, logout };
 });

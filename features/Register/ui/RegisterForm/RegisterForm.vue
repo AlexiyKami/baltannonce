@@ -10,7 +10,6 @@ import { PasswordField, PasswordConfirmationField, NickField } from '@/entities/
 import { cities } from '@/shared/model/cities';
 import { isLocationsCorrect, isEmailCorrect } from '@/shared/lib/helpers/fields-validation';
 
-const router = useRouter();
 const authStore = useAuthStore();
 
 const type = ref('user');
@@ -53,9 +52,6 @@ const sendForm = async () => {
     type.value === 'user'
       ? await authStore.register(data, 'customer')
       : await authStore.register(data, 'model');
-    if (!authStore.isError) {
-      router.push('/');
-    }
     submitError.value = false;
     disableBlur.value = false;
   }
