@@ -3,7 +3,21 @@ import { HomeAdvertisements, HomeCard } from '@/entities/Home';
 import { escortMen, strippersMen } from '../model/men';
 import { BaseTooltip } from '@/shared/ui';
 
-const menStore = useMenStore();
+const router = useRouter();
+const route = useRoute();
+
+const currentTab = ref(route.query.tab || 'escort');
+
+const setCurrentTab = (value) => {
+  router.push({ query: { tab: value } });
+};
+
+watch(
+  () => route.query.tab,
+  () => {
+    currentTab.value = route.query.tab;
+  }
+);
 </script>
 
 <template>
@@ -14,9 +28,9 @@ const menStore = useMenStore();
           <div
             class="home__tab-btn home__tab-btn_strippers"
             :class="{
-              active: menStore.currentTab === 'strippers'
+              active: currentTab === 'strippers'
             }"
-            @click="menStore.setCurrentTab('strippers')"
+            @click="setCurrentTab('strippers')"
           >
             <h2 class="home__tab-title">
               Стриптизеры
@@ -26,9 +40,9 @@ const menStore = useMenStore();
           <div
             class="home__tab-btn home__tab-btn_escort"
             :class="{
-              active: menStore.currentTab === 'escort'
+              active: currentTab === 'escort'
             }"
-            @click="menStore.setCurrentTab('escort')"
+            @click="setCurrentTab('escort')"
           >
             <h2 class="home__tab-title">
               Эскорт
@@ -65,7 +79,7 @@ const menStore = useMenStore();
           </div>
         </div>
         <div
-          v-if="menStore.currentTab === 'strippers'"
+          v-if="currentTab === 'strippers'"
           class="home__all-cards home__cards-in-tab home__cards-in-tab_strippers"
         >
           <ul class="home__cards-container">
@@ -73,7 +87,7 @@ const menStore = useMenStore();
           </ul>
         </div>
         <div
-          v-if="menStore.currentTab === 'escort'"
+          v-if="currentTab === 'escort'"
           class="home__all-cards home__cards-in-tab home__cards-in-tab_escort"
         >
           <ul class="home__cards-container">

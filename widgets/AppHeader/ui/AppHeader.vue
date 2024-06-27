@@ -11,7 +11,7 @@ import { debounce } from '../lib/helpers/debounce';
 import { LoginPopup } from '@/features/Login';
 
 const authStore = useAuthStore();
-const menStore = useMenStore();
+const router = useRouter();
 
 const breakpoint = 1280;
 const isMenuOpened = ref(false);
@@ -36,7 +36,7 @@ onUnmounted(() => {
 });
 
 const handleMenLinkClick = (value) => {
-  menStore.setCurrentTab(value);
+  router.push({ path: '/men', query: { tab: value } });
   isMenuOpened.value = false;
 };
 </script>
