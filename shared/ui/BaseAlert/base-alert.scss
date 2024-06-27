@@ -173,12 +173,12 @@
 
 @media screen and (max-width: $desktop-sm) {
   .alert {
-    margin: 1.25rem;
+    margin: 0 1.25rem;
   }
 }
 
 @media screen and (max-width: $mobile-md) {
   .alert {
-    margin: 1rem;
+    margin: 0 1rem;
   }
 }

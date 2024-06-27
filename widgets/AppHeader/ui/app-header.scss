@@ -5,6 +5,10 @@
   position: relative;
   background-color: $color-surface-primary;
 
+  &-overlay {
+    display: none;
+  }
+
   &.logged-in {
     .header__profile-dropdown {
       display: block;
@@ -17,10 +21,9 @@
 
   &__container {
     @include flex(row, space-between, center);
-    @include padding-vertical(0.625rem);
     max-width: 90rem;
     margin: 0 auto;
-    min-height: 4rem;
+    min-height: 4.625rem;
     position: relative;
     @include padding-horizontal(1.5rem);
   }
@@ -234,7 +237,7 @@
 }
 
 .burger-header.active .burger-header__stripe_1 {
-  transform: translateY(0.1437rem) rotate(45deg);
+  transform: translateY(0.1563rem) rotate(45deg);
 }
 
 .burger-header.active .burger-header__stripe_2 {
@@ -243,7 +246,7 @@
 }
 
 .burger-header.active .burger-header__stripe_3 {
-  transform: translateY(-0.1437rem) rotate(-45deg);
+  transform: translateY(-0.1563rem) rotate(-45deg);
 }
 
 .burger-header__stripe {
@@ -261,6 +264,19 @@
 
 @media screen and (max-width: $desktop-md) {
   .header {
+    z-index: 102;
+
+    &-overlay {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      @include size(100%);
+      z-index: 101;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
     &__container {
       @include padding-horizontal(1.25rem);
     }
@@ -337,10 +353,11 @@
     gap: 0rem;
     visibility: hidden;
     opacity: 0;
+    border-top: 0.0625rem solid $color-border-primary;
   }
 
   .header__body.active {
-    top: 4.4375rem;
+    top: 4.625rem;
     transition:
       top 0.6s ease-out,
       visibility 0s,
@@ -464,10 +481,6 @@
   .header__body {
     padding: 1rem;
     padding-bottom: 0.75rem;
-
-    &.active {
-      top: 4.0625rem;
-    }
   }
 
   .header__buttons-burger {

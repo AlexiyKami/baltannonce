@@ -4,7 +4,6 @@ import { PasswordIcon, BaseTextField } from '@/shared/ui';
 import { isPasswordCorrect } from '@/shared/lib/helpers/fields-validation';
 
 const isPasswordInputFocused = ref(false);
-// const disableBlur = ref(false)
 
 const props = defineProps({
   password: { type: String, required: true },

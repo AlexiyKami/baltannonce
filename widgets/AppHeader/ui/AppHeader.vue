@@ -38,6 +38,9 @@ const handleMenLinkClick = (value) => {
 </script>
 
 <template>
+  <Transition>
+    <div v-if="isMenuOpened" class="header-overlay" @click="isMenuOpened = false" />
+  </Transition>
   <div
     class="header"
     :class="{
