@@ -22,7 +22,7 @@ watch(
 
 <template>
   <section class="home">
-    <div class="home__container _container">
+    <div class="home__container">
       <div class="home__tab-menu">
         <div class="home__tabs-btns">
           <div
