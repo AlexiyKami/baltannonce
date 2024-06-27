@@ -1,0 +1,1784 @@
+<script setup>
+import './form-section.scss';
+import { HomeAdvertisements } from '@/entities/Home';
+</script>
+
+<template>
+  <section class="form-section">
+    <div class="form-section__container _container">
+      <div class="form-section__content">
+        <div class="form-section__main-block main-block-form-section">
+          <div class="main-block-form-section__media">
+            <div class="main-block-form-section__photo-container">
+              <div class="main-block-form-section__form-details">
+                <p class="main-block-form-section__date-create">
+                  Дата создания анкеты:
+                  <span class="main-block-form-section__date-create-value">12/12/2023</span>
+                </p>
+                <p class="main-block-form-section__date-update">
+                  В последний раз модифицирована:
+                  <span class="main-block-form-section__date-create-value">12/12/2023</span>
+                </p>
+              </div>
+              <div class="main-block-form-section__slider">
+                <div class="main-block-form-section__slider-img-container">
+                  <img
+                    src="../assets/girls/girl05_big.jpg"
+                    alt="photo"
+                    class="main-block-form-section__slider-photo"
+                  >
+                </div>
+                <div
+                  class="main-block-form-section__slider-btn main-block-form-section__slider-btn_left filled-round-button"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15 18L9 12L15 6"
+                      stroke="var(--color-surface-invert)"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div
+                  class="main-block-form-section__slider-btn main-block-form-section__slider-btn_right filled-round-button"
+                >
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M9 18L15 12L9 6"
+                      stroke="var(--color-surface-invert)"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="main-block-form-section__slider-tag">
+                  <div
+                    class="main-block-form-section__slider-verified main-block-form-section__slider-verified_by-admin"
+                  >
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M16 21V19.8C16 18.1198 16 17.2798 15.673 16.638C15.3854 16.0735 14.9265 15.6146 14.362 15.327C13.7202 15 12.8802 15 11.2 15H6.8C5.11984 15 4.27976 15 3.63803 15.327C3.07354 15.6146 2.6146 16.0735 2.32698 16.638C2 17.2798 2 18.1198 2 19.8V21M16 6L18 8L22 4M12.5 7.5C12.5 9.433 10.933 11 9 11C7.067 11 5.5 9.433 5.5 7.5C5.5 5.567 7.067 4 9 4C10.933 4 12.5 5.567 12.5 7.5Z"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <span class="main-block-form-section__slider-verified-text"
+                      >Проверено лично</span
+                    >
+                  </div>
+                  <div class="main-block-form-section__slider-rating">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M11.2827 3.45332C11.5131 2.98638 11.6284 2.75291 11.7848 2.67831C11.9209 2.61341 12.0791 2.61341 12.2152 2.67831C12.3717 2.75291 12.4869 2.98638 12.7174 3.45332L14.9041 7.88328C14.9721 8.02113 15.0061 8.09006 15.0558 8.14358C15.0999 8.19096 15.1527 8.22935 15.2113 8.25662C15.2776 8.28742 15.3536 8.29854 15.5057 8.32077L20.397 9.03571C20.9121 9.11099 21.1696 9.14863 21.2888 9.27444C21.3925 9.38389 21.4412 9.5343 21.4215 9.68377C21.3988 9.85558 21.2124 10.0372 20.8395 10.4004L17.3014 13.8464C17.1912 13.9538 17.136 14.0076 17.1004 14.0715C17.0689 14.128 17.0487 14.1902 17.0409 14.2545C17.0321 14.3271 17.0451 14.403 17.0711 14.5547L17.906 19.4221C17.994 19.9355 18.038 20.1922 17.9553 20.3445C17.8833 20.477 17.7554 20.57 17.6071 20.5975C17.4366 20.6291 17.2061 20.5078 16.7451 20.2654L12.3724 17.9658C12.2361 17.8942 12.168 17.8584 12.0962 17.8443C12.0327 17.8318 11.9673 17.8318 11.9038 17.8443C11.832 17.8584 11.7639 17.8942 11.6277 17.9658L7.25492 20.2654C6.79392 20.5078 6.56341 20.6291 6.39297 20.5975C6.24468 20.57 6.11672 20.477 6.04474 20.3445C5.962 20.1922 6.00603 19.9355 6.09407 19.4221L6.92889 14.5547C6.95491 14.403 6.96793 14.3271 6.95912 14.2545C6.95132 14.1902 6.93111 14.128 6.89961 14.0715C6.86402 14.0076 6.80888 13.9538 6.69859 13.8464L3.16056 10.4004C2.78766 10.0372 2.60121 9.85558 2.57853 9.68377C2.55879 9.5343 2.60755 9.38389 2.71125 9.27444C2.83044 9.14863 3.08797 9.11099 3.60304 9.03571L8.49431 8.32077C8.64642 8.29854 8.72248 8.28742 8.78872 8.25662C8.84736 8.22935 8.90016 8.19096 8.94419 8.14358C8.99391 8.09006 9.02793 8.02113 9.09597 7.88328L11.2827 3.45332Z"
+                        fill="var(--color-text-secondary)"
+                      />
+                    </svg>
+
+                    <span class="main-block-form-section__slider-rating-text">5.0</span>
+                    <span class="main-block-form-section__slider-rating-text">(12)</span>
+                  </div>
+                </div>
+              </div>
+              <div class="main-block-form-section__photo-info">
+                <div class="main-block-form-section__photo-info-text">
+                  <p class="main-block-form-section__photo-date-create">
+                    Дата создания фотосессии:
+                    <span class="main-block-form-section__photo-date-create-value">12/12/2023</span>
+                  </p>
+                  <p class="main-block-form-section__search-photo">
+                    Искать изображение на:
+                    <a class="main-block-form-section__search-photo-link">Google</a>
+                    <a class="main-block-form-section__search-photo-link">TinEye</a>
+                    <a class="main-block-form-section__search-photo-link">Яндекс</a>
+                  </p>
+                </div>
+                <div class="main-block-form-section__alert-fake-btn button button_with-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M11.9998 8.99999V13M11.9998 17H12.0098M10.6151 3.89171L2.39019 18.0983C1.93398 18.8863 1.70588 19.2803 1.73959 19.6037C1.769 19.8857 1.91677 20.142 2.14613 20.3088C2.40908 20.5 2.86435 20.5 3.77487 20.5H20.2246C21.1352 20.5 21.5904 20.5 21.8534 20.3088C22.0827 20.142 22.2305 19.8857 22.2599 19.6037C22.2936 19.2803 22.0655 18.8863 21.6093 18.0983L13.3844 3.89171C12.9299 3.10654 12.7026 2.71396 12.4061 2.58211C12.1474 2.4671 11.8521 2.4671 11.5935 2.58211C11.2969 2.71396 11.0696 3.10655 10.6151 3.89171Z"
+                      stroke="var(--color-accent-primary)"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+
+                  Сообщить о фейке
+                </div>
+              </div>
+            </div>
+            <div class="main-block-form-section__video-container">
+              <!-- <video src="" class="main-block-form-section__video"></video> -->
+              <img
+                src="../assets/girls/girl05_video.jpg"
+                alt="photo"
+                class="main-block-form-section__video"
+              >
+              <svg
+                width="80"
+                height="80"
+                viewBox="0 0 80 80"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                class="main-block-form-section__video-btn"
+              >
+                <rect width="80" height="80" rx="40" fill="currentColor" />
+                <path
+                  d="M51 38.2679C52.3333 39.0377 52.3333 40.9623 51 41.7321L36 50.3923C34.6667 51.1621 33 50.1999 33 48.6603V31.3397C33 29.8001 34.6667 28.8379 36 29.6077L51 38.2679Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+          </div>
+          <div class="main-block-form-section__details">
+            <div class="main-block-form-section__header">
+              <div class="main-block-form-section__name-block">
+                <h2 class="main-block-form-section__name">Имя Девушки</h2>
+                <p class="main-block-form-section__last-online">Была онлайн: сегодня</p>
+              </div>
+              <div class="main-block-form-section__favourite-btn button button_with-icon">
+                Сделать фаворитом
+                <svg
+                  width="22"
+                  height="20"
+                  viewBox="0 0 22 20"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="main-block-form-section__favourite-btn-icon"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M10.9932 3.13581C8.9938 0.7984 5.65975 0.169643 3.15469 2.31001C0.649644 4.45038 0.296968 8.02898 2.2642 10.5604C3.89982 12.6651 8.84977 17.1041 10.4721 18.5408C10.6536 18.7016 10.7444 18.7819 10.8502 18.8135C10.9426 18.8411 11.0437 18.8411 11.1361 18.8135C11.2419 18.7819 11.3327 18.7016 11.5142 18.5408C13.1365 17.1041 18.0865 12.6651 19.7221 10.5604C21.6893 8.02898 21.3797 4.42787 18.8316 2.31001C16.2835 0.192157 12.9925 0.7984 10.9932 3.13581Z"
+                    stroke="var(--color-accent-primary)"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div class="form-section__info-container info-container-form-section">
+              <div class="info-container-form-section__heading">
+                <h3 class="info-container-form-section__title">Тур</h3>
+              </div>
+              <div class="info-container-form-section__content">
+                <div class="info-container-form-section__row">
+                  <h4 class="info-container-form-section__row-title">Город:</h4>
+                  <p class="info-container-form-section__row-text">Юрмала</p>
+                </div>
+                <div class="info-container-form-section__row">
+                  <h4 class="info-container-form-section__row-title">Дата:</h4>
+                  <p class="info-container-form-section__row-text">24/07/2024 - 30/07/2024</p>
+                </div>
+              </div>
+            </div>
+            <div class="form-section__info-container info-container-form-section">
+              <div class="info-container-form-section__heading">
+                <h3 class="info-container-form-section__title">Характеристики</h3>
+                <a href="" class="info-container-form-section__site-btn button button_with-icon">
+                  Персональный сайт
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M21 9.00001L21 3.00001M21 3.00001H15M21 3.00001L12 12M10 3H7.8C6.11984 3 5.27976 3 4.63803 3.32698C4.07354 3.6146 3.6146 4.07354 3.32698 4.63803C3 5.27976 3 6.11984 3 7.8V16.2C3 17.8802 3 18.7202 3.32698 19.362C3.6146 19.9265 4.07354 20.3854 4.63803 20.673C5.27976 21 6.11984 21 7.8 21H16.2C17.8802 21 18.7202 21 19.362 20.673C19.9265 20.3854 20.3854 19.9265 20.673 19.362C21 18.7202 21 17.8802 21 16.2V14"
+                      stroke="var(--color-accent-primary)"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <div class="info-container-form-section__content">
+                <div class="info-container-form-section__row">
+                  <h4 class="info-container-form-section__row-title">Возраст:</h4>
+                  <p class="info-container-form-section__row-text">24</p>
+                </div>
+                <div class="info-container-form-section__row">
+                  <h4 class="info-container-form-section__row-title">Раса:</h4>
+                  <p class="info-container-form-section__row-text">Белая</p>
+                </div>
+                <div class="info-container-form-section__row">
+                  <h4 class="info-container-form-section__row-title">Национальность:</h4>
+                  <p class="info-container-form-section__row-text">Латвия</p>
+                </div>
+                <div class="info-container-form-section__row">
+                  <h4 class="info-container-form-section__row-title">Цвет глаз:</h4>
+                  <p class="info-container-form-section__row-text">Карий</p>
+                </div>
+                <div class="info-container-form-section__row">
+                  <h4 class="info-container-form-section__row-title">Цвет волос:</h4>
+                  <p class="info-container-form-section__row-text">Брюнетка</p>
+                </div>
+                <div class="info-container-form-section__row">
+                  <h4 class="info-container-form-section__row-title">Рост:</h4>
+                  <p class="info-container-form-section__row-text">166 см</p>
+                </div>
+                <div class="info-container-form-section__row">
+                  <h4 class="info-container-form-section__row-title">Вес:</h4>
+                  <p class="info-container-form-section__row-text">50 кг</p>
+                </div>
+                <div class="info-container-form-section__row">
+                  <h4 class="info-container-form-section__row-title">Размер груди:</h4>
+                  <p class="info-container-form-section__row-text">B</p>
+                </div>
+                <div class="info-container-form-section__row">
+                  <h4 class="info-container-form-section__row-title">Грудь:</h4>
+                  <p class="info-container-form-section__row-text">Натуральная</p>
+                </div>
+                <div class="info-container-form-section__row">
+                  <h4 class="info-container-form-section__row-title">Грудь-живот-бедра:</h4>
+                  <p class="info-container-form-section__row-text">85-55-88</p>
+                </div>
+                <div class="info-container-form-section__row">
+                  <h4 class="info-container-form-section__row-title">Эпиляция зоны бикини:</h4>
+                  <p class="info-container-form-section__row-text">Полная депиляция</p>
+                </div>
+                <div class="info-container-form-section__row">
+                  <h4 class="info-container-form-section__row-title">Размер одежды:</h4>
+                  <p class="info-container-form-section__row-text">M</p>
+                </div>
+                <div class="info-container-form-section__row">
+                  <h4 class="info-container-form-section__row-title">Размер обуви:</h4>
+                  <p class="info-container-form-section__row-text">36</p>
+                </div>
+                <div class="info-container-form-section__row">
+                  <h4 class="info-container-form-section__row-title">Тату:</h4>
+                  <p class="info-container-form-section__row-text">Руки, Спина</p>
+                </div>
+                <div class="info-container-form-section__row">
+                  <h4 class="info-container-form-section__row-title">Пирсинг:</h4>
+                  <p class="info-container-form-section__row-text">Нет</p>
+                </div>
+                <div class="info-container-form-section__column">
+                  <h4 class="info-container-form-section__column-title">Обо мне:</h4>
+                  <p class="info-container-form-section__column-text">
+                    Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                    eleifend cras dictumst. Tincidunt arcu adipiscing lacinia urna mauris pulvinar
+                    pretium urna. Pellentesque mi ipsum dolor sit amet consectetur. Eget lorem amet
+                    feugiat diam tristique eleifend cras dictumst. Tincidunt arcu adipiscing lacinia
+                    urna mauris pulvinar pretium urna.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="form-section__info-container info-container-form-section">
+              <div class="info-container-form-section__heading">
+                <h3 class="info-container-form-section__title">Дополнительно</h3>
+              </div>
+              <div class="info-container-form-section__content">
+                <div class="info-container-form-section__row">
+                  <h4 class="info-container-form-section__row-title">Встречусь с:</h4>
+                  <p class="info-container-form-section__row-text">Мужчина, Женщина</p>
+                </div>
+                <div class="info-container-form-section__row">
+                  <h4 class="info-container-form-section__row-title">Принимаю в возрасте от:</h4>
+                  <p class="info-container-form-section__row-text">от 23 до 30 лет</p>
+                </div>
+                <div class="info-container-form-section__row">
+                  <h4 class="info-container-form-section__row-title">Языки:</h4>
+                  <div class="info-container-form-section__language-items">
+                    <div class="info-container-form-section__language-item">
+                      <span class="info-container-form-section__row-text">Русский</span>
+                      <div class="info-container-form-section__language-item-stars">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="info-container-form-section__language-item-star active"
+                        >
+                          <path
+                            d="M11.2827 3.45332C11.5131 2.98638 11.6284 2.75291 11.7848 2.67831C11.9209 2.61341 12.0791 2.61341 12.2152 2.67831C12.3717 2.75291 12.4869 2.98638 12.7174 3.45332L14.9041 7.88328C14.9721 8.02113 15.0061 8.09006 15.0558 8.14358C15.0999 8.19096 15.1527 8.22935 15.2113 8.25662C15.2776 8.28742 15.3536 8.29854 15.5057 8.32077L20.397 9.03571C20.9121 9.11099 21.1696 9.14863 21.2888 9.27444C21.3925 9.38389 21.4412 9.5343 21.4215 9.68377C21.3988 9.85558 21.2124 10.0372 20.8395 10.4004L17.3014 13.8464C17.1912 13.9538 17.136 14.0076 17.1004 14.0715C17.0689 14.128 17.0487 14.1902 17.0409 14.2545C17.0321 14.3271 17.0451 14.403 17.0711 14.5547L17.906 19.4221C17.994 19.9355 18.038 20.1922 17.9553 20.3445C17.8833 20.477 17.7554 20.57 17.6071 20.5975C17.4366 20.6291 17.2061 20.5078 16.7451 20.2654L12.3724 17.9658C12.2361 17.8942 12.168 17.8584 12.0962 17.8443C12.0327 17.8318 11.9673 17.8318 11.9038 17.8443C11.832 17.8584 11.7639 17.8942 11.6277 17.9658L7.25492 20.2654C6.79392 20.5078 6.56341 20.6291 6.39297 20.5975C6.24468 20.57 6.11672 20.477 6.04474 20.3445C5.962 20.1922 6.00603 19.9355 6.09407 19.4221L6.92889 14.5547C6.95491 14.403 6.96793 14.3271 6.95912 14.2545C6.95132 14.1902 6.93111 14.128 6.89961 14.0715C6.86402 14.0076 6.80888 13.9538 6.69859 13.8464L3.16056 10.4004C2.78766 10.0372 2.60121 9.85558 2.57853 9.68377C2.55879 9.5343 2.60755 9.38389 2.71125 9.27444C2.83044 9.14863 3.08797 9.11099 3.60304 9.03571L8.49431 8.32077C8.64642 8.29854 8.72248 8.28742 8.78872 8.25662C8.84736 8.22935 8.90016 8.19096 8.94419 8.14358C8.99391 8.09006 9.02793 8.02113 9.09597 7.88328L11.2827 3.45332Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="info-container-form-section__language-item-star active"
+                        >
+                          <path
+                            d="M11.2827 3.45332C11.5131 2.98638 11.6284 2.75291 11.7848 2.67831C11.9209 2.61341 12.0791 2.61341 12.2152 2.67831C12.3717 2.75291 12.4869 2.98638 12.7174 3.45332L14.9041 7.88328C14.9721 8.02113 15.0061 8.09006 15.0558 8.14358C15.0999 8.19096 15.1527 8.22935 15.2113 8.25662C15.2776 8.28742 15.3536 8.29854 15.5057 8.32077L20.397 9.03571C20.9121 9.11099 21.1696 9.14863 21.2888 9.27444C21.3925 9.38389 21.4412 9.5343 21.4215 9.68377C21.3988 9.85558 21.2124 10.0372 20.8395 10.4004L17.3014 13.8464C17.1912 13.9538 17.136 14.0076 17.1004 14.0715C17.0689 14.128 17.0487 14.1902 17.0409 14.2545C17.0321 14.3271 17.0451 14.403 17.0711 14.5547L17.906 19.4221C17.994 19.9355 18.038 20.1922 17.9553 20.3445C17.8833 20.477 17.7554 20.57 17.6071 20.5975C17.4366 20.6291 17.2061 20.5078 16.7451 20.2654L12.3724 17.9658C12.2361 17.8942 12.168 17.8584 12.0962 17.8443C12.0327 17.8318 11.9673 17.8318 11.9038 17.8443C11.832 17.8584 11.7639 17.8942 11.6277 17.9658L7.25492 20.2654C6.79392 20.5078 6.56341 20.6291 6.39297 20.5975C6.24468 20.57 6.11672 20.477 6.04474 20.3445C5.962 20.1922 6.00603 19.9355 6.09407 19.4221L6.92889 14.5547C6.95491 14.403 6.96793 14.3271 6.95912 14.2545C6.95132 14.1902 6.93111 14.128 6.89961 14.0715C6.86402 14.0076 6.80888 13.9538 6.69859 13.8464L3.16056 10.4004C2.78766 10.0372 2.60121 9.85558 2.57853 9.68377C2.55879 9.5343 2.60755 9.38389 2.71125 9.27444C2.83044 9.14863 3.08797 9.11099 3.60304 9.03571L8.49431 8.32077C8.64642 8.29854 8.72248 8.28742 8.78872 8.25662C8.84736 8.22935 8.90016 8.19096 8.94419 8.14358C8.99391 8.09006 9.02793 8.02113 9.09597 7.88328L11.2827 3.45332Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="info-container-form-section__language-item-star active"
+                        >
+                          <path
+                            d="M11.2827 3.45332C11.5131 2.98638 11.6284 2.75291 11.7848 2.67831C11.9209 2.61341 12.0791 2.61341 12.2152 2.67831C12.3717 2.75291 12.4869 2.98638 12.7174 3.45332L14.9041 7.88328C14.9721 8.02113 15.0061 8.09006 15.0558 8.14358C15.0999 8.19096 15.1527 8.22935 15.2113 8.25662C15.2776 8.28742 15.3536 8.29854 15.5057 8.32077L20.397 9.03571C20.9121 9.11099 21.1696 9.14863 21.2888 9.27444C21.3925 9.38389 21.4412 9.5343 21.4215 9.68377C21.3988 9.85558 21.2124 10.0372 20.8395 10.4004L17.3014 13.8464C17.1912 13.9538 17.136 14.0076 17.1004 14.0715C17.0689 14.128 17.0487 14.1902 17.0409 14.2545C17.0321 14.3271 17.0451 14.403 17.0711 14.5547L17.906 19.4221C17.994 19.9355 18.038 20.1922 17.9553 20.3445C17.8833 20.477 17.7554 20.57 17.6071 20.5975C17.4366 20.6291 17.2061 20.5078 16.7451 20.2654L12.3724 17.9658C12.2361 17.8942 12.168 17.8584 12.0962 17.8443C12.0327 17.8318 11.9673 17.8318 11.9038 17.8443C11.832 17.8584 11.7639 17.8942 11.6277 17.9658L7.25492 20.2654C6.79392 20.5078 6.56341 20.6291 6.39297 20.5975C6.24468 20.57 6.11672 20.477 6.04474 20.3445C5.962 20.1922 6.00603 19.9355 6.09407 19.4221L6.92889 14.5547C6.95491 14.403 6.96793 14.3271 6.95912 14.2545C6.95132 14.1902 6.93111 14.128 6.89961 14.0715C6.86402 14.0076 6.80888 13.9538 6.69859 13.8464L3.16056 10.4004C2.78766 10.0372 2.60121 9.85558 2.57853 9.68377C2.55879 9.5343 2.60755 9.38389 2.71125 9.27444C2.83044 9.14863 3.08797 9.11099 3.60304 9.03571L8.49431 8.32077C8.64642 8.29854 8.72248 8.28742 8.78872 8.25662C8.84736 8.22935 8.90016 8.19096 8.94419 8.14358C8.99391 8.09006 9.02793 8.02113 9.09597 7.88328L11.2827 3.45332Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="info-container-form-section__language-item">
+                      <span class="info-container-form-section__row-text">Английский</span>
+                      <div class="info-container-form-section__language-item-stars">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="info-container-form-section__language-item-star active"
+                        >
+                          <path
+                            d="M11.2827 3.45332C11.5131 2.98638 11.6284 2.75291 11.7848 2.67831C11.9209 2.61341 12.0791 2.61341 12.2152 2.67831C12.3717 2.75291 12.4869 2.98638 12.7174 3.45332L14.9041 7.88328C14.9721 8.02113 15.0061 8.09006 15.0558 8.14358C15.0999 8.19096 15.1527 8.22935 15.2113 8.25662C15.2776 8.28742 15.3536 8.29854 15.5057 8.32077L20.397 9.03571C20.9121 9.11099 21.1696 9.14863 21.2888 9.27444C21.3925 9.38389 21.4412 9.5343 21.4215 9.68377C21.3988 9.85558 21.2124 10.0372 20.8395 10.4004L17.3014 13.8464C17.1912 13.9538 17.136 14.0076 17.1004 14.0715C17.0689 14.128 17.0487 14.1902 17.0409 14.2545C17.0321 14.3271 17.0451 14.403 17.0711 14.5547L17.906 19.4221C17.994 19.9355 18.038 20.1922 17.9553 20.3445C17.8833 20.477 17.7554 20.57 17.6071 20.5975C17.4366 20.6291 17.2061 20.5078 16.7451 20.2654L12.3724 17.9658C12.2361 17.8942 12.168 17.8584 12.0962 17.8443C12.0327 17.8318 11.9673 17.8318 11.9038 17.8443C11.832 17.8584 11.7639 17.8942 11.6277 17.9658L7.25492 20.2654C6.79392 20.5078 6.56341 20.6291 6.39297 20.5975C6.24468 20.57 6.11672 20.477 6.04474 20.3445C5.962 20.1922 6.00603 19.9355 6.09407 19.4221L6.92889 14.5547C6.95491 14.403 6.96793 14.3271 6.95912 14.2545C6.95132 14.1902 6.93111 14.128 6.89961 14.0715C6.86402 14.0076 6.80888 13.9538 6.69859 13.8464L3.16056 10.4004C2.78766 10.0372 2.60121 9.85558 2.57853 9.68377C2.55879 9.5343 2.60755 9.38389 2.71125 9.27444C2.83044 9.14863 3.08797 9.11099 3.60304 9.03571L8.49431 8.32077C8.64642 8.29854 8.72248 8.28742 8.78872 8.25662C8.84736 8.22935 8.90016 8.19096 8.94419 8.14358C8.99391 8.09006 9.02793 8.02113 9.09597 7.88328L11.2827 3.45332Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="info-container-form-section__language-item-star active"
+                        >
+                          <path
+                            d="M11.2827 3.45332C11.5131 2.98638 11.6284 2.75291 11.7848 2.67831C11.9209 2.61341 12.0791 2.61341 12.2152 2.67831C12.3717 2.75291 12.4869 2.98638 12.7174 3.45332L14.9041 7.88328C14.9721 8.02113 15.0061 8.09006 15.0558 8.14358C15.0999 8.19096 15.1527 8.22935 15.2113 8.25662C15.2776 8.28742 15.3536 8.29854 15.5057 8.32077L20.397 9.03571C20.9121 9.11099 21.1696 9.14863 21.2888 9.27444C21.3925 9.38389 21.4412 9.5343 21.4215 9.68377C21.3988 9.85558 21.2124 10.0372 20.8395 10.4004L17.3014 13.8464C17.1912 13.9538 17.136 14.0076 17.1004 14.0715C17.0689 14.128 17.0487 14.1902 17.0409 14.2545C17.0321 14.3271 17.0451 14.403 17.0711 14.5547L17.906 19.4221C17.994 19.9355 18.038 20.1922 17.9553 20.3445C17.8833 20.477 17.7554 20.57 17.6071 20.5975C17.4366 20.6291 17.2061 20.5078 16.7451 20.2654L12.3724 17.9658C12.2361 17.8942 12.168 17.8584 12.0962 17.8443C12.0327 17.8318 11.9673 17.8318 11.9038 17.8443C11.832 17.8584 11.7639 17.8942 11.6277 17.9658L7.25492 20.2654C6.79392 20.5078 6.56341 20.6291 6.39297 20.5975C6.24468 20.57 6.11672 20.477 6.04474 20.3445C5.962 20.1922 6.00603 19.9355 6.09407 19.4221L6.92889 14.5547C6.95491 14.403 6.96793 14.3271 6.95912 14.2545C6.95132 14.1902 6.93111 14.128 6.89961 14.0715C6.86402 14.0076 6.80888 13.9538 6.69859 13.8464L3.16056 10.4004C2.78766 10.0372 2.60121 9.85558 2.57853 9.68377C2.55879 9.5343 2.60755 9.38389 2.71125 9.27444C2.83044 9.14863 3.08797 9.11099 3.60304 9.03571L8.49431 8.32077C8.64642 8.29854 8.72248 8.28742 8.78872 8.25662C8.84736 8.22935 8.90016 8.19096 8.94419 8.14358C8.99391 8.09006 9.02793 8.02113 9.09597 7.88328L11.2827 3.45332Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="info-container-form-section__language-item-star"
+                        >
+                          <path
+                            d="M11.2827 3.45332C11.5131 2.98638 11.6284 2.75291 11.7848 2.67831C11.9209 2.61341 12.0791 2.61341 12.2152 2.67831C12.3717 2.75291 12.4869 2.98638 12.7174 3.45332L14.9041 7.88328C14.9721 8.02113 15.0061 8.09006 15.0558 8.14358C15.0999 8.19096 15.1527 8.22935 15.2113 8.25662C15.2776 8.28742 15.3536 8.29854 15.5057 8.32077L20.397 9.03571C20.9121 9.11099 21.1696 9.14863 21.2888 9.27444C21.3925 9.38389 21.4412 9.5343 21.4215 9.68377C21.3988 9.85558 21.2124 10.0372 20.8395 10.4004L17.3014 13.8464C17.1912 13.9538 17.136 14.0076 17.1004 14.0715C17.0689 14.128 17.0487 14.1902 17.0409 14.2545C17.0321 14.3271 17.0451 14.403 17.0711 14.5547L17.906 19.4221C17.994 19.9355 18.038 20.1922 17.9553 20.3445C17.8833 20.477 17.7554 20.57 17.6071 20.5975C17.4366 20.6291 17.2061 20.5078 16.7451 20.2654L12.3724 17.9658C12.2361 17.8942 12.168 17.8584 12.0962 17.8443C12.0327 17.8318 11.9673 17.8318 11.9038 17.8443C11.832 17.8584 11.7639 17.8942 11.6277 17.9658L7.25492 20.2654C6.79392 20.5078 6.56341 20.6291 6.39297 20.5975C6.24468 20.57 6.11672 20.477 6.04474 20.3445C5.962 20.1922 6.00603 19.9355 6.09407 19.4221L6.92889 14.5547C6.95491 14.403 6.96793 14.3271 6.95912 14.2545C6.95132 14.1902 6.93111 14.128 6.89961 14.0715C6.86402 14.0076 6.80888 13.9538 6.69859 13.8464L3.16056 10.4004C2.78766 10.0372 2.60121 9.85558 2.57853 9.68377C2.55879 9.5343 2.60755 9.38389 2.71125 9.27444C2.83044 9.14863 3.08797 9.11099 3.60304 9.03571L8.49431 8.32077C8.64642 8.29854 8.72248 8.28742 8.78872 8.25662C8.84736 8.22935 8.90016 8.19096 8.94419 8.14358C8.99391 8.09006 9.02793 8.02113 9.09597 7.88328L11.2827 3.45332Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="info-container-form-section__language-item">
+                      <span class="info-container-form-section__row-text">Португальский</span>
+                      <div class="info-container-form-section__language-item-stars">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="info-container-form-section__language-item-star active"
+                        >
+                          <path
+                            d="M11.2827 3.45332C11.5131 2.98638 11.6284 2.75291 11.7848 2.67831C11.9209 2.61341 12.0791 2.61341 12.2152 2.67831C12.3717 2.75291 12.4869 2.98638 12.7174 3.45332L14.9041 7.88328C14.9721 8.02113 15.0061 8.09006 15.0558 8.14358C15.0999 8.19096 15.1527 8.22935 15.2113 8.25662C15.2776 8.28742 15.3536 8.29854 15.5057 8.32077L20.397 9.03571C20.9121 9.11099 21.1696 9.14863 21.2888 9.27444C21.3925 9.38389 21.4412 9.5343 21.4215 9.68377C21.3988 9.85558 21.2124 10.0372 20.8395 10.4004L17.3014 13.8464C17.1912 13.9538 17.136 14.0076 17.1004 14.0715C17.0689 14.128 17.0487 14.1902 17.0409 14.2545C17.0321 14.3271 17.0451 14.403 17.0711 14.5547L17.906 19.4221C17.994 19.9355 18.038 20.1922 17.9553 20.3445C17.8833 20.477 17.7554 20.57 17.6071 20.5975C17.4366 20.6291 17.2061 20.5078 16.7451 20.2654L12.3724 17.9658C12.2361 17.8942 12.168 17.8584 12.0962 17.8443C12.0327 17.8318 11.9673 17.8318 11.9038 17.8443C11.832 17.8584 11.7639 17.8942 11.6277 17.9658L7.25492 20.2654C6.79392 20.5078 6.56341 20.6291 6.39297 20.5975C6.24468 20.57 6.11672 20.477 6.04474 20.3445C5.962 20.1922 6.00603 19.9355 6.09407 19.4221L6.92889 14.5547C6.95491 14.403 6.96793 14.3271 6.95912 14.2545C6.95132 14.1902 6.93111 14.128 6.89961 14.0715C6.86402 14.0076 6.80888 13.9538 6.69859 13.8464L3.16056 10.4004C2.78766 10.0372 2.60121 9.85558 2.57853 9.68377C2.55879 9.5343 2.60755 9.38389 2.71125 9.27444C2.83044 9.14863 3.08797 9.11099 3.60304 9.03571L8.49431 8.32077C8.64642 8.29854 8.72248 8.28742 8.78872 8.25662C8.84736 8.22935 8.90016 8.19096 8.94419 8.14358C8.99391 8.09006 9.02793 8.02113 9.09597 7.88328L11.2827 3.45332Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="info-container-form-section__language-item-star"
+                        >
+                          <path
+                            d="M11.2827 3.45332C11.5131 2.98638 11.6284 2.75291 11.7848 2.67831C11.9209 2.61341 12.0791 2.61341 12.2152 2.67831C12.3717 2.75291 12.4869 2.98638 12.7174 3.45332L14.9041 7.88328C14.9721 8.02113 15.0061 8.09006 15.0558 8.14358C15.0999 8.19096 15.1527 8.22935 15.2113 8.25662C15.2776 8.28742 15.3536 8.29854 15.5057 8.32077L20.397 9.03571C20.9121 9.11099 21.1696 9.14863 21.2888 9.27444C21.3925 9.38389 21.4412 9.5343 21.4215 9.68377C21.3988 9.85558 21.2124 10.0372 20.8395 10.4004L17.3014 13.8464C17.1912 13.9538 17.136 14.0076 17.1004 14.0715C17.0689 14.128 17.0487 14.1902 17.0409 14.2545C17.0321 14.3271 17.0451 14.403 17.0711 14.5547L17.906 19.4221C17.994 19.9355 18.038 20.1922 17.9553 20.3445C17.8833 20.477 17.7554 20.57 17.6071 20.5975C17.4366 20.6291 17.2061 20.5078 16.7451 20.2654L12.3724 17.9658C12.2361 17.8942 12.168 17.8584 12.0962 17.8443C12.0327 17.8318 11.9673 17.8318 11.9038 17.8443C11.832 17.8584 11.7639 17.8942 11.6277 17.9658L7.25492 20.2654C6.79392 20.5078 6.56341 20.6291 6.39297 20.5975C6.24468 20.57 6.11672 20.477 6.04474 20.3445C5.962 20.1922 6.00603 19.9355 6.09407 19.4221L6.92889 14.5547C6.95491 14.403 6.96793 14.3271 6.95912 14.2545C6.95132 14.1902 6.93111 14.128 6.89961 14.0715C6.86402 14.0076 6.80888 13.9538 6.69859 13.8464L3.16056 10.4004C2.78766 10.0372 2.60121 9.85558 2.57853 9.68377C2.55879 9.5343 2.60755 9.38389 2.71125 9.27444C2.83044 9.14863 3.08797 9.11099 3.60304 9.03571L8.49431 8.32077C8.64642 8.29854 8.72248 8.28742 8.78872 8.25662C8.84736 8.22935 8.90016 8.19096 8.94419 8.14358C8.99391 8.09006 9.02793 8.02113 9.09597 7.88328L11.2827 3.45332Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="info-container-form-section__language-item-star"
+                        >
+                          <path
+                            d="M11.2827 3.45332C11.5131 2.98638 11.6284 2.75291 11.7848 2.67831C11.9209 2.61341 12.0791 2.61341 12.2152 2.67831C12.3717 2.75291 12.4869 2.98638 12.7174 3.45332L14.9041 7.88328C14.9721 8.02113 15.0061 8.09006 15.0558 8.14358C15.0999 8.19096 15.1527 8.22935 15.2113 8.25662C15.2776 8.28742 15.3536 8.29854 15.5057 8.32077L20.397 9.03571C20.9121 9.11099 21.1696 9.14863 21.2888 9.27444C21.3925 9.38389 21.4412 9.5343 21.4215 9.68377C21.3988 9.85558 21.2124 10.0372 20.8395 10.4004L17.3014 13.8464C17.1912 13.9538 17.136 14.0076 17.1004 14.0715C17.0689 14.128 17.0487 14.1902 17.0409 14.2545C17.0321 14.3271 17.0451 14.403 17.0711 14.5547L17.906 19.4221C17.994 19.9355 18.038 20.1922 17.9553 20.3445C17.8833 20.477 17.7554 20.57 17.6071 20.5975C17.4366 20.6291 17.2061 20.5078 16.7451 20.2654L12.3724 17.9658C12.2361 17.8942 12.168 17.8584 12.0962 17.8443C12.0327 17.8318 11.9673 17.8318 11.9038 17.8443C11.832 17.8584 11.7639 17.8942 11.6277 17.9658L7.25492 20.2654C6.79392 20.5078 6.56341 20.6291 6.39297 20.5975C6.24468 20.57 6.11672 20.477 6.04474 20.3445C5.962 20.1922 6.00603 19.9355 6.09407 19.4221L6.92889 14.5547C6.95491 14.403 6.96793 14.3271 6.95912 14.2545C6.95132 14.1902 6.93111 14.128 6.89961 14.0715C6.86402 14.0076 6.80888 13.9538 6.69859 13.8464L3.16056 10.4004C2.78766 10.0372 2.60121 9.85558 2.57853 9.68377C2.55879 9.5343 2.60755 9.38389 2.71125 9.27444C2.83044 9.14863 3.08797 9.11099 3.60304 9.03571L8.49431 8.32077C8.64642 8.29854 8.72248 8.28742 8.78872 8.25662C8.84736 8.22935 8.90016 8.19096 8.94419 8.14358C8.99391 8.09006 9.02793 8.02113 9.09597 7.88328L11.2827 3.45332Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="info-container-form-section__row">
+                  <h4 class="info-container-form-section__row-title">Курит:</h4>
+                  <p class="info-container-form-section__row-text">Только вейп</p>
+                </div>
+                <div class="info-container-form-section__row">
+                  <h4 class="info-container-form-section__row-title">Алкоголь:</h4>
+                  <p class="info-container-form-section__row-text">Нет</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-section__additional-block additional-block-form-section">
+          <nav class="additional-block-form-section__tabs-container">
+            <ul class="additional-block-form-section__tab-list">
+              <li class="additional-block-form-section__tab-item">
+                <a
+                  class="additional-block-form-section__tab-link active"
+                  href="#info-container-prices"
+                  >Цены</a
+                >
+              </li>
+              <li class="additional-block-form-section__tab-item">
+                <a class="additional-block-form-section__tab-link" href="#info-container-contacts"
+                  >Контакты</a
+                >
+              </li>
+              <li class="additional-block-form-section__tab-item">
+                <a
+                  class="additional-block-form-section__tab-link"
+                  href="#info-container-working-hours"
+                  >Рабочие часы</a
+                >
+              </li>
+              <li class="additional-block-form-section__tab-item">
+                <a class="additional-block-form-section__tab-link" href="#info-container-services"
+                  >Услуги</a
+                >
+              </li>
+              <li class="additional-block-form-section__tab-item">
+                <a class="additional-block-form-section__tab-link" href="#info-container-location"
+                  >Расположение</a
+                >
+              </li>
+              <li class="additional-block-form-section__tab-item">
+                <a class="additional-block-form-section__tab-link" href="#info-container-reviews"
+                  >Отзывы</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div
+            id="info-container-prices"
+            class="form-section__info-container info-container-form-section"
+          >
+            <div class="info-container-form-section__heading">
+              <h3 class="info-container-form-section__title">Цены</h3>
+            </div>
+            <div class="info-container-form-section__prices-comment">
+              <span
+                class="info-container-form-section__prices-comment-span info-container-form-section__prices-comment-span_red"
+                >Требую предоплату:</span
+              >
+              <span class="info-container-form-section__prices-comment-text"
+                >Текст девушки с условиями предоплаты</span
+              >
+            </div>
+            <div class="info-container-form-section__prices-content">
+              <div class="info-container-form-section__incall-block">
+                <h4 class="info-container-form-section__incall-block-title">
+                  Incall
+                  <span class="info-container-form-section__incall-block-title-span"
+                    >(Прием у себя)</span
+                  >
+                </h4>
+                <div class="info-container-form-section__incall-subtitle">
+                  <div class="info-container-form-section__checkbox-container active-green">
+                    <span class="info-container-form-section__checkbox">Апартаменты</span>
+                  </div>
+                  <div class="info-container-form-section__checkbox-container cross">
+                    <span class="info-container-form-section__checkbox">Отель</span>
+                  </div>
+                </div>
+                <ul class="info-container-form-section__incall-list">
+                  <li class="info-container-form-section__incall-item">
+                    <h4 class="info-container-form-section__row-title">30 минут:</h4>
+                    <p class="info-container-form-section__row-text">200€</p>
+                  </li>
+                  <li class="info-container-form-section__incall-item">
+                    <h4 class="info-container-form-section__row-title">1 час:</h4>
+                    <p class="info-container-form-section__row-text">200€</p>
+                  </li>
+                  <li class="info-container-form-section__incall-item">
+                    <h4 class="info-container-form-section__row-title">2 часа:</h4>
+                    <p class="info-container-form-section__row-text">200€</p>
+                  </li>
+                  <li class="info-container-form-section__incall-item">
+                    <h4 class="info-container-form-section__row-title">Дополнительный час:</h4>
+                    <p class="info-container-form-section__row-text">200€</p>
+                  </li>
+                  <li class="info-container-form-section__incall-item">
+                    <h4 class="info-container-form-section__row-title">На всю ночь:</h4>
+                    <p class="info-container-form-section__row-text">200€</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="info-container-form-section__outcall-block">
+                <h4 class="info-container-form-section__outcall-block-title">
+                  Outcall
+                  <span class="info-container-form-section__outcall-block-title-span"
+                    >(Выезд к клиенту)</span
+                  >
+                </h4>
+                <div class="info-container-form-section__outcall-subtitle">
+                  <div class="info-container-form-section__checkbox-container active-green">
+                    <span class="info-container-form-section__checkbox">Апартаменты</span>
+                  </div>
+                  <div class="info-container-form-section__checkbox-container active-green">
+                    <span class="info-container-form-section__checkbox">Отель</span>
+                  </div>
+                </div>
+                <ul class="info-container-form-section__outcall-list">
+                  <li class="info-container-form-section__outcall-item">
+                    <h4 class="info-container-form-section__row-title">30 минут:</h4>
+                    <p class="info-container-form-section__row-text">200€</p>
+                  </li>
+                  <li class="info-container-form-section__outcall-item">
+                    <h4 class="info-container-form-section__row-title">1 час:</h4>
+                    <p class="info-container-form-section__row-text">200€</p>
+                  </li>
+                  <li class="info-container-form-section__outcall-item">
+                    <h4 class="info-container-form-section__row-title">2 часа:</h4>
+                    <p class="info-container-form-section__row-text">200€</p>
+                  </li>
+                  <li class="info-container-form-section__outcall-item">
+                    <h4 class="info-container-form-section__row-title">Дополнительный час:</h4>
+                    <p class="info-container-form-section__row-text">200€</p>
+                  </li>
+                  <li class="info-container-form-section__outcall-item">
+                    <h4 class="info-container-form-section__row-title">На всю ночь:</h4>
+                    <p class="info-container-form-section__row-text">200€</p>
+                  </li>
+                </ul>
+                <p class="info-container-form-section__outcall-notice">
+                  Outcall не включает цену за такси
+                </p>
+              </div>
+              <div class="info-container-form-section__travel-block">
+                <h4 class="info-container-form-section__travel-block-title">Travel</h4>
+                <div class="info-container-form-section__travel-subtitle">
+                  Вильнюс, Рига, Юрмала, Каунас, Клайпеда, Шяуляй
+                </div>
+                <ul class="info-container-form-section__travel-list">
+                  <li class="info-container-form-section__travel-item">
+                    <h4 class="info-container-form-section__row-title">1 час:</h4>
+                    <p class="info-container-form-section__row-text">200€</p>
+                  </li>
+                  <li class="info-container-form-section__travel-item">
+                    <h4 class="info-container-form-section__row-title">Вся ночь:</h4>
+                    <p class="info-container-form-section__row-text">200€</p>
+                  </li>
+                  <li class="info-container-form-section__travel-item">
+                    <h4 class="info-container-form-section__row-title">24 часа:</h4>
+                    <p class="info-container-form-section__row-text">200€</p>
+                  </li>
+                  <li class="info-container-form-section__travel-item">
+                    <h4 class="info-container-form-section__row-title">48 часов:</h4>
+                    <p class="info-container-form-section__row-text">200€</p>
+                  </li>
+                  <li class="info-container-form-section__travel-item">
+                    <h4 class="info-container-form-section__row-title">Дополнительные сутки:</h4>
+                    <p class="info-container-form-section__row-text">200€</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="info-container-form-section__prices-comment">
+              <span class="info-container-form-section__prices-comment-span"
+                >Так же принимаю оплату в Tether USDT (TRC20 on Tron)</span
+              >
+            </div>
+          </div>
+          <div class="additional-block-form-section__contacts-and-hours">
+            <div
+              id="info-container-contacts"
+              class="form-section__info-container info-container-form-section"
+            >
+              <div class="info-container-form-section__heading">
+                <h3 class="info-container-form-section__title">Контакты</h3>
+              </div>
+              <div class="info-container-form-section__content">
+                <div class="info-container-form-section__row">
+                  <h4 class="info-container-form-section__row-title">Город:</h4>
+                  <p class="info-container-form-section__row-text">Вильнюс</p>
+                </div>
+                <div class="info-container-form-section__row">
+                  <h4 class="info-container-form-section__row-title">Телефон:</h4>
+                  <p
+                    class="info-container-form-section__column-text info-container-form-section__phone-text"
+                  >
+                    <a class="info-container-form-section__row-text" href="tel:+943 395 429"
+                      >+943 395 429</a
+                    >
+                    <span class="info-container-form-section__row-span"
+                      >не звонить, не писать SMS</span
+                    >
+                  </p>
+                </div>
+                <div class="info-container-form-section__row">
+                  <h4 class="info-container-form-section__row-title">Доступные приложения:</h4>
+                  <div class="info-container-form-section__social-btns">
+                    <a href="" class="button button_social telegram">Telegram</a>
+                    <a href="" class="button button_social whatsapp">Whatsapp</a>
+                  </div>
+                </div>
+                <div class="info-container-form-section__row">
+                  <h4 class="info-container-form-section__row-title">Электронная почта:</h4>
+                  <a class="info-container-form-section__row-text" href="mailto:youremail@gmail.com"
+                    >youremail@gmail.com</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div
+              id="info-container-working-hours"
+              class="form-section__info-container info-container-form-section"
+            >
+              <div
+                class="info-container-form-section__heading info-container-form-section__heading-working-hours"
+              >
+                <h3 class="info-container-form-section__title">Рабочие часы</h3>
+                <h4 class="info-container-form-section__working-hours-subtitle">
+                  (Часовой пояс:
+                  <span class="info-container-form-section__subtitle-span"
+                    >GMT+03:00 - Литва, Латвия, Эстония)</span
+                  >
+                </h4>
+              </div>
+              <div class="info-container-form-section__working-hours-content">
+                <div class="info-container-form-section__working-hours-row">
+                  <h4 class="info-container-form-section__row-title">Понедельник</h4>
+                  <p class="info-container-form-section__row-text">13:00 - 16:00</p>
+                </div>
+                <div class="info-container-form-section__working-hours-row">
+                  <h4 class="info-container-form-section__row-title">Вторник</h4>
+                  <p class="info-container-form-section__row-text">13:00 - 16:00</p>
+                </div>
+                <div class="info-container-form-section__working-hours-row">
+                  <h4 class="info-container-form-section__row-title">Среда</h4>
+                  <p class="info-container-form-section__row-text">13:00 - 16:00</p>
+                </div>
+                <div class="info-container-form-section__working-hours-row">
+                  <h4 class="info-container-form-section__row-title">Четверг</h4>
+                  <p class="info-container-form-section__row-text">13:00 - 16:00</p>
+                </div>
+                <div class="info-container-form-section__working-hours-row">
+                  <h4 class="info-container-form-section__row-title">Пятница</h4>
+                  <p class="info-container-form-section__row-text">13:00 - 16:00</p>
+                </div>
+                <div class="info-container-form-section__working-hours-row">
+                  <h4 class="info-container-form-section__row-title">Суббота</h4>
+                  <p
+                    class="info-container-form-section__row-text info-container-form-section__row-text_grey"
+                  >
+                    Не рабочий
+                  </p>
+                </div>
+                <div class="info-container-form-section__working-hours-row">
+                  <h4 class="info-container-form-section__row-title">Воскресенье</h4>
+                  <p
+                    class="info-container-form-section__row-text info-container-form-section__row-text_grey"
+                  >
+                    Не рабочий
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="info-container-services"
+            class="form-section__info-container info-container-form-section"
+          >
+            <div class="info-container-form-section__heading">
+              <h3 class="info-container-form-section__title">Услуги</h3>
+            </div>
+            <div class="info-container-form-section__services-content">
+              <h4 class="info-container-form-section__services-content-title">Секс</h4>
+              <div class="info-container-form-section__services-content-lists">
+                <ul class="info-container-form-section__services-content-list">
+                  <li id="" class="info-container-form-section__checkbox-container active">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Секс классический</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li
+                    id=""
+                    class="info-container-form-section__checkbox-container extra description"
+                  >
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Секс групповой</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container extra">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Секс анальный</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox"
+                        >Услуги семейной паре</span
+                      >
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container active">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox"
+                        >Минет в презервативе</span
+                      >
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container active">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Минет без резинки</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li
+                    id=""
+                    class="info-container-form-section__checkbox-container extra description"
+                  >
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Горловой минет</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container active">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Куннилингус</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container active">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Поцелуи</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container active">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Окончание на грудь</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container active">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Окончание на лицо</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Окончание в рот</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Сквирт</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Игрушки</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="info-container-form-section__services-content">
+              <h4 class="info-container-form-section__services-content-title">Стриптиз</h4>
+              <div class="info-container-form-section__services-content-lists">
+                <ul class="info-container-form-section__services-content-list">
+                  <li
+                    id=""
+                    class="info-container-form-section__checkbox-container extra description"
+                  >
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Стриптиз профи</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container extra">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Стриптиз не профи</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="info-container-form-section__services-content">
+              <h4 class="info-container-form-section__services-content-title">Массаж</h4>
+              <div class="info-container-form-section__services-content-lists">
+                <ul class="info-container-form-section__services-content-list">
+                  <li id="" class="info-container-form-section__checkbox-container active">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Классический</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li
+                    id=""
+                    class="info-container-form-section__checkbox-container extra description"
+                  >
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Профессиональный</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li
+                    id=""
+                    class="info-container-form-section__checkbox-container extra description"
+                  >
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Массажный стол</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li
+                    id=""
+                    class="info-container-form-section__checkbox-container extra description"
+                  >
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Урологический</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li
+                    id=""
+                    class="info-container-form-section__checkbox-container extra description"
+                  >
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Эротический</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container active">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Лингам</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Карсай</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="info-container-form-section__services-content">
+              <h4 class="info-container-form-section__services-content-title">Экстрим</h4>
+              <div class="info-container-form-section__services-content-lists">
+                <ul class="info-container-form-section__services-content-list">
+                  <li id="" class="info-container-form-section__checkbox-container active">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Страпон</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Анилингус вам</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Анилингус мне</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container extra">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Золот. дождь выдача</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container extra">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Золот. дождь выдача</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Золотой дождь прием</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Копро выдача</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox"
+                        >Фистинг анальный вам</span
+                      >
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox"
+                        >Фистинг анальный вам</span
+                      >
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox"
+                        >Фистинг анальный мне</span
+                      >
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox"
+                        >Фистинг классический</span
+                      >
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container active">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Фингеринг</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="info-container-form-section__services-content">
+              <h4 class="info-container-form-section__services-content-title">Садо-мазо</h4>
+              <div class="info-container-form-section__services-content-lists">
+                <ul class="info-container-form-section__services-content-list">
+                  <li id="" class="info-container-form-section__checkbox-container active">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Бандаж</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Госпожа</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Игры</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container extra">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Легкая доминация</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container extra">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Порка</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Клизма</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Рабыня</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Легкая рабыня</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Фетиш</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Трамплинг</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Боллбастинг</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container active">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Феминизация</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="info-container-form-section__services-content">
+              <h4 class="info-container-form-section__services-content-title">Разное</h4>
+              <div class="info-container-form-section__services-content-lists">
+                <ul class="info-container-form-section__services-content-list">
+                  <li id="" class="info-container-form-section__checkbox-container active">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Ролевые игры</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Фото/видео съемка</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Эскорт</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container active">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Виртуальный секс</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container active">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Cекс по телефону</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container active">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">GFE</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">PSE</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                  <li id="" class="info-container-form-section__checkbox-container">
+                    <div class="info-container-form-section__checkbox-row">
+                      <span class="info-container-form-section__checkbox">Порнозвезда</span>
+                      <span class="info-container-form-section__checkbox-price">+200€</span>
+                    </div>
+                    <p class="info-container-form-section__services-description">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="button button_with-icon-secondary small">
+              Посмотреть доп. услуги
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8 1V15M1 8H15"
+                  stroke="var(--color-accent-primary)"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            id="info-container-location"
+            class="form-section__info-container info-container-form-section"
+          >
+            <div class="info-container-form-section__heading">
+              <h3 class="info-container-form-section__title">Расположение</h3>
+            </div>
+            <div class="info-container-form-section__content">
+              <div
+                class="info-container-form-section__column info-container-form-section__location-column"
+              >
+                <h4 class="info-container-form-section__row-title">
+                  Pylimo g. 23-3, 01141 Vilnius, Литва
+                </h4>
+                <div
+                  style="
+                    text-decoration: none;
+                    overflow: hidden;
+                    max-width: 100%;
+                    width: 100%;
+                    height: 23.75rem;
+                    border-radius: 0.5rem;
+                  "
+                >
+                  <div id="gmap-canvas" style="height: 100%; width: 100%; max-width: 100%">
+                    <iframe
+                      style="height: 100%; width: 100%; border: 0"
+                      frameborder="0"
+                      src="https://www.google.com/maps/embed/v1/place?q=Pylimo+g.+23-3,+01141+Vilnius&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+                    />
+                  </div>
+                  <a
+                    id="grab-map-data"
+                    class="google-map-code-enabler"
+                    rel="nofollow"
+                    href="https://www.bootstrapskins.com/themes"
+                    >premium bootstrap themes</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="info-container-reviews"
+            class="form-section__info-container info-container-form-section"
+          >
+            <div
+              class="info-container-form-section__heading info-container-form-section__reviews-heading"
+            >
+              <h3 class="info-container-form-section__title">Отзывы</h3>
+              <div class="button button_primary">Оставить отзыв</div>
+            </div>
+            <div
+              class="info-container-form-section__content info-container-form-section__review-content"
+            >
+              <div class="info-container-form-section__review-container">
+                <div class="info-container-form-section__review-heading">
+                  <div class="info-container-form-section__review-title">
+                    <h4 class="info-container-form-section__review-name">Имя пользователя</h4>
+                    <span class="info-container-form-section__review-date">12/12/2023</span>
+                  </div>
+                  <div class="info-container-form-section__review-visit-confirmation confirmed">
+                    Посещение подтверждено
+                  </div>
+                </div>
+                <div class="info-container-form-section__review-score">
+                  <ul class="info-container-form-section__review-score-table-row">
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">Возраст</div>
+                      <div class="info-container-form-section__review-score-value">24 лет</div>
+                    </li>
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">Поцелуй</div>
+                      <div class="info-container-form-section__review-score-value">Да</div>
+                    </li>
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">Орал</div>
+                      <div class="info-container-form-section__review-score-value">
+                        Да (с презервативом)
+                      </div>
+                    </li>
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">Анал</div>
+                      <div class="info-container-form-section__review-score-value">Услуга</div>
+                    </li>
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">Сумма</div>
+                      <div class="info-container-form-section__review-score-value">Услуга</div>
+                    </li>
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">Время</div>
+                      <div class="info-container-form-section__review-score-value">Услуга</div>
+                    </li>
+                  </ul>
+                  <ul class="info-container-form-section__review-score-table-row">
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">Красота</div>
+                      <div class="info-container-form-section__review-score-value">Великолепна</div>
+                    </li>
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">Фигура</div>
+                      <div class="info-container-form-section__review-score-value">Идеальное</div>
+                    </li>
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">Грудь</div>
+                      <div class="info-container-form-section__review-score-value">В форме</div>
+                    </li>
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">
+                        Контроль времени
+                      </div>
+                      <div class="info-container-form-section__review-score-value">Спешит</div>
+                    </li>
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">Гигиена</div>
+                      <div class="info-container-form-section__review-score-value">Хорошая</div>
+                    </li>
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">Депиляция</div>
+                      <div class="info-container-form-section__review-score-value">
+                        Аккуратная стрижка
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="info-container-form-section__review-comment">
+                  <div class="info-container-form-section__review-comment-heading">
+                    <h5 class="info-container-form-section__review-comment-title">Комментарий</h5>
+                    <div class="text-button">Показать оригинал</div>
+                  </div>
+                  <p class="info-container-form-section__review-comment-text">
+                    Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                    eleifend cras dictumst. Tincidunt arcu adipiscing lacinia urna mauris pulvinar
+                    pretium urna. Pellentesque mi ipsum dolor sit amet consectetur. Eget lorem amet
+                    feugiat diam tristique eleifend cras dictumst. Tincidunt arcu adipiscing lacinia
+                    urna mauris pulvinar pretium urna.
+                  </p>
+                </div>
+                <div class="info-container-form-section__review-experience positive">
+                  <div class="info-container-form-section__review-experience-text-block">
+                    <p class="info-container-form-section__review-experience-text">Общая оценка:</p>
+                    <span class="info-container-form-section__review-experience-text-span"
+                      >5.0</span
+                    >
+                  </div>
+                  <div class="info-container-form-section__review-experience-text-block">
+                    <p class="info-container-form-section__review-experience-text">Опыт в целом:</p>
+                    <span class="info-container-form-section__review-experience-text-span"
+                      >Позитивный</span
+                    >
+                  </div>
+                </div>
+                <div class="info-container-form-section__review-answer">
+                  <div class="info-container-form-section__review-answer-content">
+                    <div class="info-container-form-section__review-answer-heading">
+                      <h5 class="info-container-form-section__review-answer-title">Ответ</h5>
+                    </div>
+                    <p class="info-container-form-section__review-answer-text">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst. Tincidunt arcu adipiscing lacinia urna mauris pulvinar
+                      pretium urna. Pellentesque mi ipsum dolor sit amet consectetur. Eget lorem
+                      amet feugiat diam tristique eleifend cras dictumst. Tincidunt arcu adipiscing
+                      lacinia urna mauris pulvinar pretium urna.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="info-container-form-section__review-container">
+                <div class="info-container-form-section__review-heading">
+                  <div class="info-container-form-section__review-title">
+                    <h4 class="info-container-form-section__review-name">Имя пользователя</h4>
+                    <span class="info-container-form-section__review-date">12/12/2023</span>
+                  </div>
+                  <div class="info-container-form-section__review-visit-confirmation">
+                    Посещение НЕ подтверждено
+                  </div>
+                </div>
+                <div class="info-container-form-section__review-score">
+                  <ul class="info-container-form-section__review-score-table-row">
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">Возраст</div>
+                      <div class="info-container-form-section__review-score-value">24 лет</div>
+                    </li>
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">Поцелуй</div>
+                      <div class="info-container-form-section__review-score-value">Да</div>
+                    </li>
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">Орал</div>
+                      <div class="info-container-form-section__review-score-value">
+                        Да (с презервативом)
+                      </div>
+                    </li>
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">Анал</div>
+                      <div class="info-container-form-section__review-score-value">Услуга</div>
+                    </li>
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">Сумма</div>
+                      <div class="info-container-form-section__review-score-value">Услуга</div>
+                    </li>
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">Время</div>
+                      <div class="info-container-form-section__review-score-value">Услуга</div>
+                    </li>
+                  </ul>
+                  <ul class="info-container-form-section__review-score-table-row">
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">Красота</div>
+                      <div class="info-container-form-section__review-score-value">Великолепна</div>
+                    </li>
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">Фигура</div>
+                      <div class="info-container-form-section__review-score-value">Идеальное</div>
+                    </li>
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">Грудь</div>
+                      <div class="info-container-form-section__review-score-value">В форме</div>
+                    </li>
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">
+                        Контроль времени
+                      </div>
+                      <div class="info-container-form-section__review-score-value">Спешит</div>
+                    </li>
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">Гигиена</div>
+                      <div class="info-container-form-section__review-score-value">Хорошая</div>
+                    </li>
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">Депиляция</div>
+                      <div class="info-container-form-section__review-score-value">
+                        Аккуратная стрижка
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="info-container-form-section__review-comment">
+                  <div class="info-container-form-section__review-comment-heading">
+                    <h5 class="info-container-form-section__review-comment-title">Комментарий</h5>
+                    <div class="text-button">Показать оригинал</div>
+                  </div>
+                  <p class="info-container-form-section__review-comment-text">
+                    Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                    eleifend cras dictumst. Tincidunt arcu adipiscing lacinia urna mauris pulvinar
+                    pretium urna. Pellentesque mi ipsum dolor sit amet consectetur. Eget lorem amet
+                    feugiat diam tristique eleifend cras dictumst. Tincidunt arcu adipiscing lacinia
+                    urna mauris pulvinar pretium urna.
+                  </p>
+                </div>
+                <div class="info-container-form-section__review-experience">
+                  <div class="info-container-form-section__review-experience-text-block">
+                    <p class="info-container-form-section__review-experience-text">Общая оценка:</p>
+                    <span class="info-container-form-section__review-experience-text-span"
+                      >4.0</span
+                    >
+                  </div>
+                  <div class="info-container-form-section__review-experience-text-block">
+                    <p class="info-container-form-section__review-experience-text">Опыт в целом:</p>
+                    <span class="info-container-form-section__review-experience-text-span"
+                      >Нейтральный</span
+                    >
+                  </div>
+                </div>
+                <div class="info-container-form-section__review-answer">
+                  <div class="info-container-form-section__review-answer-content">
+                    <div class="info-container-form-section__review-answer-heading">
+                      <h5 class="info-container-form-section__review-answer-title">Ответ</h5>
+                    </div>
+                    <p class="info-container-form-section__review-answer-text">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst. Tincidunt arcu adipiscing lacinia urna mauris pulvinar
+                      pretium urna. Pellentesque mi ipsum dolor sit amet consectetur. Eget lorem
+                      amet feugiat diam tristique eleifend cras dictumst. Tincidunt arcu adipiscing
+                      lacinia urna mauris pulvinar pretium urna.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="info-container-form-section__review-container">
+                <div class="info-container-form-section__review-heading">
+                  <div class="info-container-form-section__review-title">
+                    <h4 class="info-container-form-section__review-name">Имя пользователя</h4>
+                    <span class="info-container-form-section__review-date">12/12/2023</span>
+                  </div>
+                  <div class="info-container-form-section__review-visit-confirmation confirmed">
+                    Посещение подтверждено
+                  </div>
+                </div>
+                <div class="info-container-form-section__review-score">
+                  <ul class="info-container-form-section__review-score-table-row">
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">Возраст</div>
+                      <div class="info-container-form-section__review-score-value">24 лет</div>
+                    </li>
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">Поцелуй</div>
+                      <div class="info-container-form-section__review-score-value">Да</div>
+                    </li>
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">Орал</div>
+                      <div class="info-container-form-section__review-score-value">
+                        Да (с презервативом)
+                      </div>
+                    </li>
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">Анал</div>
+                      <div class="info-container-form-section__review-score-value">Услуга</div>
+                    </li>
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">Сумма</div>
+                      <div class="info-container-form-section__review-score-value">Услуга</div>
+                    </li>
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">Время</div>
+                      <div class="info-container-form-section__review-score-value">Услуга</div>
+                    </li>
+                  </ul>
+                  <ul class="info-container-form-section__review-score-table-row">
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">Красота</div>
+                      <div class="info-container-form-section__review-score-value">Великолепна</div>
+                    </li>
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">Фигура</div>
+                      <div class="info-container-form-section__review-score-value">Идеальное</div>
+                    </li>
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">Грудь</div>
+                      <div class="info-container-form-section__review-score-value">В форме</div>
+                    </li>
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">
+                        Контроль времени
+                      </div>
+                      <div class="info-container-form-section__review-score-value">Спешит</div>
+                    </li>
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">Гигиена</div>
+                      <div class="info-container-form-section__review-score-value">Хорошая</div>
+                    </li>
+                    <li class="info-container-form-section__review-score-item">
+                      <div class="info-container-form-section__review-score-label">Депиляция</div>
+                      <div class="info-container-form-section__review-score-value">
+                        Аккуратная стрижка
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="info-container-form-section__review-comment">
+                  <div class="info-container-form-section__review-comment-heading">
+                    <h5 class="info-container-form-section__review-comment-title">Комментарий</h5>
+                    <div class="text-button">Показать оригинал</div>
+                  </div>
+                  <p class="info-container-form-section__review-comment-text">
+                    Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                    eleifend cras dictumst. Tincidunt arcu adipiscing lacinia urna mauris pulvinar
+                    pretium urna. Pellentesque mi ipsum dolor sit amet consectetur. Eget lorem amet
+                    feugiat diam tristique eleifend cras dictumst. Tincidunt arcu adipiscing lacinia
+                    urna mauris pulvinar pretium urna.
+                  </p>
+                </div>
+                <div class="info-container-form-section__review-experience negative">
+                  <div class="info-container-form-section__review-experience-text-block">
+                    <p class="info-container-form-section__review-experience-text">Общая оценка:</p>
+                    <span class="info-container-form-section__review-experience-text-span"
+                      >1.0</span
+                    >
+                  </div>
+                  <div class="info-container-form-section__review-experience-text-block">
+                    <p class="info-container-form-section__review-experience-text">Опыт в целом:</p>
+                    <span class="info-container-form-section__review-experience-text-span"
+                      >Негативный</span
+                    >
+                  </div>
+                </div>
+                <div class="info-container-form-section__review-answer">
+                  <div class="info-container-form-section__review-answer-content">
+                    <div class="info-container-form-section__review-answer-heading">
+                      <h5 class="info-container-form-section__review-answer-title">Ответ</h5>
+                    </div>
+                    <p class="info-container-form-section__review-answer-text">
+                      Lorem ipsum dolor sit amet consectetur. Eget lorem amet feugiat diam tristique
+                      eleifend cras dictumst. Tincidunt arcu adipiscing lacinia urna mauris pulvinar
+                      pretium urna. Pellentesque mi ipsum dolor sit amet consectetur. Eget lorem
+                      amet feugiat diam tristique eleifend cras dictumst. Tincidunt arcu adipiscing
+                      lacinia urna mauris pulvinar pretium urna.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="text-button">Показать отзывы</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <HomeAdvertisements :count="4" />
+    </div>
+  </section>
+</template>

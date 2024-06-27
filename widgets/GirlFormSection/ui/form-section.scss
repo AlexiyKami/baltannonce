@@ -1,0 +1,971 @@
+@use '@/app/assets/scss/utils' as *;
+
+#gmap-canvas img {
+  max-height: none;
+  max-width: none!important;
+  background: none!important;
+}
+
+.form-section {
+  padding: 2rem 0rem;
+  &__container {
+    display: flex;
+    gap: 2.75rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+}
+
+.main-block-form-section {
+  display: flex;
+  gap: 1.25rem;
+  &__media {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 1 1 auto;
+  }
+
+  &__photo-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  &__form-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    color: $color-text-secondary;
+    margin-bottom: 0.4375rem;
+  }
+
+  &__date-create {
+  }
+
+  &__date-create-value {
+  }
+
+  &__date-update {
+  }
+
+  &__main-block {
+  }
+
+  &__info-container {
+  }
+
+  &__slider {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0.375rem;
+    background: $gradient-linear-gold;
+    border-radius: 0.75rem;
+  }
+
+  &__slider-img-container {
+    display: flex;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  &__slider-photo {
+  }
+
+  &__slider-btn {
+    position: absolute;
+    &_left {
+      top: 50%;
+      left: 0.875rem;
+    }
+    &_right {
+      top: 50%;
+      right: 0.875rem;
+    }
+  }
+
+  &__slider-tag {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-surface-primary;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    padding: 0.8125rem 1.25rem;
+  }
+
+  &__slider-verified {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: $color-checked-not-verified;
+    &_similar {
+      color: $color-checked-similar;
+    }
+    &_not-similar {
+      color: $color-checked-not-similar;
+    }
+    &_by-photo {
+      color: $color-checked-by-photo;
+    }
+    &_by-admin {
+      color: $color-checked-personally;
+    }
+    &_by-video {
+      color: $color-checked-by-video;
+    }
+  }
+
+  &__slider-verified-text {
+    @include font(1.125rem, 600, 144%);
+  }
+
+  &__slider-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  &__slider-rating-text {
+    @include font(1.125rem, 600, 144%);
+    color: $color-text-secondary;
+  }
+
+  &__photo-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: $color-text-secondary;
+    gap: 0.25rem;
+  }
+
+  &__photo-info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__photo-date-create {
+  }
+
+  &__photo-date-create-value {
+  }
+
+  &__search-photo {
+  }
+
+  &__search-photo-link {
+    cursor: pointer;
+    color: $color-accent-primary;
+    text-decoration: underline;
+    @include font(1rem, 600, 136%);
+  }
+
+  &__alert-fake-btn {
+
+  }
+
+  &__video-container {
+    position: relative;
+    padding-bottom: 58.15%;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    height: 0;
+  }
+
+  &__video {
+    position: absolute;
+    &-btn {
+      cursor: pointer;
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: rgba(0, 0, 0, 0.5);
+      transition: color $transition-hover;
+      &:hover {
+        color: rgba(0, 0, 0, 0.7);
+      }
+    }
+  }
+
+
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 0 1 66%;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+  }
+
+  &__name-block {
+  }
+
+  &__name {
+    @include font(1.5rem, 600, 136%);
+  }
+
+  &__last-online {
+    color: $color-text-secondary;
+  }
+
+  &__favourite-btn {
+    background-color: $color-surface-highlight;
+    &.active &-icon {
+      color: $color-accent-primary;
+    }
+  }
+
+  &__favourite-btn-icon {
+    color: transparent;
+    
+  }
+}
+
+.info-container-form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background-color: $color-surface-primary;
+  border: 0.0625rem solid $color-border-secondary;
+  border-radius: 0.75rem;
+  padding: 1.5rem 1.25rem;
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 0.0625rem;
+      margin-top: 0.5rem;
+      background-color: $color-border-primary
+    }
+  }
+
+  &__title {
+    @include font(1.25rem, 700, 136%);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: 12.375rem 1fr;
+    row-gap: 0.25rem;
+    column-gap: 0.75rem;
+  }
+
+  &__column {
+    display: grid;
+    row-gap: 0.25rem;
+    column-gap: 0.75rem;
+    grid-template-rows: auto 1fr;
+  }
+
+  &__row-title, &__column-title {
+    @include font(1rem, 700, 144%);
+  }
+
+  &__row-text {
+    display: flex;
+    word-break: break-word;
+    &_grey {
+      color: $color-text-secondary;
+    }
+  }
+
+  &__column-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__language-items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__language-item {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(7.25rem, 1fr));
+  }
+
+  &__language-item-stars {
+    display: flex;
+    gap: 0.25rem;
+  }
+
+  &__language-item-star {
+    color: $color-surface-brand;
+    &.active {
+      color: $color-accent-primary;
+    }
+  }
+
+  &__site-btn {
+    background-color: $color-surface-highlight;
+  }
+
+  &__prices-comment {
+    display: flex;
+    gap: 4px;
+  }
+
+  &__prices-comment-text {
+    @include font(0.875rem, 400, 143%);
+  }
+
+  &__prices-comment-span {
+    @include font(0.875rem, 700, 143%);
+    &_red {
+      color: #DA1212;
+    }
+  }
+
+}
+
+.form-section {
+
+  &__additional-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+.additional-block-form-section {
+  &__tabs-container {
+    position: sticky;
+    top: 1rem;
+  }
+
+  &__tab-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    border: 0.0625rem solid $color-border-primary;
+    border-radius: 0.5rem;
+    width: 100%;
+    background-color: $color-surface-primary;
+    overflow: hidden;
+  }
+
+  &__tab-item {
+    
+  }
+
+  &__tab-link {
+    cursor: pointer;
+    @include font(1rem, 700, 144%);
+    background-color: $color-surface-primary;
+    padding: 0.75rem 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color $transition-hover, color $transition-hover;
+    &.active {
+      background-color: $color-accent-primary;
+      color: $color-text-invert;
+    }
+  }
+
+  &__contacts-and-hours {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+}
+.info-container-form-section {
+
+  &__prices-content {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__incall-block, &__outcall-block, &__travel-block {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  &__incall-block-title, &__outcall-block-title, &__travel-block-title {
+    @include font(1.125rem, 600, 144%);
+    color: $color-text-secondary;
+  }
+
+  &__incall-block-title-span, &__outcall-block-title-span {
+    @include font(1rem, 400, 144%);
+  }
+
+  &__incall-subtitle, &__outcall-subtitle {
+    display: flex;
+    gap: 1.25rem;
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: $color-text-secondary;
+    text-decoration: line-through;
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 1.25rem;
+      height: 1.25rem;
+      background-color: $color-surface-highlight;
+      border-radius: 0.25rem;
+      border: 0.0625rem solid $color-border-primary;
+    }
+  }
+
+  &__incall-list, &__outcall-list, &__travel-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__incall-item, &__outcall-item, &__travel-item {
+    display: grid;
+    grid-template-columns: 12.375rem auto;
+    border-bottom: 0.0625rem solid $color-border-secondary;
+    max-width: 19.9375rem;
+  }
+
+  &__outcall-notice {
+    @include font(0.875rem, 400, 143%);
+    color: $color-checked-not-verified;
+  }
+
+  &__travel-subtitle {
+  }
+
+  &__row-span {
+    @include font(0.875rem, 400, 143%);
+    color: $color-checked-not-verified;
+  }
+
+  &__social-btns {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__heading-working-hours {
+  }
+
+  &__working-hours-subtitle {
+    @include font(0.875rem, 700, 143%);
+  }
+
+  &__subtitle-span {
+    @include font(0.875rem, 400, 143%);
+  }
+
+  &__working-hours-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 165px;
+    gap: 0.75rem;
+  }
+
+  &__working-hours-row {
+    display: grid;
+    grid-template-columns: 6.75rem 1fr;
+    column-gap: 0.75rem;
+  }
+
+  &__services-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  &__services-content-title {
+    @include font(1.125rem, 600, 144%);
+    color: $color-text-secondary;
+  }
+
+  &__services-content-lists {
+    // display: grid;
+    // grid-template-columns: 1fr 1fr 1fr;
+    // column-gap: 1.5rem;
+  }
+
+  &__services-content-list {
+    display: flex;
+    flex-direction: column;
+    // max-width: 320px;
+    flex-wrap: wrap;
+    // flex-direction: column;
+    gap: 0.75rem;
+    column-count: 3;
+  }
+
+  &__checkbox-container {
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    &.active .info-container-form-section__checkbox {
+      color: $color-text-primary;
+      text-decoration: none;
+      &::before {
+        border-width: 0rem;
+        background: url('../assets/icons/checkmark.svg') no-repeat center;
+        background-color: $color-checked-not-verified;
+      }
+    }
+
+    &.active-green .info-container-form-section__checkbox {
+      color: $color-text-primary;
+      text-decoration: none;
+      &::before {
+        border-width: 0rem;
+        background: url('../assets/icons/checkmark.svg') no-repeat center;
+        background-color: $color-checked-similar;
+      }
+    }
+
+    &.extra .info-container-form-section__checkbox {
+      color: $color-text-primary;
+      text-decoration: none;
+      &::before {
+        border-width: 0rem;
+        background: url('../assets/icons/dollar.svg') no-repeat center;
+        background-color: $color-checked-not-similar;
+      }
+    }
+
+    &.extra .info-container-form-section__checkbox-price {
+      display: block;
+    }
+
+    &.cross .info-container-form-section__checkbox {
+      color: $color-text-primary;
+      text-decoration: none;
+      &::before {
+        background: url('../assets/icons/check-cross.svg') no-repeat center;
+        background-color: $color-checked-not-verified;
+      }
+    }
+
+    &.description .info-container-form-section__services-description {
+      display: block;
+    }
+  }
+
+  &__checkbox-row {
+    display: grid;
+    grid-template-columns: 12.5rem 1fr;
+  }
+
+  &__checkbox-price {
+    display: none;
+    color: $color-border-accent;
+  }
+
+  &__services-description {
+    display: none;
+    @include font(0.875rem, 400, 143%);
+    color: $color-text-secondary;
+  }
+
+  &__location-column {
+    row-gap: 1.3125rem;
+  }
+
+  &__review-content {
+    gap: 1.5rem;
+  }
+
+  &__reviews-heading {
+    justify-content: flex-start;
+    column-gap: 1.5rem;
+  }
+
+  &__review-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: $color-surface-highlight;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+
+  &__review-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    align-items: flex-start;
+  }
+
+  &__review-title {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__review-name {
+    @include font(1.125rem, 600, 144%);
+  }
+
+  &__review-date {
+    color: $color-text-secondary;
+  }
+
+  &__review-visit-confirmation {
+    @include font(0.875rem, 700, 143%);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: $color-checked-not-similar;
+    background-color: $color-other-normal-bg;
+    padding: 0.625rem 0.5rem;
+    border-radius: 0.25rem;
+    &::before {
+      background: url('../assets/icons/help-circle.svg') no-repeat center;
+      content: '';
+      display: inline-block;
+      @include size(1.5rem);
+    }
+    &.confirmed {
+      color: $color-checked-similar;
+      background-color: $color-other-positive-bg;
+      &::before {
+        background: url('../assets/icons/check-circle.svg') no-repeat center;
+      }
+    }
+  }
+
+  &__review-score {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  &__review-score-table-row {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.25rem;
+  }
+
+  &__review-score-item {
+    display: grid;
+    grid-template-rows: 2.4375rem 3.875rem;
+    gap: 0.25rem;
+  }
+
+  &__review-score-label {
+    @include font(1rem, 700, 144%);
+    color: $color-text-invert;
+    background-color: $color-accent-primary;
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+  }
+
+  &__review-score-value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: $color-surface-primary;
+    width: 100%;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    word-break: break-all;
+  }
+
+  &__review-comment {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 1rem;
+    background-color: $color-surface-primary;
+    border-radius: 0.5rem;
+  }
+
+  &__review-comment-heading, &__review-answer-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  &__review-comment-title, &__review-answer-title {
+    @include font(1rem, 700, 144%);
+  }
+
+  &__review-comment-text, &__review-answer-text {
+
+  }
+
+  &__review-experience {
+    width: fit-content;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 0.5rem 1.25rem;
+    background-color: $color-other-normal-bg;
+
+    &-text-block {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    &-text-span {
+      @include font(1rem, 600, 144%);
+      color: $color-checked-not-similar;
+    }
+    &.positive {
+      background-color: $color-other-positive-bg;
+    }
+    &.positive &-text-span {
+      color: $color-checked-similar;
+    }
+    &.negative {
+      background-color: $color-other-negative-bg;
+    }
+    &.negative &-text-span {
+      color: $color-checked-not-verified;
+    }
+  }
+
+  &__review-answer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  &__review-answer {
+    display: flex;
+    gap: 1.25rem;
+  }
+
+  &__review-answer::before {
+    content: '';
+    display: inline-block;
+    // height: 100%;
+    width: 1px;
+    min-width: 1px;
+    background-color: $color-border-icons;
+    margin-left: 1.5rem;
+  }
+}
+
+@media screen and (max-width:$desktop-lg) {
+  .info-container-form-section {
+    &__working-hours-content {
+      max-height: none;
+    }
+  }
+}
+
+
+@media screen and (max-width:$desktop-md) {
+  .form-section {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      // padding-left: 0;
+      // padding-right: 0;
+    }
+  }
+  .main-block-form-section {
+    &__details {
+      flex: 0 0 47%;
+    }
+
+    &__photo-info {
+      gap: 0.25rem;
+      flex-wrap: wrap;
+    }
+  }
+
+}
+
+@media screen and (max-width:$desktop-sm) {
+  .main-block-form-section {
+    flex-direction: column;
+    &__form-details {
+      flex-direction: row;
+      gap: 1.5rem;
+    }
+    &__photo-info {
+      gap: 0.25rem;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+  }
+  .info-container-form-section {
+    &__prices-content {
+      grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    }
+    &__services-content-lists {
+      
+    }
+    &__language-item {
+      grid-template-columns: repeat(2, minmax(7.25rem, 1fr));
+    }
+
+    &__phone-text {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    &__working-hours-content {
+      max-height: 8.125rem;
+    }
+  }
+
+  .additional-block-form-section {
+    &__contacts-and-hours {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media screen and (max-width:$tablet) {
+  .main-block-form-section {
+    flex-direction: column;
+    &__form-details {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    &__alert-fake-btn {
+      @include font(0.875rem, 600, 136%);
+    }
+
+    &__header {
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      padding: 0rem;
+    }
+  }
+  .info-container-form-section {
+    padding: 0.75rem;
+    &__heading {
+      row-gap: 0.5rem;
+    }
+
+    &__language-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__social-btns {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__working-hours-content {
+      max-height: none;
+    }
+
+    &__review-score-table-row {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: auto;
+      flex-direction: column;
+    }
+    &__review-score-item {
+      display: flex;
+    }
+    &__review-experience {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+  .additional-block-form-section {
+    &__tab-list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    &__tab-item {
+      
+    }
+    &__tab-link {
+      padding: 0.75rem 1rem;
+      white-space: nowrap;
+    }
+  }
+}
+
+@media screen and (max-width:$mobile-md) {
+  .form-section {
+    padding: 1.25rem 0rem;
+    &__container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    &__details {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      @include font(0.875rem, 400, 143%);
+    }
+  }
+
+  .main-block-form-section {
+    &__photo-info {
+      @include font(0.875rem, 400, 143%);
+    }
+    &__photo-info, &__header, &__form-details {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    &__name {
+      @include font(1.25rem, 700, 136%);
+    }
+    &__last-online {
+      @include font(0.875rem, 400, 143%);
+    }
+    &__slider-verified-text, &__slider-rating-text {
+      @include font(0.875rem, 700, 143%);
+    }
+  }
+
+  .info-container-form-section {
+    &__title {
+      @include font(1.125rem, 600, 144%);
+    }
+
+    &__row {
+      grid-template-columns: 10.875rem 1fr;
+    }
+
+    &__row-title, &__column-title {
+      @include font(0.875rem, 700, 143%);
+    }
+
+    &__row-text {
+      @include font(0.875rem, 400, 143%);
+    }
+  }
+
+}
