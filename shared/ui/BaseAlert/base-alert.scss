@@ -1,19 +1,5 @@
 @use '@/app/assets/scss/utils' as *;
 
-.alert-wrapper {
-  @include flex(column);
-  z-index: 9998;
-
-  &__overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    @include size(100%);
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-}
-
 .alert {
   background-color: $color-surface-primary;
   position: fixed;
