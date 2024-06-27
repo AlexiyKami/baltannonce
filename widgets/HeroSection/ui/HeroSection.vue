@@ -4,6 +4,7 @@ import { CityDropdown, FilterDropdown } from '@/entities/Filters';
 import { ExtendedFilterModal } from '@/widgets/ExtendedFilterModal';
 import { girlsFilters } from '../model/girls-filters';
 import { girlsExtendedFilters } from '../model/girls-extended-filters';
+import { setScrollHidden } from '@/shared/lib/helpers/scroll-helpers.js';
 
 const isCityDropdownOpened = ref(true);
 const isFilterDropdownOpened = ref(false);
@@ -11,7 +12,7 @@ const isExtendedFilterModalOpened = ref(false);
 
 const setIsExtendedFilterModalOpened = (value) => {
   isExtendedFilterModalOpened.value = value;
-  value ? (document.body.style.overflow = 'hidden') : (document.body.style.overflow = 'auto');
+  value ? setScrollHidden(true) : setScrollHidden(false);
 };
 </script>
 

@@ -1,8 +1,10 @@
+import { setScrollHidden } from '@/shared/lib/helpers/scroll-helpers.js';
+
 export const useAlertsStore = defineStore('alerts', () => {
   const alert = ref(null);
 
   const displayAlert = (color, title, text, variant, density, border, closable) => {
-    document.body.style.overflow = 'hidden';
+    setScrollHidden(true);
     alert.value = {
       color,
       title,
@@ -15,7 +17,7 @@ export const useAlertsStore = defineStore('alerts', () => {
   };
 
   const hideAlert = () => {
-    document.body.style.overflow = 'auto';
+    setScrollHidden(false);
     alert.value = null;
   };
 
