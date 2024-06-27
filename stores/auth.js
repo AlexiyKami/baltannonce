@@ -5,7 +5,10 @@ export const useAuthStore = defineStore('auth', () => {
   const router = useRouter();
   const alertsStore = useAlertsStore();
 
+  // Save the access token in cookies for 5 minutes
   const token = ref(useCookie('token', { expires: new Date(Date.now() + 5 * 60 * 1000) }));
+
+  // Save the refresh token in cookies for 1 day
   const refreshToken = ref(
     useCookie('refresh', { expires: new Date(Date.now() + 24 * 60 * 60 * 1000) })
   );
@@ -45,6 +48,7 @@ export const useAuthStore = defineStore('auth', () => {
         await login({ username: user.username, password: user.password });
       }
     } catch (error) {
+      // Set an alert message
       let alertText = '';
       if (error.response.status === 400) {
         if (error.response.data.email && error.response.data.username) {

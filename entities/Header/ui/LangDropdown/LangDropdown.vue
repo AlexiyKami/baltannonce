@@ -4,6 +4,8 @@ import { languages } from '../../model/languages';
 
 const isDropdownOpened = ref(false);
 
+// Get language from cookies
+// If it is not in the cookies, then set the default value
 const currentLanguage = ref(useCookie('lang', { maxAge: 60 * 60 * 24 * 365 }));
 if (!currentLanguage.value) {
   currentLanguage.value = 'ru';

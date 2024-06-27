@@ -30,6 +30,7 @@ const isNickCorrect = ref(false);
 const disableBlur = ref(false);
 
 const sendForm = async () => {
+  // Validate all fields
   if (
     !gender.value ||
     !isLocationsCorrect(locations.value) ||

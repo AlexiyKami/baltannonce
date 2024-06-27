@@ -17,6 +17,8 @@ const breakpoint = 1280;
 const isMenuOpened = ref(false);
 const isLoginPopupOpened = ref(false);
 
+// closeMenuOnResize implements behavior so that when resizing,
+// if the menu disappears, it should not appear again
 const closeMenuOnResize = () => {
   if (window.innerWidth > breakpoint) {
     isMenuOpened.value = false;
@@ -24,6 +26,8 @@ const closeMenuOnResize = () => {
 };
 
 onMounted(() => {
+  // debounce is used to prevent a function from executing too often
+  // Performing without debounce may result in reduced performance
   window.addEventListener('resize', debounce(closeMenuOnResize, 10));
 });
 

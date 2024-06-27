@@ -19,6 +19,7 @@ const submitError = ref(false);
 const disableBlur = ref(false);
 
 const sendForm = async () => {
+  // Validate all fields
   if (!isNickCorrect.value || !isPasswordCorrect.value) {
     submitError.value = true;
   } else {

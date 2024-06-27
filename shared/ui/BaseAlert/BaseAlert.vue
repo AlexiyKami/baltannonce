@@ -1,6 +1,12 @@
 <script setup>
 import './base-alert.scss';
 
+// color => 'info' || 'warning' || 'success' || 'error'
+// variant => 'outlined' || 'tonal' || 'default'
+// density => 'default' || 'comfortable' || 'compact'
+// border => true || false
+// closable => true || false
+
 defineProps({
   color: { type: String, required: true },
   title: { type: String, required: true },

@@ -4,6 +4,8 @@ import { BaseAlert } from '@/shared/ui';
 
 const authStore = useAuthStore();
 const alertsStore = useAlertsStore();
+
+// Take stores after initialization
 injectStores(authStore, alertsStore);
 
 useSeoMeta({

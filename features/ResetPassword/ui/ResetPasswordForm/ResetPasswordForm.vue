@@ -7,6 +7,7 @@ const submitError = ref(false);
 const email = ref('');
 
 const sendForm = () => {
+  // Validate all fields
   if (!email.value || !isEmailCorrect(email)) {
     submitError.value = true;
     console.log(submitError.value);

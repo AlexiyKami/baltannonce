@@ -7,17 +7,20 @@ const instance = axios.create({
 let authStore;
 let alertsStore;
 
+// Take stores after initialization
 export const injectStores = (first, second) => {
   authStore = first;
   alertsStore = second;
 };
 
+// Send token in headers on every request
 instance.interceptors.request.use((config) => {
   const token = authStore.token;
   config.headers.Authorization = token ? `Bearer ${token}` : '';
   return config;
 });
 
+// We take new tokens when the old access token expires
 instance.interceptors.response.use(
   (config) => config,
   async (error) => {

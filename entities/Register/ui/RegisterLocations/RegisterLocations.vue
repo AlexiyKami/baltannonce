@@ -17,6 +17,7 @@ const isChecked = (cityId) => {
 };
 
 const isDisabled = (cityId) => {
+  // Disable location selection if 2 locations are already selected
   return props.locations.length >= 2 && !isChecked(cityId);
 };
 </script>
