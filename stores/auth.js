@@ -17,11 +17,20 @@ export const useAuthStore = defineStore('auth', () => {
   const login = async (user) => {
     isLoading.value = true;
     try {
-      const { data, status } = await AuthService.login(user);
-      if (status === 200) {
-        token.value = data.access;
-        refreshToken.value = data.refresh;
+      const response = await AuthService.login(user);
+      if (response.status === 200) {
+        token.value = response.data.access;
+        refreshToken.value = response.data.refresh;
         router.push('/');
+        alertsStore.displayAlert(
+          'success',
+          'Вход выполнен успешно',
+          'Добро пожаловать обратно! Ваш вход выполнен успешно. Мы рады снова видеть вас.',
+          'tonal',
+          'default',
+          true,
+          false
+        );
       }
     } catch (error) {
       if (error.status === 401) {
@@ -43,9 +52,26 @@ export const useAuthStore = defineStore('auth', () => {
   const register = async (user, pathSegment) => {
     isLoading.value = true;
     try {
-      const response = await AuthService.register(user, pathSegment);
-      if (response.status === 201) {
-        await login({ username: user.username, password: user.password });
+      const { status } = await AuthService.register(user, pathSegment);
+      if (status === 201) {
+        const response = await AuthService.login({
+          username: user.username,
+          password: user.password
+        });
+        if (response.status === 200) {
+          token.value = response.data.access;
+          refreshToken.value = response.data.refresh;
+          router.push('/');
+          alertsStore.displayAlert(
+            'success',
+            'Регистрация успешно завершена',
+            'Ваш аккаунт успешно зарегистрирован. Мы рады приветствовать вас в нашем сообществе!',
+            'tonal',
+            'default',
+            true,
+            false
+          );
+        }
       }
     } catch (error) {
       // Set an alert message
@@ -60,6 +86,8 @@ export const useAuthStore = defineStore('auth', () => {
         }
         alertsStore.displayAlert('error', 'Ошибка', alertText, 'tonal', 'default', true, false);
       }
+    } finally {
+      isLoading.value = false;
     }
   };
 
