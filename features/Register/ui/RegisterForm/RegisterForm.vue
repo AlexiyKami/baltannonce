@@ -1,6 +1,6 @@
 <script setup>
 import './register-form.scss';
-import { BaseTextField } from '@/shared/ui';
+import { BaseTextField, SpinnerDots } from '@/shared/ui';
 import {
   RegisterCardWithDescription,
   RegisterGenderCard,
@@ -10,7 +10,6 @@ import { PasswordField, PasswordConfirmationField, NickField } from '@/entities/
 import { cities } from '@/shared/model/cities';
 import { isLocationsCorrect, isEmailCorrect } from '@/shared/lib/helpers/fields-validation';
 
-const router = useRouter();
 const authStore = useAuthStore();
 
 const type = ref('user');
@@ -31,6 +30,7 @@ const isNickCorrect = ref(false);
 const disableBlur = ref(false);
 
 const sendForm = async () => {
+  // Validate all fields
   if (
     !gender.value ||
     !isLocationsCorrect(locations.value) ||
@@ -53,9 +53,6 @@ const sendForm = async () => {
     type.value === 'user'
       ? await authStore.register(data, 'customer')
       : await authStore.register(data, 'model');
-    if (!authStore.isError) {
-      router.push('/');
-    }
     submitError.value = false;
     disableBlur.value = false;
   }
@@ -231,8 +228,15 @@ const setLocations = (city, country) => {
       </div>
     </div>
     <div class="register__actions-container">
-      <button class="button button_primary register__button" @mousedown="sendForm">
-        Регистрация
+      <button
+        class="button button_primary register__button"
+        :disabled="authStore.isLoading"
+        @mousedown.left="sendForm"
+      >
+        <div class="register__button-inner">
+          Регистрация
+          <SpinnerDots v-if="authStore.isLoading" />
+        </div>
       </button>
     </div>
   </form>

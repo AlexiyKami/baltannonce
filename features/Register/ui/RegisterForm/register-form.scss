@@ -151,6 +151,15 @@
 
   &__button {
     width: 100%;
+
+    & .register__button-inner {
+      position: relative;
+    }
+
+    &:disabled {
+      background-color: $color-surface-highlight;
+      color: $color-text-primary;
+    }
   }
 
   &__actions {

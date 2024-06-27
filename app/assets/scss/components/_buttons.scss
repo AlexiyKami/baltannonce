@@ -15,8 +15,12 @@
   background-color: $color-button;
   color: $color-text-invert;
 
-  &:hover {
+  &:not(:disabled):hover {
     box-shadow: $hover-light-mode;
+  }
+
+  &:disabled {
+    cursor: auto;
   }
 }
 

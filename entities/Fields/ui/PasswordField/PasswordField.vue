@@ -4,7 +4,6 @@ import { PasswordIcon, BaseTextField } from '@/shared/ui';
 import { isPasswordCorrect } from '@/shared/lib/helpers/fields-validation';
 
 const isPasswordInputFocused = ref(false);
-// const disableBlur = ref(false)
 
 const props = defineProps({
   password: { type: String, required: true },
@@ -39,6 +38,9 @@ const setPassword = (value) => {
 
 const setFocus = (value) => {
   if (!value) {
+    // We check whether the form submit button was clicked
+    // If this happens, then we cancel the loss of focus from the password field
+    // so that there is no sharp jump in the UI
     if (!props.disableBlur) {
       isPasswordInputFocused.value = value;
     }

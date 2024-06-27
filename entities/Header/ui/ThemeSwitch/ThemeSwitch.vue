@@ -3,6 +3,7 @@ import './theme-switch.scss';
 
 const settingsStore = useSettingsStore();
 
+// If dark mode, set the darkmode class for the body
 watch(
   () => settingsStore.isDarkMode,
   () => {

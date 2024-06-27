@@ -32,6 +32,11 @@
   --color-normal-bg: #0651c11a;
   --color-negative-bg: #da12121a;
   --color-warning-bg: #fbbf241a;
+
+  --color-warning: #fbbf24;
+  --color-success: #22ad5c;
+  --color-error: #da1212;
+  --color-info: #0651c1;
 }
 
 $color-text-primary: var(--color-text-primary);
@@ -67,6 +72,9 @@ $color-feedback-positive: #17a21533;
 $color-feedback-normal: #0651c133;
 $color-feedback-negative: #da121233;
 $color-warning: #fbbf24;
+$color-success: #22ad5c;
+$color-error: #da1212;
+$color-info: #0651c1;
 
 $color-accent-primary: var(--color-accent-primary);
 $color-accent-secondary: var(--color-accent-secondary);

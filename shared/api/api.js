@@ -5,17 +5,22 @@ const instance = axios.create({
 });
 
 let authStore;
+let alertsStore;
 
-export const injectStore = (_store) => {
-  authStore = _store;
+// Take stores after initialization
+export const injectStores = (first, second) => {
+  authStore = first;
+  alertsStore = second;
 };
 
+// Send token in headers on every request
 instance.interceptors.request.use((config) => {
   const token = authStore.token;
   config.headers.Authorization = token ? `Bearer ${token}` : '';
   return config;
 });
 
+// We take new tokens when the old access token expires
 instance.interceptors.response.use(
   (config) => config,
   async (error) => {
@@ -29,7 +34,15 @@ instance.interceptors.response.use(
         authStore.updateTokens(response.data);
         return instance.request(originalRequest);
       } catch (e) {
-        console.log('User is not authorized');
+        alertsStore.displayAlert(
+          'error',
+          'Ошибка',
+          'Активная учетная запись с указанными учетными данными не найдена',
+          'tonal',
+          'default',
+          true,
+          false
+        );
         authStore.logout();
       }
     }

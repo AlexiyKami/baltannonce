@@ -11,12 +11,14 @@ import { debounce } from '../lib/helpers/debounce';
 import { LoginPopup } from '@/features/Login';
 
 const authStore = useAuthStore();
-const menStore = useMenStore();
+const router = useRouter();
 
 const breakpoint = 1280;
 const isMenuOpened = ref(false);
 const isLoginPopupOpened = ref(false);
 
+// closeMenuOnResize implements behavior so that when resizing,
+// if the menu disappears, it should not appear again
 const closeMenuOnResize = () => {
   if (window.innerWidth > breakpoint) {
     isMenuOpened.value = false;
@@ -24,6 +26,8 @@ const closeMenuOnResize = () => {
 };
 
 onMounted(() => {
+  // debounce is used to prevent a function from executing too often
+  // Performing without debounce may result in reduced performance
   window.addEventListener('resize', debounce(closeMenuOnResize, 10));
 });
 
@@ -32,12 +36,15 @@ onUnmounted(() => {
 });
 
 const handleMenLinkClick = (value) => {
-  menStore.setCurrentTab(value);
+  router.push({ path: '/men', query: { tab: value } });
   isMenuOpened.value = false;
 };
 </script>
 
 <template>
+  <Transition>
+    <div v-if="isMenuOpened" class="header-overlay" @click="isMenuOpened = false" />
+  </Transition>
   <div
     class="header"
     :class="{
