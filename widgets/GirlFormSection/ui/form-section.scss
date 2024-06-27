@@ -576,6 +576,10 @@
     }
   }
 
+  &__show-all-btn {
+    align-self: flex-start;
+  }
+
   &__checkbox-row {
     display: grid;
     grid-template-columns: 12.5rem 1fr;
