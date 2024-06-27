@@ -1,0 +1,236 @@
+@use '@/app/assets/scss/utils' as *;
+
+.main-block-form-section {
+  &__media {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 1 1 auto;
+  }
+
+  &__photo-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  &__form-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    color: $color-text-secondary;
+    margin-bottom: 0.4375rem;
+  }
+
+  &__date-create {
+  }
+
+  &__date-create-value {
+  }
+
+  &__date-update {
+  }
+
+  &__main-block {
+  }
+
+  &__info-container {
+  }
+
+  &__slider {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0.375rem;
+    background: $gradient-linear-gold;
+    border-radius: 0.75rem;
+  }
+
+  &__slider-img-container {
+    display: flex;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    overflow: hidden;
+  }
+
+  &__slider-photo {
+  }
+
+  &__slider-btn {
+    position: absolute;
+    &_left {
+      top: 50%;
+      left: 0.875rem;
+    }
+    &_right {
+      top: 50%;
+      right: 0.875rem;
+    }
+  }
+
+  &__slider-tag {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $color-surface-primary;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    padding: 0.8125rem 1.25rem;
+  }
+
+  &__slider-verified {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: $color-checked-not-verified;
+    &_similar {
+      color: $color-checked-similar;
+    }
+    &_not-similar {
+      color: $color-checked-not-similar;
+    }
+    &_by-photo {
+      color: $color-checked-by-photo;
+    }
+    &_by-admin {
+      color: $color-checked-personally;
+    }
+    &_by-video {
+      color: $color-checked-by-video;
+    }
+  }
+
+  &__slider-verified-text {
+    @include font(1.125rem, 600, 144%);
+  }
+
+  &__slider-rating {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  &__slider-rating-text {
+    @include font(1.125rem, 600, 144%);
+    color: $color-text-secondary;
+  }
+
+  &__photo-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: $color-text-secondary;
+    gap: 0.25rem;
+  }
+
+  &__photo-info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__search-photo {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  &__photo-date-create {
+  }
+
+  &__photo-date-create-value {
+  }
+
+  &__search-photo {
+  }
+
+  &__search-photo-link {
+    cursor: pointer;
+    color: $color-accent-primary;
+    text-decoration: underline;
+    @include font(1rem, 600, 136%);
+  }
+
+  &__alert-fake-btn {
+
+  }
+
+  &__video-container {
+    position: relative;
+    padding-bottom: 58.15%;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    height: 0;
+  }
+
+  &__video {
+    position: absolute;
+    &-btn {
+      cursor: pointer;
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: rgba(0, 0, 0, 0.5);
+      transition: color $transition-hover;
+      &:hover {
+        color: rgba(0, 0, 0, 0.7);
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width:$desktop-md) {
+  .main-block-form-section {
+    &__photo-info {
+      gap: 0.25rem;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media screen and (max-width:$desktop-sm) {
+  .main-block-form-section {
+    flex-direction: column;
+    &__form-details {
+      flex-direction: row;
+      gap: 1.5rem;
+    }
+    &__photo-info {
+      gap: 0.25rem;
+      flex-wrap: wrap;
+      flex-direction: row;
+    }
+  }
+}
+
+@media screen and (max-width:$tablet) {
+  .main-block-form-section {
+    &__form-details {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    &__alert-fake-btn {
+      @include font(0.875rem, 600, 136%);
+    }
+  }
+}
+
+@media screen and (max-width:$mobile-md) {
+
+  .main-block-form-section {
+    &__photo-info, &__form-details {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      @include font(0.875rem, 400, 143%);
+    }
+    &__slider-verified-text, &__slider-rating-text {
+      @include font(0.875rem, 700, 143%);
+    }
+  }
+}
