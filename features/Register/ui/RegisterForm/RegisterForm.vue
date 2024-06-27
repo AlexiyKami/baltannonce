@@ -1,6 +1,6 @@
 <script setup>
 import './register-form.scss';
-import { BaseTextField } from '@/shared/ui';
+import { BaseTextField, SpinnerDots } from '@/shared/ui';
 import {
   RegisterCardWithDescription,
   RegisterGenderCard,
@@ -228,8 +228,15 @@ const setLocations = (city, country) => {
       </div>
     </div>
     <div class="register__actions-container">
-      <button class="button button_primary register__button" @mousedown="sendForm">
-        Регистрация
+      <button
+        class="button button_primary register__button"
+        :disabled="authStore.isLoading"
+        @mousedown.left="sendForm"
+      >
+        <div class="register__button-inner">
+          Регистрация
+          <SpinnerDots v-if="authStore.isLoading" />
+        </div>
       </button>
     </div>
   </form>

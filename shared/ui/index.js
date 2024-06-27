@@ -9,6 +9,7 @@ import PasswordIcon from './PasswordIcon/PasswordIcon.vue';
 import BaseTextField from './BaseTextField/BaseTextField.vue';
 import BaseTooltip from './BaseTooltip/BaseTooltip.vue';
 import BaseAlert from './BaseAlert/BaseAlert.vue';
+import SpinnerDots from './SpinnerDots/SpinnerDots.vue';
 
 export { PopupDropdownFilter };
 export { DropdownItemWithCount };
@@ -21,3 +22,4 @@ export { PasswordIcon };
 export { BaseTextField };
 export { BaseTooltip };
 export { BaseAlert };
+export { SpinnerDots };

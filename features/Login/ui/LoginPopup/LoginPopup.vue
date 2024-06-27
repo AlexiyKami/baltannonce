@@ -1,6 +1,7 @@
 <script setup>
 import './login-popup.scss';
 import { PasswordField, NickField } from '@/entities/Fields';
+import { SpinnerDots } from '@/shared/ui';
 
 defineProps({
   isLoginPopupOpened: { type: Boolean, required: true }
@@ -62,14 +63,22 @@ const sendForm = async () => {
           </div>
         </div>
         <div class="login-popup-header__actions-container">
-          <button class="button button_primary login-popup-header__button" @mousedown="sendForm">
-            Войти
+          <button
+            class="button button_primary login-popup-header__button"
+            :disabled="authStore.isLoading"
+            @mousedown.left="sendForm"
+          >
+            <div class="login-popup-header__button-inner">
+              Войти
+              <SpinnerDots v-if="authStore.isLoading" />
+            </div>
           </button>
           <div class="login-popup-header__actions">
             <p class="login-popup-header__action">
               <NuxtLink
                 to="/reset-password"
                 class="button text-button login-popup-header__reset-password-link"
+                @click="emits('closePopup')"
                 >Забыли пароль?</NuxtLink
               >
             </p>

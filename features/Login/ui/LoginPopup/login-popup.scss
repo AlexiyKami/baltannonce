@@ -70,6 +70,19 @@
     flex-direction: column;
     gap: 1rem;
   }
+
+  &__button {
+    width: 100%;
+
+    & .login-popup-header__button-inner {
+      position: relative;
+    }
+
+    &:disabled {
+      background-color: $color-surface-highlight;
+      color: $color-text-primary;
+    }
+  }
 }
 
 @media screen and (max-width: $desktop-md) {

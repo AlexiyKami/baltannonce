@@ -1,0 +1,55 @@
+@use '@/app/assets/scss/utils' as *;
+
+.spinner-dots {
+  position: absolute;
+  margin-left: 0.75rem;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+
+  &__dot {
+    animation: changeColor 0.8s linear infinite;
+
+    &:nth-child(1) {
+      animation-delay: 0ms;
+    }
+
+    &:nth-child(2) {
+      animation-delay: 100ms;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 200ms;
+    }
+
+    &:nth-child(4) {
+      animation-delay: 300ms;
+    }
+
+    &:nth-child(5) {
+      animation-delay: 400ms;
+    }
+
+    &:nth-child(6) {
+      animation-delay: 500ms;
+    }
+
+    &:nth-child(7) {
+      animation-delay: 600ms;
+    }
+
+    &:nth-child(8) {
+      animation-delay: 700ms;
+    }
+  }
+}
+
+@keyframes changeColor {
+  0% {
+    fill-opacity: 1;
+  }
+
+  12% {
+    fill-opacity: 0.2;
+  }
+}
