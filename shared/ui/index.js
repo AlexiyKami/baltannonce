@@ -8,6 +8,7 @@ import RangeInputSmall from './RangeInputSmall/RangeInputSmall.vue';
 import PasswordIcon from './PasswordIcon/PasswordIcon.vue';
 import BaseTextField from './BaseTextField/BaseTextField.vue';
 import BaseTooltip from './BaseTooltip/BaseTooltip.vue';
+import BaseBreadcrumbs from './BaseBreadcrumbs/BaseBreadcrumbs.vue';
 import BaseAlert from './BaseAlert/BaseAlert.vue';
 import SpinnerDots from './SpinnerDots/SpinnerDots.vue';
 
@@ -21,5 +22,6 @@ export { RangeInputSmall };
 export { PasswordIcon };
 export { BaseTextField };
 export { BaseTooltip };
+export { BaseBreadcrumbs };
 export { BaseAlert };
 export { SpinnerDots };

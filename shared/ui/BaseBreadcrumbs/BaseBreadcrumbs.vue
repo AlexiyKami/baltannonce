@@ -1,5 +1,5 @@
 <script setup>
-import './breadcrumbs.scss';
+import './base-breadcrumbs.scss';
 </script>
 
 <template>

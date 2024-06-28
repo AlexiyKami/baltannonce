@@ -1,11 +1,11 @@
 <script setup>
-import { BreadcrumbsBlock } from '@/entities/BreadcrumbsBlock';
+import { BaseBreadcrumbs } from '@/shared/ui';
 import { GirlFormSection } from '@/widgets/GirlFormSection';
 </script>
 
 <template>
   <div>
-    <BreadcrumbsBlock />
+    <BaseBreadcrumbs />
     <GirlFormSection />
   </div>
 </template>
