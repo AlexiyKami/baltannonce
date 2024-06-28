@@ -1,0 +1,118 @@
+{
+  "header": {
+    "girlsDropdownBtn": "Девушки",
+    "girlsLinks": {
+      "first": "Эскорт",
+      "second": "Содержанки"
+    },
+    "menDropdownBtn": "Мужчины",
+    "menLinks": {
+      "first": "Эскорт",
+      "second": "Стриптизеры"
+    },
+    "supplyDemandLink": "Спрос и предложение",
+    "firstTimeLink": "В первый раз?",
+    "loginBtn": "Войти",
+    "registerBtn": "Регистрация"
+  },
+  "girlsPage": {
+    "heading": "Высококлассный Эскорт в странах Прибалтики",
+    "comingSoon": "Скоро в городе",
+    "catsInPoke": {
+      "title": "Кошки в мешке",
+      "tooltip": "Lorem ipsum dolor sit amet consectetur. Ornare sagittis risus sapien ullamcorper. Tortor sed ipsum morbi nibh natoque aenean lacinia."
+    }
+  },
+  "menPage": {
+    "heading": "Мужской Эскорт и Стриптизеры в странах Прибалтики",
+    "strippers": "Стриптизеры",
+    "escort": {
+      "title": "Эскорт",
+      "tooltip": "Lorem ipsum dolor sit amet consectetur. Ornare sagittis risus sapien ullamcorper. Tortor sed ipsum morbi nibh natoque aenean lacinia."
+    }
+  },
+  "advertisement": "Реклама",
+  "hero": {
+    "selectCityBtn": "Выберите город",
+    "filtersBtn": "Фильтры",
+    "advancedSearchBtn": "Продвинутый поиск"
+  },
+  "footer": {
+    "girlsLink": "Девушки",
+    "menLink": "Мужчины",
+    "supplyDemandLink": "Спрос и предложение",
+    "firstTimeLink": "В первый раз?",
+    "keptWomen": "Содержанки",
+    "supportPayment": "Поддержка и Оплата"
+  },
+  "login": {
+    "nick": "Ник",
+    "password": "Пароль",
+    "loginBtn": "Войти",
+    "forgotPassword": "Забыли пароль?"
+  },
+  "register": {
+    "type": {
+      "heading": "Выберите тип",
+      "userTypeBtn": {
+        "title": "Пользователь",
+        "details": "Я хочу воспользоваться услугами"
+      },
+      "advertiserTypeBtn": {
+        "title": "Рекламодатель",
+        "details": "Я хочу рекламировать свои услуги"
+      }
+    },
+    "gender": {
+      "heading": "Выберите пол",
+      "male": "Мужской",
+      "female": "Женский"
+    },
+    "city": {
+      "heading": "Выберите город",
+      "tip": "не более 2"
+    },
+    "info": {
+      "heading": "Ввести информацию",
+      "checkboxes": {
+        "agreement": {
+          "agreeWith": "Я согласен с",
+          "privacyPolicy": "Политика конфиденциальности",
+          "termsConditions": "Условия и положения"
+        },
+        "wantToReceive": "Я хочу получать письма от рекламодателя в фаворитах"
+      }
+    },
+    "registerBtn": "Регистрация"
+  },
+  "resetPasswordPage": {
+    "heading": "Забыли пароль? Введите свой адрес электронной почты ниже, и мы вышлем вам электронное письмо, позволяющее сбросить его.",
+    "sendLetterBtn": "Отправить письмо",
+    "success": "Мы отправили вам письмо с инструкцией по сбросу пароля"
+  },
+  "tips": {
+    "emptyField": "Пожалуйста, заполните поле",
+    "emailTip": "Email который вы ввели не является допустимым",
+    "nickTip": "От 2 до 10 символов",
+    "passwordTips": {
+      "first": "Минимум 8 символов",
+      "second": "Минимум 1 строчная буква",
+      "third": "Минимум 1 заглавная буква",
+      "fourth": "Минимум 1 цифра",
+      "fifth": "Можно использовать специальные символы"
+    },
+    "passwordConfirmationTip": "Пароли не совпадают"
+  },
+  "placeholders": {
+    "email": "Email",
+    "nick": "Ник",
+    "password": "Пароль",
+    "passwordConfirmation": "Подтверждение пароля"
+  },
+  "newPasswordPage": {
+    "heading": "Введите новый пароль для вашего аккаунта",
+    "savePasswordBtn": "Сохранить пароль",
+    "success": "Ваш пароль был успешно обновлен. Теперь вы можете войти с новым паролем через логин справа сверху."
+  },
+  "backToMainPage": "Вернуться на главную"
+}

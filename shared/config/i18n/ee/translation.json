@@ -1,0 +1,118 @@
+{
+  "header": {
+    "girlsDropdownBtn": "",
+    "girlsLinks": {
+      "first": "",
+      "second": ""
+    },
+    "menDropdownBtn": "",
+    "menLinks": {
+      "first": "",
+      "second": ""
+    },
+    "supplyDemandLink": "",
+    "firstTimeLink": "",
+    "loginBtn": "",
+    "registerBtn": ""
+  },
+  "girlsPage": {
+    "heading": "",
+    "comingSoon": "",
+    "catsInPoke": {
+      "title": "",
+      "tooltip": ""
+    }
+  },
+  "menPage": {
+    "heading": "",
+    "strippers": "",
+    "escort": {
+      "title": "",
+      "tooltip": ""
+    }
+  },
+  "advertisement": "",
+  "hero": {
+    "selectCityBtn": "",
+    "filtersBtn": "",
+    "advancedSearchBtn": ""
+  },
+  "footer": {
+    "girlsLink": "",
+    "menLink": "",
+    "supplyDemandLink": "",
+    "firstTimeLink": "",
+    "keptWomen": "",
+    "supportPayment": ""
+  },
+  "login": {
+    "nick": "",
+    "password": "",
+    "loginBtn": "",
+    "forgotPassword": ""
+  },
+  "register": {
+    "type": {
+      "heading": "",
+      "userTypeBtn": {
+        "title": "",
+        "details": ""
+      },
+      "advertiserTypeBtn": {
+        "title": "",
+        "details": ""
+      }
+    },
+    "gender": {
+      "heading": "",
+      "male": "",
+      "female": ""
+    },
+    "city": {
+      "heading": "",
+      "tip": ""
+    },
+    "info": {
+      "heading": "",
+      "checkboxes": {
+        "agreement": {
+          "agreeWith": "",
+          "privacyPolicy": "",
+          "termsConditions": ""
+        },
+        "wantToReceive": ""
+      }
+    },
+    "registerBtn": ""
+  },
+  "resetPasswordPage": {
+    "heading": "",
+    "sendLetterBtn": "",
+    "success": ""
+  },
+  "tips": {
+    "emptyField": "",
+    "emailTip": "",
+    "nickTip": "",
+    "passwordTips": {
+      "first": "",
+      "second": "",
+      "third": "",
+      "fourth": "",
+      "fifth": ""
+    },
+    "passwordConfirmationTip": ""
+  },
+  "placeholders": {
+    "email": "",
+    "nick": "",
+    "password": "",
+    "passwordConfirmation": ""
+  },
+  "newPasswordPage": {
+    "heading": "",
+    "savePasswordBtn": "",
+    "success": ""
+  },
+  "backToMainPage": ""
+}
