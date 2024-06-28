@@ -33,7 +33,7 @@
   }
 
   &__text {
-    @include font(16px, 400, 143%);
+    @include font(1rem, 400, 143%);
     color: $color-text-secondary;
   }
 
