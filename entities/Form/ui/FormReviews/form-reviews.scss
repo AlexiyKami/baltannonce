@@ -1,0 +1,212 @@
+@use '@/app/assets/scss/utils' as *;
+
+.info-container-form-section {
+  &__review-content {
+    gap: 1.5rem;
+  }
+
+  &__reviews-heading {
+    justify-content: flex-start;
+    column-gap: 1.5rem;
+  }
+
+  &__review-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: $color-surface-highlight;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+
+  &__review-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    align-items: flex-start;
+  }
+
+  &__review-title {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__review-name {
+    @include font(1.125rem, 600, 144%);
+  }
+
+  &__review-date {
+    color: $color-text-secondary;
+  }
+
+  &__review-visit-confirmation {
+    @include font(0.875rem, 700, 143%);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: $color-checked-not-similar;
+    background-color: $color-other-normal-bg;
+    padding: 0.625rem 0.5rem;
+    border-radius: 0.25rem;
+    &::before {
+      background: url('./assets/icons/help-circle.svg') no-repeat center;
+      content: '';
+      display: inline-block;
+      @include size(1.5rem);
+    }
+    &.confirmed {
+      color: $color-checked-similar;
+      background-color: $color-other-positive-bg;
+      &::before {
+        background: url('./assets/icons/check-circle.svg') no-repeat center;
+      }
+    }
+  }
+
+  &__review-score {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  &__review-score-table-row {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0.25rem;
+  }
+
+  &__review-score-item {
+    display: grid;
+    grid-template-rows: 2.4375rem 3.875rem;
+    gap: 0.25rem;
+  }
+
+  &__review-score-label {
+    @include font(1rem, 700, 144%);
+    color: $color-text-invert;
+    background-color: $color-accent-primary;
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+  }
+
+  &__review-score-value {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: $color-surface-primary;
+    width: 100%;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    word-break: break-all;
+  }
+
+  &__review-comment {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 1rem;
+    background-color: $color-surface-primary;
+    border-radius: 0.5rem;
+  }
+
+  &__review-comment-heading, &__review-answer-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  &__review-comment-title, &__review-answer-title {
+    @include font(1rem, 700, 144%);
+  }
+
+  &__review-comment-text, &__review-answer-text {
+
+  }
+
+  &__review-experience {
+    width: fit-content;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 0.5rem 1.25rem;
+    background-color: $color-other-normal-bg;
+
+    &-text-block {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    &-text-span {
+      @include font(1rem, 600, 144%);
+      color: $color-checked-not-similar;
+    }
+    &.positive {
+      background-color: $color-other-positive-bg;
+    }
+    &.positive &-text-span {
+      color: $color-checked-similar;
+    }
+    &.negative {
+      background-color: $color-other-negative-bg;
+    }
+    &.negative &-text-span {
+      color: $color-checked-not-verified;
+    }
+  }
+
+  &__review-answer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  &__review-answer {
+    display: flex;
+    gap: 1.25rem;
+  }
+
+  &__review-answer::before {
+    content: '';
+    display: inline-block;
+    // height: 100%;
+    width: 1px;
+    min-width: 1px;
+    background-color: $color-border-icons;
+    margin-left: 1.5rem;
+  }
+}
+
+@media screen and (max-width:$desktop-md) {
+  
+}
+
+@media screen and (max-width:$desktop-sm) {
+  
+}
+
+@media screen and (max-width:$tablet) {
+  .info-container-form-section {
+    &__review-score-table-row {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: auto;
+      flex-direction: column;
+    }
+    &__review-score-item {
+      display: flex;
+    }
+    &__review-experience {
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width:$mobile-md) {
+
+}

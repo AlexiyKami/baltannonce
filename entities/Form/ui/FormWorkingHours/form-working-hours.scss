@@ -1,0 +1,60 @@
+@use '@/app/assets/scss/utils' as *;
+
+.info-container-form-section {
+  &__heading-working-hours {
+  }
+
+  &__working-hours-subtitle {
+    @include font(0.875rem, 700, 143%);
+  }
+
+  &__subtitle-span {
+    @include font(0.875rem, 400, 143%);
+  }
+
+  &__working-hours-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 165px;
+    gap: 0.75rem;
+  }
+
+  &__working-hours-row {
+    display: grid;
+    grid-template-columns: 6.75rem 1fr;
+    column-gap: 0.75rem;
+  }
+}
+
+@media screen and (max-width:$desktop-lg) {
+  .info-container-form-section {
+    &__working-hours-content {
+      max-height: none;
+    }
+  }
+}
+
+@media screen and (max-width:$desktop-md) {
+  
+}
+
+@media screen and (max-width:$desktop-sm) {
+  .info-container-form-section {
+    &__working-hours-content {
+      max-height: 8.125rem;
+    }
+  }
+}
+
+@media screen and (max-width:$tablet) {
+  .info-container-form-section {
+    &__working-hours-content {
+      max-height: none;
+    }
+  }
+}
+
+@media screen and (max-width:$mobile-md) {
+
+}

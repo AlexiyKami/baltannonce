@@ -37,84 +37,6 @@
   &__info-container {
   }
 
-  &__slider {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    padding: 0.375rem;
-    background: $gradient-linear-gold;
-    border-radius: 0.75rem;
-  }
-
-  &__slider-img-container {
-    display: flex;
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
-    overflow: hidden;
-  }
-
-  &__slider-photo {
-  }
-
-  &__slider-btn {
-    position: absolute;
-    &_left {
-      top: 50%;
-      left: 0.875rem;
-    }
-    &_right {
-      top: 50%;
-      right: 0.875rem;
-    }
-  }
-
-  &__slider-tag {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: $color-surface-primary;
-    border-bottom-left-radius: 0.5rem;
-    border-bottom-right-radius: 0.5rem;
-    padding: 0.8125rem 1.25rem;
-  }
-
-  &__slider-verified {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    color: $color-checked-not-verified;
-    &_similar {
-      color: $color-checked-similar;
-    }
-    &_not-similar {
-      color: $color-checked-not-similar;
-    }
-    &_by-photo {
-      color: $color-checked-by-photo;
-    }
-    &_by-admin {
-      color: $color-checked-personally;
-    }
-    &_by-video {
-      color: $color-checked-by-video;
-    }
-  }
-
-  &__slider-verified-text {
-    @include font(1.125rem, 600, 144%);
-  }
-
-  &__slider-rating {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-  }
-
-  &__slider-rating-text {
-    @include font(1.125rem, 600, 144%);
-    color: $color-text-secondary;
-  }
-
   &__photo-info {
     display: flex;
     flex-direction: column;
@@ -228,9 +150,6 @@
       padding-left: 1rem;
       padding-right: 1rem;
       @include font(0.875rem, 400, 143%);
-    }
-    &__slider-verified-text, &__slider-rating-text {
-      @include font(0.875rem, 700, 143%);
     }
   }
 }

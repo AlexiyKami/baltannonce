@@ -1,0 +1,36 @@
+@use '@/app/assets/scss/utils' as *;
+
+.info-container-form-section {
+  &__social-btns {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width:$desktop-md) {
+  
+}
+
+@media screen and (max-width:$desktop-sm) {
+  .info-container-form-section {
+    &__phone-text {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    
+  }
+}
+
+@media screen and (max-width:$tablet) {
+  .info-container-form-section {
+    &__social-btns {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
+
+@media screen and (max-width:$mobile-md) {
+
+}

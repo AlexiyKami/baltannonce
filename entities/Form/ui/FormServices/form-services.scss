@@ -1,0 +1,65 @@
+@use '@/app/assets/scss/utils' as *;
+
+.info-container-form-section {
+  &__services-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  &__services-content-title {
+    @include font(1.125rem, 600, 144%);
+    color: $color-text-secondary;
+  }
+
+  &__services-content-lists {
+    // display: grid;
+    // grid-template-columns: 1fr 1fr 1fr;
+    // column-gap: 1.5rem;
+  }
+
+  &__services-content-list {
+    display: flex;
+    flex-direction: column;
+    // max-width: 320px;
+    flex-wrap: wrap;
+    // flex-direction: column;
+    gap: 0.75rem;
+    column-count: 3;
+  }
+
+  &__show-all-btn {
+    align-self: flex-start;
+  }
+
+  &__services-description {
+    display: none;
+    @include font(0.875rem, 400, 143%);
+    color: $color-text-secondary;
+  }
+  
+  &__checkbox-price {
+    display: none;
+    color: $color-border-accent;
+  }
+}
+
+@media screen and (max-width:$desktop-md) {
+  
+}
+
+@media screen and (max-width:$desktop-sm) {
+  .info-container-form-section {
+    &__services-content-lists {
+      
+    }
+  }
+}
+
+@media screen and (max-width:$tablet) {
+  
+}
+
+@media screen and (max-width:$mobile-md) {
+
+}

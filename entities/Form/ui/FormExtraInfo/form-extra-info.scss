@@ -1,0 +1,50 @@
+@use '@/app/assets/scss/utils' as *;
+
+.info-container-form-section {
+  &__language-items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__language-item {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(7.25rem, 1fr));
+  }
+
+  &__language-item-stars {
+    display: flex;
+    gap: 0.25rem;
+  }
+
+  &__language-item-star {
+    color: $color-surface-brand;
+    &.active {
+      color: $color-accent-primary;
+    }
+  }
+}
+
+@media screen and (max-width:$desktop-md) {
+  
+}
+
+@media screen and (max-width:$desktop-sm) {
+  .info-container-form-section {
+    &__language-item {
+      grid-template-columns: repeat(2, minmax(7.25rem, 1fr));
+    }
+  }
+}
+
+@media screen and (max-width:$tablet) {
+  .info-container-form-section {
+    &__language-item {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and (max-width:$mobile-md) {
+
+}
