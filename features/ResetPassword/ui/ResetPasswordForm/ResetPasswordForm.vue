@@ -8,9 +8,8 @@ const email = ref('');
 
 const sendForm = () => {
   // Validate all fields
-  if (!email.value || !isEmailCorrect(email)) {
+  if (!email.value || !isEmailCorrect(email.value)) {
     submitError.value = true;
-    console.log(submitError.value);
   } else {
     emits('setIsSuccess', true);
     submitError.value = false;

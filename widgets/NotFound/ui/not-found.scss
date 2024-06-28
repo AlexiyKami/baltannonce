@@ -1,0 +1,70 @@
+@use '@/app/assets/scss/utils' as *;
+
+.not-found {
+  &__container {
+    background-color: $color-surface-primary;
+    min-height: 100vh;
+    @include flex(column, center, center);
+    padding: 2.5rem;
+  }
+
+  &__content {
+    max-width: 49.0625rem;
+    @include flex(column, center, center);
+    gap: 2.5rem;
+  }
+
+  &__error {
+    @include font(13rem, 800, 100%);
+    background: $gradient-linear-accent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  &__heading {
+    color: $color-accent-primary;
+    text-align: center;
+  }
+
+  &__paragraph {
+    font-family: 'Manrope', sans-serif;
+    @include font(1.125rem, 400, 144%);
+    text-align: center;
+    color: $color-text-primary;
+  }
+}
+
+@media screen and (max-width: $desktop-sm) {
+  .not-found {
+    &__container {
+      padding: 1.25rem;
+    }
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .not-found {
+    &__error {
+      @include font(5.375rem, 800, 100%);
+      background: $gradient-linear-accent;
+      background-clip: text;
+      color: transparent;
+    }
+
+    &__heading {
+      @include font(1.5rem, 600, 136%);
+    }
+
+    &__paragraph {
+      @include font(1rem, 400, 143%);
+    }
+  }
+}
+
+@media screen and (max-width: $mobile-md) {
+  .not-found {
+    &__container {
+      padding: 1rem;
+    }
+  }
+}

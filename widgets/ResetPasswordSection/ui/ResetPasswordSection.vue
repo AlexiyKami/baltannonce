@@ -12,7 +12,7 @@ const isSuccess = ref(false);
         <ResetPasswordForm
           v-if="!isSuccess"
           :is-success="isSuccess"
-          :set-is-success="(value) => isSuccess(value)"
+          @set-is-success="(value) => (isSuccess = value)"
         />
         <div v-if="isSuccess" class="reset-password__form reset-password__form-success">
           <div class="reset-password__success-message-container">
