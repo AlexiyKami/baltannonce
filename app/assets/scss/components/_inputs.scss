@@ -16,17 +16,13 @@ input[type='checkbox'] {
   border: 0.0625rem solid $color-border-primary;
   border-radius: 0.25rem;
 
-  &:checked {
-    background-size: cover;
-    padding: 0.125rem;
-  }
-
   &:not(:disabled):checked {
     background-color: $color-button;
     background-image: url(@/app/assets/images/icons/checkbox.svg);
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: center;
+    border: none;
   }
 
   &:not(:checked):not(:disabled):hover {
@@ -44,11 +40,11 @@ input[type='radio'] {
   border-radius: 50%;
   transition: border-color $transition-hover;
 
-  &:hover {
+  &:not(:checked):not(:disabled):hover {
     border: 0.0625rem solid $color-border-accent;
   }
 
-  &:checked {
+  &:not(:disabled):checked {
     display: inline-block;
     background-clip: content-box;
     border: 0.3125rem solid $color-button;

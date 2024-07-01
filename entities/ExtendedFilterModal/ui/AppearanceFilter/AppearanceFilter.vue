@@ -1,9 +1,13 @@
 <script setup>
 import { RowFilterFieldset, BaseDropdown, RangeInputSmall } from '@/shared/ui';
+
 defineProps({
   filters: { type: Object, required: true },
   gender: { type: String, required: true }
 });
+
+const tattoo = ref([]);
+const piercing = ref([]);
 </script>
 
 <template>
@@ -52,7 +56,7 @@ defineProps({
             :options="filters.beardOptions"
           />
           <div v-if="gender === 'girls'" class="item-extended-filter__appearance">
-            <label class="heading_h6 heading__align-self_start" for="">Грудь:</label>
+            <h6 class="heading_h6 heading__align-self_start">Грудь:</h6>
             <div class="item-extended-filter__column item-extended-filter__breast">
               <RangeInputSmall name="breast-size-input" title="Размер">A-G или 1-6</RangeInputSmall>
               <div class="item-extended-filter__column">
@@ -73,15 +77,18 @@ defineProps({
             :options="filters.intimateHaircutOptions"
           />
           <div class="item-extended-filter__appearance">
-            <label class="heading_h6 heading__align-self_start" for="">Тату:</label>
+            <h6 class="heading_h6 heading__align-self_start">Тату:</h6>
             <div class="item-extended-filter__column">
               <div class="item-extended-filter__row">
-                <input id="tattoo-y" type="checkbox" name="tattoo" >
+                <input id="tattoo-y" v-model="tattoo" type="checkbox" :value="true" >
                 <label for="tattoo-y">Да</label>
-                <input id="tattoo-n" type="checkbox" name="tattoo" >
+                <input id="tattoo-n" v-model="tattoo" type="checkbox" :value="false" >
                 <label for="tattoo-n">Нет</label>
               </div>
-              <div class="item-extended-filter__row item-extended-filter__tattoo">
+              <div
+                v-if="tattoo.includes(true)"
+                class="item-extended-filter__row item-extended-filter__tattoo"
+              >
                 <span class="item-extended-filter__row-span">Места на теле:</span>
                 <div
                   v-for="option in filters.tattooPlacesOptions"
@@ -95,15 +102,18 @@ defineProps({
             </div>
           </div>
           <div class="item-extended-filter__appearance">
-            <label class="heading_h6 heading__align-self_start" for="">Пирсинг:</label>
+            <h6 class="heading_h6 heading__align-self_start">Пирсинг:</h6>
             <div class="item-extended-filter__column">
               <div class="item-extended-filter__row">
-                <input id="piercing-y" type="checkbox" name="piercing" >
+                <input id="piercing-y" v-model="piercing" type="checkbox" :value="true" >
                 <label for="piercing-y">Да</label>
-                <input id="piercing-n" type="checkbox" name="piercing" >
+                <input id="piercing-n" v-model="piercing" type="checkbox" :value="false" >
                 <label for="piercing-n">Нет</label>
               </div>
-              <div class="item-extended-filter__row item-extended-filter__piercing">
+              <div
+                v-if="piercing.includes(true)"
+                class="item-extended-filter__row item-extended-filter__piercing"
+              >
                 <span class="item-extended-filter__row-span">Места на теле:</span>
                 <div
                   v-for="option in filters.piercingPlacesOptions"
@@ -123,7 +133,7 @@ defineProps({
             :options="filters.raceOptions"
           />
           <div class="item-extended-filter__appearance">
-            <label class="heading_h6" for="">Национальности:</label>
+            <h6 class="heading_h6">Национальности:</h6>
             <div class="button button_secondary button_small">Выбрать</div>
           </div>
           <RowFilterFieldset
@@ -133,9 +143,9 @@ defineProps({
             :options="filters.languageOptions"
           />
           <div class="item-extended-filter__appearance">
-            <label class="heading_h6 heading__align-self_start" for="">Паспорт:</label>
+            <h6 class="heading_h6 heading__align-self_start">Паспорт:</h6>
             <div class="item-extended-filter__row wrap item-extended-filter__has-passport">
-              <input id="has-passport" type="checkbox" name="" >
+              <input id="has-passport" type="checkbox" >
               <label for="has-passport">Есть паспорт для путешествий</label>
             </div>
           </div>
