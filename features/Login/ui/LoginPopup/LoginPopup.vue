@@ -7,7 +7,7 @@ defineProps({
   isLoginPopupOpened: { type: Boolean, required: true }
 });
 
-const emits = defineEmits(['closePopup', 'closeMenu']);
+const emits = defineEmits(['setIsLoginPopupOpened']);
 
 const authStore = useAuthStore();
 
@@ -27,8 +27,7 @@ const sendForm = async () => {
     disableBlur.value = true;
     await authStore.login({ username: nick.value, password: password.value });
     submitError.value = false;
-    emits('closePopup');
-    emits('closeMenu');
+    emits('setIsLoginPopupOpened');
     disableBlur.value = false;
   }
 };
@@ -41,7 +40,7 @@ const sendForm = async () => {
       active: isLoginPopupOpened
     }"
   >
-    <div class="header__login-popup-overlay" @click="emits('closePopup')" />
+    <div class="header__login-popup-overlay" @click="emits('setIsLoginPopupOpened', false)" />
     <div class="header__login-popup login-popup-header">
       <form class="login-popup-header__form" novalidate @submit.prevent="sendForm">
         <div class="login-popup-header__inputs-container">
@@ -78,7 +77,7 @@ const sendForm = async () => {
               <NuxtLink
                 to="/reset-password"
                 class="button text-button login-popup-header__reset-password-link"
-                @click="emits('closePopup')"
+                @click="emits('setIsLoginPopupOpened', false)"
                 >Забыли пароль?</NuxtLink
               >
             </p>

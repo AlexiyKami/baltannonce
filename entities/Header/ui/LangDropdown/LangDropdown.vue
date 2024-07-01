@@ -2,7 +2,10 @@
 import './lang-dropdown.scss';
 import { languages } from '../../model/languages';
 
-const isDropdownOpened = ref(false);
+defineEmits(['setIsDropdownOpened']);
+defineProps({
+  isDropdownOpened: { type: Boolean, required: true }
+});
 
 // Get language from cookies
 // If it is not in the cookies, then set the default value
@@ -27,7 +30,7 @@ const getCurrentLanguageImage = computed(() => {
 
 <template>
   <div class="header__dropdown-lang dropdown-lang">
-    <div class="dropdown-lang__btn" @click="isDropdownOpened = !isDropdownOpened">
+    <div class="dropdown-lang__btn" @click="$emit('setIsDropdownOpened')">
       <img :src="getCurrentLanguageImage" alt="flag" class="dropdown-lang__flag" >
       <span class="dropdown-lang__text button__text">{{ currentLanguage }}</span>
     </div>
