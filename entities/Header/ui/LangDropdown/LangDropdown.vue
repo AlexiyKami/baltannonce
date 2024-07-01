@@ -2,34 +2,28 @@
 import './lang-dropdown.scss';
 import { languages } from '../../model/languages';
 
-const isDropdownOpened = ref(false);
+const { locale, locales } = useI18n();
+const switchLocalePath = useSwitchLocalePath();
 
-// Get language from cookies
-// If it is not in the cookies, then set the default value
-const currentLanguage = ref(useCookie('lang', { maxAge: 60 * 60 * 24 * 365 }));
-if (!currentLanguage.value) {
-  currentLanguage.value = 'ru';
-}
-
-const options = computed(() => {
-  return languages.filter((lang) => lang.title !== currentLanguage.value);
+defineEmits(['setIsDropdownOpened']);
+defineProps({
+  isDropdownOpened: { type: Boolean, required: true }
 });
 
-const setCurrentLanguage = (value) => {
-  currentLanguage.value = value;
-  isDropdownOpened.value = false;
+const availableLocales = computed(() => {
+  return locales.value.filter((item) => item !== locale.value);
+});
+
+const getLanguageImage = (value) => {
+  return languages.find((lang) => lang.title === value).image;
 };
-
-const getCurrentLanguageImage = computed(() => {
-  return languages.find((lang) => lang.title === currentLanguage.value).image;
-});
 </script>
 
 <template>
   <div class="header__dropdown-lang dropdown-lang">
-    <div class="dropdown-lang__btn" @click="isDropdownOpened = !isDropdownOpened">
-      <img :src="getCurrentLanguageImage" alt="flag" class="dropdown-lang__flag" >
-      <span class="dropdown-lang__text button__text">{{ currentLanguage }}</span>
+    <div class="dropdown-lang__btn" @click="$emit('setIsDropdownOpened')">
+      <img :src="getLanguageImage(locale)" alt="flag" class="dropdown-lang__flag" >
+      <span class="dropdown-lang__text button__text">{{ locale }}</span>
     </div>
     <div
       class="dropdown-lang__body"
@@ -37,15 +31,16 @@ const getCurrentLanguageImage = computed(() => {
         active: isDropdownOpened
       }"
     >
-      <div
-        v-for="option in options"
-        :key="option.title"
+      <NuxtLink
+        v-for="availableLocale in availableLocales"
+        :key="availableLocale"
+        :to="switchLocalePath(availableLocale)"
         class="dropdown-lang__item"
-        @click="setCurrentLanguage(option.title)"
+        @click="$emit('setIsDropdownOpened')"
       >
-        <img :src="option.image" alt="flag" class="dropdown-lang__flag" >
-        <span class="dropdown-lang__text button__text">{{ option.title }}</span>
-      </div>
+        <img :src="getLanguageImage(availableLocale)" alt="flag" class="dropdown-lang__flag" >
+        <span class="dropdown-lang__text button__text">{{ availableLocale }}</span>
+      </NuxtLink>
     </div>
   </div>
 </template>

@@ -3,15 +3,18 @@
 .header__login-popup {
   position: absolute;
   z-index: 1002;
-  top: 100%;
+  top: 4.625rem;
   right: 18.6%;
 }
 
 .header__login-popup-container {
+  position: absolute;
   pointer-events: none;
   opacity: 0;
   z-index: 1001;
   transition: opacity $transition-hover;
+  width: 100%;
+  height: 100%;
 
   &.active {
     pointer-events: all;
@@ -102,7 +105,6 @@
 @media screen and (max-width: $mobile-md) {
   .header__login-popup {
     width: 18rem;
-    top: 50%;
     transform: translateY(50%);
   }
 

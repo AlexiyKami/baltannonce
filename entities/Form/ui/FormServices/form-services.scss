@@ -37,29 +37,25 @@
     @include font(0.875rem, 400, 143%);
     color: $color-text-secondary;
   }
-  
+
   &__checkbox-price {
     display: none;
     color: $color-border-accent;
   }
 }
 
-@media screen and (max-width:$desktop-md) {
-  
+@media screen and (max-width: $desktop-md) {
 }
 
-@media screen and (max-width:$desktop-sm) {
+@media screen and (max-width: $desktop-sm) {
   .info-container-form-section {
     &__services-content-lists {
-      
     }
   }
 }
 
-@media screen and (max-width:$tablet) {
-  
+@media screen and (max-width: $tablet) {
 }
 
-@media screen and (max-width:$mobile-md) {
-
+@media screen and (max-width: $mobile-md) {
 }

@@ -2,6 +2,8 @@
 import './reset-password-section.scss';
 import { ResetPasswordForm } from '@/features/ResetPassword';
 
+const localePath = useLocalePath();
+
 const isSuccess = ref(false);
 </script>
 
@@ -20,7 +22,7 @@ const isSuccess = ref(false);
               Мы отправили вам письмо с инструкцией по сбросу пароля
             </h2>
             <img src="../assets/images/icons/email-send.png" alt="email-send" >
-            <NuxtLink to="/" class="button button_primary reset-password__login-btn"
+            <NuxtLink :to="localePath('/')" class="button button_primary reset-password__login-btn"
               >Вернуться на главную</NuxtLink
             >
           </div>

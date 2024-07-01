@@ -16,17 +16,6 @@ const settingsStore = useSettingsStore();
             <HomeCard v-for="(girl, index) in girls" :key="index" :card="girl" />
           </ul>
         </div>
-        <div class="home__coming-soon-cards">
-          <div class="home__heading">
-            <h2 class="home__title heading_h2">
-              Скоро в городе
-              <span class="home__title-counter heading_h3">(5)</span>
-            </h2>
-          </div>
-          <ul class="home__cards-container">
-            <HomeCard v-for="(girl, index) in comingSoonGirls" :key="index" :card="girl" />
-          </ul>
-        </div>
         <div class="home__random-cards">
           <div class="home__heading home__heading_random-cards">
             <h2 class="home__title heading_h2">
@@ -74,6 +63,17 @@ const settingsStore = useSettingsStore();
           </picture>
           <ul class="home__cards-container">
             <HomeCard v-for="(girl, index) in randomGirls" :key="index" :card="girl" />
+          </ul>
+        </div>
+        <div class="home__coming-soon-cards">
+          <div class="home__heading">
+            <h2 class="home__title heading_h2">
+              Скоро в городе
+              <span class="home__title-counter heading_h3">(5)</span>
+            </h2>
+          </div>
+          <ul class="home__cards-container">
+            <HomeCard v-for="(girl, index) in comingSoonGirls" :key="index" :card="girl" />
           </ul>
         </div>
       </div>

@@ -31,15 +31,13 @@
   }
 }
 
-@media screen and (max-width:$desktop-md) {
-  
+@media screen and (max-width: $desktop-md) {
 }
 
-@media screen and (max-width:$desktop-sm) {
-  
+@media screen and (max-width: $desktop-sm) {
 }
 
-@media screen and (max-width:$tablet) {
+@media screen and (max-width: $tablet) {
   .main-block-form-section {
     &__header {
       flex-wrap: wrap;
@@ -49,7 +47,7 @@
   }
 }
 
-@media screen and (max-width:$mobile-md) {
+@media screen and (max-width: $mobile-md) {
   .main-block-form-section {
     &__header {
       padding-left: 1rem;

@@ -76,7 +76,6 @@
   }
 
   &__alert-fake-btn {
-
   }
 
   &__video-container {
@@ -105,8 +104,7 @@
   }
 }
 
-
-@media screen and (max-width:$desktop-md) {
+@media screen and (max-width: $desktop-md) {
   .main-block-form-section {
     &__photo-info {
       gap: 0.25rem;
@@ -115,7 +113,7 @@
   }
 }
 
-@media screen and (max-width:$desktop-sm) {
+@media screen and (max-width: $desktop-sm) {
   .main-block-form-section {
     flex-direction: column;
     &__form-details {
@@ -130,7 +128,7 @@
   }
 }
 
-@media screen and (max-width:$tablet) {
+@media screen and (max-width: $tablet) {
   .main-block-form-section {
     &__form-details {
       flex-direction: column;
@@ -143,10 +141,10 @@
   }
 }
 
-@media screen and (max-width:$mobile-md) {
-
+@media screen and (max-width: $mobile-md) {
   .main-block-form-section {
-    &__photo-info, &__form-details {
+    &__photo-info,
+    &__form-details {
       padding-left: 1rem;
       padding-right: 1rem;
       @include font(0.875rem, 400, 143%);

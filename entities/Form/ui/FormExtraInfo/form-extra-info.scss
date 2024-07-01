@@ -24,11 +24,10 @@
   }
 }
 
-@media screen and (max-width:$desktop-md) {
-  
+@media screen and (max-width: $desktop-md) {
 }
 
-@media screen and (max-width:$desktop-sm) {
+@media screen and (max-width: $desktop-sm) {
   .info-container-form-section {
     &__language-item {
       grid-template-columns: repeat(2, minmax(7.25rem, 1fr));
@@ -36,7 +35,7 @@
   }
 }
 
-@media screen and (max-width:$tablet) {
+@media screen and (max-width: $tablet) {
   .info-container-form-section {
     &__language-item {
       display: flex;
@@ -45,6 +44,5 @@
   }
 }
 
-@media screen and (max-width:$mobile-md) {
-
+@media screen and (max-width: $mobile-md) {
 }

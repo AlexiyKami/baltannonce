@@ -80,9 +80,10 @@
   }
 }
 
-@media screen and (max-width:$mobile-md) {
+@media screen and (max-width: $mobile-md) {
   .main-block-form-section {
-    &__slider-verified-text, &__slider-rating-text {
+    &__slider-verified-text,
+    &__slider-rating-text {
       @include font(0.875rem, 700, 143%);
     }
   }

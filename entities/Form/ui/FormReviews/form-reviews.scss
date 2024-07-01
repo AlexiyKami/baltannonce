@@ -113,18 +113,20 @@
     border-radius: 0.5rem;
   }
 
-  &__review-comment-heading, &__review-answer-heading {
+  &__review-comment-heading,
+  &__review-answer-heading {
     display: flex;
     align-items: center;
     gap: 0.75rem;
   }
 
-  &__review-comment-title, &__review-answer-title {
+  &__review-comment-title,
+  &__review-answer-title {
     @include font(1rem, 700, 144%);
   }
 
-  &__review-comment-text, &__review-answer-text {
-
+  &__review-comment-text,
+  &__review-answer-text {
   }
 
   &__review-experience {
@@ -181,15 +183,13 @@
   }
 }
 
-@media screen and (max-width:$desktop-md) {
-  
+@media screen and (max-width: $desktop-md) {
 }
 
-@media screen and (max-width:$desktop-sm) {
-  
+@media screen and (max-width: $desktop-sm) {
 }
 
-@media screen and (max-width:$tablet) {
+@media screen and (max-width: $tablet) {
   .info-container-form-section {
     &__review-score-table-row {
       display: grid;
@@ -207,6 +207,5 @@
   }
 }
 
-@media screen and (max-width:$mobile-md) {
-
+@media screen and (max-width: $mobile-md) {
 }

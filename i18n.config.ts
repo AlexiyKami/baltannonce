@@ -8,6 +8,7 @@ import translationPt from '@/shared/config/i18n/pt/translation.json';
 import translationDe from '@/shared/config/i18n/de/translation.json';
 
 export default defineI18nConfig(() => ({
+  legacy: false,
   locale: 'ru',
   fallbackLocale: 'ru',
   messages: {

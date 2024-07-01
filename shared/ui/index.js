@@ -13,6 +13,7 @@ import BaseSlider from './BaseSlider/BaseSlider.vue';
 import BaseAlert from './BaseAlert/BaseAlert.vue';
 import SpinnerDots from './SpinnerDots/SpinnerDots.vue';
 import FormNavTabs from './FormNavTabs/FormNavTabs.vue';
+import BaseModal from './BaseModal/BaseModal.vue';
 
 export { PopupDropdownFilter };
 export { DropdownItemWithCount };
@@ -29,3 +30,4 @@ export { BaseSlider };
 export { BaseAlert };
 export { SpinnerDots };
 export { FormNavTabs };
+export { BaseModal };

@@ -13,43 +13,53 @@
   &__prices-comment-span {
     @include font(0.875rem, 700, 143%);
     &_red {
-      color: #DA1212;
+      color: #da1212;
     }
   }
-  
+
   &__prices-content {
     display: grid;
     gap: 1.5rem;
     grid-template-columns: repeat(3, 1fr);
   }
 
-  &__incall-block, &__outcall-block, &__travel-block {
+  &__incall-block,
+  &__outcall-block,
+  &__travel-block {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
   }
 
-  &__incall-block-title, &__outcall-block-title, &__travel-block-title {
+  &__incall-block-title,
+  &__outcall-block-title,
+  &__travel-block-title {
     @include font(1.125rem, 600, 144%);
     color: $color-text-secondary;
   }
 
-  &__incall-block-title-span, &__outcall-block-title-span {
+  &__incall-block-title-span,
+  &__outcall-block-title-span {
     @include font(1rem, 400, 144%);
   }
 
-  &__incall-subtitle, &__outcall-subtitle {
+  &__incall-subtitle,
+  &__outcall-subtitle {
     display: flex;
     gap: 1.25rem;
   }
 
-  &__incall-list, &__outcall-list, &__travel-list {
+  &__incall-list,
+  &__outcall-list,
+  &__travel-list {
     display: flex;
     flex-direction: column;
     gap: 1rem;
   }
 
-  &__incall-item, &__outcall-item, &__travel-item {
+  &__incall-item,
+  &__outcall-item,
+  &__travel-item {
     display: grid;
     grid-template-columns: 12.375rem auto;
     border-bottom: 0.0625rem solid $color-border-secondary;
@@ -68,11 +78,10 @@
   }
 }
 
-@media screen and (max-width:$desktop-md) {
-  
+@media screen and (max-width: $desktop-md) {
 }
 
-@media screen and (max-width:$desktop-sm) {
+@media screen and (max-width: $desktop-sm) {
   .info-container-form-section {
     &__prices-content {
       grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
@@ -80,10 +89,8 @@
   }
 }
 
-@media screen and (max-width:$tablet) {
-  
+@media screen and (max-width: $tablet) {
 }
 
-@media screen and (max-width:$mobile-md) {
-
+@media screen and (max-width: $mobile-md) {
 }

@@ -19,6 +19,10 @@
     }
   }
 
+  &.active {
+    z-index: 1500;
+  }
+
   &__container {
     @include flex(row, space-between, center);
     max-width: 90rem;
@@ -452,6 +456,11 @@
 }
 
 @media screen and (max-width: $mobile-md) {
+  .header {
+    &.active {
+      z-index: 102;
+    }
+  }
   .header.logged-in .header__profile-dropdown {
     display: none;
   }

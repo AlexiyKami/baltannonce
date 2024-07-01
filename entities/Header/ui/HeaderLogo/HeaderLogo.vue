@@ -1,5 +1,9 @@
+<script setup>
+const localePath = useLocalePath();
+</script>
+
 <template>
-  <NuxtLink to="/" class="header__logo" aria-label="Главная">
+  <NuxtLink :to="localePath('/')" class="header__logo" aria-label="Главная">
     <svg
       width="161"
       height="20"

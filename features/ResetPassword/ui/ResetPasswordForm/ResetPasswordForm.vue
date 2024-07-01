@@ -2,6 +2,8 @@
 import './reset-password-form.scss';
 import { isEmailCorrect } from '@/shared/lib/helpers/fields-validation';
 
+const localePath = useLocalePath();
+
 const emits = defineEmits(['setIsSuccess']);
 const submitError = ref(false);
 const email = ref('');
@@ -45,7 +47,7 @@ const sendForm = () => {
       <button class="button button_primary reset-password__button" @submit.prevent="sendForm">
         Отправить письмо
       </button>
-      <NuxtLink to="/" class="button text-button reset-password__login-link"
+      <NuxtLink :to="localePath('/')" class="button text-button reset-password__login-link"
         >Вернуться на главную</NuxtLink
       >
     </div>
