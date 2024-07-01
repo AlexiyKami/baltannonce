@@ -27,7 +27,7 @@
   }
 }
 
-@media screen and (max-width:$desktop-lg) {
+@media screen and (max-width: $desktop-lg) {
   .info-container-form-section {
     &__working-hours-content {
       max-height: none;
@@ -35,11 +35,10 @@
   }
 }
 
-@media screen and (max-width:$desktop-md) {
-  
+@media screen and (max-width: $desktop-md) {
 }
 
-@media screen and (max-width:$desktop-sm) {
+@media screen and (max-width: $desktop-sm) {
   .info-container-form-section {
     &__working-hours-content {
       max-height: 8.125rem;
@@ -47,7 +46,7 @@
   }
 }
 
-@media screen and (max-width:$tablet) {
+@media screen and (max-width: $tablet) {
   .info-container-form-section {
     &__working-hours-content {
       max-height: none;
@@ -55,6 +54,5 @@
   }
 }
 
-@media screen and (max-width:$mobile-md) {
-
+@media screen and (max-width: $mobile-md) {
 }
