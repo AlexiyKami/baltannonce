@@ -375,7 +375,7 @@ export const girlsExtendedFilters = {
       id: 'intimate-haircut-c'
     },
     {
-      title: 'Натуральная',
+      title: 'Нет депиляции',
       id: 'intimate-haircut-n'
     }
   ],

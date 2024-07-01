@@ -407,7 +407,7 @@ export const menExtendedFilters = {
       id: 'intimate-haircut-c'
     },
     {
-      title: 'Натуральная',
+      title: 'Нет депиляции',
       id: 'intimate-haircut-n'
     }
   ],

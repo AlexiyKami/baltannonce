@@ -222,9 +222,7 @@ const setLocations = (city, country) => {
       </div>
       <div v-if="type === 'user'" class="register__checkbox-container">
         <input id="register-subscribe-email" v-model="wantToReceiveLetters" type="checkbox" >
-        <label for="register-subscribe-email"
-          >Я хочу получать письма от рекламодателя в фаворитах</label
-        >
+        <label for="register-subscribe-email">Я хочу получать письма от анкет в фаворитах</label>
       </div>
     </div>
     <div class="register__actions-container">

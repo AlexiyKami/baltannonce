@@ -20,7 +20,7 @@ import { BaseDropdown } from '@/shared/ui';
         </div>
         <div class="item-extended-filter__forms">
           <div class="item-extended-filter__reviews">
-            <label class="heading_h6" for="">Оценок, не менее:</label>
+            <label class="heading_h6" for="">С оценкой не менее:</label>
             <BaseDropdown>-</BaseDropdown>
           </div>
           <div class="item-extended-filter__reviews">
