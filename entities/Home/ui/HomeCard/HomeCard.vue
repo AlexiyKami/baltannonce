@@ -2,6 +2,8 @@
 import './home-card.scss';
 
 defineProps({ card: { type: Object, required: true } });
+
+const localePath = useLocalePath();
 </script>
 
 <template>
@@ -13,7 +15,7 @@ defineProps({ card: { type: Object, required: true } });
       'card-background_bronze': card.background === 'bronze'
     }"
   >
-    <NuxtLink to="/girl-form" class="home__card card-home">
+    <NuxtLink :to="localePath('/girl-form')" class="home__card card-home">
       <div class="card-home__badges">
         <div v-if="card.girlOfTheDay" class="card-home__of-the-day heading_h4">Девушка дня!</div>
         <div v-if="card.manOfTheDay" class="card-home__of-the-day heading_h4">Мужчина дня!</div>

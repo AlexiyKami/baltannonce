@@ -2,6 +2,8 @@
 import './new-password-section.scss';
 import { NewPasswordForm } from '@/features/NewPassword';
 
+const localePath = useLocalePath();
+
 const isSuccess = ref(false);
 </script>
 
@@ -17,7 +19,7 @@ const isSuccess = ref(false);
               справа сверху.
             </h2>
             <img src="../assets/images/check-circle.png" alt="check-new-password" >
-            <NuxtLink to="/" class="button button_primary new-password__login-btn"
+            <NuxtLink :to="localePath('/')" class="button button_primary new-password__login-btn"
               >Вернуться на главную</NuxtLink
             >
           </div>

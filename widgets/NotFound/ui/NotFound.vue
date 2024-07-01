@@ -1,5 +1,7 @@
 <script setup>
 import './not-found.scss';
+
+const localePath = useLocalePath();
 </script>
 
 <template>
@@ -12,7 +14,7 @@ import './not-found.scss';
           Возможно, страница, которую вы ищете, была удалена, ее имя было изменено или она временно
           недоступна.
         </p>
-        <NuxtLink to="/" class="button button_primary not-found__button"
+        <NuxtLink :to="localePath('/')" class="button button_primary not-found__button"
           >Вернуться на главную</NuxtLink
         >
       </div>

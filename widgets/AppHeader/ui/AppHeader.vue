@@ -10,6 +10,8 @@ import {
 import { debounce } from '../lib/helpers/debounce';
 import { LoginPopup } from '@/features/Login';
 
+const localePath = useLocalePath();
+
 const authStore = useAuthStore();
 const router = useRouter();
 
@@ -43,7 +45,8 @@ const closeMenuPopupAndLangDropdown = () => {
 };
 
 const handleMenLinkClick = (value) => {
-  router.push({ path: '/men', query: { tab: value } });
+  const path = localePath({ path: '/men' });
+  router.push({ path, query: { tab: value } });
   closeMenuPopupAndLangDropdown();
 };
 
@@ -89,7 +92,7 @@ const setIsLoginPopupOpened = (value) => {
               Войти
             </div>
             <NuxtLink
-              to="/register"
+              :to="localePath('/register')"
               class="button button_primary button_filled header__btn-register"
               @click="closeMenuPopupAndLangDropdown"
               >Регистрация</NuxtLink
@@ -118,14 +121,14 @@ const setIsLoginPopupOpened = (value) => {
             <ul class="navmenu-header__list">
               <ItemWithDropdown title="Девушки">
                 <NuxtLink
-                  to="/"
+                  :to="localePath('/')"
                   class="header__item-dropdown"
                   @click="closeMenuPopupAndLangDropdown"
                 >
                   <p class="header__text">Эскорт</p>
                 </NuxtLink>
                 <NuxtLink
-                  to="/"
+                  :to="localePath('/')"
                   class="header__item-dropdown"
                   @click="closeMenuPopupAndLangDropdown"
                 >
@@ -133,28 +136,26 @@ const setIsLoginPopupOpened = (value) => {
                 </NuxtLink>
               </ItemWithDropdown>
               <ItemWithDropdown title="Мужчины">
-                <NuxtLink
-                  to="/men"
-                  class="header__item-dropdown"
-                  @click="handleMenLinkClick('escort')"
-                >
+                <NuxtLink class="header__item-dropdown" @click="handleMenLinkClick('escort')">
                   <p class="header__text">Эскорт</p>
                 </NuxtLink>
-                <NuxtLink
-                  to="/men"
-                  class="header__item-dropdown"
-                  @click="handleMenLinkClick('strippers')"
-                >
+                <NuxtLink class="header__item-dropdown" @click="handleMenLinkClick('strippers')">
                   <p class="header__text">Стриптизеры</p>
                 </NuxtLink>
               </ItemWithDropdown>
               <li class="navmenu-header__item">
-                <NuxtLink to="" class="navmenu-header__link" @click="closeMenuPopupAndLangDropdown"
+                <NuxtLink
+                  :to="localePath('/')"
+                  class="navmenu-header__link"
+                  @click="closeMenuPopupAndLangDropdown"
                   >Спрос и предложение</NuxtLink
                 >
               </li>
               <li class="navmenu-header__item">
-                <NuxtLink to="" class="navmenu-header__link" @click="closeMenuPopupAndLangDropdown"
+                <NuxtLink
+                  :to="localePath('/')"
+                  class="navmenu-header__link"
+                  @click="closeMenuPopupAndLangDropdown"
                   >В первый раз?</NuxtLink
                 >
               </li>
@@ -174,7 +175,7 @@ const setIsLoginPopupOpened = (value) => {
                 Войти
               </div>
               <NuxtLink
-                to="/register"
+                :to="localePath('/register')"
                 class="button button_primary button_filled header__btn-register"
                 @click="closeMenuPopupAndLangDropdown"
                 >Регистрация</NuxtLink

@@ -3,6 +3,8 @@ import './login-popup.scss';
 import { PasswordField, NickField } from '@/entities/Fields';
 import { SpinnerDots } from '@/shared/ui';
 
+const localePath = useLocalePath();
+
 defineProps({
   isLoginPopupOpened: { type: Boolean, required: true }
 });
@@ -75,7 +77,7 @@ const sendForm = async () => {
           <div class="login-popup-header__actions">
             <p class="login-popup-header__action">
               <NuxtLink
-                to="/reset-password"
+                :to="localePath('/reset-password')"
                 class="button text-button login-popup-header__reset-password-link"
                 @click="emits('setIsLoginPopupOpened', false)"
                 >Забыли пароль?</NuxtLink

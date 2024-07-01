@@ -1,5 +1,7 @@
 <script setup>
 import './app-footer.scss';
+
+const localePath = useLocalePath();
 </script>
 
 <template>
@@ -60,28 +62,34 @@ import './app-footer.scss';
         <nav class="footer__navmenu navmenu-footer">
           <ul class="navmenu-footer__list">
             <li class="navmenu-footer__item">
-              <NuxtLink to="/" class="navmenu-footer__link">Девушки</NuxtLink>
+              <NuxtLink :to="localePath('/')" class="navmenu-footer__link">Девушки</NuxtLink>
             </li>
             <li class="navmenu-footer__item">
-              <NuxtLink to="/men" class="navmenu-footer__link">Мужчины</NuxtLink>
+              <NuxtLink :to="localePath('/men')" class="navmenu-footer__link">Мужчины</NuxtLink>
             </li>
             <li class="navmenu-footer__item">
-              <NuxtLink to="" class="navmenu-footer__link">Спрос и предложение</NuxtLink>
+              <NuxtLink :to="localePath('/')" class="navmenu-footer__link"
+                >Спрос и предложение</NuxtLink
+              >
             </li>
             <li class="navmenu-footer__item">
-              <NuxtLink to="" class="navmenu-footer__link">Содержанки</NuxtLink>
+              <NuxtLink :to="localePath('/')" class="navmenu-footer__link">Содержанки</NuxtLink>
             </li>
             <li class="navmenu-footer__item">
-              <NuxtLink to="" class="navmenu-footer__link">В первый раз?</NuxtLink>
+              <NuxtLink :to="localePath('/')" class="navmenu-footer__link">В первый раз?</NuxtLink>
             </li>
             <li class="navmenu-footer__item">
-              <NuxtLink to="" class="navmenu-footer__link">Поддержка и Оплата</NuxtLink>
+              <NuxtLink :to="localePath('/')" class="navmenu-footer__link"
+                >Поддержка и Оплата</NuxtLink
+              >
             </li>
             <li class="navmenu-footer__item">
-              <NuxtLink to="" class="navmenu-footer__link">Terms and Conditions</NuxtLink>
+              <NuxtLink :to="localePath('/')" class="navmenu-footer__link"
+                >Terms and Conditions</NuxtLink
+              >
             </li>
             <li class="navmenu-footer__item">
-              <NuxtLink to="" class="navmenu-footer__link">Privacy Policy</NuxtLink>
+              <NuxtLink :to="localePath('/')" class="navmenu-footer__link">Privacy Policy</NuxtLink>
             </li>
           </ul>
         </nav>
