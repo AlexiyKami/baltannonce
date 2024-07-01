@@ -241,7 +241,7 @@
 }
 
 .burger-header.active .burger-header__stripe_1 {
-  transform: translateY(0.1563rem) rotate(45deg);
+  transform: translateY(0.1875rem) rotate(45deg);
 }
 
 .burger-header.active .burger-header__stripe_2 {
@@ -250,13 +250,13 @@
 }
 
 .burger-header.active .burger-header__stripe_3 {
-  transform: translateY(-0.1563rem) rotate(-45deg);
+  transform: translateY(-0.175rem) rotate(-45deg);
 }
 
 .burger-header__stripe {
   background-color: $color-surface-invert;
   width: 1.125rem;
-  height: 0.0625rem;
+  height: 0.125rem;
   border-radius: 0.625rem;
 }
 
