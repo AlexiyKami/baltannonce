@@ -27,7 +27,7 @@ const sendForm = async () => {
     disableBlur.value = true;
     await authStore.login({ username: nick.value, password: password.value });
     submitError.value = false;
-    emits('setIsLoginPopupOpened');
+    emits('setIsLoginPopupOpened', false);
     disableBlur.value = false;
   }
 };

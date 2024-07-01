@@ -1,10 +1,28 @@
 <script setup>
+import './profile-dropdown.scss';
+import { BaseModal } from '@/shared/ui';
 const isDropdownOpened = ref(false);
 
 const authStore = useAuthStore();
+const alertsStore = useAlertsStore();
+const isLogoutModalOpened = ref(false);
 
-const handleLogoutButtonClick = () => {
+const closeModal = () => {
+  isLogoutModalOpened.value = false;
+  isDropdownOpened.value = false;
+};
+
+const handleLogout = () => {
   authStore.logout();
+  alertsStore.displayAlert(
+    'success',
+    'Выход из системы прошел успешно',
+    'Мы будем рады видеть вас снова!',
+    'tonal',
+    'default',
+    true,
+    false
+  );
   isDropdownOpened.value = false;
 };
 </script>
@@ -55,9 +73,22 @@ const handleLogoutButtonClick = () => {
       <NuxtLink to="" class="header__item-dropdown">
         <p class="header__text">Профиль</p>
       </NuxtLink>
-      <div class="header__item-dropdown" @click="handleLogoutButtonClick">
+      <div class="header__item-dropdown" @click="isLogoutModalOpened = true">
         <p class="header__text">Выйти</p>
       </div>
     </div>
+    <BaseModal v-if="isLogoutModalOpened" @close-modal="closeModal">
+      <div class="confirmation">
+        <h4 class="confirmation__heading heading_h4">Вы уверенны что хотите выйти из аккаунта?</h4>
+        <div class="confirmation__buttons">
+          <button class="confirmation__button button button_secondary" @click="closeModal">
+            Отмена
+          </button>
+          <button class="confirmation__button button button_primary" @click="handleLogout">
+            Выйти
+          </button>
+        </div>
+      </div>
+    </BaseModal>
   </div>
 </template>
